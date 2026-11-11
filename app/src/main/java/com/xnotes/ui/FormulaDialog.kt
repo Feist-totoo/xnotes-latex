@@ -18,12 +18,15 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.xnotes.R
 import com.xnotes.core.formula.LatexSource
 import com.xnotes.platform.FormulaDraft
+import com.xnotes.platform.FormulaPacks
 import com.xnotes.platform.LocalFormulaRecognizer
 import com.xnotes.platform.RenderedFormula
 import kotlinx.coroutines.CancellationException
@@ -36,7 +39,13 @@ import kotlinx.coroutines.withContext
 fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    var latex by remember(draft) { mutableStateOf(draft.initialLatex) }
+    var field by remember(draft) { mutableStateOf(TextFieldValue(draft.initialLatex)) }
+    val latex = field.text
+    var catalog by remember(context) { mutableStateOf(FormulaPacks.load(context)) }
+    var selectedPacks by remember(context) { mutableStateOf(FormulaPacks.selected(context, catalog)) }
+    var automaticPacks by remember(context) { mutableStateOf(FormulaPacks.automatic(context)) }
+    var managingPacks by remember { mutableStateOf(false) }
+    var pendingTemplate by remember { mutableStateOf<String?>(null) }
     var ink by remember(draft) { mutableStateOf<Bitmap?>(null) }
     var rendered by remember(draft) { mutableStateOf<RenderedFormula?>(null) }
     var recognizing by remember(draft) { mutableStateOf(draft.originalFormula == null) }
@@ -56,7 +65,7 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
             if (draft.originalFormula != null) return@LaunchedEffect
             val source = ink ?: error("Empty selection")
             val result = LocalFormulaRecognizer.recognize(context, source)
-            latex = result.latex
+            field = TextFieldValue(result.latex, TextRange(result.latex.length))
             uncertain = result.uncertain
         } catch (cancelled: CancellationException) {
             throw cancelled
@@ -113,12 +122,22 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
                         uncertain -> R.string.formula_uncertain
                         else -> R.string.formula_review
                     }), style = MaterialTheme.typography.bodyMedium)
-                    OutlinedTextField(value = latex, onValueChange = { if (it.length <= 4096) latex = it },
+                    OutlinedTextField(value = field, onValueChange = { if (it.text.length <= 4096) field = it },
                         label = { Text("LaTeX") }, enabled = !recognizing && !committing, minLines = 3, maxLines = 7,
                         textStyle = MaterialTheme.typography.bodyLarge.copy(fontFamily = FontFamily.Monospace),
                         isError = (problem != null && problem != "empty") || renderFailed,
                         supportingText = { if ((problem != null && problem != "empty") || renderFailed) Text(stringResource(R.string.formula_invalid)) },
                         modifier = Modifier.fillMaxWidth())
+                    FormulaPackPanel(catalog, selectedPacks, cleaned, !recognizing && !committing,
+                        automatic = automaticPacks,
+                        onAutomatic = { automaticPacks = it; FormulaPacks.setAutomatic(context, it) },
+                        onManage = { managingPacks = true },
+                        onSelect = { selectedPacks = it; FormulaPacks.save(context, it) },
+                        onInsert = { snippet ->
+                            val selection = field.selection
+                            val next = latex.replaceRange(selection.min, selection.max, snippet)
+                            if (next.length <= 4096) field = TextFieldValue(next, TextRange(selection.min + snippet.length))
+                        }, onTemplate = { pendingTemplate = it })
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         if (draft.originalFormula == null) {
                             Checkbox(checked = keepInk, onCheckedChange = { keepInk = it }, enabled = !committing)
@@ -154,4 +173,20 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
             }
         }
     }
+    pendingTemplate?.let { template ->
+        AlertDialog(onDismissRequest = { pendingTemplate = null },
+            title = { Text(stringResource(R.string.formula_template_title)) },
+            text = { Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(stringResource(R.string.formula_template_description))
+                Text(template, fontFamily = FontFamily.Monospace)
+            } },
+            confirmButton = { TextButton(onClick = {
+                field = TextFieldValue(template, TextRange(template.length)); pendingTemplate = null
+            }) { Text(stringResource(R.string.formula_template_apply)) } },
+            dismissButton = { TextButton(onClick = { pendingTemplate = null }) { Text(stringResource(R.string.cancel)) } })
+    }
+    if (managingPacks) FormulaPackManager(source = cleaned, onChanged = {
+        catalog = FormulaPacks.load(context)
+        selectedPacks = FormulaPacks.selected(context, catalog)
+    }, onDismiss = { managingPacks = false })
 }

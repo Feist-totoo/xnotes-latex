@@ -74,7 +74,7 @@ class FormulaWorkflowTest {
         xy.toList().chunked(2).map { Sample(it[0], it[1], 1.0) }, straight = xy.size == 4,
     )
 
-    /** A small original handwriting fixture: X = 1, assembled from actual ink strokes. */
+    /** Synthetic pen-path fixture for UI actions only; not part of the accuracy benchmark. */
     private fun handwriting() = listOf(
         line(200.0, 300.0, 207.0, 305.0, 215.0, 320.0, 229.0, 340.0, 239.0, 346.0),
         line(238.0, 299.0, 225.0, 312.0, 213.0, 329.0, 200.0, 346.0),
@@ -85,7 +85,8 @@ class FormulaWorkflowTest {
     @Test fun rendererSupportsCommonTeachingFormulasAndRejectsUnknownCommands() {
         compose.waitForIdle()
         val draft = FormulaDraft(handwriting(), compose.activity.cacheDir) { _, _ -> false }
-        for (source in listOf("X=1", "\\frac{x^{2}+1}{2}", "\\int_0^1 x\\,dx", "\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}")) {
+        val templates = com.xnotes.platform.FormulaPacks.load(compose.activity).flatMap { it.templates }.map { it.latex }
+        for (source in listOf("X=1", "\\frac{x^{2}+1}{2}", "\\int_0^1 x\\,dx", "\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}") + templates) {
             val rendered = runBlocking(Dispatchers.Default) { draft.render(source) }
             assertTrue(source, rendered.bitmap.width > 20 && rendered.bitmap.height > 20)
             rendered.bitmap.recycle()
@@ -157,17 +158,35 @@ class FormulaWorkflowTest {
         }
         compose.onNodeWithContentDescription(compose.activity.getString(R.string.formula_convert)).performClick()
         val insert = compose.activity.getString(R.string.formula_insert)
-        compose.waitUntil(120_000) { compose.onAllNodes(hasText(insert) and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
-        compose.onNode(hasSetTextAction()).assertTextContains("X = 1")
+        compose.waitUntil(240_000) { compose.onAllNodes(hasText(insert) and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
+        val recognized = compose.onNode(hasSetTextAction()).fetchSemanticsNode()
+            .config[androidx.compose.ui.semantics.SemanticsProperties.EditableText].text
+        assertEquals("x=1", recognized.replace(" ", "").lowercase())
         compose.onNodeWithContentDescription(compose.activity.getString(R.string.formula_preview)).assertIsDisplayed()
         screenshot("formula-dialog.png")
+        val catalog = com.xnotes.platform.FormulaPacks.load(compose.activity)
+        val beforePacks = com.xnotes.platform.FormulaPacks.selected(compose.activity, catalog)
+        val packButton = compose.activity.getString(R.string.formula_packs_count, beforePacks.size)
+        compose.onNodeWithText(packButton).performScrollTo().performClick()
+        val quantum = catalog.first()
+        val chinese = compose.activity.resources.configuration.locales[0].language == "zh"
+        compose.onAllNodesWithText(quantum.name(chinese)).onFirst().performScrollTo().performClick()
+        assertEquals(beforePacks.contains(quantum.id).not(), com.xnotes.platform.FormulaPacks.selected(compose.activity, catalog).contains(quantum.id))
+        screenshot("formula-subject-packs.png")
+        // Restore the persisted selection through the same UI before continuing.
+        compose.onAllNodesWithText(quantum.name(chinese)).onFirst().performScrollTo().performClick()
+        compose.onNodeWithText(if (chinese) "管理 / 下载" else "Manage / download").performScrollTo().performClick()
+        compose.onNodeWithText(if (chinese) "学科包管理" else "Subject pack manager").assertIsDisplayed()
+        screenshot("formula-pack-manager.png")
+        compose.onNodeWithText(if (chinese) "完成" else "Done").performClick()
+        compose.onNodeWithText(packButton).performScrollTo().performClick()
         compose.onNodeWithText(insert).performClick()
         compose.waitUntil(15_000) { ed.state.document.pages.first().items.filterIsInstance<ImageItem>().any { it.formula != null } }
         lateinit var block: ImageItem
         compose.runOnIdle {
             val items = ed.state.document.pages.first().items
             block = items.filterIsInstance<ImageItem>().single()
-            assertEquals("X=1", block.formula!!.latex.replace(" ", ""))
+            assertEquals(recognized, block.formula!!.latex)
             assertTrue(items.contains(neighbour))
             assertFalse(items.any { it in ink })
             val original = block.rect
@@ -186,7 +205,7 @@ class FormulaWorkflowTest {
         compose.waitUntil(15_000) { ed.state.document.pages.first().items.filterIsInstance<ImageItem>().singleOrNull()?.formula?.latex == "\\frac{x^{2}+1}{2}" }
         compose.runOnIdle {
             ed.undo() // edit
-            assertEquals("X = 1", ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single().formula!!.latex)
+            assertEquals(recognized, ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single().formula!!.latex)
             ed.undo() // drag
             ed.undo() // conversion
             assertEquals(ink + neighbour, ed.state.document.pages.first().items.toList())

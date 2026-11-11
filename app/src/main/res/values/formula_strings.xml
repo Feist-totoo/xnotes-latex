@@ -18,4 +18,12 @@
     <string name="formula_insert">Insert formula block</string>
     <string name="formula_update">Update formula</string>
     <string name="formula_one_page">Select handwriting on a single page to convert it.</string>
+    <string name="formula_packs_count">Subject packs (%1$d enabled)</string>
+    <string name="formula_packs_explanation">Enable installed packs below. Manage or download independent packs from GitHub Releases. Automatic routing reuses local OCR; it does not rewrite your formula.</string>
+    <string name="formula_packs_edit">Insert symbols at the cursor</string>
+    <string name="formula_packs_templates">Templates replace the editor text after confirmation; they are not recognition results.</string>
+    <string name="formula_packs_review">Review: %1$s</string>
+    <string name="formula_template_title">Use this formula template?</string>
+    <string name="formula_template_description">This replaces the current LaTeX editor text. Your original handwriting stays unchanged until you insert the formula block.</string>
+    <string name="formula_template_apply">Use template</string>
 </resources>

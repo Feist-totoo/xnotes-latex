@@ -17,64 +17,49 @@
 
 ## 本地 OCR 与准确性
 
-**准确性诊断与后续方案：**见 [平板离线识别优化与十个学科包](FORMULA_ACCURACY.md)。`0.9.8-latex.2` 修复 OCR 空格导致的上下标排版错误；识别模型尚未更换，学科包尚未训练或发布。
+`0.9.8-latex.3` 使用 [GLM-OCR](https://huggingface.co/zai-org/GLM-OCR) 的 Q8 权重，通过 [llama.cpp](https://github.com/ggml-org/llama.cpp) C++ / JNI 在设备 CPU 上运行。模型与分词器随 APK 安装，识别全程在平板上完成。网络权限只用于用户主动从 GitHub Releases 下载独立学科包；不使用云端 OCR 或局域网服务。
 
-- 使用 [Texo / FormulaNet](https://github.com/alephpi/Texo) 的 ONNX encoder + cached decoder，通过 ONNX Runtime Android **在设备 CPU 上**运行。
-- 两个模型文件合计约 80 MB（十进制）。模型与词表直接打包进 APK；首次使用只从 APK 解包到应用私有目录，不联网下载。
-- 没有新增网络权限、云端 API、账号或订阅。原笔迹不上传。
-- 输入只包含被圈选的笔画，统一渲染成黑字白底；不包含网格、PDF 背景或未选中的文字。
-- 一次适合圈选一个公式，不是整页中文板书 OCR，也不负责推导、求解或判断数学是否正确。
-- 手写 OCR **不能保证每个符号正确**。低 token 置信度只是一项提示，不是校准后的正确率。正负号、上下标、分数结构必须检查。所有结果都先预览，用户确认后才改变笔迹。
-- 支持当前排版器能理解的数学命令；未知命令、未配对括号或环境会阻止插入。过长公式、超时或无笔迹会安全失败，并允许手动输入。
-- 当前图片缓存上限为边长 3072 像素 / 400 万像素。可自由缩放，但极度放大会看到栅格边缘。
+模型文件合计 1,434,837,056 字节；APK 约 1.49 GB。首次使用将模型校验、解包到不参与云备份的应用私有目录，额外占用约 1.44 GB。安装和首次解包请预留约 5 GB 可用空间。仅支持 64 位 Android（arm64-v8a、x86_64），Android 8.0 及以上。不同平板的速度、内存压力尚需真机验证；4 GB RAM 模拟器可以运行，但有明显内存压力，建议使用 6 GB 或更多内存的设备。
+
+输入仅含选中的笔画，黑字白底，不含纸张网格、PDF 背景或相邻内容。一次圈选一个表达式。模型不会求解或判断等式是否成立；识别结果必须对照预览。超过长度、内存、时间或排版器支持范围时不替换笔迹。取消后保持原笔迹，native worker 在安全点退出并释放模型。
+
+10 个学科包可以独立下载、安装、启停、更新、卸载和导入，选择会记忆：高中数学、高等数学、线性代数、概率统计、离散数学、力学、电磁学与电路、热学与统计物理、振动波动与光学、近代与量子物理。高中数学包随 APK 提供，其余包在“管理 / 下载”中从 GitHub Releases 获取，下载后可断网使用。自动选包复用本机识别结果，可关闭；未知类别保持通用辅助。展开“学科包”后可在编辑框光标处插入符号，也可明确确认后套用模板，并查看匹配学科的校对提示。这些是**离线编辑与词表辅助包**，共用一个识别模型；没有宣称训练了十个专用模型，也不自动把陌生写法改成教科书公式。
+
+真实手写的旧/新模型对照、错误、数据限制和复现命令见 [识别验证报告](FORMULA_ACCURACY.md)。不能把排版成功率或模型厂商的文档 OCR 成绩当作本应用手写整式准确率。
 
 ## 构建
 
-需要 JDK 17、Python 3.10+、Android SDK 36、NDK 27.0.12077973、CMake 3.22.1。工具链版本沿用上游。将 `ANDROID_HOME` 或 `local.properties` 指向 SDK。
+需要 JDK 17、Python 3.11+、Git、Android SDK 36、NDK 27.0.12077973、CMake 3.22.1。
 
 ```sh
-python tools/prepare_formula_model.py
+python tools/prepare_glm_formula.py
+python tools/package_formula_mods.py
 ./gradlew :app:testDebugUnitTest :app:assembleDebug
 ```
 
-Windows 使用 `gradlew.bat`。模型下载脚本固定 Hugging Face revision，并校验三个文件的 SHA-256。模型权重不进 Git；缺少资源时构建会明确失败，防止产生无法离线识别的 APK。
+Windows 使用 `gradlew.bat`。准备脚本在开发机器下载固定 revision 的模型、llama.cpp 源码，并校验模型 SHA-256。应用本身不下载模型，只在用户操作时下载独立学科包。旧 Texo 模型不再进入 APK，旧评测脚本仅为复现基线保留。
 
-调试 APK 位于 `app/build/outputs/apk/debug/app-debug.apk`，包名 `com.xnotes.latex.debug`，可以和原版并存。它是开发构建，不是上游或 F-Droid 的官方版本。
+输出 `app/build/outputs/apk/debug/app-debug.apk`，包名 `com.xnotes.latex.debug`，versionCode 71。沿用旧版调试签名，可覆盖此前本 fork 的调试安装。不要先卸载旧版，以免删除应用内存储的笔记。
 
-Android 真机或模拟器测试（包含真实 OCR 推理，不使用识别 mock）：
+真实笔迹测试准备（只进入 androidTest APK，不进入应用 APK）：
 
 ```sh
+python tools/handwriting_benchmark.py fetch --destination build/handwriting
+python tools/handwriting_benchmark.py fixtures --data build/handwriting/mathwriting-test
+# 另将 build/releases/*.xformula 复制到 app/src/androidTest/assets/packs/ 供包测试使用
 ./gradlew :app:connectedDebugAndroidTest
 ```
 
-## 实现
+私有截图回归为本地可选 fixture，不能公开分发。通用测试不依赖这张截图。
 
-- `FormulaDraft`：冻结选中的笔迹、生成识别图片、排版预览、构造公式块。
-- `LocalFormulaRecognizer`：原生 ONNX 推理、缓存解码、取消与超时处理、模型完整性校验。
-- `FormulaDialog`：原笔迹 / 公式对照、LaTeX 编辑、保留笔迹、确认后提交。
-- `ImageItem.formula`：保存不可变 `FormulaSource`，包含 LaTeX、颜色和字号。原生对象处理移动与缩放。
-- `FormulaSelectionState`：确认前检查文档、对象、笔迹及样式是否改变，防止异步结果覆盖新内容。
-- 两种文件格式都增加可选的 `latex`、`latex_rgba`、`latex_size` 字段。普通图片的格式不变。旧版可以显示缓存图片，但经旧版保存后可能丢失编辑公式所需的扩展字段。
+## 实现与来源
 
-## 来源与许可
+- `FormulaDraft` 冻结套索笔画，产生黑白输入和透明公式图片，提交前核对选区是否变化。
+- `LocalFormulaRecognizer` 校验本地模型、转换 RGB、串行调度可取消 JNI 工作；短时复用模型，空闲 30 秒或内存紧张时释放。
+- `formula_jni.cpp` 直接调用 llama / mtmd CPU 库，使用固定公式识别提示、greedy 解码和 512 token 上限。推理超时为 180 秒，不返回截断的公式。
+- `FormulaDialog` 提供原笔迹/预览、光标编辑、保留笔迹、学科包选择与确认插入。
+- 公式源码随 `.xnote` / `.xcanvas` 保存；可拖动、缩放、旋转、编辑、撤销。PDF 导出使用栅格缓存。未知数学命令会阻止插入。
 
-此 fork（含新增集成和打包模型）按根目录的 **AGPL-3.0** 许可发布。原始 xnotes 代码的 MIT 许可与作者署名保存在 [LICENSE-XNOTES](../LICENSE-XNOTES)。Texo / FormulaNet 模型也采用 AGPL-3.0；许可文本、作者与源码地址一并包含在 APK 中。
+本 fork 继续按根目录 AGPL-3.0 发布。原 xnotes MIT 署名保留在 `LICENSE-XNOTES`。新模型 GLM-OCR 和 llama.cpp 均采用 MIT；固定版本、哈希和许可在 `app/src/main/assets/formula-glm/`。未训练或微调这些权重。Google MathWriting 仅用于测试，不作为训练数据，不随应用发布。
 
-- 模型：[alephpi/FormulaNet](https://huggingface.co/alephpi/FormulaNet/tree/b2668efe5112082846fde4d446b9bfaab3989533/onnx)
-- 训练与导出源码：[alephpi/Texo](https://github.com/alephpi/Texo)
-- 预处理与缓存解码参考：[alephpi/Texo-web](https://github.com/alephpi/Texo-web)
-- 完整模型许可：[LICENSE-AGPL-3.0.txt](../app/src/main/assets/formula/LICENSE-AGPL-3.0.txt)
-- APK 内也包含 `formula/NOTICE.txt` 和完整模型许可；关于页面提供模型与本 fork 源码链接。
-- ONNX Runtime：[Microsoft，MIT](https://github.com/microsoft/onnxruntime)
-
-模型权重未修改。模型大小、评测数据集成绩与作者宣传不能替代目标三星平板上的延迟、耗电、S Pen 和真实教师笔迹验证。
-
-## 已完成的验证
-
-2026-11-12，在 Windows / JDK 17 上构建调试 APK；Android 14（API 34）x86_64 模拟器，1920 × 1200、240 dpi。
-
-- `:app:testDebugUnitTest`：**2503 项通过，0 失败**。包括两个文件格式的公式源码 / 图片缓存往返、复制移动、撤销重做、保留原笔迹、陈旧选区拒绝、插入空白不切割公式，以及 OCR 上下标空格规范化和文字/转义保留。
-- `:app:connectedDebugAndroidTest`：**5 项通过，0 失败**。真实套索手势、真实离线 ONNX 识别 `X = 1`、预览、插入、手势拖动、编辑为分式、连续撤销恢复笔迹；另测取消、错误命令拒绝、分式 / 上下标 / 积分 / 矩阵渲染，以及无限画布提交与撤销。新增测试验证带空格的 OCR 上下标与紧凑源码的渲染逐像素一致，并检查解析树中的指数确实附着于 `e`。
-- 截图来自实际运行的 APK：[识别预览](screenshots/formula-dialog.png)、[可移动公式块](screenshots/formula-block.png)、[再次编辑](screenshots/formula-edit.png)。
-
-这些是功能回归和少量样例验证，不是识别准确率评测。尚未在三星平板 / S Pen 真机上测量延迟、耗电和课堂笔迹表现。
+没有三星平板 / S Pen 真机测试数据。模拟器性能不应作为目标平板的性能承诺。

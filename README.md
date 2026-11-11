@@ -3,14 +3,16 @@
 这是面向 Android 平板白板的独立 fork。**套索圈选笔画 → 本地 OCR → LaTeX 预览纠错 → 插入可拖动公式块**，支持分页笔记和无限画布。
 
 - 公式保留可编辑源码，可移动、缩放、再次编辑；支持撤销和保留原笔迹。
-- 模型内置 APK，识别不联网。不是整页中文 OCR；每次选择一个数学公式并检查预览。
-- 基于 xnotes 原生 Android 画布和 Texo / FormulaNet；此 fork 按 AGPL-3.0 发布，保留原始 xnotes 的 MIT 许可与署名。
-- **[使用、构建与许可说明](docs/FORMULA.md)**。构建前运行 `python tools/prepare_formula_model.py`。
-- 已通过 2501 项单元测试和 4 项 Android 设备测试；三星平板 / S Pen 实机表现仍需验证。
+- 模型内置 APK，识别不联网。十个学科包可从 GitHub Releases 独立下载、启停、更新和本地导入；下载后离线调用。不是整页中文 OCR；每次选择一个数学公式并检查预览。
+- 基于 xnotes 原生 Android 画布和完全离线的 GLM-OCR / llama.cpp；此 fork 按 AGPL-3.0 发布，保留原始 xnotes 的 MIT 许可与署名。
+- **[使用、构建与许可说明](docs/FORMULA.md)**。构建前运行 `python tools/prepare_glm_formula.py`。
+- 真实手写对照与 Android 原生验证见 [识别验证报告](docs/FORMULA_ACCURACY.md)；三星平板 / S Pen 实机表现仍需验证。
+- **[新版 APK](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.3)** · **[十个独立学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/formula-packs-v1.0.0)**。当前仍需逐式核对，未达到大部分任意手写公式可靠识别的目标。
 - 此 fork 的包名与官方版不同。下方保留上游介绍；其中商店和上游 release 链接不包含本 fork 新功能。
 
 <p align="center"><img src="docs/screenshots/formula-dialog.png" width="90%" alt="套索选中笔迹后，在本机识别并预览 LaTeX 公式" /></p>
 <p align="center"><img src="docs/screenshots/formula-edit.png" width="90%" alt="公式块保留可再次编辑的 LaTeX 源码" /></p>
+<p align="center"><img src="docs/screenshots/formula-pack-manager.png" width="90%" alt="从 GitHub Releases 独立下载和管理学科包" /></p>
 
 ---
 

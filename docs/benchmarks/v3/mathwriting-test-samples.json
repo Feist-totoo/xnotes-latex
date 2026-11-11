@@ -1,0 +1,802 @@
+[
+  {
+    "id": "000a4e8ca49c5a1c",
+    "image": "000a4e8ca49c5a1c.png",
+    "latex": "(x-y)/sqrt(2)",
+    "split": "test",
+    "image_sha256": "205e3fd0266fd3389d5291b69092175a38e8de8c43faee6cdefdc5b35a905d70",
+    "label_sha256": "789dac1fd1a332fc8b06c86d1728a16502b1c0c6c8cc42beafbb07a4a4fd0e56"
+  },
+  {
+    "id": "001083e26028da36",
+    "image": "001083e26028da36.png",
+    "latex": "\\nabla I=(I_{x},I_{y})",
+    "split": "test",
+    "image_sha256": "8fa955c3f8392b47e9f71b6c2faa04e727fbe2deb9d520b86e64e7e91449e08e",
+    "label_sha256": "cf3690dad59c304b59948d4bab41965b1684b36685d3008545f3a3d40920092d"
+  },
+  {
+    "id": "0017bb5822bcba69",
+    "image": "0017bb5822bcba69.png",
+    "latex": "P=P(C(Z))",
+    "split": "test",
+    "image_sha256": "7bdc2f8194cea74cc029207aa34a25afa991865a10bda2681317098e0b6c5832",
+    "label_sha256": "195fd05ff2634c0e8fbcd136110988e960a72080d9797219c7828c71e674744f"
+  },
+  {
+    "id": "002ae6d5dd4173e4",
+    "image": "002ae6d5dd4173e4.png",
+    "latex": "x_{1}-x_{2}+x_{0}=0",
+    "split": "test",
+    "image_sha256": "9df00f6a947d40391583969fcb78fa2694f73e11688743f0a152df90839463df",
+    "label_sha256": "08ba2d51083bd0cf7a4cfb14f7ab42959604f408e9bc261cb28733326c93d4cd"
+  },
+  {
+    "id": "00386113d577085b",
+    "image": "00386113d577085b.png",
+    "latex": "\\langle a_{0},a_{1},...\\rangle\\in R^{\\omega}",
+    "split": "test",
+    "image_sha256": "df4c4ee4ad81b6c418500a450883b17f4819a3c7c5d6519fda84c3532b8a0316",
+    "label_sha256": "338b8074316e14a58e5439a590f051ae1e3620dc9b5285e0b911175d24abc5cc"
+  },
+  {
+    "id": "003ca9082c7047d3",
+    "image": "003ca9082c7047d3.png",
+    "latex": "\\partial_{i}f=\\frac{\\partial f}{\\partial\\xi^{i}}:=\\frac{\\partial\\overline{f}}{\\partial\\xi^{i}}",
+    "split": "test",
+    "image_sha256": "f8b9c23ae79643353cd54cd41c1fe4e5ab43bd579543049b3867cc2a0e02b58e",
+    "label_sha256": "3c2f76079b9646d7203aeb1707378a64e05f9a31c4f99162b7db78ed6900f276"
+  },
+  {
+    "id": "004c9413be3ff1be",
+    "image": "004c9413be3ff1be.png",
+    "latex": "\\langle A\\rangle_{\\psi}=||A\\psi||^{2}",
+    "split": "test",
+    "image_sha256": "bb39e23c1fd80a9607395c81f2648eeb53b0ca9ab9daf35e1a36227c516a3f49",
+    "label_sha256": "11e41a52b057a2b405170d505514c6ea2ac17c6eab3829b258a5ea2283f2d9ef"
+  },
+  {
+    "id": "004fc8d3f626f1d9",
+    "image": "004fc8d3f626f1d9.png",
+    "latex": "\\delta_{j,j_{1}}\\delta_{m,m_{1}}",
+    "split": "test",
+    "image_sha256": "e4b70edf81bda85b59fe1ee1b1ec14f725349cf6da8fa46a97b019d7953b56cb",
+    "label_sha256": "2a7687d501fc0ce9d56d43370003eaa7b58aea8253550a47625b198fa4c2aa62"
+  },
+  {
+    "id": "0052b8e13b5f4a36",
+    "image": "0052b8e13b5f4a36.png",
+    "latex": "w(\\neg\\theta)=F_{\\neg}(w(\\theta))",
+    "split": "test",
+    "image_sha256": "91a4bc52a1ad2803bebbc5548319befdd7dd6431d30dc99d76c624c5bd0546fa",
+    "label_sha256": "f053cb411c42a807f4bfbab7b926e2f723e2e683993a8e9a4f577b2d7c388a29"
+  },
+  {
+    "id": "00692074bbc0f678",
+    "image": "00692074bbc0f678.png",
+    "latex": "t\\longrightarrow F(t,t_{0},x)",
+    "split": "test",
+    "image_sha256": "6af33c852703d4ca75a7b13bbfa5fb9d32e0627233b02e27614597fd2c6d18c9",
+    "label_sha256": "4141eb56725f315e982c1c2fed0258a3c11928ac82e9a8ceb75f757a85af6ff5"
+  },
+  {
+    "id": "006badbfc63bbd21",
+    "image": "006badbfc63bbd21.png",
+    "latex": "p=(p_{x},p_{y},p_{z})",
+    "split": "test",
+    "image_sha256": "fc0d0d0e1d654650c933b0dbd4b82058d9944025799361d0b57bc3e8b466abee",
+    "label_sha256": "88e2970a130ecfa5c0db95e48540f06d8bf0270942c1d5d9b344cfdcfe944072"
+  },
+  {
+    "id": "0082d4aa943b9f8c",
+    "image": "0082d4aa943b9f8c.png",
+    "latex": "|\\frac{d^{2}y}{dx^{2}}|\\approx\\frac{1}{R}",
+    "split": "test",
+    "image_sha256": "6850fc26ee9b0138d61dc773ca00124a915d4d2031bb230e4222ec91226a1016",
+    "label_sha256": "1fc8e326ad83db6479d90b7a7c67457545f950a9943b0742beea75dfdfc4a146"
+  },
+  {
+    "id": "0083f66ddd05c46c",
+    "image": "0083f66ddd05c46c.png",
+    "latex": "m_{i,j}=x^{i}\\cdot x^{j}",
+    "split": "test",
+    "image_sha256": "8fe266abf8160469dd057f89762716e1c168b94c46f2ecd70296923ffe1a5373",
+    "label_sha256": "b1387d5e1ab82d45d37126ea885f6c6831e44fed8fc4b4ed5c6790dec9105d2b"
+  },
+  {
+    "id": "0090db2a639b5c98",
+    "image": "0090db2a639b5c98.png",
+    "latex": "S_{ijk}\\rightarrow S_{ij}(\\omega_{k})",
+    "split": "test",
+    "image_sha256": "5c21f3ea6fee71606386c4d68c9c2874dd6705a8ca8e87e62fda0ac2a875f0f1",
+    "label_sha256": "5abc88021275f886eab7e4c180d9f6e059b649f15ee9b2e31f44c2cdb4959736"
+  },
+  {
+    "id": "00915f0ffe17930e",
+    "image": "00915f0ffe17930e.png",
+    "latex": "(g^{a}modp,g,p)",
+    "split": "test",
+    "image_sha256": "57760d2e1465d6b2cff197d73cb14810355642360df7a63cdd59874c7d964328",
+    "label_sha256": "01c40d1fd4f31e68ee3ec0c6e5dec6aff1e7760d4d53c3898508697e78b7462e"
+  },
+  {
+    "id": "009d124a50399bba",
+    "image": "009d124a50399bba.png",
+    "latex": "J_{i}=\\sum_{j}L_{ij}\\frac{\\partial F_{j}}{\\partial x_{j}}",
+    "split": "test",
+    "image_sha256": "2b7b04a6dff505f1c98ceb2599f5aac4e9dae91268f202bdc4a0a46ca165bdd3",
+    "label_sha256": "63ac3e35391eaeb0792a6c1d599b22982fd4daabb6d7a79f5da62960052d6ff1"
+  },
+  {
+    "id": "009fb93aab47d6f5",
+    "image": "009fb93aab47d6f5.png",
+    "latex": "\\{f_{X}(\\cdot;\\theta)|\\theta\\in\\Theta\\}",
+    "split": "test",
+    "image_sha256": "e35c34eac038daecafabe852d1c8f4c721711b5460b25386cae62e0189ddde3b",
+    "label_sha256": "2366294a5e715f212b06ff47d53ab081dbebdd6eee3ddaac94a0ddc8ac8223fa"
+  },
+  {
+    "id": "00ad7566b9f1d872",
+    "image": "00ad7566b9f1d872.png",
+    "latex": "\\dot{x}(t)=f(x(t))",
+    "split": "test",
+    "image_sha256": "efd701fd0c888caab0c29d85a3275c7a8cd97d9e5581cca8639918c129d1a430",
+    "label_sha256": "5891dc4129dad792c7852193bfdc17e7e5f4bde75bbc377efa0a7ea20e3fd04d"
+  },
+  {
+    "id": "00ba90fe7f71d8c6",
+    "image": "00ba90fe7f71d8c6.png",
+    "latex": "\\Omega((logn)/n^{2})",
+    "split": "test",
+    "image_sha256": "6ae45a49a3b9b024ad685adc8d30dc7ae174894ef4086f0d4053c50811a1b4db",
+    "label_sha256": "30b0e60f29084289e19e333300a41d92a8829301b3b247dc0500f59bfc3937e3"
+  },
+  {
+    "id": "00c46c9b07b39bb7",
+    "image": "00c46c9b07b39bb7.png",
+    "latex": "l_{n}=kl_{n}\\cdot\\frac{b_{n}}{b_{a}}\\cdot\\frac{s_{n}}{s_{a}}",
+    "split": "test",
+    "image_sha256": "cd9d5465e651e9affe7f1778fc641b8b62d5759b94a889028992a7028d5e8987",
+    "label_sha256": "4fbffe462eddd6e5364f4b3fee458f0034c1a66d672d4913b87412eea500d92b"
+  },
+  {
+    "id": "00d4fc6636cbf2d9",
+    "image": "00d4fc6636cbf2d9.png",
+    "latex": "\\tilde{g}_{n}=[\\begin{matrix}g_{n}\\\\ \\gamma_{n}\\end{matrix}]",
+    "split": "test",
+    "image_sha256": "96e70082afae5dbce35f3417f6b40cdd9d7feec839c12ea1db64386adb1daa82",
+    "label_sha256": "4869f91b0d4c989c1ea24af0454aaecaf4cd46bc81b850925606a0af865031d7"
+  },
+  {
+    "id": "00db5331b85f4d47",
+    "image": "00db5331b85f4d47.png",
+    "latex": "N=|V|",
+    "split": "test",
+    "image_sha256": "96332dca2affcaa5df6e782aa07bf1fb4101251479f80336ed207f1ba6287c13",
+    "label_sha256": "104530453da7d2e4e3151a1d489cc226fbd439ff5328fc2ffec708e293932759"
+  },
+  {
+    "id": "00eaf4f2d3d20bb1",
+    "image": "00eaf4f2d3d20bb1.png",
+    "latex": "B=ln(-b)",
+    "split": "test",
+    "image_sha256": "dae756a2c81f8c916d3b4ec4f9adec8e07c5998e1ec78d0953f8bfe160c7389b",
+    "label_sha256": "683a0704ca21f7e7069c7cca1b9a2d0af82863b18bf211136f6b02f66df040ab"
+  },
+  {
+    "id": "00fcddfee1ebfee6",
+    "image": "00fcddfee1ebfee6.png",
+    "latex": "2sin(x/2)",
+    "split": "test",
+    "image_sha256": "30a599dcdab9fd9566ee082311267a91103596006e5780fc3375c80c8f35afc6",
+    "label_sha256": "1ef5381000cec968a248596cf0c9dfdbd6560d736468ebdf2f94f62c388fa361"
+  },
+  {
+    "id": "00fee560e6c9af79",
+    "image": "00fee560e6c9af79.png",
+    "latex": "\\sqrt{1-\\omega^{2}r_{0}^{2}}",
+    "split": "test",
+    "image_sha256": "58132da86e824fd4b0a754a4f86c79bdf64e4084d2f3d3490f8d71fbb22a6279",
+    "label_sha256": "f5bfaa0f4d689e54b90e2f89e180327068b62dac6fab4c395b46336b3a56c61b"
+  },
+  {
+    "id": "010d0f9e951a7a44",
+    "image": "010d0f9e951a7a44.png",
+    "latex": "x_{i}^{\\prime}\\equiv\\frac{1}{1+e^{-\\frac{x_{i}-\\mu_{i}}{\\sigma_{i}}}}",
+    "split": "test",
+    "image_sha256": "a6457d936ed9ebc38d21bedb292198ffd37ef47ea204209d5ecf027bd8f4ab93",
+    "label_sha256": "0070def18998be92293930d64a21d09576b431aa55c78c9ad7ae3049ed4bc10d"
+  },
+  {
+    "id": "010d4fea2361f01f",
+    "image": "010d4fea2361f01f.png",
+    "latex": "Inj(M_{i})<\\epsilon(n)",
+    "split": "test",
+    "image_sha256": "2cbc7cb08191f247bc9c350377ac24619686fac96d25b3f200d15c16836336c7",
+    "label_sha256": "726aa24bbbe8cbf6bbd2dfde1c54d898e46ae8f09903cf0997d30912418e813a"
+  },
+  {
+    "id": "0111fa141bb73b48",
+    "image": "0111fa141bb73b48.png",
+    "latex": "-a^{n}u[-n-1]",
+    "split": "test",
+    "image_sha256": "ac18deda3495d29a0ccb8d0c45536c38abab8cf67396487eda999bcc037fc07e",
+    "label_sha256": "eaf4f183913abc2160878ee2c3c896ca821f6d280380bb52ca3454a8188967ce"
+  },
+  {
+    "id": "0114e881d8b22bbb",
+    "image": "0114e881d8b22bbb.png",
+    "latex": "(\\Lambda(A):A\\in B_{b}(S))",
+    "split": "test",
+    "image_sha256": "adaed6e0a6117f6e487106ebabd371f20222046644a00dbd992475817ea33308",
+    "label_sha256": "90dc6b31c1820c7ad78909d4603eb7779a502154baa0f653812b1ec516dba341"
+  },
+  {
+    "id": "011f1f41eb55b661",
+    "image": "011f1f41eb55b661.png",
+    "latex": "(\\frac{lnN}{N})\\rightarrow0",
+    "split": "test",
+    "image_sha256": "bc1d7510ecb3b0516bc0842a415b7ed05e151e66d9b14cb149b6b31f26b2aa8b",
+    "label_sha256": "a6887ec735e5ab99536ab985eba5e47e69e6eeee197185ff575b06b0c31a57f1"
+  },
+  {
+    "id": "0121d7fdad59c8ab",
+    "image": "0121d7fdad59c8ab.png",
+    "latex": "\\Leftrightarrow|PA|^{2}=9|PB|^{2}",
+    "split": "test",
+    "image_sha256": "02afdb9f0bb12db6ddf7d75f0ee4d2aaa9c7c6140939a585848da47ef687f6df",
+    "label_sha256": "4179e95a4e5e7b12509384a11571dc8b2be2ff1ee59b6c3015e3b2df0d15265c"
+  },
+  {
+    "id": "01292cf19c2c9c7c",
+    "image": "01292cf19c2c9c7c.png",
+    "latex": "u=1+l^{2}+m^{2}",
+    "split": "test",
+    "image_sha256": "efe74525becde20bd310f38f0b9259b560b5d216cfc5c21f6aba59b202e33327",
+    "label_sha256": "d59823a702265f9da1dbd61daaafcd0ae497bfb4b776ac3866d5c48bda6ce7c9"
+  },
+  {
+    "id": "013a32b84ce6252f",
+    "image": "013a32b84ce6252f.png",
+    "latex": "\\{L(u,v):u,v\\in X\\}",
+    "split": "test",
+    "image_sha256": "e7c4acac81ca6df757df1bccf3ea15be966206bd266c49a2b917702a1c931c31",
+    "label_sha256": "e78e4077654dace57393b5708a9c156d88ef0ec9baeabbd22104ad45631fbd8e"
+  },
+  {
+    "id": "01453872d3d2afe5",
+    "image": "01453872d3d2afe5.png",
+    "latex": "=J+\\epsilon_{0}\\frac{\\partial E}{\\partial t}",
+    "split": "test",
+    "image_sha256": "d44cd4d4affde382268115d4a4e3fdaddb98ee51ac09b6243a2760255e8988b8",
+    "label_sha256": "bc9d683075f8fa19f411a2e947596c05eafb354c0f56879a347eb21e841f021a"
+  },
+  {
+    "id": "014f7412fa06f5c0",
+    "image": "014f7412fa06f5c0.png",
+    "latex": "||L_{x}||_{(l^{p})^{*}}=||x||_{q}",
+    "split": "test",
+    "image_sha256": "578c4ffe0a4f89fd72931b93c68bc0f4d56fdd2d42098fd03671582bdfb01278",
+    "label_sha256": "54f0dae4343d7186e7ac2901d473ce432ff3c0728039ec19d32899e0129d2f33"
+  },
+  {
+    "id": "015e012d8baa97f3",
+    "image": "015e012d8baa97f3.png",
+    "latex": "\\epsilon,\\delta,K>0",
+    "split": "test",
+    "image_sha256": "9226720bebcb6680c78276e2dc8ac9fedaae10855047c1702f7293f051d8e87a",
+    "label_sha256": "a3c937a145234ae246bad90d9a45200884bb0294e549a05af6f53cd6b0bb2dcc"
+  },
+  {
+    "id": "016a39f81ff20b8d",
+    "image": "016a39f81ff20b8d.png",
+    "latex": "\\frac{\\partial}{\\partial\\overline{z}}w(z)=0",
+    "split": "test",
+    "image_sha256": "3e0b69415c3540312547bc061a6dad45a9df85cc046bb2354144f18a97b44078",
+    "label_sha256": "8b682b52255343243d8b54928348ddd961293115495e6cf6d88fddfe2979ea42"
+  },
+  {
+    "id": "01752f0f5fba0225",
+    "image": "01752f0f5fba0225.png",
+    "latex": "L=(\\begin{matrix}1&0\\\\ \\frac{-1}{f}&1\\end{matrix})",
+    "split": "test",
+    "image_sha256": "c222d7bf8583c50eab99f5c920b081035a5ba300acfb0eb7a369231483baabe8",
+    "label_sha256": "9b6aae5f1eb88e7febb3f8cc783ccbc78afd64f887d76efebe255a5658e35a37"
+  },
+  {
+    "id": "0175c1fb5814dc11",
+    "image": "0175c1fb5814dc11.png",
+    "latex": "\\Omega=\\sqrt{|\\chi_{g,e}|^{2}+\\delta^{2}}",
+    "split": "test",
+    "image_sha256": "a5729e9afa5e752bf4a3e693e6a2399d620264c5245d139509f7468ce1ecc11e",
+    "label_sha256": "97868a1ac2545b9cca74c5c396db241e23e55c2a07dd42972bb933ca22fc102e"
+  },
+  {
+    "id": "0180366e774d93be",
+    "image": "0180366e774d93be.png",
+    "latex": "\\Omega(eg)=g^{-1}\\Omega(e)g",
+    "split": "test",
+    "image_sha256": "3cca72ad45c4e888f7bd12d2fca9fcad3f2822ef6d92b238a27ba1c1e35f4332",
+    "label_sha256": "178ad4652d03e961263beaa14e2f48953314fd8de97f162da60f23f9d8d94682"
+  },
+  {
+    "id": "01859fc130dc9008",
+    "image": "01859fc130dc9008.png",
+    "latex": "(++++)",
+    "split": "test",
+    "image_sha256": "e7aca17f45ac794c62b5e624b30210c1fe14dc5255193fe7ec2c30e98dadabcc",
+    "label_sha256": "e6a1743a1845b0de1581d616fb88a722aed321085f05bc5bde768d92a0372ada"
+  },
+  {
+    "id": "01917677eaf160bb",
+    "image": "01917677eaf160bb.png",
+    "latex": "Pr(s|I)\\propto1/s",
+    "split": "test",
+    "image_sha256": "4720eea7d16f9cd2702c893980203969b44ff553b5ab9197dd8671213f6646ee",
+    "label_sha256": "45c20994041c8860c770f3c0f6058c1abc308670c2511d8e7eaa9f4d1b251974"
+  },
+  {
+    "id": "0199f657babdf636",
+    "image": "0199f657babdf636.png",
+    "latex": "\\prod_{p}p/(p-1)",
+    "split": "test",
+    "image_sha256": "4fb2de8d1198e135f90dbe95a67ac73908bc0529fab35cc4c253e64112f3586e",
+    "label_sha256": "5a62c43cb3a8e637fcc14f179690d804e5591b676bc16b385c6f21b350188f3f"
+  },
+  {
+    "id": "01a2f3186b7e33e1",
+    "image": "01a2f3186b7e33e1.png",
+    "latex": "(2n,n,\\lambda,1)",
+    "split": "test",
+    "image_sha256": "b4cb65277ecaceaff697c7c40a1a1dc42018d4c47f781476e0b44f3c44158e0c",
+    "label_sha256": "375d67d79a770c5006b7f11b13147370c3b28f77056c91ea15ce42b872f6c100"
+  },
+  {
+    "id": "01a53ae1e3a9b918",
+    "image": "01a53ae1e3a9b918.png",
+    "latex": "E:R^{n}\\rightarrow T_{p}M",
+    "split": "test",
+    "image_sha256": "1c8b2e211da5abfa15b3ca6b33aaabe969f908624a8ffbefc7eb1147337a2d83",
+    "label_sha256": "924f3e9bf63062d65111e48b88cf6156db840d2c36824e3e73eb8138a66c91a9"
+  },
+  {
+    "id": "01ab618a2350036f",
+    "image": "01ab618a2350036f.png",
+    "latex": "f_{n}\\rightarrow\\chi_{[1,2)}",
+    "split": "test",
+    "image_sha256": "c89c1aa79f6eca956ebe110db0aca5b8328386bb5b9627de89fed0097c0eebb7",
+    "label_sha256": "cceda1db814b531bba4f97e10771115998f11bea4daabed4a022618e247bae27"
+  },
+  {
+    "id": "01b552b8a037ab13",
+    "image": "01b552b8a037ab13.png",
+    "latex": "T_{pq}(e_{p}\\otimes e_{q})",
+    "split": "test",
+    "image_sha256": "735414e28f8d78537abaff8c284b1f85a763c30355340643a38cf3f70a6fc12a",
+    "label_sha256": "c49c890c0a6fc877e3a2094178e1f36d8ea744313a182668171634b826561a94"
+  },
+  {
+    "id": "01b74db41e479782",
+    "image": "01b74db41e479782.png",
+    "latex": "\\vec{x}\\in S",
+    "split": "test",
+    "image_sha256": "e707dd50a879c1e0a2b124f25454aabddd1686995eca4a245fe1deb47d71f806",
+    "label_sha256": "3caa57359ae71caf37a8b5635b53898ac95f05786aafb98595c229ce1b4c16ad"
+  },
+  {
+    "id": "01c37bbe7ea55c56",
+    "image": "01c37bbe7ea55c56.png",
+    "latex": "T+ATT=1+E",
+    "split": "test",
+    "image_sha256": "8a81a3c14c5d242696d6b11425305be1038c01f5efd411f523bdf6c549178df6",
+    "label_sha256": "6c49d0720f3fbbd0b6e692e31d9868a8c9ce4cee77be3ab2216c076204a0b6a9"
+  },
+  {
+    "id": "01cdd808862eab64",
+    "image": "01cdd808862eab64.png",
+    "latex": "T^{t}:=S^{1}\\times\\cdot\\cdot\\cdot\\times S^{1}",
+    "split": "test",
+    "image_sha256": "aa7236a0b0d553e1d24cdcd8a757c4ccf5d467ea261235dd171c1fae34bcccc0",
+    "label_sha256": "a7c134a93f0657093760ae76c8cf1aa045fe8040dc23631674a3620beec61984"
+  },
+  {
+    "id": "01cf085d26abe325",
+    "image": "01cf085d26abe325.png",
+    "latex": "G^{p^{k}}=\\{g^{p^{k}}|g\\in G\\}",
+    "split": "test",
+    "image_sha256": "2027e69e8a03131650c0f66f17e3f3b321ff65c44146f987687c2bd2639f5879",
+    "label_sha256": "b2ae5d14e414b837dc13d0248dcd84f344a1a79a9773c76d80f73c23471a8070"
+  },
+  {
+    "id": "01d12458811a5a38",
+    "image": "01d12458811a5a38.png",
+    "latex": "\\Omega=arg(-z_{2},z_{1})",
+    "split": "test",
+    "image_sha256": "8ad58d9ce1e803fe50c7cf25d52e6d9c9e6442b85ff1de850fbed6342126fafc",
+    "label_sha256": "89f1407c1f22eebef96d1a59f05487f715f8632d5337776f2d3504e242bc77b4"
+  },
+  {
+    "id": "01d2b56291c7ffdd",
+    "image": "01d2b56291c7ffdd.png",
+    "latex": "N_{i}\\overline{r_{i}}",
+    "split": "test",
+    "image_sha256": "48275efe0df07da99cbb0816af29f0f9487213816be8a61e7ca0f14e7e7c5816",
+    "label_sha256": "bc21b9d7eb6694ea3a113c32c1b4e7f2cff6299f0244dd70298a855bfa4e1344"
+  },
+  {
+    "id": "01d2f97f90ed79e6",
+    "image": "01d2f97f90ed79e6.png",
+    "latex": "m\\equiv\\frac{RF_{,R}}{F}",
+    "split": "test",
+    "image_sha256": "c47c5c6904d8a29a869ecc64cb4d64b84329eb0af521920026684096114d0900",
+    "label_sha256": "0cc83c792ae1765fbbd3c12142c316c669e3d226f3912fd0017fb74b6cd3e67a"
+  },
+  {
+    "id": "01d4d9a9dc145333",
+    "image": "01d4d9a9dc145333.png",
+    "latex": "K_{m}=\\frac{1}{2}(k_{1}+k_{2})",
+    "split": "test",
+    "image_sha256": "262333f4eb93e5a7f6df116b3d07311ef59fca23f94185614046a9760e05e60a",
+    "label_sha256": "4f584cbddbe0f38804bdf0935a0df790497898bafd8fea48072bd319c62ab05a"
+  },
+  {
+    "id": "01d54b93c127e89c",
+    "image": "01d54b93c127e89c.png",
+    "latex": "F^{0}[f]=f",
+    "split": "test",
+    "image_sha256": "0ee0fd0c5ed5efce421087f5886a266c2750beafd5699dcda8156ca7aa0abb63",
+    "label_sha256": "660adb28134cea840ecb27339d88e42f4f90a175dea14f173235121a341a4114"
+  },
+  {
+    "id": "01d90fce29b20f64",
+    "image": "01d90fce29b20f64.png",
+    "latex": "A\\models_{X}^{+}Rt_{1}...t_{n}",
+    "split": "test",
+    "image_sha256": "7e2dfde253b49e7227f45253809a49ac7e7c966832204472035d802e85e4e19f",
+    "label_sha256": "d7a19243c683c224fad35e8ed844a8dbeb7712618d27914e3c31c032f09b87be"
+  },
+  {
+    "id": "01e4c8973307a964",
+    "image": "01e4c8973307a964.png",
+    "latex": "|g,n\\rangle\\rightarrow|e,n-1\\rangle",
+    "split": "test",
+    "image_sha256": "7b481c136878c97ea23664103266b8c3a45b40c516ca44fbaddae5440555bfa8",
+    "label_sha256": "33fd67431033b02e69b810c73627c9a3c41d04ecffb6f2625fea0eee120f111f"
+  },
+  {
+    "id": "01e6c79f4d27bc54",
+    "image": "01e6c79f4d27bc54.png",
+    "latex": "N(t)=N_{0}2^{-t/t_{1/2}}",
+    "split": "test",
+    "image_sha256": "3fdbe9bd071554cfd48e7a7122c9c3a09d69d287b5680ca9070ffe05d5d914d4",
+    "label_sha256": "568880d5e3658216cb039d32988444d4da4d371eb6f93d21e911353bdcb3f2c3"
+  },
+  {
+    "id": "01f3445177808c3d",
+    "image": "01f3445177808c3d.png",
+    "latex": "X_{2i}\\epsilon R^{Q}",
+    "split": "test",
+    "image_sha256": "59173f7ad9ceba172448833f52e66644a1a47ea0d21eb875261ce57ca883ad6a",
+    "label_sha256": "529433ee642249968a10cd313b81c6a2b9d51ffd3258a2ef1d6c13e59996abfe"
+  },
+  {
+    "id": "0204f1101b3f4033",
+    "image": "0204f1101b3f4033.png",
+    "latex": "(x,y,\\theta,\\kappa,\\kappa^{\\prime})",
+    "split": "test",
+    "image_sha256": "621f1416fddb29012322b25c46d18e5505394c0f2d783b6a106ad5d139006841",
+    "label_sha256": "0b1854635024829c81a0cd8e0dce5e58b6f641ca24e4088a9699d9ec7da4a90d"
+  },
+  {
+    "id": "02248037ee4a5528",
+    "image": "02248037ee4a5528.png",
+    "latex": "(h,h(\\hat{k}),h(\\hat{l}))",
+    "split": "test",
+    "image_sha256": "1099dabf13d417ffb4ec7aa26b652c12b996c1a5f6ef1271e55df264309108e6",
+    "label_sha256": "86e17603b33b6e0f620f6dd487798f2cc8bf87ebec8d560c2a636207ea96c98f"
+  },
+  {
+    "id": "022b4cfb5a5a3856",
+    "image": "022b4cfb5a5a3856.png",
+    "latex": "d^{\\prime}=V_{ud}d+V_{us}s",
+    "split": "test",
+    "image_sha256": "dedba7ed8bc7b9a7084746dbbc49f0d9173c625a0235c32ea3ed80c2eb0fbaee",
+    "label_sha256": "728c59c436e00a3c3098036c6ca49c02295f32010e044031166ba2dd8e6e0796"
+  },
+  {
+    "id": "022be26e0a8ab535",
+    "image": "022be26e0a8ab535.png",
+    "latex": "|\\psi\\rangle=\\sum_{n=0}^{\\infty}a_{n}|\\psi_{n}\\rangle",
+    "split": "test",
+    "image_sha256": "77f7e1cff2afc145c4455402d5c1ec67605dbe881aee82776e9e6eaa1ec126fd",
+    "label_sha256": "1cdcd605b703e924e00c67d713be66e35b32ec0df1a04055daa9e9f82171763e"
+  },
+  {
+    "id": "0235a447c15a24d7",
+    "image": "0235a447c15a24d7.png",
+    "latex": "nlog_{2}n-\\frac{n}{ln2}",
+    "split": "test",
+    "image_sha256": "cb81323d66cbe8efa7eccddbb944da1a51026efce2226273f5f099eb11876c2c",
+    "label_sha256": "fdac2046e649f2c93628c2f133531ca51778335051a129c51740ab029b485833"
+  },
+  {
+    "id": "023a443f36a838ff",
+    "image": "023a443f36a838ff.png",
+    "latex": "\\nabla_{\\vec{\\theta}}=D_{d}\\nabla",
+    "split": "test",
+    "image_sha256": "469f60ab33d93c46325b2ed6b5d4a27bb2ae8f9134900decc0c688d8508b970e",
+    "label_sha256": "1d1b54d37a9b276d9619f0255debf16cb9f1d3fce4760e5d0e7aa71a9c753c93"
+  },
+  {
+    "id": "024279a4b8037bae",
+    "image": "024279a4b8037bae.png",
+    "latex": "f(y)=2+2y+y^{2}",
+    "split": "test",
+    "image_sha256": "d2b7898d89a9322eeb16e92f6a5f03290da70bf07059c939f55b589cc5af7918",
+    "label_sha256": "7d3ac69f80643f05f09854139779bcf877e50e1bd747da80f713f5905ea04414"
+  },
+  {
+    "id": "0247a5d7e1002d66",
+    "image": "0247a5d7e1002d66.png",
+    "latex": "|V_{0}|\\gg E_{f}",
+    "split": "test",
+    "image_sha256": "a7b00318742805ffc80ca2f2564ee2188b0c3137bfa0d817c6b6d0939d1f56de",
+    "label_sha256": "323fd6a1d169c92a92e382f7b01bf2fcc77b11c9779d08b3484361d72ead1b69"
+  },
+  {
+    "id": "0255dc5b14261907",
+    "image": "0255dc5b14261907.png",
+    "latex": "1+x+\\frac{x^{2}}{2}",
+    "split": "test",
+    "image_sha256": "109a1518e8dd5e92b653152c1741a32a847edd92fd8ea9608e3d4de19ec4639f",
+    "label_sha256": "095822759f8403d484ce9cc63815a1c35dca0bbe998ea6611c6b4e10ee4a78ba"
+  },
+  {
+    "id": "025f51bee0e59494",
+    "image": "025f51bee0e59494.png",
+    "latex": "g=g_{-1}\\oplus g_{0}\\oplus g_{1}",
+    "split": "test",
+    "image_sha256": "72977213aa6477265456f1801dd9ee6ea18ade03771a90b0bea4da42c22282ae",
+    "label_sha256": "a6e2423c1b3f206ca9928ccb3969a14a3967a4252c7e82ed818cdae24ffc51ce"
+  },
+  {
+    "id": "02657f6bba1d2004",
+    "image": "02657f6bba1d2004.png",
+    "latex": "f_{a}(bx)=f_{f_{a}(b)}(x)",
+    "split": "test",
+    "image_sha256": "678733237be34f64cd22e545b179dd6e50e154d720bc8b45e9cb65a26d08f332",
+    "label_sha256": "4da621e26795ade556dedc55eec5248b4adb79d72d2298f49969eaa1a3815ec0"
+  },
+  {
+    "id": "026fd85034106735",
+    "image": "026fd85034106735.png",
+    "latex": "T^{-1}=(T_{b}^{a})^{-1}",
+    "split": "test",
+    "image_sha256": "5bbd97d9f779090eaab882001246ce41f9f6d8ef2e8842d53c82cfa3a0cc604e",
+    "label_sha256": "778e4d9de9e5327a3ba06c3bc6bc2726f1858bfcdf5cc481373cc15371543f41"
+  },
+  {
+    "id": "02720f6a67e8bc09",
+    "image": "02720f6a67e8bc09.png",
+    "latex": "L_{10}=(C/P)^{p}",
+    "split": "test",
+    "image_sha256": "41012679cc2c6be782a71153ecd246e3cc9a9545820821abc263fbc52fa96991",
+    "label_sha256": "729a93dadc9926de57f7be70c5ea24944a719d635d002b0fdecfb4808e82113d"
+  },
+  {
+    "id": "0272a794109d5d2d",
+    "image": "0272a794109d5d2d.png",
+    "latex": "P_{F}=\\sqrt{P_{P}\\cdot P_{L}}",
+    "split": "test",
+    "image_sha256": "70a78261ebba54f6ec986686abf5f5841d877dc6e852281ce76da3911fc7d11b",
+    "label_sha256": "74280dbc8bf5a80713ccf4503053b3335d827dbf7d3dad84d8506ad4223ce64d"
+  },
+  {
+    "id": "0276c02c9b9222e9",
+    "image": "0276c02c9b9222e9.png",
+    "latex": "f^{-1}(y)=\\sqrt{y}",
+    "split": "test",
+    "image_sha256": "0162ab2cd5bb4d5f8c3c97f7ac745cfb2b23020cebbe29f87884cc7dc07a12ef",
+    "label_sha256": "930a8d8337ec99063b7b817a2956fa8eded9788f00264e0f7d14aaf2483d6dc5"
+  },
+  {
+    "id": "028414d36ea98262",
+    "image": "028414d36ea98262.png",
+    "latex": "\\Delta b/b^{2}\\approx\\Delta f/f^{2}",
+    "split": "test",
+    "image_sha256": "7539ce1c2a7ed502cc4e36652e74e92f66276c2affcfd546dfd7984f686b7951",
+    "label_sha256": "5140678a4e7056d532bcc11032e881869488e6e6208ecb9530f2b1c2dcdfdc9a"
+  },
+  {
+    "id": "02894b4ff1ee6c7b",
+    "image": "02894b4ff1ee6c7b.png",
+    "latex": "0/x=0,x/x=1",
+    "split": "test",
+    "image_sha256": "bdfb069718a7599ece3e862de27a84a49a9a451d5e980a89f40a72d86969a671",
+    "label_sha256": "398281fee0cacd5fbc740208b1e18ed5746d3128bfc5f89f70b981e32cd396d6"
+  },
+  {
+    "id": "028cf1f0507df703",
+    "image": "028cf1f0507df703.png",
+    "latex": "U_{i}(I)=I_{L_{i}}",
+    "split": "test",
+    "image_sha256": "dde1327ca1e5004527b43af18d28dc257d228c72ea45305dfc17cf1abbd5e313",
+    "label_sha256": "d81e71c1a134e9dda65a9c6ab2ee65d6aa147ff7513d6e7b6163b578329f2a39"
+  },
+  {
+    "id": "029b5da0999d4903",
+    "image": "029b5da0999d4903.png",
+    "latex": "\\omega_{\\{(k,i),(k^{\\prime},i^{\\prime}),(k^{\\prime\\prime},i^{\\prime\\prime})\\}}",
+    "split": "test",
+    "image_sha256": "e929b7c78489b90693c5f185be4ed9e7bbc8410d8c12e0ad8619b1294ab3b302",
+    "label_sha256": "e33f31917788468a72172d316ebd977c8cc2b906af021cb90e8feb01fb88afbe"
+  },
+  {
+    "id": "029decc2d74fd082",
+    "image": "029decc2d74fd082.png",
+    "latex": "abca^{-1}b^{-1}d\\sim?",
+    "split": "test",
+    "image_sha256": "2c9e0df8f204eaf029cdcfa67fd36fec9f15a1ed1cc0041ce66425a34ec6bbcd",
+    "label_sha256": "229ec22fc6060157f5a1e197ee916d48ea661d3f27710fa24a0e565e254dee18"
+  },
+  {
+    "id": "02ace78dfc726867",
+    "image": "02ace78dfc726867.png",
+    "latex": "2sin(\\theta/2)r",
+    "split": "test",
+    "image_sha256": "6ab1c59bdd777fede203d25dcf58067341f4129dfa787d370e7f6f7535a5c635",
+    "label_sha256": "e219f5ac54d0b73a7d7da0930d2ae90b0da2aed605d6288e4f04dedeecbea186"
+  },
+  {
+    "id": "02aced0c052805c6",
+    "image": "02aced0c052805c6.png",
+    "latex": "1/x\\approx1-x",
+    "split": "test",
+    "image_sha256": "cfc826769d55e056829d306d8fe74a5b9567d56bcc9a632728d916d4a49cd425",
+    "label_sha256": "19a2678bb6622449fa0e5e936e25b5c18a3b8a87cc5eab227b1d53095fd8c115"
+  },
+  {
+    "id": "02b1dc6d4efd493a",
+    "image": "02b1dc6d4efd493a.png",
+    "latex": "\\Omega(R)=cP(R)",
+    "split": "test",
+    "image_sha256": "3e42d844be0d47ee50a549d5f9df1ce02592c1bd83877f2fe7bf27c5ec512ea2",
+    "label_sha256": "85db92923cee23182aa754ea9043aef5a5ef44baac02d0dd73b07cc90e286925"
+  },
+  {
+    "id": "02b7060b95d998eb",
+    "image": "02b7060b95d998eb.png",
+    "latex": "-|I|>I_{0}",
+    "split": "test",
+    "image_sha256": "c5251cea4c0c0beb7e45436ddd5c5d7b4b6fa9056cd405cc7188703832950a88",
+    "label_sha256": "3cb9bc6592fa6070c83c1dc713d389c31f60b28a2dbda6e7fac3f5bd4ce0e5d5"
+  },
+  {
+    "id": "02c39c1be9d660b7",
+    "image": "02c39c1be9d660b7.png",
+    "latex": "1-4\\pi r^{3}/3V",
+    "split": "test",
+    "image_sha256": "68739fb60d07e4e25d2d07976002a11e146406dfdaf948721dde7bc53b688620",
+    "label_sha256": "59078fcd56f9a16dc484e891b4be1eff6444fc460b67e65ddbb7ba5193987661"
+  },
+  {
+    "id": "02c6f6dea91a2a06",
+    "image": "02c6f6dea91a2a06.png",
+    "latex": "(RU^{2}D^{-1}BD^{-1})",
+    "split": "test",
+    "image_sha256": "43e7632604b22063d76d6a56d08ddf75b173d152939eb307d7df331c674f242a",
+    "label_sha256": "91461d714b4426e931b6c847ed0dfb382e8ea687990c8a897fb963ce167be2de"
+  },
+  {
+    "id": "02c9daf282f5a1e3",
+    "image": "02c9daf282f5a1e3.png",
+    "latex": "\\sum_{x\\in\\{0,1\\}^{T}}|x\\rangle|f(x)\\rangle",
+    "split": "test",
+    "image_sha256": "9a9fd6d07e1205c0a8100e0879abc11d17a4880fbed4844d7d5a6c78060a4ce6",
+    "label_sha256": "dc5f3f29e09fa3a3ee2a97b693326c1c655192ab6450e62979476ab71c8a2eaa"
+  },
+  {
+    "id": "02d5b5f98ac5fbd2",
+    "image": "02d5b5f98ac5fbd2.png",
+    "latex": "f_{z}(x)=e^{ix^{t}Zx/2}",
+    "split": "test",
+    "image_sha256": "d8c347308117b657d4e22beaba2b3c317d91f8a03f8fc9f88c8a9527e34da9b4",
+    "label_sha256": "aee48f7cc11319774f947061eb4f2aabe1c6bda5e35f2582b2609b538a1f9ed4"
+  },
+  {
+    "id": "02da6f52e30f674d",
+    "image": "02da6f52e30f674d.png",
+    "latex": "2^{k}t_{0}",
+    "split": "test",
+    "image_sha256": "a9dc6049916b372d518624c4759efed81432daec645ef2f55da6d036ce6409a3",
+    "label_sha256": "e228e13cecfabeb5dcbee1c928d3fa79828fe765201a9b7412c269965711c3a5"
+  },
+  {
+    "id": "02dcdb815d18cdf1",
+    "image": "02dcdb815d18cdf1.png",
+    "latex": "f(x_{t},t)=x_{t}e^{\\theta t}",
+    "split": "test",
+    "image_sha256": "6495cf02dffedcb1a383d4cf663a9c6085432804664fae81290f17c425b5050c",
+    "label_sha256": "a2bafdb000fd950810e620a91671dd4d824e4d1d9e391d4bd798f44286e6be32"
+  },
+  {
+    "id": "02de91b624143438",
+    "image": "02de91b624143438.png",
+    "latex": "y^{2}=x^{3}-n^{2}x",
+    "split": "test",
+    "image_sha256": "d58ba4e896c4fd48018658eb2fc372de760b6aaffca8778abec2f67af0ff14a2",
+    "label_sha256": "5a59b7faac2a442d6be28f3686a1d9fc9f15aacec2bc4884dd534c226a8651ba"
+  },
+  {
+    "id": "030373f9d3edac3b",
+    "image": "030373f9d3edac3b.png",
+    "latex": "\\frac{R_{U}}{r_{e}}\\approx\\frac{r_{H}}{r_{e}}\\approx10^{42}",
+    "split": "test",
+    "image_sha256": "dfa454c5acd93b754a17cb149c56aa8141b07359b383c07718d9781145915bfc",
+    "label_sha256": "27841eb5a38df7f84f9cdbae2af7f3b37984d6b731e1018dca09b2724e888104"
+  },
+  {
+    "id": "030a0f18b6fcb87b",
+    "image": "030a0f18b6fcb87b.png",
+    "latex": "\\pi(x)-\\pi(\\frac{x}{2})\\ge1",
+    "split": "test",
+    "image_sha256": "224981d69ec640adad2335e6fbc77729627f320708da8103f7b9604016dc23d1",
+    "label_sha256": "ee7074aaac6ee6df447f2dcb628980c41fd630332fe9138bd2d9029348d16da3"
+  },
+  {
+    "id": "030ea5646116a251",
+    "image": "030ea5646116a251.png",
+    "latex": "M_{2}=P_{1}^{\\prime}|P_{2}|...",
+    "split": "test",
+    "image_sha256": "fc288dd577958b02d577dd0d93ea80fc82da188afe0d73b5b499c909fe9da23b",
+    "label_sha256": "43e312d6b10f502103373abb7ac9b831e68a2fea5d9992025d56315d0a2171a2"
+  },
+  {
+    "id": "0316d949cd776194",
+    "image": "0316d949cd776194.png",
+    "latex": "X_{k}=p(e^{2\\pi i\\frac{k}{2^{n}}})",
+    "split": "test",
+    "image_sha256": "a6983d9d1309beb14c6b6b4105b68c5d56b4c68debdedc480a8aa75108fbb5a0",
+    "label_sha256": "73357984bbcd43773eb0accdc4b4e2a824801cbb98552aeabe81a839da60ca63"
+  },
+  {
+    "id": "032278982233fefa",
+    "image": "032278982233fefa.png",
+    "latex": "L_{r},L_{t},L_{L}/10",
+    "split": "test",
+    "image_sha256": "ab82fa2788e18825a2f70daef819c14a84b3f10b64ce44953100f7b7958af88f",
+    "label_sha256": "fcbeb6e4b185b8ed458af72855f5d4335fc07c832ac5014afb8a72c720fa6282"
+  },
+  {
+    "id": "032360b882783120",
+    "image": "032360b882783120.png",
+    "latex": "\\kappa_{2}=\\mu_{2}^{\\prime}-{\\mu_{1}^{\\prime}}^{2}",
+    "split": "test",
+    "image_sha256": "7590bafa51fdd630966305ca4ee192fb30c59694b8719f0f336ed204d8ce7656",
+    "label_sha256": "abe8814f4ba7a6c83baad7087d9d71857252389b909601651b2d2861d3c820c0"
+  },
+  {
+    "id": "0325d90612c71772",
+    "image": "0325d90612c71772.png",
+    "latex": "\\hat{\\Sigma}_{j,/j}",
+    "split": "test",
+    "image_sha256": "9e0599412919f5f3a1773a3ef1b71bb82c4814cd5a4ad90735f4a7650931a870",
+    "label_sha256": "f9b45cfd47cf015eca6101a702a8897241d60f8eceb9d95d4f45784d8f9d1c48"
+  },
+  {
+    "id": "03277de2f80a8aaf",
+    "image": "03277de2f80a8aaf.png",
+    "latex": "Y_{n+1}=I-XY_{n}",
+    "split": "test",
+    "image_sha256": "c203d7a87710c057d42694add7ebc869dcca0a6a7d4d7f9385c8ddbba691d0fa",
+    "label_sha256": "a40ba217e322816b8d111651759f1cee674b0b3e6fdf71e716c3c37d260d1d25"
+  },
+  {
+    "id": "0333d9584ff7c0d0",
+    "image": "0333d9584ff7c0d0.png",
+    "latex": "f^{-1}(x)=\\frac{1}{f(x)}",
+    "split": "test",
+    "image_sha256": "eff53b05589ee5a8e1852893ba2b10f953bc9d9a837af2f4004b94cf2bc2f62b",
+    "label_sha256": "240062196fa0ddaecf99480beebdabc0c227acd33d552539c9c8f5fc0034a5eb"
+  }
+]

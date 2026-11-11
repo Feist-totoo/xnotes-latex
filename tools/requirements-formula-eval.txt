@@ -1,0 +1,5 @@
+pillow==13.0.0
+numpy==2.5.4
+onnxruntime==1.23.2
+tokenizers==0.19.1
+requests==2.34.2

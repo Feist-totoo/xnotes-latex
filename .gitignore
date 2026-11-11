@@ -31,4 +31,13 @@ keystore.properties
 # Reproducible offline formula assets (tools/prepare_formula_model.py)
 app/src/main/assets/formula/*.onnx
 app/src/main/assets/formula/*.part
+app/src/main/assets/formula-glm/*.gguf
+app/src/main/assets/formula-glm/*.part
+app/src/androidTest/assets/handwriting/
 .venv/
+
+__pycache__/
+tools/formula_metrics/node_modules/
+
+.kotlin/
+app/src/androidTest/assets/packs/

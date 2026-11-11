@@ -1,4 +1,4 @@
-"""Fetch the pinned, AGPL-3.0 Texo model for a fully offline Android build."""
+"""Fetch the historical Texo model for desktop baseline evaluation only."""
 import hashlib
 import json
 from pathlib import Path
@@ -6,7 +6,7 @@ import urllib.request
 
 REVISION = "b2668efe5112082846fde4d446b9bfaab3989533"
 BASE = f"https://huggingface.co/alephpi/FormulaNet/resolve/{REVISION}/onnx/"
-DEST = Path(__file__).resolve().parents[1] / "app/src/main/assets/formula"
+DEST = Path(__file__).resolve().parents[1] / "build/legacy-formula"
 FILES = {
     "encoder_model.onnx": "fbd69cf63cf833db1e2ef40013d859b560671c1253278441a01bde4516b624ae",
     "decoder_model_merged.onnx": "61d4e9e60e3caa62af3f28a15a22bc13567eb4e618c87917d9597461e54c46be",

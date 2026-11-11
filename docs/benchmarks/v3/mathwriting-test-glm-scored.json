@@ -1,0 +1,702 @@
+[
+  {
+    "id": "000a4e8ca49c5a1c",
+    "truth": "(x-y)/sqrt(2)",
+    "latex": "\n$$\nx - y / \\sqrt {r ^ {2} + (2)}\n$$",
+    "seconds": 6.594000000040978,
+    "structure_match": false
+  },
+  {
+    "id": "001083e26028da36",
+    "truth": "\\nabla I=(I_{x},I_{y})",
+    "latex": "\n$$\n\\nabla I = \\left(I _ {x} \\times I _ {y}\\right)\n$$",
+    "seconds": 9.922000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "0017bb5822bcba69",
+    "truth": "P=P(C(Z))",
+    "latex": "\n$$\nP = P (C (z))\n$$",
+    "seconds": 12.765000000130385,
+    "structure_match": false
+  },
+  {
+    "id": "002ae6d5dd4173e4",
+    "truth": "x_{1}-x_{2}+x_{0}=0",
+    "latex": "\n$$\nx _ {1} - x _ {2} + x _ {0} = 0\n$$",
+    "seconds": 18.203999999910593,
+    "structure_match": true
+  },
+  {
+    "id": "00386113d577085b",
+    "truth": "\\langle a_{0},a_{1},...\\rangle\\in R^{\\omega}",
+    "latex": "\n$$\n\\langle a _ {0}, a _ {1}, \\dots \\rangle \\in R ^ {w}\n$$",
+    "seconds": 13.421000000089407,
+    "structure_match": false
+  },
+  {
+    "id": "003ca9082c7047d3",
+    "truth": "\\partial_{i}f=\\frac{\\partial f}{\\partial\\xi^{i}}:=\\frac{\\partial\\overline{f}}{\\partial\\xi^{i}}",
+    "latex": "\n$$\nO _ {i} f = \\frac {O f}{O 3 ^ {i}} = \\frac {O f}{O 3 ^ {i}}\n$$",
+    "seconds": 8.719000000040978,
+    "structure_match": false
+  },
+  {
+    "id": "004c9413be3ff1be",
+    "truth": "\\langle A\\rangle_{\\psi}=||A\\psi||^{2}",
+    "latex": "\n$$\n\\langle A \\rangle_ {4} = \\| A \\psi \\| ^ {2}\n$$",
+    "seconds": 9.094000000040978,
+    "structure_match": false
+  },
+  {
+    "id": "004fc8d3f626f1d9",
+    "truth": "\\delta_{j,j_{1}}\\delta_{m,m_{1}}",
+    "latex": "\n$$\n\\delta j, j _ {1} \\delta m, m _ {1}\n$$",
+    "seconds": 8.156000000191852,
+    "structure_match": false
+  },
+  {
+    "id": "0052b8e13b5f4a36",
+    "truth": "w(\\neg\\theta)=F_{\\neg}(w(\\theta))",
+    "latex": "\n$$\nw (\\neg \\theta) = F _ {7} (w (\\theta))\n$$",
+    "seconds": 9.734999999869615,
+    "structure_match": false
+  },
+  {
+    "id": "00692074bbc0f678",
+    "truth": "t\\longrightarrow F(t,t_{0},x)",
+    "latex": "\n$$\nf \\rightarrow F (t, t _ {0}, x)\n$$",
+    "seconds": 13.733999999938533,
+    "structure_match": false
+  },
+  {
+    "id": "006badbfc63bbd21",
+    "truth": "p=(p_{x},p_{y},p_{z})",
+    "latex": "\n$$\nP = \\left(P _ {x}, P _ {y}, P _ {z}\\right)\n$$",
+    "seconds": 12.281000000191852,
+    "structure_match": false
+  },
+  {
+    "id": "0082d4aa943b9f8c",
+    "truth": "|\\frac{d^{2}y}{dx^{2}}|\\approx\\frac{1}{R}",
+    "latex": "\n$$\n\\left| \\begin{array}{c c} d ^ {2} y \\\\ d x ^ {2} \\end{array} \\right| \\approx \\frac {1}{R}\n$$",
+    "seconds": 9.547000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "0083f66ddd05c46c",
+    "truth": "m_{i,j}=x^{i}\\cdot x^{j}",
+    "latex": "\n$$\nm _ {i j} = x ^ {i} \\cdot x ^ {j}\n$$",
+    "seconds": 7.734999999869615,
+    "structure_match": false
+  },
+  {
+    "id": "0090db2a639b5c98",
+    "truth": "S_{ijk}\\rightarrow S_{ij}(\\omega_{k})",
+    "latex": "\n$$\nS _ {i j k} \\rightarrow S _ {i j} (w _ {k})\n$$",
+    "seconds": 11.327999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "00915f0ffe17930e",
+    "truth": "(g^{a}modp,g,p)",
+    "latex": "\n$$\n(g ^ {a} \\mod p, g, p)\n$$",
+    "seconds": 10.922000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "009d124a50399bba",
+    "truth": "J_{i}=\\sum_{j}L_{ij}\\frac{\\partial F_{j}}{\\partial x_{j}}",
+    "latex": "\n$$\nJ _ {i} = \\sum_ {j} L _ {i j} \\frac {\\partial F _ {j}}{\\partial x _ {j}}\n$$",
+    "seconds": 11.858999999938533,
+    "structure_match": true
+  },
+  {
+    "id": "009fb93aab47d6f5",
+    "truth": "\\{f_{X}(\\cdot;\\theta)|\\theta\\in\\Theta\\}",
+    "latex": "\n$$\n\\{f _ {X} (\\cdot ; \\theta) | \\theta \\in \\theta \\}\n$$",
+    "seconds": 8.609000000171363,
+    "structure_match": false
+  },
+  {
+    "id": "00ad7566b9f1d872",
+    "truth": "\\dot{x}(t)=f(x(t))",
+    "latex": "\n$$\n\\dot {x} (t) = f (x (t))\n$$",
+    "seconds": 8.859999999869615,
+    "structure_match": true
+  },
+  {
+    "id": "00ba90fe7f71d8c6",
+    "truth": "\\Omega((logn)/n^{2})",
+    "latex": "\n$$\n\\leq ((p _ {y n}) n ^ {2})\n$$",
+    "seconds": 9.312000000150874,
+    "structure_match": false
+  },
+  {
+    "id": "00c46c9b07b39bb7",
+    "truth": "l_{n}=kl_{n}\\cdot\\frac{b_{n}}{b_{a}}\\cdot\\frac{s_{n}}{s_{a}}",
+    "latex": "\n$$\nl _ {n} = k l _ {a} \\cdot \\frac {b _ {n}}{p _ {a}} \\cdot \\frac {S _ {n}}{S _ {q}}\n$$",
+    "seconds": 11.484999999869615,
+    "structure_match": false
+  },
+  {
+    "id": "00d4fc6636cbf2d9",
+    "truth": "\\tilde{g}_{n}=[\\begin{matrix}g_{n}\\\\ \\gamma_{n}\\end{matrix}]",
+    "latex": "\n$$\n\\tilde {g} _ {n} = \\left[ \\begin{array}{c} g _ {n} \\\\ \\gamma_ {n} \\end{array} \\right]\n$$",
+    "seconds": 10.968000000109896,
+    "structure_match": true
+  },
+  {
+    "id": "00db5331b85f4d47",
+    "truth": "N=|V|",
+    "latex": "\n$$\nN = | V |\n$$",
+    "seconds": 9.234999999869615,
+    "structure_match": true
+  },
+  {
+    "id": "00eaf4f2d3d20bb1",
+    "truth": "B=ln(-b)",
+    "latex": "\n$$\nB = \\ln (- b)\n$$",
+    "seconds": 10.562000000150874,
+    "structure_match": false
+  },
+  {
+    "id": "00fcddfee1ebfee6",
+    "truth": "2sin(x/2)",
+    "latex": "\n$$\n2 \\sin (x / 2)\n$$",
+    "seconds": 9.593999999808148,
+    "structure_match": false
+  },
+  {
+    "id": "00fee560e6c9af79",
+    "truth": "\\sqrt{1-\\omega^{2}r_{0}^{2}}",
+    "latex": "\n$$\n\\sqrt {1 - c ^ {2} r _ {0} ^ {2}}\n$$",
+    "seconds": 9.827999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "010d0f9e951a7a44",
+    "truth": "x_{i}^{\\prime}\\equiv\\frac{1}{1+e^{-\\frac{x_{i}-\\mu_{i}}{\\sigma_{i}}}}",
+    "latex": "\n$$\nx _ {i} ^ {\\prime} = \\frac {1}{1 + e ^ {- \\frac {y _ {i} - u _ {i}}{e ^ {\\prime}}}}\n$$",
+    "seconds": 13.016000000061467,
+    "structure_match": false
+  },
+  {
+    "id": "010d4fea2361f01f",
+    "truth": "Inj(M_{i})<\\epsilon(n)",
+    "latex": "\n$$\n\\ln_ {n j} \\left(M _ {i}\\right) < \\varepsilon (n)\n$$",
+    "seconds": 12.25,
+    "structure_match": false
+  },
+  {
+    "id": "0111fa141bb73b48",
+    "truth": "-a^{n}u[-n-1]",
+    "latex": "\n$$\n- a^{n}u[-n-1]\n$$",
+    "seconds": 5.937000000150874,
+    "structure_match": true
+  },
+  {
+    "id": "0114e881d8b22bbb",
+    "truth": "(\\Lambda(A):A\\in B_{b}(S))",
+    "latex": "\n$$\n(\\Lambda (A): A \\in B _ {b} (Q))\n$$",
+    "seconds": 9.125,
+    "structure_match": false
+  },
+  {
+    "id": "011f1f41eb55b661",
+    "truth": "(\\frac{lnN}{N})\\rightarrow0",
+    "latex": "\n$$\n(\\frac {\\ln N}{N}) \\rightarrow 0\n$$",
+    "seconds": 7.577999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "0121d7fdad59c8ab",
+    "truth": "\\Leftrightarrow|PA|^{2}=9|PB|^{2}",
+    "latex": "\n$$\n\\Leftrightarrow | P A | ^ {2} = 9 | P B | ^ {2}\n$$",
+    "seconds": 7.359000000171363,
+    "structure_match": true
+  },
+  {
+    "id": "01292cf19c2c9c7c",
+    "truth": "u=1+l^{2}+m^{2}",
+    "latex": "\n$$\nu = 1 + 1 ^ {2} + m ^ {2}\n$$",
+    "seconds": 6.469000000040978,
+    "structure_match": false
+  },
+  {
+    "id": "013a32b84ce6252f",
+    "truth": "\\{L(u,v):u,v\\in X\\}",
+    "latex": "\n$$\n\\{L (u, v): u, v \\in X \\}\n$$",
+    "seconds": 8.719000000040978,
+    "structure_match": true
+  },
+  {
+    "id": "01453872d3d2afe5",
+    "truth": "=J+\\epsilon_{0}\\frac{\\partial E}{\\partial t}",
+    "latex": "\n$$\n= J + E _ {0} \\frac {\\partial E}{\\partial t}\n$$",
+    "seconds": 9.327999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "014f7412fa06f5c0",
+    "truth": "||L_{x}||_{(l^{p})^{*}}=||x||_{q}",
+    "latex": "\n$$\n\\| L x \\| (L p) ^ {*} = \\| x \\| _ {q}\n$$",
+    "seconds": 11.25,
+    "structure_match": false
+  },
+  {
+    "id": "015e012d8baa97f3",
+    "truth": "\\epsilon,\\delta,K>0",
+    "latex": "\n$$\n\\in , d, K > 0\n$$",
+    "seconds": 11.405999999959022,
+    "structure_match": false
+  },
+  {
+    "id": "016a39f81ff20b8d",
+    "truth": "\\frac{\\partial}{\\partial\\overline{z}}w(z)=0",
+    "latex": "\n$$\n\\frac {\\partial}{\\partial z} w (z) = 0\n$$",
+    "seconds": 4.780999999959022,
+    "structure_match": false
+  },
+  {
+    "id": "01752f0f5fba0225",
+    "truth": "L=(\\begin{matrix}1&0\\\\ \\frac{-1}{f}&1\\end{matrix})",
+    "latex": "\n$$\nL = \\left( \\begin{array}{c c} 1 & 0 \\\\ \\frac {- 1}{f} & 1 \\end{array} \\right)\n$$",
+    "seconds": 6.594000000040978,
+    "structure_match": true
+  },
+  {
+    "id": "0175c1fb5814dc11",
+    "truth": "\\Omega=\\sqrt{|\\chi_{g,e}|^{2}+\\delta^{2}}",
+    "latex": "\n$$\n\\Omega = \\sqrt {\\left| X _ {g r e} \\right| ^ {2} + \\delta^ {2}}\n$$",
+    "seconds": 8.75,
+    "structure_match": false
+  },
+  {
+    "id": "0180366e774d93be",
+    "truth": "\\Omega(eg)=g^{-1}\\Omega(e)g",
+    "latex": "\n$$\n\\Omega (e g) = g ^ {- 1} \\Omega (e) g\n$$",
+    "seconds": 5.7649999998975545,
+    "structure_match": true
+  },
+  {
+    "id": "01859fc130dc9008",
+    "truth": "(++++)",
+    "latex": "\n$$\n(+ + +)\n$$",
+    "seconds": 3.5780000002123415,
+    "structure_match": false
+  },
+  {
+    "id": "01917677eaf160bb",
+    "truth": "Pr(s|I)\\propto1/s",
+    "latex": "\n$$\nP _ {1} (S \\mid I) \\propto 1 / S\n$$",
+    "seconds": 4.4689999998081475,
+    "structure_match": false
+  },
+  {
+    "id": "0199f657babdf636",
+    "truth": "\\prod_{p}p/(p-1)",
+    "latex": "\n$$\n\\prod_ {P} P / (p - 1)\n$$",
+    "seconds": 4.0310000001918525,
+    "structure_match": false
+  },
+  {
+    "id": "01a2f3186b7e33e1",
+    "truth": "(2n,n,\\lambda,1)",
+    "latex": "\n$$\n(2 n, n, \\lambda , 1)\n$$",
+    "seconds": 5.9689999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "01a53ae1e3a9b918",
+    "truth": "E:R^{n}\\rightarrow T_{p}M",
+    "latex": "\n$$\nE: R ^ {n} \\rightarrow T _ {p} M\n$$",
+    "seconds": 5.641000000061467,
+    "structure_match": true
+  },
+  {
+    "id": "01ab618a2350036f",
+    "truth": "f_{n}\\rightarrow\\chi_{[1,2)}",
+    "latex": "\n$$\nf _ {n} \\rightarrow \\chi [ 1, 2)\n$$",
+    "seconds": 5.968000000109896,
+    "structure_match": false
+  },
+  {
+    "id": "01b552b8a037ab13",
+    "truth": "T_{pq}(e_{p}\\otimes e_{q})",
+    "latex": "\n$$\nT _ {p q} \\left(e _ {p} \\otimes e _ {q}\\right)\n$$",
+    "seconds": 4.328999999910593,
+    "structure_match": true
+  },
+  {
+    "id": "01b74db41e479782",
+    "truth": "\\vec{x}\\in S",
+    "latex": "\n$$\n\\overrightarrow {x} \\in S\n$$",
+    "seconds": 5.7649999998975545,
+    "structure_match": false
+  },
+  {
+    "id": "01c37bbe7ea55c56",
+    "truth": "T+ATT=1+E",
+    "latex": "\n$$\nT + A T T = 1 + E\n$$",
+    "seconds": 7.0310000001918525,
+    "structure_match": true
+  },
+  {
+    "id": "01cdd808862eab64",
+    "truth": "T^{t}:=S^{1}\\times\\cdot\\cdot\\cdot\\times S^{1}",
+    "latex": "\n$$\nT ^ {t} := S ^ {1} \\times \\dots \\times S ^ {1}\n$$",
+    "seconds": 6.25,
+    "structure_match": false
+  },
+  {
+    "id": "01cf085d26abe325",
+    "truth": "G^{p^{k}}=\\{g^{p^{k}}|g\\in G\\}",
+    "latex": "\n$$\nG ^ {p ^ {k}} = \\left\\{g ^ {p ^ {k}} \\mid g \\in G \\right\\}\n$$",
+    "seconds": 5.75,
+    "structure_match": false
+  },
+  {
+    "id": "01d12458811a5a38",
+    "truth": "\\Omega=arg(-z_{2},z_{1})",
+    "latex": "\n$$\n\\Omega = \\arg (- z _ {2}, z _ {1})\n$$",
+    "seconds": 5.2810000001918525,
+    "structure_match": false
+  },
+  {
+    "id": "01d2b56291c7ffdd",
+    "truth": "N_{i}\\overline{r_{i}}",
+    "latex": "\n$$\nN _ {i} \\overline {{r _ {i}}}\n$$",
+    "seconds": 2.827999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "01d2f97f90ed79e6",
+    "truth": "m\\equiv\\frac{RF_{,R}}{F}",
+    "latex": "\n$$\nm \\equiv \\frac {R F _ {1} R}{F}\n$$",
+    "seconds": 2.828999999910593,
+    "structure_match": false
+  },
+  {
+    "id": "01d4d9a9dc145333",
+    "truth": "K_{m}=\\frac{1}{2}(k_{1}+k_{2})",
+    "latex": "\n$$\nk _ {m} = \\frac {1}{2} \\left(k _ {1} + k _ {2}\\right)\n$$",
+    "seconds": 5.811999999918044,
+    "structure_match": false
+  },
+  {
+    "id": "01d54b93c127e89c",
+    "truth": "F^{0}[f]=f",
+    "latex": "\n$$\nF ^ {\\circ} [ f ] = f\n$$",
+    "seconds": 4.125,
+    "structure_match": false
+  },
+  {
+    "id": "01d90fce29b20f64",
+    "truth": "A\\models_{X}^{+}Rt_{1}...t_{n}",
+    "latex": "\n$$\nA \\models^ {+} x R t _ {1} \\dots t _ {n}\n$$",
+    "seconds": 5.188000000081956,
+    "structure_match": false
+  },
+  {
+    "id": "01e4c8973307a964",
+    "truth": "|g,n\\rangle\\rightarrow|e,n-1\\rangle",
+    "latex": "\n$$\n\\vert g, n \\rangle \\rightarrow \\vert e, n - 1 \\rangle\n$$",
+    "seconds": 5.593000000109896,
+    "structure_match": true
+  },
+  {
+    "id": "01e6c79f4d27bc54",
+    "truth": "N(t)=N_{0}2^{-t/t_{1/2}}",
+    "latex": "\n$$\nN (t) = N _ {0} \\bar {Z} ^ {t / t _ {1 / 2}}\n$$",
+    "seconds": 5.452999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "01f3445177808c3d",
+    "truth": "X_{2i}\\epsilon R^{Q}",
+    "latex": "\n$$\nX _ {2 i} \\in B Q\n$$",
+    "seconds": 4.140999999828637,
+    "structure_match": false
+  },
+  {
+    "id": "0204f1101b3f4033",
+    "truth": "(x,y,\\theta,\\kappa,\\kappa^{\\prime})",
+    "latex": "\n$$\n(x, y, \\theta , k, k ^ {\\prime})\n$$",
+    "seconds": 5.0,
+    "structure_match": false
+  },
+  {
+    "id": "02248037ee4a5528",
+    "truth": "(h,h(\\hat{k}),h(\\hat{l}))",
+    "latex": "\n$$\n(h, h / \\hat {k}, h (\\hat {c}))\n$$",
+    "seconds": 4.780999999959022,
+    "structure_match": false
+  },
+  {
+    "id": "022b4cfb5a5a3856",
+    "truth": "d^{\\prime}=V_{ud}d+V_{us}s",
+    "latex": "\n$$\nd ^ {\\prime} = V _ {u d} d + V _ {u s} S\n$$",
+    "seconds": 10.452999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "022be26e0a8ab535",
+    "truth": "|\\psi\\rangle=\\sum_{n=0}^{\\infty}a_{n}|\\psi_{n}\\rangle",
+    "latex": "\n$$\n| \\psi \\rangle = \\sum_ {n = 0} ^ {\\infty} a _ {n} | \\psi_ {n} \\rangle\n$$",
+    "seconds": 8.327999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "0235a447c15a24d7",
+    "truth": "nlog_{2}n-\\frac{n}{ln2}",
+    "latex": "\n$$\nn \\log_ {2} n - \\frac {n}{1 n 2}\n$$",
+    "seconds": 5.2030000002123415,
+    "structure_match": false
+  },
+  {
+    "id": "023a443f36a838ff",
+    "truth": "\\nabla_{\\vec{\\theta}}=D_{d}\\nabla",
+    "latex": "\n$$\n\\nabla_ {\\vec {\\theta}} = D d V\n$$",
+    "seconds": 5.406999999890104,
+    "structure_match": false
+  },
+  {
+    "id": "024279a4b8037bae",
+    "truth": "f(y)=2+2y+y^{2}",
+    "latex": "\n$$\nf (y) = 2 + 2 y + y ^ {2}\n$$",
+    "seconds": 4.577999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "0247a5d7e1002d66",
+    "truth": "|V_{0}|\\gg E_{f}",
+    "latex": "\n$$\n\\left| V _ {0} \\right| > E _ {r}\n$$",
+    "seconds": 5.952999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "0255dc5b14261907",
+    "truth": "1+x+\\frac{x^{2}}{2}",
+    "latex": "\n$$\n1 + x + \\frac {x ^ {2}}{2}\n$$",
+    "seconds": 4.452999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "025f51bee0e59494",
+    "truth": "g=g_{-1}\\oplus g_{0}\\oplus g_{1}",
+    "latex": "\n$$\ng = g _ {- 1} \\oplus g _ {0} \\oplus g _ {1}\n$$",
+    "seconds": 7.858999999938533,
+    "structure_match": true
+  },
+  {
+    "id": "02657f6bba1d2004",
+    "truth": "f_{a}(bx)=f_{f_{a}(b)}(x)",
+    "latex": "\n$$\nf _ {a} (b x) = f _ {f _ {a} (b)} (x)\n$$",
+    "seconds": 6.187000000150874,
+    "structure_match": true
+  },
+  {
+    "id": "026fd85034106735",
+    "truth": "T^{-1}=(T_{b}^{a})^{-1}",
+    "latex": "\n$$\nT ^ {- 1} = \\left( \\begin{array}{c} a \\\\ b \\end{array} \\right) ^ {- 1}\n$$",
+    "seconds": 4.609999999869615,
+    "structure_match": false
+  },
+  {
+    "id": "02720f6a67e8bc09",
+    "truth": "L_{10}=(C/P)^{p}",
+    "latex": "\n$$\nL _ {1 0} = (C / P) ^ {P}\n$$",
+    "seconds": 4.655999999959022,
+    "structure_match": false
+  },
+  {
+    "id": "0272a794109d5d2d",
+    "truth": "P_{F}=\\sqrt{P_{P}\\cdot P_{L}}",
+    "latex": "\n$$\nP _ {F} = \\sqrt {P _ {P} \\cdot P _ {L}}\n$$",
+    "seconds": 3.7810000001918525,
+    "structure_match": true
+  },
+  {
+    "id": "0276c02c9b9222e9",
+    "truth": "f^{-1}(y)=\\sqrt{y}",
+    "latex": "\n$$\nf ^ {- 1} (y) = \\sqrt {y}\n$$",
+    "seconds": 3.5,
+    "structure_match": true
+  },
+  {
+    "id": "028414d36ea98262",
+    "truth": "\\Delta b/b^{2}\\approx\\Delta f/f^{2}",
+    "latex": "\n$$\n\\Delta 6 / 6 ^ {2} \\approx \\Delta f / f ^ {2}\n$$",
+    "seconds": 5.437999999849126,
+    "structure_match": false
+  },
+  {
+    "id": "02894b4ff1ee6c7b",
+    "truth": "0/x=0,x/x=1",
+    "latex": "\n$$\n0 / x = 0, x / x = 1\n$$",
+    "seconds": 6.219000000040978,
+    "structure_match": true
+  },
+  {
+    "id": "028cf1f0507df703",
+    "truth": "U_{i}(I)=I_{L_{i}}",
+    "latex": "\n$$\nU _ {i} (I) = I _ {2 i}\n$$",
+    "seconds": 3.4850000001024455,
+    "structure_match": false
+  },
+  {
+    "id": "029b5da0999d4903",
+    "truth": "\\omega_{\\{(k,i),(k^{\\prime},i^{\\prime}),(k^{\\prime\\prime},i^{\\prime\\prime})\\}}",
+    "latex": "\n$$\nw \\left\\{(k, i), \\left(k ^ {\\prime}, i ^ {\\prime}\\right), \\left(k ^ {\\prime \\prime}, i ^ {\\prime \\prime}\\right) \\right\\}\n$$",
+    "seconds": 4.968000000109896,
+    "structure_match": false
+  },
+  {
+    "id": "029decc2d74fd082",
+    "truth": "abca^{-1}b^{-1}d\\sim?",
+    "latex": "\n$$\na b c a ^ {- 1} b ^ {- 1} d ^ {2}?\n$$",
+    "seconds": 4.515999999828637,
+    "structure_match": false
+  },
+  {
+    "id": "02ace78dfc726867",
+    "truth": "2sin(\\theta/2)r",
+    "latex": "\n$$\n2\\sin (\\theta /2)r\n$$",
+    "seconds": 3.8590000001713634,
+    "structure_match": false
+  },
+  {
+    "id": "02aced0c052805c6",
+    "truth": "1/x\\approx1-x",
+    "latex": "\n$$\n1 / x \\approx 1 - x\n$$",
+    "seconds": 4.5939999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "02b1dc6d4efd493a",
+    "truth": "\\Omega(R)=cP(R)",
+    "latex": "\n$$\n\\Omega (R) = c P (R)\n$$",
+    "seconds": 4.875,
+    "structure_match": true
+  },
+  {
+    "id": "02b7060b95d998eb",
+    "truth": "-|I|>I_{0}",
+    "latex": "\n$$\n| I | > I _ {0}\n$$",
+    "seconds": 2.952999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "02c39c1be9d660b7",
+    "truth": "1-4\\pi r^{3}/3V",
+    "latex": "\n$$\n1 - 4 \\pi r ^ {3} / 3 V\n$$",
+    "seconds": 4.797000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "02c6f6dea91a2a06",
+    "truth": "(RU^{2}D^{-1}BD^{-1})",
+    "latex": "\n$$\n(R U ^ {2} D ^ {- 1} B D ^ {- 1})\n$$",
+    "seconds": 4.797000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "02c9daf282f5a1e3",
+    "truth": "\\sum_{x\\in\\{0,1\\}^{T}}|x\\rangle|f(x)\\rangle",
+    "latex": "\n$$\n\\sum_ {x \\in \\{0, 1 \\} ^ {T}} | x > | f (x) >\n$$",
+    "seconds": 3.655999999959022,
+    "structure_match": false
+  },
+  {
+    "id": "02d5b5f98ac5fbd2",
+    "truth": "f_{z}(x)=e^{ix^{t}Zx/2}",
+    "latex": "\n$$\nf _ {Z} (x) = e ^ {i x ^ {t}} Z \\times R\n$$",
+    "seconds": 5.797000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "02da6f52e30f674d",
+    "truth": "2^{k}t_{0}",
+    "latex": "\n$$\n2 ^ {k} \\in 0\n$$",
+    "seconds": 2.297000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "02dcdb815d18cdf1",
+    "truth": "f(x_{t},t)=x_{t}e^{\\theta t}",
+    "latex": "\n$$\nf \\left(x _ {t}, t\\right) = x _ {t} e ^ {\\theta t}\n$$",
+    "seconds": 4.671000000089407,
+    "structure_match": true
+  },
+  {
+    "id": "02de91b624143438",
+    "truth": "y^{2}=x^{3}-n^{2}x",
+    "latex": "\n$$\ny ^ {2} = x ^ {3} - n ^ {2} x\n$$",
+    "seconds": 6.156999999890104,
+    "structure_match": true
+  },
+  {
+    "id": "030373f9d3edac3b",
+    "truth": "\\frac{R_{U}}{r_{e}}\\approx\\frac{r_{H}}{r_{e}}\\approx10^{42}",
+    "latex": "\n$$\n\\frac {R _ {U}}{r _ {e}} \\approx \\frac {r _ {H}}{r _ {e}} \\approx 1 0 ^ {4 2}\n$$",
+    "seconds": 6.5,
+    "structure_match": true
+  },
+  {
+    "id": "030a0f18b6fcb87b",
+    "truth": "\\pi(x)-\\pi(\\frac{x}{2})\\ge1",
+    "latex": "\n$$\n\\pi (x) - \\pi (\\frac {x}{2}) \\geq 1\n$$",
+    "seconds": 9.093999999808148,
+    "structure_match": true
+  },
+  {
+    "id": "030ea5646116a251",
+    "truth": "M_{2}=P_{1}^{\\prime}|P_{2}|...",
+    "latex": "\n$$\nM _ {2} = P _ {1} ^ {\\prime} / P _ {2} / \\dots\n$$",
+    "seconds": 5.077999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "0316d949cd776194",
+    "truth": "X_{k}=p(e^{2\\pi i\\frac{k}{2^{n}}})",
+    "latex": "\n$$\nx _ {k} = p \\left(e ^ {2 \\pi i \\frac {k}{2}}\\right)\n$$",
+    "seconds": 3.7810000001918525,
+    "structure_match": false
+  },
+  {
+    "id": "032278982233fefa",
+    "truth": "L_{r},L_{t},L_{L}/10",
+    "latex": "\n$$\nL _ {r}, L _ {t}, L _ {c} / 1 0\n$$",
+    "seconds": 4.5939999998081475,
+    "structure_match": false
+  },
+  {
+    "id": "032360b882783120",
+    "truth": "\\kappa_{2}=\\mu_{2}^{\\prime}-{\\mu_{1}^{\\prime}}^{2}",
+    "latex": "\n$$\nK _ {2} = \\mu_ {2} ^ {\\prime} - \\mu_ {1} ^ {\\prime 2}\n$$",
+    "seconds": 4.422000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "0325d90612c71772",
+    "truth": "\\hat{\\Sigma}_{j,/j}",
+    "latex": "\n$$\n\\sum_ {j, i} ^ {n}\n$$",
+    "seconds": 1.6880000000819564,
+    "structure_match": false
+  },
+  {
+    "id": "03277de2f80a8aaf",
+    "truth": "Y_{n+1}=I-XY_{n}",
+    "latex": "\n$$\nY _ {n + 1} = 2 - x Y _ {n}\n$$",
+    "seconds": 4.608999999938533,
+    "structure_match": false
+  },
+  {
+    "id": "0333d9584ff7c0d0",
+    "truth": "f^{-1}(x)=\\frac{1}{f(x)}",
+    "latex": "\n$$\nf ^ {- 1} (x) = \\frac {1}{f (x)}\n$$",
+    "seconds": 4.125,
+    "structure_match": true
+  }
+]

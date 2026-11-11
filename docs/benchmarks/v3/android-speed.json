@@ -1,0 +1,30 @@
+{
+  "environment": "Android 14 x86_64 emulator, 2 vCPU, 4 GiB RAM; single image, cold/warm/cold; not Samsung hardware",
+  "samples": [
+    {
+      "run": 0,
+      "elapsed_ms": 9320,
+      "load_ms": 1491,
+      "encode_ms": 7111,
+      "decode_ms": 637,
+      "warm": false
+    },
+    {
+      "run": 1,
+      "elapsed_ms": 7623,
+      "load_ms": 11,
+      "encode_ms": 6995,
+      "decode_ms": 611,
+      "warm": true
+    },
+    {
+      "run": 2,
+      "elapsed_ms": 9239,
+      "load_ms": 1526,
+      "encode_ms": 7023,
+      "decode_ms": 611,
+      "warm": false
+    }
+  ],
+  "outputs_identical": true
+}

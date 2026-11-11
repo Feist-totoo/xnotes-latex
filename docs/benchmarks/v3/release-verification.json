@@ -1,0 +1,38 @@
+{
+  "version": "0.9.8-latex.3",
+  "date": "2026-11-12",
+  "apk": {
+    "filename": "xnotes-latex-0.9.8-latex.3-offline.apk",
+    "bytes": 1492082002,
+    "sha256": "24fb2e4f903642316261282ec93abcfbba9bc082534ff94731e83b80c956401e",
+    "abis": [
+      "arm64-v8a",
+      "x86_64"
+    ],
+    "versionCode": 71,
+    "minSdk": 26
+  },
+  "jvm": {
+    "tests": 2505,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android": {
+    "real_handwriting_and_storage_tests": 3,
+    "ui_workflow_tests": 5,
+    "github_release_download_tests": 1,
+    "offline_wifi": false,
+    "offline_mobile_data": false,
+    "ui_final_seconds": 50.446,
+    "device": "Android 14 x86_64 emulator; 4 GiB RAM, 2 vCPU",
+    "physical_samsung_tested": false
+  },
+  "notes": [
+    "Network enabled only for explicit package download test; recognition and UI tests run with Wi-Fi/mobile data off.",
+    "13 native handwriting predictions unchanged by warm cache; 12 public predictions match desktop after formatting normalization.",
+    "A System UI startup ANR was dismissed before the final UI regression; no new ANR events were recorded during that regression. This is not a low-memory hardware qualification.",
+    "No private user image, evaluation image or androidTest APK is distributed.",
+    "Signed with the same Android debug certificate as the earlier fork APK."
+  ]
+}

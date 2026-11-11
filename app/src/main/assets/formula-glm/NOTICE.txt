@@ -1,0 +1,14 @@
+GLM-OCR model weights: Z.ai (zai-org), MIT license as declared in its model card.
+Original model: https://huggingface.co/zai-org/GLM-OCR
+Quantized conversion: ggml-org/GLM-OCR-GGUF, revision 65a42de1148dbed2297e922b5dbc7d9b70c36578
+No fine-tuning or model modification; Q8_0 conversion provided by ggml-org.
+
+llama.cpp runtime: MIT, copyright (c) 2023-2026 The ggml authors.
+Revision: 2d973636e292ee6f75fadcf08d29cb33511f509f (b9870).
+See LICENSE-llama.cpp.txt and manifest.json.
+The original upstream runtime is built unchanged; xnotes supplies a separate JNI caller.
+
+The APK runs the weights directly on its own CPU, via JNI. It contains no cloud
+OCR SDK, network model loader, or local HTTP server. The optional subject-pack
+downloader uses INTERNET permission only for user-initiated GitHub Release GETs.
+Subject packs are original static editing/review resources, not trained models.

@@ -25,11 +25,11 @@ android {
         applicationId = "com.xnotes.latex"
         minSdk = 26
         targetSdk = 36
-        versionCode = 70
-        versionName = "0.9.8-latex.2"
+        versionCode = 71
+        versionName = "0.9.8-latex.3"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
-            abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64")
+            abiFilters += listOf("arm64-v8a", "x86_64")
         }
         externalNativeBuild {
             cmake {
@@ -101,6 +101,7 @@ android {
     // Lists every values-* translation in the manifest so Android 13+ offers a per-app language.
     androidResources {
         generateLocaleConfig = true
+        noCompress += "gguf"
     }
 }
 
@@ -119,7 +120,6 @@ tasks.configureEach {
 }
 
 dependencies {
-    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.23.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
@@ -151,12 +151,12 @@ dependencies {
 
 // Never ship a build that silently needs an online model download at first use.
 val verifyFormulaModel by tasks.registering {
-    val modelDir = layout.projectDirectory.dir("src/main/assets/formula")
+    val modelDir = layout.projectDirectory.dir("src/main/assets/formula-glm")
     inputs.dir(modelDir)
     doLast {
-        for (name in listOf("encoder_model.onnx", "decoder_model_merged.onnx", "tokenizer.json", "manifest.json")) {
+        for (name in listOf("GLM-OCR-Q8_0.gguf", "mmproj-GLM-OCR-Q8_0.gguf", "manifest.json")) {
             check(modelDir.file(name).asFile.let { it.isFile && it.length() > 0 }) {
-                "Missing offline formula asset $name. Run: python tools/prepare_formula_model.py"
+                "Missing offline formula asset $name. Run: python tools/prepare_glm_formula.py"
             }
         }
     }

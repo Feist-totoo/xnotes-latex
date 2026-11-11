@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "000a4e8ca49c5a1c",
+    "reference": "(x-y)/sqrt(2)",
+    "candidates": [
+      "x - y / s g r ^ { + } ( z )"
+    ],
+    "seconds": 0.3279999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "001083e26028da36",
+    "reference": "\\nabla I=(I_{x},I_{y})",
+    "candidates": [
+      "\\because I = ( I \\times I )"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0017bb5822bcba69",
+    "reference": "P=P(C(Z))",
+    "candidates": [
+      "P = P ( C ( z ) )"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "002ae6d5dd4173e4",
+    "reference": "x_{1}-x_{2}+x_{0}=0",
+    "candidates": [
+      "x _ { 1 } - x _ { 2 } + x _ { 0 } = 0"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": true,
+    "topk": true,
+    "structure_match": true
+  },
+  {
+    "id": "00386113d577085b",
+    "reference": "\\langle a_{0},a_{1},...\\rangle\\in R^{\\omega}",
+    "candidates": [
+      "( a _ { 0 } , a _ { 1 } , \\dots ) \\in R ^ { c _ { 0 } }"
+    ],
+    "seconds": 0.3279999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "003ca9082c7047d3",
+    "reference": "\\partial_{i}f=\\frac{\\partial f}{\\partial\\xi^{i}}:=\\frac{\\partial\\overline{f}}{\\partial\\xi^{i}}",
+    "candidates": [
+      "\\therefore I = \\frac { O I } { O ^ { 3 } } = \\frac { 2 I } { O ^ { 3 } }"
+    ],
+    "seconds": 0.2660000000614673,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "004c9413be3ff1be",
+    "reference": "\\langle A\\rangle_{\\psi}=||A\\psi||^{2}",
+    "candidates": [
+      "< A / _ { 4 } = | A | | ^ { 2 }"
+    ],
+    "seconds": 0.17100000008940697,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "004fc8d3f626f1d9",
+    "reference": "\\delta_{j,j_{1}}\\delta_{m,m_{1}}",
+    "candidates": [
+      "\\sin ^ { - } 2 \\sin m _ { 1 }"
+    ],
+    "seconds": 0.28199999989010394,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0052b8e13b5f4a36",
+    "reference": "w(\\neg\\theta)=F_{\\neg}(w(\\theta))",
+    "candidates": [
+      "h ( - 2 \\theta ) = F _ { - } ( h ( \\theta ) )"
+    ],
+    "seconds": 0.2339999999385327,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00692074bbc0f678",
+    "reference": "t\\longrightarrow F(t,t_{0},x)",
+    "candidates": [
+      "r \\rarr F ( + , \\alpha )"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "006badbfc63bbd21",
+    "reference": "p=(p_{x},p_{y},p_{z})",
+    "candidates": [
+      "P = ( P _ { X } , P _ { Y } , P _ { Z } )"
+    ],
+    "seconds": 0.2660000000614673,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0082d4aa943b9f8c",
+    "reference": "|\\frac{d^{2}y}{dx^{2}}|\\approx\\frac{1}{R}",
+    "candidates": [
+      "| x ^ { 2 } | y | \\approx \\frac { 1 } { R }"
+    ],
+    "seconds": 0.2339999999385327,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0083f66ddd05c46c",
+    "reference": "m_{i,j}=x^{i}\\cdot x^{j}",
+    "candidates": [
+      "M _ { i j } = X ^ { j } - X ^ { j }"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0090db2a639b5c98",
+    "reference": "S_{ijk}\\rightarrow S_{ij}(\\omega_{k})",
+    "candidates": [
+      "S _ { i j } \\rarr S _ { i j } ( u _ { j } )"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00915f0ffe17930e",
+    "reference": "(g^{a}modp,g,p)",
+    "candidates": [
+      "( 9 ^ { a } m o d , 9 , 9 )"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "009d124a50399bba",
+    "reference": "J_{i}=\\sum_{j}L_{ij}\\frac{\\partial F_{j}}{\\partial x_{j}}",
+    "candidates": [
+      "S _ { i } = \\sum _ { j } ( i , j ) \\frac { \\partial F _ { i } } { \\partial x }"
+    ],
+    "seconds": 0.2339999999385327,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "009fb93aab47d6f5",
+    "reference": "\\{f_{X}(\\cdot;\\theta)|\\theta\\in\\Theta\\}",
+    "candidates": [
+      "\\{ f \\times ( \\cdot , \\theta ) / \\theta \\in ( 0 ) \\}"
+    ],
+    "seconds": 0.23500000010244548,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00ad7566b9f1d872",
+    "reference": "\\dot{x}(t)=f(x(t))",
+    "candidates": [
+      "x ( t ) = f ( x ( t ) )"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00ba90fe7f71d8c6",
+    "reference": "\\Omega((logn)/n^{2})",
+    "candidates": [
+      "S 2 ( ( \\log n ) n ^ { 2 } )"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00c46c9b07b39bb7",
+    "reference": "l_{n}=kl_{n}\\cdot\\frac{b_{n}}{b_{a}}\\cdot\\frac{s_{n}}{s_{a}}",
+    "candidates": [
+      "f _ { n } = k _ { 1 } \\cdot \\frac { b _ { n } } { b _ { n } } \\cdot \\frac { s _ { n } } { s _ { q } }"
+    ],
+    "seconds": 0.2970000000204891,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00d4fc6636cbf2d9",
+    "reference": "\\tilde{g}_{n}=[\\begin{matrix}g_{n}\\\\ \\gamma_{n}\\end{matrix}]",
+    "candidates": [
+      "d _ { n } = [ \\frac { g _ { n } } { d _ { n } } ]"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00db5331b85f4d47",
+    "reference": "N=|V|",
+    "candidates": [
+      "A = b"
+    ],
+    "seconds": 0.1720000000204891,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00eaf4f2d3d20bb1",
+    "reference": "B=ln(-b)",
+    "candidates": [
+      "B = ( n ( - 6 )"
+    ],
+    "seconds": 0.1869999999180436,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00fcddfee1ebfee6",
+    "reference": "2sin(x/2)",
+    "candidates": [
+      "2 \\sin ( X / 2 )"
+    ],
+    "seconds": 0.20300000021234155,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "00fee560e6c9af79",
+    "reference": "\\sqrt{1-\\omega^{2}r_{0}^{2}}",
+    "candidates": [
+      "\\sqrt { 1 - G ^ { 2 } F _ { 0 } ^ { 2 } }"
+    ],
+    "seconds": 0.23499999986961484,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "010d0f9e951a7a44",
+    "reference": "x_{i}^{\\prime}\\equiv\\frac{1}{1+e^{-\\frac{x_{i}-\\mu_{i}}{\\sigma_{i}}}}",
+    "candidates": [
+      "x _ { i } = \\frac { 1 } { e ^ { - x _ { i } - u } }"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "010d4fea2361f01f",
+    "reference": "Inj(M_{i})<\\epsilon(n)",
+    "candidates": [
+      "n , ( M , i ) \\leq ( n )"
+    ],
+    "seconds": 0.25,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0111fa141bb73b48",
+    "reference": "-a^{n}u[-n-1]",
+    "candidates": [
+      "- a ^ { n } u [ - n - 1 ]"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": true,
+    "topk": true,
+    "structure_match": true
+  },
+  {
+    "id": "0114e881d8b22bbb",
+    "reference": "(\\Lambda(A):A\\in B_{b}(S))",
+    "candidates": [
+      "( A ( A ) : A \\in B _ { k } ( 8 ) )"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "011f1f41eb55b661",
+    "reference": "(\\frac{lnN}{N})\\rightarrow0",
+    "candidates": [
+      "( \\frac { n N } { N } ) \\rarr 0"
+    ],
+    "seconds": 0.26500000013038516,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0121d7fdad59c8ab",
+    "reference": "\\Leftrightarrow|PA|^{2}=9|PB|^{2}",
+    "candidates": [
+      "\\Longleftrightarrow | p A | ^ { 2 } = 9 | p ^ { 2 }"
+    ],
+    "seconds": 0.29699999978765845,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01292cf19c2c9c7c",
+    "reference": "u=1+l^{2}+m^{2}",
+    "candidates": [
+      "u = 1 + 1 ^ { 2 } + m ^ { 2 }"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "013a32b84ce6252f",
+    "reference": "\\{L(u,v):u,v\\in X\\}",
+    "candidates": [
+      "\\sum ( d ( a , V ) \\cdot d y \\leq x \\leq \\frac { 3 } { S }"
+    ],
+    "seconds": 0.23400000017136335,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01453872d3d2afe5",
+    "reference": "=J+\\epsilon_{0}\\frac{\\partial E}{\\partial t}",
+    "candidates": [
+      "= 5 + 4 \\frac { D E } { D E }"
+    ],
+    "seconds": 0.21899999980814755,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "014f7412fa06f5c0",
+    "reference": "||L_{x}||_{(l^{p})^{*}}=||x||_{q}",
+    "candidates": [
+      "| x | | ( x ) ^ { k } = | x | | _ { q }"
+    ],
+    "seconds": 0.25,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "015e012d8baa97f3",
+    "reference": "\\epsilon,\\delta,K>0",
+    "candidates": [
+      "E _ { j } d < 0"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "016a39f81ff20b8d",
+    "reference": "\\frac{\\partial}{\\partial\\overline{z}}w(z)=0",
+    "candidates": [
+      "\\frac { \\partial } { \\partial z } \\omega ( z ) = 0"
+    ],
+    "seconds": 0.2809999999590218,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01752f0f5fba0225",
+    "reference": "L=(\\begin{matrix}1&0\\\\ \\frac{-1}{f}&1\\end{matrix})",
+    "candidates": [
+      "L = ( \\frac { 1 } { f } ~ 0 )"
+    ],
+    "seconds": 0.28100000019185245,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0175c1fb5814dc11",
+    "reference": "\\Omega=\\sqrt{|\\chi_{g,e}|^{2}+\\delta^{2}}",
+    "candidates": [
+      "s = \\sqrt { 1 x _ { g , 1 } t ^ { 2 } + f ^ { 2 } }"
+    ],
+    "seconds": 0.31299999984912574,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0180366e774d93be",
+    "reference": "\\Omega(eg)=g^{-1}\\Omega(e)g",
+    "candidates": [
+      "G ( e g ) = g ( e ) g"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01859fc130dc9008",
+    "reference": "(++++)",
+    "candidates": [
+      "( 1 + + 1 )"
+    ],
+    "seconds": 0.1869999999180436,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01917677eaf160bb",
+    "reference": "Pr(s|I)\\propto1/s",
+    "candidates": [
+      "f ( S | T M | S )"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0199f657babdf636",
+    "reference": "\\prod_{p}p/(p-1)",
+    "candidates": [
+      "\\int _ { r } ^ { } ( P | P - 1 )"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01a2f3186b7e33e1",
+    "reference": "(2n,n,\\lambda,1)",
+    "candidates": [
+      "( 2 , n , 1 , 1 )"
+    ],
+    "seconds": 0.18700000015087426,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01a53ae1e3a9b918",
+    "reference": "E:R^{n}\\rightarrow T_{p}M",
+    "candidates": [
+      "e : P ^ { n } \\rarr T _ { j } P"
+    ],
+    "seconds": 0.18799999984912574,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01ab618a2350036f",
+    "reference": "f_{n}\\rightarrow\\chi_{[1,2)}",
+    "candidates": [
+      "f _ { n } \\rarr Y ( 1 , 2 )"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01b552b8a037ab13",
+    "reference": "T_{pq}(e_{p}\\otimes e_{q})",
+    "candidates": [
+      "\\int _ { f g } ( e _ { p } \\otimes e _ { g } )"
+    ],
+    "seconds": 0.2339999999385327,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01b74db41e479782",
+    "reference": "\\vec{x}\\in S",
+    "candidates": [
+      "x = 5"
+    ],
+    "seconds": 0.15600000019185245,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01c37bbe7ea55c56",
+    "reference": "T+ATT=1+E",
+    "candidates": [
+      "T + A T = 1 + E"
+    ],
+    "seconds": 0.17199999978765845,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01cdd808862eab64",
+    "reference": "T^{t}:=S^{1}\\times\\cdot\\cdot\\cdot\\times S^{1}",
+    "candidates": [
+      "T ^ { t } : = S ^ { 1 } \\times \\cdot \\cdot \\times S ^ { 1 }"
+    ],
+    "seconds": 0.1880000000819564,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01cf085d26abe325",
+    "reference": "G^{p^{k}}=\\{g^{p^{k}}|g\\in G\\}",
+    "candidates": [
+      "c ^ { p ^ { \\prime } } = \\int q ^ { p ^ { \\prime } } | g \\in G p"
+    ],
+    "seconds": 0.21800000010989606,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01d12458811a5a38",
+    "reference": "\\Omega=arg(-z_{2},z_{1})",
+    "candidates": [
+      "\\Omega = a ( g ( - z _ { 2 } , z _ { 1 } )"
+    ],
+    "seconds": 0.23499999986961484,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01d2b56291c7ffdd",
+    "reference": "N_{i}\\overline{r_{i}}",
+    "candidates": [
+      "i \\cdot \\overline { i }"
+    ],
+    "seconds": 0.1720000000204891,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01d2f97f90ed79e6",
+    "reference": "m\\equiv\\frac{RF_{,R}}{F}",
+    "candidates": [
+      "m = \\frac { R F _ { 1 } R } { F }"
+    ],
+    "seconds": 0.2339999999385327,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01d4d9a9dc145333",
+    "reference": "K_{m}=\\frac{1}{2}(k_{1}+k_{2})",
+    "candidates": [
+      "k _ { n } = \\frac { 1 } { 2 } ( k _ { 1 } + k _ { 2 } )"
+    ],
+    "seconds": 0.28100000019185245,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01d54b93c127e89c",
+    "reference": "F^{0}[f]=f",
+    "candidates": [
+      "[ F ^ { 0 } ] + f = f"
+    ],
+    "seconds": 0.25,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01d90fce29b20f64",
+    "reference": "A\\models_{X}^{+}Rt_{1}...t_{n}",
+    "candidates": [
+      "A _ { t } = t _ { x } t _ { 1 } \\dots t _ { n }"
+    ],
+    "seconds": 0.25,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01e4c8973307a964",
+    "reference": "|g,n\\rangle\\rightarrow|e,n-1\\rangle",
+    "candidates": [
+      "| g , h | \\rarr | R , h - 1 |"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01e6c79f4d27bc54",
+    "reference": "N(t)=N_{0}2^{-t/t_{1/2}}",
+    "candidates": [
+      "N ( t ) = N _ { 0 } 2 ^ { + } k _ { 2 }"
+    ],
+    "seconds": 0.2970000000204891,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "01f3445177808c3d",
+    "reference": "X_{2i}\\epsilon R^{Q}",
+    "candidates": [
+      "X _ { 2 } \\leq R ^ { 2 } C"
+    ],
+    "seconds": 0.18799999984912574,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0204f1101b3f4033",
+    "reference": "(x,y,\\theta,\\kappa,\\kappa^{\\prime})",
+    "candidates": [
+      "( x _ { 1 } , \\theta _ { 1 } , k ^ { \\prime } )"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02248037ee4a5528",
+    "reference": "(h,h(\\hat{k}),h(\\hat{l}))",
+    "candidates": [
+      "( h , h / h ^ { n } , h ^ { n } ( l ) )"
+    ],
+    "seconds": 0.2339999999385327,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "022b4cfb5a5a3856",
+    "reference": "d^{\\prime}=V_{ud}d+V_{us}s",
+    "candidates": [
+      "d = V _ { u d } d + V _ { u \\in S }"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "022be26e0a8ab535",
+    "reference": "|\\psi\\rangle=\\sum_{n=0}^{\\infty}a_{n}|\\psi_{n}\\rangle",
+    "candidates": [
+      "| \\psi \\rangle = \\sum _ { n = 0 } ^ { \\infin } a _ { n } | \\psi _ { n } \\rangle"
+    ],
+    "seconds": 0.23400000017136335,
+    "top1": false,
+    "topk": false,
+    "structure_match": true
+  },
+  {
+    "id": "0235a447c15a24d7",
+    "reference": "nlog_{2}n-\\frac{n}{ln2}",
+    "candidates": [
+      "n \\log _ { 2 } n - \\frac { n } { \\ln 2 }"
+    ],
+    "seconds": 0.20399999991059303,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "023a443f36a838ff",
+    "reference": "\\nabla_{\\vec{\\theta}}=D_{d}\\nabla",
+    "candidates": [
+      "7 5 = \\textcircled { 2 } d V"
+    ],
+    "seconds": 0.1869999999180436,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "024279a4b8037bae",
+    "reference": "f(y)=2+2y+y^{2}",
+    "candidates": [
+      "f ( y ) = 2 + 2 y + y ^ { 2 }"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": true,
+    "topk": true,
+    "structure_match": true
+  },
+  {
+    "id": "0247a5d7e1002d66",
+    "reference": "|V_{0}|\\gg E_{f}",
+    "candidates": [
+      "| v _ { 0 } | \\rarr E _ { 1 }"
+    ],
+    "seconds": 0.20300000021234155,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0255dc5b14261907",
+    "reference": "1+x+\\frac{x^{2}}{2}",
+    "candidates": [
+      "1 + X + \\frac { X } { 2 }"
+    ],
+    "seconds": 0.21899999980814755,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "025f51bee0e59494",
+    "reference": "g=g_{-1}\\oplus g_{0}\\oplus g_{1}",
+    "candidates": [
+      "y = g _ { 1 } \\textcircled { + } g _ { 0 } \\textcircled { + } g _ { 1 }"
+    ],
+    "seconds": 0.28100000019185245,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02657f6bba1d2004",
+    "reference": "f_{a}(bx)=f_{f_{a}(b)}(x)",
+    "candidates": [
+      "f _ { a } ( b x ) = f _ { f _ { a } ( b ) } | b |"
+    ],
+    "seconds": 0.25,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "026fd85034106735",
+    "reference": "T^{-1}=(T_{b}^{a})^{-1}",
+    "candidates": [
+      "t ^ { - 1 } = ( T _ { t } ) ^ { - 1 }"
+    ],
+    "seconds": 0.21899999980814755,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02720f6a67e8bc09",
+    "reference": "L_{10}=(C/P)^{p}",
+    "candidates": [
+      "L _ { 1 0 } = ( c / p ) ^ { p }"
+    ],
+    "seconds": 0.2190000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0272a794109d5d2d",
+    "reference": "P_{F}=\\sqrt{P_{P}\\cdot P_{L}}",
+    "candidates": [
+      "P _ { F } = \\sqrt { P _ { P } \\cdot P _ { C } }"
+    ],
+    "seconds": 0.2029999999795109,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0276c02c9b9222e9",
+    "reference": "f^{-1}(y)=\\sqrt{y}",
+    "candidates": [
+      "f ^ { - 1 } ( y ) = \\sqrt { y }"
+    ],
+    "seconds": 0.23400000017136335,
+    "top1": true,
+    "topk": true,
+    "structure_match": true
+  },
+  {
+    "id": "028414d36ea98262",
+    "reference": "\\Delta b/b^{2}\\approx\\Delta f/f^{2}",
+    "candidates": [
+      "A G / 6 ^ { 2 } \\approx \\Delta f / f ^ { 2 }"
+    ],
+    "seconds": 0.21899999980814755,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02894b4ff1ee6c7b",
+    "reference": "0/x=0,x/x=1",
+    "candidates": [
+      "( ) / x = 0 , x / x = 1"
+    ],
+    "seconds": 0.25,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "028cf1f0507df703",
+    "reference": "U_{i}(I)=I_{L_{i}}",
+    "candidates": [
+      "( 1 ) \\cdot I _ { 2 }"
+    ],
+    "seconds": 0.1720000000204891,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "029b5da0999d4903",
+    "reference": "\\omega_{\\{(k,i),(k^{\\prime},i^{\\prime}),(k^{\\prime\\prime},i^{\\prime\\prime})\\}}",
+    "candidates": [
+      "w _ { I } ( k , i ) ( k , i ) , ( k ^ { 1 1 } , 1 1 )"
+    ],
+    "seconds": 0.2970000000204891,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "029decc2d74fd082",
+    "reference": "abca^{-1}b^{-1}d\\sim?",
+    "candidates": [
+      "a b c a ^ { - 1 } k ^ { - 1 } d r"
+    ],
+    "seconds": 0.2809999999590218,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02ace78dfc726867",
+    "reference": "2sin(\\theta/2)r",
+    "candidates": [
+      "\\cos \\sin ( \\theta | 2 ) c"
+    ],
+    "seconds": 0.1880000000819564,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02aced0c052805c6",
+    "reference": "1/x\\approx1-x",
+    "candidates": [
+      "1 / X X | - X"
+    ],
+    "seconds": 0.1869999999180436,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02b1dc6d4efd493a",
+    "reference": "\\Omega(R)=cP(R)",
+    "candidates": [
+      "S ( R ) = C ^ { P ( R ) }"
+    ],
+    "seconds": 0.2660000000614673,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02b7060b95d998eb",
+    "reference": "-|I|>I_{0}",
+    "candidates": [
+      "I > I"
+    ],
+    "seconds": 0.21800000010989606,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02c39c1be9d660b7",
+    "reference": "1-4\\pi r^{3}/3V",
+    "candidates": [
+      "1 - 4 + r ^ { 7 } / 3 V"
+    ],
+    "seconds": 0.21899999980814755,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02c6f6dea91a2a06",
+    "reference": "(RU^{2}D^{-1}BD^{-1})",
+    "candidates": [
+      "( \\beta V ^ { 2 } P ^ { - 1 } \\beta D ^ { - 1 } )"
+    ],
+    "seconds": 0.23500000010244548,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02c9daf282f5a1e3",
+    "reference": "\\sum_{x\\in\\{0,1\\}^{T}}|x\\rangle|f(x)\\rangle",
+    "candidates": [
+      "\\sum _ { x \\in \\partial , x } \\lim _ { y } | f ( x ) |"
+    ],
+    "seconds": 0.2339999999385327,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02d5b5f98ac5fbd2",
+    "reference": "f_{z}(x)=e^{ix^{t}Zx/2}",
+    "candidates": [
+      "f _ { z } ( x ) = e ^ { i x ^ { t } } \\geq x \\times R"
+    ],
+    "seconds": 0.3440000000409782,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "02da6f52e30f674d",
+    "reference": "2^{k}t_{0}",
+    "candidates": [
+      "2 ^ { k } t _ { 0 }"
+    ],
+    "seconds": 0.34300000010989606,
+    "top1": true,
+    "topk": true,
+    "structure_match": true
+  },
+  {
+    "id": "02dcdb815d18cdf1",
+    "reference": "f(x_{t},t)=x_{t}e^{\\theta t}",
+    "candidates": [
+      "f ( x _ { t } , t ) = x _ { t } e ^ { \\theta t }"
+    ],
+    "seconds": 0.31299999984912574,
+    "top1": true,
+    "topk": true,
+    "structure_match": true
+  },
+  {
+    "id": "02de91b624143438",
+    "reference": "y^{2}=x^{3}-n^{2}x",
+    "candidates": [
+      "y ^ { 2 } = x ^ { 3 } - r ^ { 2 } x"
+    ],
+    "seconds": 0.2970000000204891,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "030373f9d3edac3b",
+    "reference": "\\frac{R_{U}}{r_{e}}\\approx\\frac{r_{H}}{r_{e}}\\approx10^{42}",
+    "candidates": [
+      "\\frac { R _ { u } } { r _ { e } } \\approx \\frac { r _ { H } } { r _ { e } } \\approx 1 0 ^ { 4 2 }"
+    ],
+    "seconds": 0.31200000015087426,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "030a0f18b6fcb87b",
+    "reference": "\\pi(x)-\\pi(\\frac{x}{2})\\ge1",
+    "candidates": [
+      "f ( x ) - \\pi ( \\frac { x } { 2 } ) \\geq 1"
+    ],
+    "seconds": 0.28199999989010394,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "030ea5646116a251",
+    "reference": "M_{2}=P_{1}^{\\prime}|P_{2}|...",
+    "candidates": [
+      "H _ { 2 } = P _ { 1 } ^ { \\prime } ( P _ { 2 } ) _ { - } ."
+    ],
+    "seconds": 0.2649999998975545,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0316d949cd776194",
+    "reference": "X_{k}=p(e^{2\\pi i\\frac{k}{2^{n}}})",
+    "candidates": [
+      "x _ { n } = p ( e ^ { 2 \\pi i \\frac { \\pi } { 2 } } )"
+    ],
+    "seconds": 0.2660000000614673,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "032278982233fefa",
+    "reference": "L_{r},L_{t},L_{L}/10",
+    "candidates": [
+      "L _ { r } , L _ { l } , L _ { l } / 1 0"
+    ],
+    "seconds": 0.31200000015087426,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "032360b882783120",
+    "reference": "\\kappa_{2}=\\mu_{2}^{\\prime}-{\\mu_{1}^{\\prime}}^{2}",
+    "candidates": [
+      "K _ { 2 } = u _ { 2 } ^ { 1 } - u _ { 1 } ^ { 2 }"
+    ],
+    "seconds": 0.28199999989010394,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0325d90612c71772",
+    "reference": "\\hat{\\Sigma}_{j,/j}",
+    "candidates": [
+      "\\sum _ { j , j } ."
+    ],
+    "seconds": 0.2339999999385327,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "03277de2f80a8aaf",
+    "reference": "Y_{n+1}=I-XY_{n}",
+    "candidates": [
+      "Y _ { n + 1 } = 2 - x _ { 1 }"
+    ],
+    "seconds": 0.23400000017136335,
+    "top1": false,
+    "topk": false,
+    "structure_match": false
+  },
+  {
+    "id": "0333d9584ff7c0d0",
+    "reference": "f^{-1}(x)=\\frac{1}{f(x)}",
+    "candidates": [
+      "f ^ { - 1 } ( x ) = \\frac { 1 } { f ( x ) }"
+    ],
+    "seconds": 0.26599999982863665,
+    "top1": true,
+    "topk": true,
+    "structure_match": true
+  }
+]

@@ -1,0 +1,702 @@
+[
+  {
+    "id": "100",
+    "truth": "- 1 8 0 0 \\cdot x = 6",
+    "latex": "\n$$\n- 8 0 0. x = 6\n$$",
+    "seconds": 2.2030000002123415,
+    "structure_match": false
+  },
+  {
+    "id": "101",
+    "truth": "\\sqrt { 1 5 }",
+    "latex": "\n$$\n\\sqrt {1 5}\n$$",
+    "seconds": 0.7659999998286366,
+    "structure_match": true
+  },
+  {
+    "id": "102",
+    "truth": "\\sqrt { \\frac { 1 } { a } }",
+    "latex": "\n$$\n\\sqrt {\\frac {1}{a}}\n$$",
+    "seconds": 0.9840000001713634,
+    "structure_match": true
+  },
+  {
+    "id": "103",
+    "truth": "c = \\pm \\sqrt { 3 }",
+    "latex": "\n$$\nC = \\pm \\sqrt {3}\n$$",
+    "seconds": 0.8439999998081475,
+    "structure_match": false
+  },
+  {
+    "id": "104",
+    "truth": "3 \\times 3 \\times 5 = 4 5 ( d m ^ { 2 } )",
+    "latex": "\n$$\n3 \\times 3 \\times 5 = 4 5 (d m ^ {2})\n$$",
+    "seconds": 1.422000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "105",
+    "truth": "y ^ { 4 } = ( x - b _ { 1 } ) ( x - b _ { 1 } ) ^ { 2 } ( x - b _ { 3 } ) ^ { 2 } ( x - b _ { 4 } ) ^ { 3 }",
+    "latex": "\n$$\ny ^ {4} = (x - b _ {1}) (x - b _ {1}) ^ {2} (x - b _ {3}) ^ {2} (x - b _ {4}) ^ {3}\n$$",
+    "seconds": 8.202999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "106",
+    "truth": "\\frac { a z ^ { - 1 } ( 1 + a z ^ { - 1 } ) } { ( 1 - a z ^ { - 1 } ) 3 }",
+    "latex": "\n$$\n\\frac {a z ^ {- 1} \\left(1 + a z ^ {- 1}\\right)}{\\left(1 - a z ^ {- 1}\\right) ^ {3}}\n$$",
+    "seconds": 4.047000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "107",
+    "truth": "b = \\sqrt { a }",
+    "latex": "\n$$\nb = \\sqrt {a}\n$$",
+    "seconds": 1.0,
+    "structure_match": true
+  },
+  {
+    "id": "108",
+    "truth": "m _ { 1 } = 1 h _ { 2 } = \\frac { 3 } { 2 }",
+    "latex": "\n$$\nm _ {1} = 1 h _ {2} = \\frac {3}{2}\n$$",
+    "seconds": 1.422000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "109",
+    "truth": "1 9",
+    "latex": "\n$$\n\\vert 1 9 \\vert\n$$",
+    "seconds": 0.9220000000204891,
+    "structure_match": false
+  },
+  {
+    "id": "110",
+    "truth": "= 5 0 0 ^ { 2 } - ( 5 0 0 - 1 ) \\times ( 5 0 0 + 1 ) = 5 0 0 ^ { 2 } - ( 5 0 0 ^ { 2 } + 1 ) = 1",
+    "latex": "\n$$\n= 5 0 0 ^ {2} - (5 0 0 - 1) \\times (5 0 0 + 1) = 5 0 0 ^ {2} - (5 0 0 ^ {2} + 1) = 1\n$$",
+    "seconds": 9.140000000130385,
+    "structure_match": true
+  },
+  {
+    "id": "111",
+    "truth": "A F ^ { 2 } = A B ^ { 2 } - B F",
+    "latex": "\n$$\nA F ^ {2} = A B ^ {2} - B F\n$$",
+    "seconds": 1.0939999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "112",
+    "truth": "x = - \\frac { 2 } { 3 }",
+    "latex": "\n$$\nx=-\\frac{2}{3}\n$$",
+    "seconds": 1.1880000000819564,
+    "structure_match": true
+  },
+  {
+    "id": "113",
+    "truth": "\\tan 1 = \\frac { C D } { B C } = \\frac { 2 } { 3 }",
+    "latex": "\n$$\n\\mathrm {f a n} = \\frac {C P}{B C} = \\frac {2}{3}\n$$",
+    "seconds": 1.343000000109896,
+    "structure_match": false
+  },
+  {
+    "id": "114",
+    "truth": "3 y - \\frac { 2 } { y } + 3 = 0",
+    "latex": "\n$$\n3 y - \\frac {2}{y} + 3 = 0\n$$",
+    "seconds": 1.0309999999590218,
+    "structure_match": true
+  },
+  {
+    "id": "115",
+    "truth": "( \\frac { B } { A + 1 } ) ^ { \\frac { 1 } { n + 1 } }",
+    "latex": "\n$$\n\\left(\\frac {B}{A + 1}\\right) ^ {\\frac {1}{n + 1}}\n$$",
+    "seconds": 2.422000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "116",
+    "truth": "\\sin ( \\frac { \\theta } { 2 } )",
+    "latex": "\n$$\n\\sin \\left(\\frac {6}{2}\\right)\n$$",
+    "seconds": 1.3590000001713634,
+    "structure_match": false
+  },
+  {
+    "id": "117",
+    "truth": "\\frac { ( s ^ { 2 } + t ^ { 2 } + u ^ { 2 } ) ^ { 2 } } { s t u }",
+    "latex": "\n$$\n\\frac {(s ^ {2} + t ^ {2} + u ^ {2}) ^ {2}}{s t u}\n$$",
+    "seconds": 7.281999999890104,
+    "structure_match": true
+  },
+  {
+    "id": "118",
+    "truth": "y = \\frac { 2 } { 3 } x",
+    "latex": "\n$$\ny = \\frac {2}{3} x\n$$",
+    "seconds": 2.515000000130385,
+    "structure_match": true
+  },
+  {
+    "id": "119",
+    "truth": "\\frac { 1 } { \\sqrt { V } }",
+    "latex": "\n$$\n\\frac {1}{\\sqrt {v}}\n$$",
+    "seconds": 2.672000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "120",
+    "truth": "5 j + 3 j",
+    "latex": "\n$$\n5 j + 3 j\n$$",
+    "seconds": 4.452999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "121",
+    "truth": "\\int d ^ { n } x f g = \\int d ^ { n } x g f",
+    "latex": "\n$$\n\\int d ^ {n} x f g = \\int d ^ {n} x g f\n$$",
+    "seconds": 4.875,
+    "structure_match": true
+  },
+  {
+    "id": "122",
+    "truth": "\\sum \\limits _ { i _ { 1 } } m _ { i _ { 1 } } + \\sum \\limits _ { j _ { 1 } } m _ { j _ { 1 } } - 2 \\sum \\limits _ { k _ { 1 } } m _ { k _ { 1 } } = - 3",
+    "latex": "\n$$\n\\sum_ {i _ {1}} m _ {i _ {1}} + \\sum_ {j _ {1}} m _ {j _ {1}} - 2 \\sum_ {k _ {1}} m _ {k _ {1}} = - 3\n$$",
+    "seconds": 12.468000000109896,
+    "structure_match": true
+  },
+  {
+    "id": "123",
+    "truth": "3 0 x = 1 9 0 8",
+    "latex": "\n$$\n3 0 x = 1 9 0 8\n$$",
+    "seconds": 1.75,
+    "structure_match": true
+  },
+  {
+    "id": "124",
+    "truth": "- 2 ^ { \\frac { 1 } { 4 } } ( \\frac { 5 + \\sqrt { 5 } } { 5 - \\sqrt { 5 } } ) ^ { \\frac { 1 } { 4 } }",
+    "latex": "\n$$\n- 2 ^ {\\frac {1}{4}} \\left(\\frac {5 + \\sqrt {3}}{5 - \\sqrt {5}}\\right) ^ {\\frac {4}{4}}\n$$",
+    "seconds": 4.859999999869615,
+    "structure_match": false
+  },
+  {
+    "id": "125",
+    "truth": "\\vert 3 0 0 x = 3 0 0 \\times 6 = 1 8 0 0",
+    "latex": "\n$$\n3 0 0 x = 3 0 0 \\times 6 = 1 8 0 0\n$$",
+    "seconds": 4.186999999918044,
+    "structure_match": false
+  },
+  {
+    "id": "126",
+    "truth": "\\frac { 1 } { 3 } \\times 2 8 . 2 6 \\times 1 0 = 9 4 . 2 ( d m ^ { 3 } )",
+    "latex": "\n$$\n\\frac {1}{2} \\times 2 8. 2 6 \\times 1 ^ {0} = 9 4. 2 (d m ^ {3})\n$$",
+    "seconds": 3.922000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "127",
+    "truth": "C ^ { 2 }",
+    "latex": "\n$$\nC ^ {2}\n$$",
+    "seconds": 1.077999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "128",
+    "truth": "\\frac { 7 } { 1 6 } + 7",
+    "latex": "\n$$\n\\frac {7}{1 6} + 7\n$$",
+    "seconds": 2.125,
+    "structure_match": true
+  },
+  {
+    "id": "129",
+    "truth": "1 - \\frac { 1 } { 2 } + \\frac { 1 } { 2 } - \\frac { 1 } { 3 } + \\frac { 1 } { 3 } - \\frac { 1 } { 4 } \\cdots + \\frac { 1 } { n } -",
+    "latex": "\n$$\n1 - \\frac {1}{2} + \\frac {1}{2} - \\frac {1}{3} + \\frac {1}{3} - \\frac {1}{4} \\therefore + \\frac {1}{n}\n$$",
+    "seconds": 5.063000000081956,
+    "structure_match": false
+  },
+  {
+    "id": "130",
+    "truth": "y ^ { \\prime } x ^ { \\prime } = q x ^ { \\prime } y ^ { \\prime }",
+    "latex": "\n$$\ny ^ {\\prime} x ^ {\\prime} = q x ^ {\\prime} y ^ {\\prime}\n$$",
+    "seconds": 4.343000000109896,
+    "structure_match": true
+  },
+  {
+    "id": "131",
+    "truth": "\\overrightarrow { A D } = \\frac { 1 } { 2 } ( \\overrightarrow { A B } + \\overrightarrow { A C } )",
+    "latex": "\n$$\n\\overrightarrow {A D} = \\frac {1}{2} (\\overrightarrow {A B} + \\overrightarrow {A C})\n$$",
+    "seconds": 3.5,
+    "structure_match": true
+  },
+  {
+    "id": "132",
+    "truth": "\\frac { 2 } { x } = \\frac { 1 } { 0 . 9 }",
+    "latex": "\n$$\n\\frac {2}{\\pi} = \\frac {1}{1 9}\n$$",
+    "seconds": 1.25,
+    "structure_match": false
+  },
+  {
+    "id": "133",
+    "truth": "O D \\bot A B",
+    "latex": "\n$$\nO D \\bot A B\n$$",
+    "seconds": 1.0159999998286366,
+    "structure_match": true
+  },
+  {
+    "id": "134",
+    "truth": "4 + 4 + \\frac { 4 } { 4 }",
+    "latex": "\n$$\n4 + 4 + \\frac {4}{4}\n$$",
+    "seconds": 3.7340000001713634,
+    "structure_match": true
+  },
+  {
+    "id": "135",
+    "truth": "x ^ { 2 } + \\frac { 1 5 } { 4 } - 1 0 x + 4 = \\frac { 1 6 9 } { 4 } + x ^ { 2 } - 1 3 x",
+    "latex": "\n$$\nx ^ {2} + \\frac {1 5}{4} - 1 0 x + 4 = \\frac {1 6 9}{4} + x ^ {2} - 1 3 \\cdot x\n$$",
+    "seconds": 5.828999999910593,
+    "structure_match": false
+  },
+  {
+    "id": "136",
+    "truth": "\\eta = \\frac { F s - f s } { F s } = \\frac { F - f } { F }",
+    "latex": "\n$$\nn = \\frac {F S - F S}{F S} = \\frac {F - f}{F}\n$$",
+    "seconds": 5.6399999998975545,
+    "structure_match": false
+  },
+  {
+    "id": "137",
+    "truth": "\\frac { 1 } { 8 }",
+    "latex": "\n$$\n\\frac {1}{8}\n$$",
+    "seconds": 0.7970000000204891,
+    "structure_match": true
+  },
+  {
+    "id": "138",
+    "truth": "\\int \\sin ^ { 2 } x d x",
+    "latex": "\n$$\n\\sqrt {S} \\sin^ {2} x d x\n$$",
+    "seconds": 1.8910000000614673,
+    "structure_match": false
+  },
+  {
+    "id": "139",
+    "truth": "\\sum \\limits _ { m = 1 } ^ { \\infty } \\sum \\limits _ { n = 1 } ^ { \\infty } \\frac { m ^ { 2 } n } { 3 ^ { m } ( m 3 ^ { n } + n 3 ^ { m } ) }",
+    "latex": "\n$$\n\\sum_ {m = 1} ^ {\\infty} \\sum_ {n = 1} ^ {\\infty} \\frac {m ^ {2} n}{3 ^ {m} \\left(m 3 ^ {n} + n 3 ^ {m}\\right)}\n$$",
+    "seconds": 9.375,
+    "structure_match": true
+  },
+  {
+    "id": "140",
+    "truth": "\\sum S S = S",
+    "latex": "\n$$\n\\sum s s = 8\n$$",
+    "seconds": 1.577999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "141",
+    "truth": "8 0 ^ { o }",
+    "latex": "\n$$\n8 0 ^ {\\circ}\n$$",
+    "seconds": 1.077999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "142",
+    "truth": "\\sqrt { t } = \\sqrt { x - 4 }",
+    "latex": "\n$$\n\\sqrt {t} = \\sqrt {x - 4}\n$$",
+    "seconds": 1.625,
+    "structure_match": true
+  },
+  {
+    "id": "143",
+    "truth": "H _ { 2 } S O _ { 3 } ^ { - } \\rightleftharpoons H ^ { + } + S O _ { 3 } ^ { 2 - }",
+    "latex": "\n$$\nH _ {2} S O _ {3} ^ {-} \\rightleftharpoons H ^ {+} + S O _ {3} ^ {2 -}\n$$",
+    "seconds": 2.0619999999180436,
+    "structure_match": true
+  },
+  {
+    "id": "144",
+    "truth": "5 \\times 5 \\times 6 = 1 5 0 ( c m ^ { 2 } )",
+    "latex": "\n$$\n5 ^ {2} \\times 5 \\times 6 = 1 5 0 (c m ^ {2})\n$$",
+    "seconds": 5.922000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "145",
+    "truth": "1 8 z",
+    "latex": "\n$$\n1 8 2\n$$",
+    "seconds": 1.8440000000409782,
+    "structure_match": false
+  },
+  {
+    "id": "146",
+    "truth": "\\frac { q ^ { 2 } \\sqrt { \\pi } } { 2 g } \\sqrt { \\frac { a - 1 } { a } }",
+    "latex": "\n$$\n\\frac {q ^ {2} \\sqrt {\\pi}}{2 g} \\sqrt {\\frac {a - 1}{a}}\n$$",
+    "seconds": 5.922000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "147",
+    "truth": "a = \\frac { 3 } { 2 }",
+    "latex": "\n$$\na = \\frac {3}{2}\n$$",
+    "seconds": 2.8280000002123415,
+    "structure_match": true
+  },
+  {
+    "id": "148",
+    "truth": "\\frac { A B } { B C } = \\frac { 3 } { 2 }",
+    "latex": "\n$$\n\\frac {A B}{B C} = \\frac {3}{2}\n$$",
+    "seconds": 1.0939999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "149",
+    "truth": "= \\frac { 5 9 } { 1 2 } = - 4 \\frac { 1 1 } { 1 2 }",
+    "latex": "\n$$\n= \\frac {5 9}{1 2} = - 7 \\frac {1 1}{1 2}\n$$",
+    "seconds": 2.1090000001713634,
+    "structure_match": false
+  },
+  {
+    "id": "150",
+    "truth": "\\alpha N _ { f } = \\alpha ( \\sum \\limits _ { I = 1 } ^ { 9 } v _ { I } \\gamma _ { I } + \\sum \\limits _ { i = 1 } ^ { 3 } \\frac { i \\mu x ^ { i } } { 4 } \\{ \\gamma _ { i } , \\gamma _ { 1 2 3 } \\} ) + \\alpha ^ { 2 } \\mu ^ { 2 } / 4 ^ { 2 }",
+    "latex": "\n$$\n\\alpha N _ {2} = \\alpha \\left(\\sum_ {i = 1} ^ {g} v _ {i} x _ {i} + \\sum_ {i = 1} ^ {3} \\frac {i \\mu x ^ {i}}{4} \\left\\{\\gamma_ {i}, \\gamma_ {1 2 3} ^ {2} \\right\\}\\right) + \\alpha^ {2} y ^ {2} / 4 ^ {2}\n$$",
+    "seconds": 14.484999999869615,
+    "structure_match": false
+  },
+  {
+    "id": "151",
+    "truth": "p ^ { \\alpha } - p ^ { \\alpha - 1 }",
+    "latex": "\n$$\np ^ {\\alpha} - p ^ {\\alpha - 1}\n$$",
+    "seconds": 2.0620000001508743,
+    "structure_match": true
+  },
+  {
+    "id": "152",
+    "truth": "\\sin z = \\beta",
+    "latex": "\n$$\n\\sin z = \\beta\n$$",
+    "seconds": 1.4849999998696148,
+    "structure_match": true
+  },
+  {
+    "id": "153",
+    "truth": "3 b - 2 a = 4",
+    "latex": "\n$$\n3 b-2 a=4\n$$",
+    "seconds": 2.265000000130385,
+    "structure_match": true
+  },
+  {
+    "id": "154",
+    "truth": "( x - 1 ) ^ { 2 } = \\frac { 7 } { 4 }",
+    "latex": "\n$$\n(x - 1) ^ {2} = \\frac {7}{4}\n$$",
+    "seconds": 2.531999999890104,
+    "structure_match": true
+  },
+  {
+    "id": "155",
+    "truth": "x ^ { n + 1 } + y ^ { 2 } + z ^ { 2 }",
+    "latex": "\n$$\nx ^ {n + 1} + y ^ {2} + z ^ {2}\n$$",
+    "seconds": 3.1089999999385327,
+    "structure_match": true
+  },
+  {
+    "id": "156",
+    "truth": "P = \\frac { F } { S } =",
+    "latex": "\n$$\nP = \\frac {F}{S}\n$$",
+    "seconds": 0.9529999999795109,
+    "structure_match": false
+  },
+  {
+    "id": "157",
+    "truth": "[ ( x + y ) + 4 ( x - y ) ] [ ( x + y ) - 4 ( x - y ) ]",
+    "latex": "\n$$\n[ (x + y) + 4 (x - y) ] [ (x + y) - 4 (x - y) ]\n$$",
+    "seconds": 1.6400000001303852,
+    "structure_match": true
+  },
+  {
+    "id": "158",
+    "truth": "x ^ { 1 } y ^ { 1 } = q y ^ { 1 } x ^ { 1 }",
+    "latex": "\n$$\nx ^ {\\prime} y ^ {\\prime} = 9 y ^ {\\prime} x ^ {\\prime}\n$$",
+    "seconds": 2.531999999890104,
+    "structure_match": false
+  },
+  {
+    "id": "159",
+    "truth": "| x y | = | x | | y |",
+    "latex": "\n$$\n| x y | = | x | | y |\n$$",
+    "seconds": 1.3589999999385327,
+    "structure_match": true
+  },
+  {
+    "id": "160",
+    "truth": "\\int d ^ { n } x a _ { 2 }",
+    "latex": "\n$$\n\\int d ^ {m} x a _ {2}\n$$",
+    "seconds": 2.577999999979511,
+    "structure_match": false
+  },
+  {
+    "id": "161",
+    "truth": "\\angle F D E = \\angle F E D = 6 0 ^ { \\circ }",
+    "latex": "\n$$\n\\angle D E = \\angle F E D = 6 0 ^ {\\circ}\n$$",
+    "seconds": 1.375,
+    "structure_match": false
+  },
+  {
+    "id": "162",
+    "truth": "\\cdot b ^ { 2 } = a ^ { 2 } + c ^ { 2 } - 2 a c \\cdot \\cos B",
+    "latex": "\n$$\nb ^ {2} = a ^ {2} + c ^ {2} - 2 a c \\cdot \\cos B\n$$",
+    "seconds": 2.4839999999385327,
+    "structure_match": false
+  },
+  {
+    "id": "163",
+    "truth": "B \\cos C = 2 S i n A + S :",
+    "latex": "\n$$\n\\cos C = 2 \\sin A + s\n$$",
+    "seconds": 1.0630000000819564,
+    "structure_match": false
+  },
+  {
+    "id": "164",
+    "truth": "\\overrightarrow { A B } = \\overrightarrow { D C }",
+    "latex": "\n$$\n\\overrightarrow {A B} = \\overrightarrow {D C}\n$$",
+    "seconds": 1.1100000001024455,
+    "structure_match": true
+  },
+  {
+    "id": "165",
+    "truth": "x = 1 0 - y",
+    "latex": "\n$$\nx = 1 0 - y\n$$",
+    "seconds": 1.093000000109896,
+    "structure_match": true
+  },
+  {
+    "id": "166",
+    "truth": "2 a = \\frac { 5 } { 4 } m",
+    "latex": "\n$$\n2 a = \\frac {5}{4} m\n$$",
+    "seconds": 3.1719999997876585,
+    "structure_match": true
+  },
+  {
+    "id": "167",
+    "truth": "\\alpha \\in [ 0 ,",
+    "latex": "\n$$\n\\alpha \\in [ 0,\n$$",
+    "seconds": 1.4380000000819564,
+    "structure_match": true
+  },
+  {
+    "id": "168",
+    "truth": "q _ { 1 } , q _ { 2 } , \\ldots , q _ { m }",
+    "latex": "\n$$\n9 _ {1}, 9 _ {2}, \\dots , 9 _ {m}\n$$",
+    "seconds": 2.75,
+    "structure_match": false
+  },
+  {
+    "id": "169",
+    "truth": "C _ { 2 } ( j , \\frac { 1 } { 2 } , \\ldots , \\pm \\frac { 1 } { 2 } ) = ( j - \\frac { 1 } { 2 } ) ( j + 2 n - \\frac { 3 } { 2 } ) + \\frac { 1 } { 4 } n ( 2 n - 1 )",
+    "latex": "\n$$\nC _ {2} \\left(j, \\frac {1}{2}, \\dots \\pm \\frac {1}{2}\\right) = \\left(j - \\frac {1}{2}\\right) \\left(j + 2 n - \\frac {3}{2}\\right) + \\frac {1}{5} n (2 n - 1)\n$$",
+    "seconds": 6.343000000109896,
+    "structure_match": false
+  },
+  {
+    "id": "170",
+    "truth": "\\sqrt { 0 . 0 2 2 5 } = 2 2 . 5 \\sqrt { 3 6 } = \\sqrt { 6 } = 3",
+    "latex": "\n$$\n\\sqrt {0 . 0 2 5}=2 2. 5 \\sqrt {A 3 6}=\\sqrt {6}=3\n$$",
+    "seconds": 2.9689999998081475,
+    "structure_match": false
+  },
+  {
+    "id": "171",
+    "truth": "O C > O D",
+    "latex": "\n$$\nO C > O D\n$$",
+    "seconds": 0.8440000000409782,
+    "structure_match": true
+  },
+  {
+    "id": "172",
+    "truth": "5 a ( a - b ) ^ { 2 } - 1 0 ( a - b ) ^ { 3 } = ( a - b ) ^ { 2 } \\cdot ( 1 0 b - 5 a ) = 5 ( a - b ) ^ { 2 }",
+    "latex": "\n$$\n5 a (a - b) ^ {2} - 1 0 (a - b) ^ {3} = (a - b) ^ {2} \\cdot (1 0 b - 5 a) = 5 (a - b) ^ {2}\n$$",
+    "seconds": 4.844000000040978,
+    "structure_match": true
+  },
+  {
+    "id": "173",
+    "truth": "E \\geq 1 + \\pi \\sqrt { \\alpha / 8 } = 1 . 3 3 0 9",
+    "latex": "\n$$\nE \\geq 1 + \\pi r \\sqrt {\\alpha / 8} = 1. 3 3 0 g\n$$",
+    "seconds": 4.047000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "174",
+    "truth": "a ( x ) a ( y ) a ( z )",
+    "latex": "\n$$\na (x) a (y) a (z)\n$$",
+    "seconds": 1.702999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "175",
+    "truth": "y = 3 x + 7 + \\frac { x + 8 } { x }",
+    "latex": "\n$$\ny = 3 x + 7 + \\frac {x + 8}{x}\n$$",
+    "seconds": 3.25,
+    "structure_match": true
+  },
+  {
+    "id": "176",
+    "truth": "1 . 6 9 4 6 9 6 1",
+    "latex": "\n$$\n1. 6 9 4 6 9 6 1\n$$",
+    "seconds": 1.297000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "177",
+    "truth": "\\frac { 1 5 0 \\times 0 . 4 } { x } + \\frac { 1 5 0 \\times 0 . 6 } { 2 x + 5 0 } = \\frac { 1 } { 2 }",
+    "latex": "\n$$\n\\frac {1 5 0 \\times 0 . 4}{x} + \\frac {1 5 0 \\times 0 . 6}{2 x + 5 0} = \\frac {1}{2}\n$$",
+    "seconds": 2.171000000089407,
+    "structure_match": true
+  },
+  {
+    "id": "178",
+    "truth": "a _ { B } = \\frac { f } { m } = \\mu g",
+    "latex": "\n$$\na _ {B} = \\frac {f}{m} = u g\n$$",
+    "seconds": 1.8909999998286366,
+    "structure_match": false
+  },
+  {
+    "id": "179",
+    "truth": "x = - \\frac { b } { 2 a } = \\frac { 2 } { 2 \\times ( - 1 ) } = 1",
+    "latex": "\n$$\nx = - \\frac {b}{2 a} = \\frac {2}{2 (x - 1)} = 1\n$$",
+    "seconds": 2.625,
+    "structure_match": false
+  },
+  {
+    "id": "180",
+    "truth": "- \\frac { 1 1 \\pi } { 8 }",
+    "latex": "\n$$\n- \\frac {1 1 \\pi}{8}\n$$",
+    "seconds": 2.077999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "181",
+    "truth": "x _ { 1 } x _ { d + 1 } + \\ldots + x _ { d } x _ { 2 d }",
+    "latex": "\n$$\nx _ {1} x _ {d + 1} + \\dots + x _ {d} x _ {2 d}\n$$",
+    "seconds": 5.266000000061467,
+    "structure_match": false
+  },
+  {
+    "id": "182",
+    "truth": "n \\times n",
+    "latex": "\n$$\nn \\times n\n$$",
+    "seconds": 1.0940000000409782,
+    "structure_match": true
+  },
+  {
+    "id": "183",
+    "truth": "7 \\sqrt { 2 }",
+    "latex": "\n$$\n\\vert 7 \\sqrt {2} \\vert\n$$",
+    "seconds": 0.9839999999385327,
+    "structure_match": false
+  },
+  {
+    "id": "184",
+    "truth": "\\lim \\limits _ { t \\rightarrow \\infty } | \\gamma ( t ) | = \\infty",
+    "latex": "\n$$\n\\lim _ {t \\rightarrow \\infty} | \\gamma (t) | = \\infty\n$$",
+    "seconds": 2.7340000001713634,
+    "structure_match": true
+  },
+  {
+    "id": "185",
+    "truth": "x ^ { 2 } + 3 x + 1 = x ^ { 4 } + x ( a - 1 ) + b - a",
+    "latex": "\n$$\nx ^ {2} + 3 x + 1 = x ^ {2} + x (a - 1) + b - a\n$$",
+    "seconds": 3.8129999998491257,
+    "structure_match": false
+  },
+  {
+    "id": "186",
+    "truth": "\\int d y f ( y ) = 1",
+    "latex": "\n$$\n\\int d y f (y) = 1\n$$",
+    "seconds": 1.2190000000409782,
+    "structure_match": true
+  },
+  {
+    "id": "187",
+    "truth": "y + \\frac { 2 } { y } = 3",
+    "latex": "\n$$\ny+\\frac {1}{y}=3\n$$",
+    "seconds": 2.2339999999385327,
+    "structure_match": false
+  },
+  {
+    "id": "188",
+    "truth": "- \\frac { 1 1 + z + 5 z ^ { 2 } - z ^ { 3 } } { 1 6 }",
+    "latex": "\n$$\n- \\frac {1 1 + 3 + 5 x ^ {2} - y ^ {3}}{1 6}\n$$",
+    "seconds": 4.625,
+    "structure_match": false
+  },
+  {
+    "id": "189",
+    "truth": "H = H _ { 0 } ^ { 1 } + H _ { 1 } ^ { 1 }",
+    "latex": "\n$$\nH = H _ {0} ^ {1} + H _ {1} ^ {1}\n$$",
+    "seconds": 2.171000000089407,
+    "structure_match": true
+  },
+  {
+    "id": "190",
+    "truth": "\u3001 C Q = B C - B Q = 6 0 - 2 0 \\sqrt { 3 } ( c m )",
+    "latex": "\n$$\nC Q = B C - B Q = 6 0 - 2 0 \\sqrt {3} (c m)\n$$",
+    "seconds": 2.422000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "191",
+    "truth": "\\theta _ { i + 1 } = \\theta _ { i } - \\alpha _ { i }",
+    "latex": "\n$$\n\\theta_ {i + 1} = \\theta_ {i} - \\alpha_ {i}\n$$",
+    "seconds": 3.9219999997876585,
+    "structure_match": true
+  },
+  {
+    "id": "192",
+    "truth": "( 1 ) + ( 1 1 ) + ( 1 1 1 ) + ( 1 1 2 ) + ( 1 2 3 )",
+    "latex": "\n$$\n(1) + (1 1) + (1 1 1) + (1 1 2) + (1 2 3)\n$$",
+    "seconds": 4.25,
+    "structure_match": true
+  },
+  {
+    "id": "193",
+    "truth": "( x + \\frac { b } { 2 a } ) ^ { 2 } = \\frac { b ^ { 2 } - 4 a } { 4 a \\cdot ^ { 2 } } \\cdot",
+    "latex": "\n$$\n(x + \\frac {b}{2 0}) ^ {2} = \\frac {6}{4} a ^ {2}.\n$$",
+    "seconds": 1.4850000001024455,
+    "structure_match": false
+  },
+  {
+    "id": "194",
+    "truth": "1 + 1 2 + 1 2 + 2 + 1 8 + 1 2 + 6 = 6 3",
+    "latex": "\n$$\n1 + 1 2 + 1 2 + 2 + 1 8 + 1 2 + 6 = 6 3\n$$",
+    "seconds": 4.280999999959022,
+    "structure_match": true
+  },
+  {
+    "id": "195",
+    "truth": "\\frac { 4 7 } { 2 } + \\frac { 1 } { 2 } \\pi = 1 3 + \\pi",
+    "latex": "\n$$\n\\frac {y 7}{2} + \\frac {1}{2} \\pi = 1 3 + \\pi\n$$",
+    "seconds": 1.3900000001303852,
+    "structure_match": false
+  },
+  {
+    "id": "196",
+    "truth": "x = \\frac { 1 } { 2 } \\times ( \\frac { 6 } { 5 } x - \\frac { 3 6 } { 5 } )",
+    "latex": "\n$$\nx = \\frac {1}{2} \\times (\\frac {6}{5} x - \\frac {3 6}{5})\n$$",
+    "seconds": 3.7189999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "197",
+    "truth": "\\frac { p _ { 2 } } { q _ { 2 } } = \\frac { p _ { 1 } + p _ { 3 } } { q _ { 1 } + q _ { 3 } }",
+    "latex": "\n$$\n\\frac {\\rho_ {2}}{\\rho_ {2}} = \\frac {\\rho_ {1} + \\rho_ {3}}{\\rho_ {1} + \\rho_ {3}}\n$$",
+    "seconds": 5.969000000040978,
+    "structure_match": false
+  },
+  {
+    "id": "198",
+    "truth": "x = \\frac { 4 4 } { 3 5 }",
+    "latex": "\n$$\nx = \\frac {1 4}{3 5}\n$$",
+    "seconds": 0.9840000001713634,
+    "structure_match": false
+  },
+  {
+    "id": "199",
+    "truth": "\\frac { 4 k + 8 - 8 k ^ { 2 } } { ( 1 - k ) ^ { 2 } } = \\alpha",
+    "latex": "\n$$\n\\frac {4 k + 8 - 8 k ^ {2}}{(1 - k) ^ {2}} = \\alpha\n$$",
+    "seconds": 1.952999999979511,
+    "structure_match": true
+  }
+]

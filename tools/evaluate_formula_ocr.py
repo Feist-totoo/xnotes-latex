@@ -206,7 +206,7 @@ def main():
     test.add_argument("--kind", choices=["texo", "ppformula"], default="texo")
     test.add_argument("--beam", type=int, choices=[1, 4], default=1)
     test.add_argument("--max-tokens", type=int, default=128)
-    test.add_argument("--model-dir", type=Path, default=ROOT / "app/src/main/assets/formula")
+    test.add_argument("--model-dir", type=Path, default=ROOT / "build/legacy-formula")
     test.add_argument("--model-file", default="pp-formulanet_plus-m.onnx")
     args = parser.parse_args()
     if args.command == "fetch":
