@@ -1,0 +1,56 @@
+{
+  "format": "xnotes-formula-pack",
+  "schema": 1,
+  "type": "vocabulary",
+  "minAppVersionCode": 71,
+  "license": "AGPL-3.0",
+  "id": "mechanics",
+  "version": 1,
+  "nameZh": "力学",
+  "nameEn": "Mechanics",
+  "reviewZh": "向量箭头、速度 v/ν 与加速度的下标",
+  "reviewEn": "Vector arrows, v/ν and acceleration indices",
+  "symbols": [
+    {
+      "latex": "\\vec{}",
+      "labelZh": "向量",
+      "labelEn": "Vector"
+    },
+    {
+      "latex": "\\dot{}",
+      "labelZh": "一阶时间导数",
+      "labelEn": "Time derivative"
+    },
+    {
+      "latex": "\\ddot{}",
+      "labelZh": "二阶时间导数",
+      "labelEn": "Second time derivative"
+    },
+    {
+      "latex": "\\omega",
+      "labelZh": "角速度 ω",
+      "labelEn": "Angular velocity ω"
+    }
+  ],
+  "templates": [
+    {
+      "latex": "\\vec{F}=m\\vec{a}",
+      "labelZh": "牛顿第二定律",
+      "labelEn": "Newton’s second law"
+    },
+    {
+      "latex": "E_k=\\frac{1}{2}mv^2",
+      "labelZh": "动能",
+      "labelEn": "Kinetic energy"
+    }
+  ],
+  "signals": {
+    "\\vec{F}": 5,
+    "\\vec{a}": 4,
+    "\\ddot": 4,
+    "\\dot": 2,
+    "mv": 3,
+    "E_k": 4,
+    "\\omega": 1
+  }
+}

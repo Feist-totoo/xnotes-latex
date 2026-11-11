@@ -1,0 +1,56 @@
+{
+  "format": "xnotes-formula-pack",
+  "schema": 1,
+  "type": "vocabulary",
+  "minAppVersionCode": 71,
+  "license": "AGPL-3.0",
+  "id": "waves_optics",
+  "version": 1,
+  "nameZh": "振动波动与光学",
+  "nameEn": "Oscillations, waves and optics",
+  "reviewZh": "相位正负号、频率 ν 与速度 v",
+  "reviewEn": "Phase signs, frequency ν and velocity v",
+  "symbols": [
+    {
+      "latex": "\\lambda",
+      "labelZh": "波长 λ",
+      "labelEn": "Wavelength λ"
+    },
+    {
+      "latex": "\\nu",
+      "labelZh": "频率 ν",
+      "labelEn": "Frequency ν"
+    },
+    {
+      "latex": "\\omega",
+      "labelZh": "角频率 ω",
+      "labelEn": "Angular frequency ω"
+    },
+    {
+      "latex": "\\phi",
+      "labelZh": "相位 φ",
+      "labelEn": "Phase φ"
+    }
+  ],
+  "templates": [
+    {
+      "latex": "y=A\\cos(\\omega t-kx+\\phi)",
+      "labelZh": "简谐波",
+      "labelEn": "Harmonic wave"
+    },
+    {
+      "latex": "\\frac{1}{f}=\\frac{1}{u}+\\frac{1}{v}",
+      "labelZh": "薄透镜公式",
+      "labelEn": "Thin lens equation"
+    }
+  ],
+  "signals": {
+    "\\omega": 2,
+    "\\lambda": 2,
+    "\\nu": 1,
+    "\\phi": 1,
+    "\\sin": 1,
+    "\\cos": 1,
+    "kx": 4
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "format": "xnotes-formula-pack",
+  "schema": 1,
+  "type": "vocabulary",
+  "minAppVersionCode": 71,
+  "license": "AGPL-3.0",
+  "id": "quantum",
+  "version": 1,
+  "nameZh": "近代与量子物理",
+  "nameEn": "Modern and quantum physics",
+  "reviewZh": "ℏ、波函数 ψ/φ、共轭与算符",
+  "reviewEn": "ℏ, ψ/φ, conjugates and operators",
+  "symbols": [
+    {
+      "latex": "\\hbar",
+      "labelZh": "约化普朗克常数",
+      "labelEn": "Reduced Planck constant"
+    },
+    {
+      "latex": "\\psi",
+      "labelZh": "波函数 ψ",
+      "labelEn": "Wave function ψ"
+    },
+    {
+      "latex": "\\hat{}",
+      "labelZh": "算符",
+      "labelEn": "Operator"
+    },
+    {
+      "latex": "^{\\dagger}",
+      "labelZh": "厄米共轭",
+      "labelEn": "Hermitian conjugate"
+    }
+  ],
+  "templates": [
+    {
+      "latex": "i\\hbar\\frac{\\partial\\psi}{\\partial t}=\\hat{H}\\psi",
+      "labelZh": "薛定谔方程",
+      "labelEn": "Schrödinger equation"
+    },
+    {
+      "latex": "E^2=p^2c^2+m^2c^4",
+      "labelZh": "能量动量关系",
+      "labelEn": "Energy–momentum relation"
+    }
+  ],
+  "signals": {
+    "\\hbar": 8,
+    "\\psi": 5,
+    "\\hat{H}": 6,
+    "\\dagger": 6,
+    "\\langle": 1,
+    "\\rangle": 1,
+    "mc": 1
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "format": "xnotes-formula-pack",
+  "schema": 1,
+  "type": "vocabulary",
+  "minAppVersionCode": 71,
+  "license": "AGPL-3.0",
+  "id": "electromagnetism",
+  "version": 1,
+  "nameZh": "电磁学与电路",
+  "nameEn": "Electromagnetism and circuits",
+  "reviewZh": "旋度/散度、偏导、负号与电磁场向量",
+  "reviewEn": "Curl/divergence, partials, signs and field vectors",
+  "symbols": [
+    {
+      "latex": "\\nabla",
+      "labelZh": "∇ 算子",
+      "labelEn": "Nabla"
+    },
+    {
+      "latex": "\\times",
+      "labelZh": "叉乘",
+      "labelEn": "Cross product"
+    },
+    {
+      "latex": "\\cdot",
+      "labelZh": "点乘",
+      "labelEn": "Dot product"
+    },
+    {
+      "latex": "\\epsilon",
+      "labelZh": "介电常数 ε",
+      "labelEn": "Permittivity ε"
+    },
+    {
+      "latex": "\\mu",
+      "labelZh": "磁导率 μ",
+      "labelEn": "Permeability μ"
+    }
+  ],
+  "templates": [
+    {
+      "latex": "\\nabla\\times\\vec{E}=-\\frac{\\partial\\vec{B}}{\\partial t}",
+      "labelZh": "法拉第定律",
+      "labelEn": "Faraday’s law"
+    },
+    {
+      "latex": "U=IR",
+      "labelZh": "欧姆定律",
+      "labelEn": "Ohm’s law"
+    }
+  ],
+  "signals": {
+    "\\nabla": 3,
+    "\\vec{E}": 5,
+    "\\vec{B}": 5,
+    "\\epsilon": 2,
+    "\\mu_0": 4,
+    "IR": 5,
+    "\\times": 1
+  }
+}

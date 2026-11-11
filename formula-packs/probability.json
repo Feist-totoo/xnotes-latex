@@ -1,0 +1,55 @@
+{
+  "format": "xnotes-formula-pack",
+  "schema": 1,
+  "type": "vocabulary",
+  "minAppVersionCode": 71,
+  "license": "AGPL-3.0",
+  "id": "probability",
+  "version": 1,
+  "nameZh": "概率统计",
+  "nameEn": "Probability and statistics",
+  "reviewZh": "条件符号、均值和方差的上下标",
+  "reviewEn": "Conditioning, means and variance indices",
+  "symbols": [
+    {
+      "latex": "\\mid",
+      "labelZh": "条件",
+      "labelEn": "Condition"
+    },
+    {
+      "latex": "\\sigma",
+      "labelZh": "标准差 σ",
+      "labelEn": "Deviation σ"
+    },
+    {
+      "latex": "\\mu",
+      "labelZh": "均值 μ",
+      "labelEn": "Mean μ"
+    },
+    {
+      "latex": "\\sum",
+      "labelZh": "求和",
+      "labelEn": "Sum"
+    }
+  ],
+  "templates": [
+    {
+      "latex": "P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)}",
+      "labelZh": "条件概率",
+      "labelEn": "Conditional probability"
+    },
+    {
+      "latex": "f(x)=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}",
+      "labelZh": "正态分布",
+      "labelEn": "Normal distribution"
+    }
+  ],
+  "signals": {
+    "P(": 3,
+    "\\mid": 3,
+    "\\sigma": 1,
+    "\\mu": 1,
+    "\\mathbb{E}": 6,
+    "\\operatorname{Var}": 6
+  }
+}

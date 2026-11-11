@@ -1,0 +1,62 @@
+{
+  "format": "xnotes-formula-pack",
+  "schema": 1,
+  "type": "vocabulary",
+  "minAppVersionCode": 71,
+  "license": "AGPL-3.0",
+  "id": "calculus",
+  "version": 1,
+  "nameZh": "高等数学",
+  "nameEn": "Calculus",
+  "reviewZh": "积分上下限、微分符号 d/∂ 与变量",
+  "reviewEn": "Integral bounds, d/∂ and variables",
+  "symbols": [
+    {
+      "latex": "\\int",
+      "labelZh": "积分",
+      "labelEn": "Integral"
+    },
+    {
+      "latex": "\\iint",
+      "labelZh": "二重积分",
+      "labelEn": "Double integral"
+    },
+    {
+      "latex": "\\partial",
+      "labelZh": "偏微分",
+      "labelEn": "Partial derivative"
+    },
+    {
+      "latex": "\\lim",
+      "labelZh": "极限",
+      "labelEn": "Limit"
+    },
+    {
+      "latex": "\\infty",
+      "labelZh": "无穷",
+      "labelEn": "Infinity"
+    }
+  ],
+  "templates": [
+    {
+      "latex": "\\frac{d^{2}y}{dx^{2}}",
+      "labelZh": "二阶导数",
+      "labelEn": "Second derivative"
+    },
+    {
+      "latex": "\\int_{a}^{b}f(x)\\,dx",
+      "labelZh": "定积分",
+      "labelEn": "Definite integral"
+    }
+  ],
+  "signals": {
+    "\\int": 4,
+    "\\iint": 5,
+    "\\iiint": 5,
+    "\\partial": 4,
+    "\\lim": 5,
+    "\\infty": 1,
+    "dx": 2,
+    "dy": 2
+  }
+}

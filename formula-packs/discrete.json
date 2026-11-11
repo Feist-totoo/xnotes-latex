@@ -1,0 +1,67 @@
+{
+  "format": "xnotes-formula-pack",
+  "schema": 1,
+  "type": "vocabulary",
+  "minAppVersionCode": 71,
+  "license": "AGPL-3.0",
+  "id": "discrete",
+  "version": 1,
+  "nameZh": "离散数学",
+  "nameEn": "Discrete mathematics",
+  "reviewZh": "集合运算、逻辑量词与箭头方向",
+  "reviewEn": "Set operators, quantifiers and implication direction",
+  "symbols": [
+    {
+      "latex": "\\forall",
+      "labelZh": "任意",
+      "labelEn": "For all"
+    },
+    {
+      "latex": "\\exists",
+      "labelZh": "存在",
+      "labelEn": "Exists"
+    },
+    {
+      "latex": "\\in",
+      "labelZh": "属于",
+      "labelEn": "Element of"
+    },
+    {
+      "latex": "\\cup",
+      "labelZh": "并集",
+      "labelEn": "Union"
+    },
+    {
+      "latex": "\\cap",
+      "labelZh": "交集",
+      "labelEn": "Intersection"
+    },
+    {
+      "latex": "\\Rightarrow",
+      "labelZh": "蕴含",
+      "labelEn": "Implies"
+    }
+  ],
+  "templates": [
+    {
+      "latex": "\\binom{n}{k}=\\frac{n!}{k!(n-k)!}",
+      "labelZh": "组合数",
+      "labelEn": "Binomial coefficient"
+    },
+    {
+      "latex": "\\forall x\\in A,\\ P(x)\\Rightarrow Q(x)",
+      "labelZh": "逻辑命题",
+      "labelEn": "Logical statement"
+    }
+  ],
+  "signals": {
+    "\\forall": 5,
+    "\\exists": 5,
+    "\\Rightarrow": 2,
+    "\\land": 4,
+    "\\lor": 4,
+    "\\cup": 2,
+    "\\cap": 2,
+    "\\binom": 2
+  }
+}

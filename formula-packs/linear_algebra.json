@@ -1,0 +1,56 @@
+{
+  "format": "xnotes-formula-pack",
+  "schema": 1,
+  "type": "vocabulary",
+  "minAppVersionCode": 71,
+  "license": "AGPL-3.0",
+  "id": "linear_algebra",
+  "version": 1,
+  "nameZh": "线性代数",
+  "nameEn": "Linear algebra",
+  "reviewZh": "矩阵行列、转置与下标",
+  "reviewEn": "Matrix rows, columns, transposes and indices",
+  "symbols": [
+    {
+      "latex": "\\det",
+      "labelZh": "行列式",
+      "labelEn": "Determinant"
+    },
+    {
+      "latex": "^{T}",
+      "labelZh": "转置",
+      "labelEn": "Transpose"
+    },
+    {
+      "latex": "^{-1}",
+      "labelZh": "逆矩阵",
+      "labelEn": "Inverse"
+    },
+    {
+      "latex": "\\lambda",
+      "labelZh": "特征值 λ",
+      "labelEn": "Eigenvalue λ"
+    }
+  ],
+  "templates": [
+    {
+      "latex": "\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}",
+      "labelZh": "二阶矩阵",
+      "labelEn": "2×2 matrix"
+    },
+    {
+      "latex": "A\\vec{x}=\\lambda\\vec{x}",
+      "labelZh": "特征方程",
+      "labelEn": "Eigenvalue equation"
+    }
+  ],
+  "signals": {
+    "\\begin{matrix}": 6,
+    "\\begin{pmatrix}": 6,
+    "\\begin{bmatrix}": 6,
+    "\\begin{array}": 3,
+    "\\det": 5,
+    "^{T}": 3,
+    "^{-1}": 1
+  }
+}

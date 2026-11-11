@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "release": "formula-packs-v1.0.0",
+  "packs": [
+    {
+      "id": "calculus",
+      "version": 1,
+      "nameZh": "高等数学",
+      "nameEn": "Calculus",
+      "signals": {
+        "\\int": 4,
+        "\\iint": 5,
+        "\\iiint": 5,
+        "\\partial": 4,
+        "\\lim": 5,
+        "\\infty": 1,
+        "dx": 2,
+        "dy": 2
+      },
+      "bytes": 908,
+      "sha256": "5d2cef27fe78193341e69a8c9fc472ee981530ad62c70c134200011e5f1f2869",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/calculus-v1.xformula"
+    },
+    {
+      "id": "discrete",
+      "version": 1,
+      "nameZh": "离散数学",
+      "nameEn": "Discrete mathematics",
+      "signals": {
+        "\\forall": 5,
+        "\\exists": 5,
+        "\\Rightarrow": 2,
+        "\\land": 4,
+        "\\lor": 4,
+        "\\cup": 2,
+        "\\cap": 2,
+        "\\binom": 2
+      },
+      "bytes": 1018,
+      "sha256": "3f491814f5a949511f9bd640d8b83972956c6e67ddb7008abb8be29151d31fff",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/discrete-v1.xformula"
+    },
+    {
+      "id": "electromagnetism",
+      "version": 1,
+      "nameZh": "电磁学与电路",
+      "nameEn": "Electromagnetism and circuits",
+      "signals": {
+        "\\nabla": 3,
+        "\\vec{E}": 5,
+        "\\vec{B}": 5,
+        "\\epsilon": 2,
+        "\\mu_0": 4,
+        "IR": 5,
+        "\\times": 1
+      },
+      "bytes": 995,
+      "sha256": "0e1181a21fd3115618317b43689bdcc41d37cc786ea015e5bf60369daac06c90",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/electromagnetism-v1.xformula"
+    },
+    {
+      "id": "linear_algebra",
+      "version": 1,
+      "nameZh": "线性代数",
+      "nameEn": "Linear algebra",
+      "signals": {
+        "\\begin{matrix}": 6,
+        "\\begin{pmatrix}": 6,
+        "\\begin{bmatrix}": 6,
+        "\\begin{array}": 3,
+        "\\det": 5,
+        "^{T}": 3,
+        "^{-1}": 1
+      },
+      "bytes": 894,
+      "sha256": "7419de6c8e16fbecc6fee5185c37e767bd2d5ab942454aad1d1dee0a2161f6f3",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/linear_algebra-v1.xformula"
+    },
+    {
+      "id": "mechanics",
+      "version": 1,
+      "nameZh": "力学",
+      "nameEn": "Mechanics",
+      "signals": {
+        "\\vec{F}": 5,
+        "\\vec{a}": 4,
+        "\\ddot": 4,
+        "\\dot": 2,
+        "mv": 3,
+        "E_k": 4,
+        "\\omega": 1
+      },
+      "bytes": 884,
+      "sha256": "4ea0e1666b68dab161d7c23deeb1dcc5ceb54b32cb35d51a96e9c571d4a90e57",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/mechanics-v1.xformula"
+    },
+    {
+      "id": "probability",
+      "version": 1,
+      "nameZh": "概率统计",
+      "nameEn": "Probability and statistics",
+      "signals": {
+        "P(": 3,
+        "\\mid": 3,
+        "\\sigma": 1,
+        "\\mu": 1,
+        "\\mathbb{E}": 6,
+        "\\operatorname{Var}": 6
+      },
+      "bytes": 920,
+      "sha256": "3c956ac7e44ee230d31300f8b19e61b2bceb0903d9d39e5e427ba31536e35a64",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/probability-v1.xformula"
+    },
+    {
+      "id": "quantum",
+      "version": 1,
+      "nameZh": "近代与量子物理",
+      "nameEn": "Modern and quantum physics",
+      "signals": {
+        "\\hbar": 8,
+        "\\psi": 5,
+        "\\hat{H}": 6,
+        "\\dagger": 6,
+        "\\langle": 1,
+        "\\rangle": 1,
+        "mc": 1
+      },
+      "bytes": 960,
+      "sha256": "001661b1f652a88ba3be138b7bf4026f25cccd3fe898ead466a4894caf124bca",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/quantum-v1.xformula"
+    },
+    {
+      "id": "school_math",
+      "version": 1,
+      "nameZh": "高中数学",
+      "nameEn": "School mathematics",
+      "signals": {
+        "\\arctan": 6,
+        "\\arcsin": 6,
+        "\\arccos": 6,
+        "\\sqrt": 1,
+        "\\sin": 1,
+        "\\cos": 1,
+        "\\log": 2
+      },
+      "bytes": 1003,
+      "sha256": "b7be00cad1c817b6c333d643e76afae815bb2e1d68a08eb3d6912bf243f7c9b8",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/school_math-v1.xformula"
+    },
+    {
+      "id": "thermal",
+      "version": 1,
+      "nameZh": "热学与统计物理",
+      "nameEn": "Thermal and statistical physics",
+      "signals": {
+        "k_B": 5,
+        "\\ln\\Omega": 5,
+        "PV": 5,
+        "nRT": 5,
+        "\\deltaQ": 5,
+        "\\DeltaS": 4
+      },
+      "bytes": 894,
+      "sha256": "1f7131299a439edbfc44ee51e60b3fc6c4ecaf6050032cc1333351958f45136e",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/thermal-v1.xformula"
+    },
+    {
+      "id": "waves_optics",
+      "version": 1,
+      "nameZh": "振动波动与光学",
+      "nameEn": "Oscillations, waves and optics",
+      "signals": {
+        "\\omega": 2,
+        "\\lambda": 2,
+        "\\nu": 1,
+        "\\phi": 1,
+        "\\sin": 1,
+        "\\cos": 1,
+        "kx": 4
+      },
+      "bytes": 902,
+      "sha256": "4a61ce16c8ea4219459b5d82e1890a4ab7f0bd94a35ccac37365fd429000d1fa",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/formula-packs-v1.0.0/waves_optics-v1.xformula"
+    }
+  ]
+}
