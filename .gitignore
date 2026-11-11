@@ -27,3 +27,8 @@ keystore.properties
 # --- Misc ---
 .DS_Store
 *.log
+
+# Reproducible offline formula assets (tools/prepare_formula_model.py)
+app/src/main/assets/formula/*.onnx
+app/src/main/assets/formula/*.part
+.venv/

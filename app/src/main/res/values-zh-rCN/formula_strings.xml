@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="formula_convert">转换 / 编辑公式</string>
+    <string name="formula_title">将手写转换为公式</string>
+    <string name="formula_edit">编辑公式</string>
+    <string name="formula_local">完全在本机处理，手写内容不会上传。</string>
+    <string name="formula_original">原始选区</string>
+    <string name="formula_preview">公式预览</string>
+    <string name="formula_recognizing">正在本机识别选中的笔迹…</string>
+    <string name="formula_recognition_failed">识别未完成。可缩小选区后重试，或在下方输入公式。原笔迹仍然保留。</string>
+    <string name="formula_uncertain">部分符号可能不确定。请核对预览，特别是正负号、分式和上下标。</string>
+    <string name="formula_review">插入前请核对预览，可在下方修改 LaTeX。撤销可恢复原笔迹。</string>
+    <string name="formula_invalid">请检查括号、环境及数学命令，成功生成预览后才能插入。</string>
+    <string name="formula_keep">保留手写，将公式放在下方</string>
+    <string name="formula_copy">复制 LaTeX</string>
+    <string name="formula_retry">重新识别</string>
+    <string name="formula_stale">选区已改变或保存失败。请关闭此窗口并重新选择。</string>
+    <string name="formula_insert">插入公式块</string>
+    <string name="formula_update">更新公式</string>
+    <string name="formula_one_page">请在同一页内选择要转换的笔迹。</string>
+</resources>

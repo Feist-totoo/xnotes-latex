@@ -281,6 +281,11 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
     private fun writeImage(j: JsonWrite, item: ImageItem, assetName: String, id: Int?) {
         j.beginObject()
         j.name("kind").value(ImageItem.KIND)
+        item.formula?.let {
+            j.name("latex").value(it.latex)
+            j.name("latex_rgba"); writeRgba(j, it.color)
+            j.name("latex_size").value(it.pointSize)
+        }
         // Only on an item a connector glues to.
         id?.let { j.name("id").value(it) }
         j.name("asset").value(assetName)
@@ -636,6 +641,7 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
         val sync: SyncMark?,
         val group: Int? = null,
         val part: Rect? = null,
+        val formula: com.xnotes.core.model.FormulaSource? = null,
     ) : Pending(index, asset)
 
     private class PendingAudio(
@@ -788,6 +794,9 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
         var rgba: Rgba? = null
         var cuts: List<CutEdge> = emptyList()
         var part: Rect? = null
+        var latex: String? = null
+        var latexColor: Rgba? = null
+        var latexSize = 24.0
     }
 
     /** Stroke config fields as written; null = absent, so defaults resolve exactly as before. */
@@ -817,6 +826,9 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
         while (p.hasNext()) {
             when (p.nextName()) {
                 "kind" -> s.kind = stringOr(p, "")
+                "latex" -> s.latex = stringOrNull(p)?.takeIf { it.isNotBlank() && it.length <= 4096 }
+                "latex_rgba" -> s.latexColor = rgbaOrNull(p)
+                "latex_size" -> s.latexSize = doubleOr(p, 24.0).takeIf { it.isFinite() && it in 6.0..144.0 } ?: 24.0
                 "id" -> s.id = intOrNull(p)
                 "connector" -> s.connector = parseConnector(p)
                 "tool" -> s.tool = stringOr(p, "")
@@ -881,6 +893,7 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
                         PendingImage(
                             items.size + pending.size, asset, s.rect, s.srcW, s.srcH,
                             s.orientation, s.angle, Flip.fromId(s.flip), s.locked, s.id, sync, s.group, s.part,
+                            s.latex?.let { com.xnotes.core.model.FormulaSource(it, s.latexColor ?: Rgba(24, 24, 24), s.latexSize) },
                         ),
                     )
                 }
@@ -1186,7 +1199,7 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
             h = probed.height
         }
         val rect = spec.rect ?: Rect(0.0, 0.0, w.toDouble(), h.toDouble())
-        return ImageItem(ImageData(file, w, h), rect, spec.orientation, spec.angle, spec.flip, spec.part)
+        return ImageItem(ImageData(file, w, h), rect, spec.orientation, spec.angle, spec.flip, spec.part, spec.formula)
             .also {
                 it.locked = spec.locked
                 it.sync = spec.sync

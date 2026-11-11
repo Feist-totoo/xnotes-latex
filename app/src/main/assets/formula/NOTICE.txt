@@ -1,0 +1,18 @@
+Offline formula recognition: Texo / FormulaNet, by alephpi and contributors.
+Model: https://huggingface.co/alephpi/FormulaNet
+Pinned revision: b2668efe5112082846fde4d446b9bfaab3989533
+Training, export and reproduction source: https://github.com/alephpi/Texo
+Web inference reference: https://github.com/alephpi/Texo-web
+License: GNU Affero General Public License version 3 (AGPL-3.0).
+Full license: LICENSE-AGPL-3.0.txt in this directory.
+The model weights are unmodified. The Android inference integration is new.
+Reproducible download script and Android source:
+https://github.com/Feist-totoo/xnotes-latex
+
+xnotes Android source: Copyright (c) shardulvs and contributors, MIT license.
+The original MIT license is retained in LICENSE-XNOTES at the repository root.
+This fork and its new integration are distributed under AGPL-3.0; see root LICENSE.
+ONNX Runtime: Microsoft and contributors, MIT license.
+https://github.com/microsoft/onnxruntime
+
+This app is an independent fork, not an official xnotes release.

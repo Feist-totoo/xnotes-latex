@@ -222,7 +222,7 @@ object RoomCut {
     /** Whether a cut across an item can split it: ink, and a picture standing at a quarter turn, which a straight cut follows. */
     private fun cuttable(item: CanvasItem, sideways: Boolean): Boolean = when (item) {
         is Stroke -> true
-        is ImageItem -> ImageCrop.split(item, item.rect.center, if (sideways) Pt(1.0, 0.0) else Pt(0.0, 1.0)) != null
+        is ImageItem -> item.formula == null && ImageCrop.split(item, item.rect.center, if (sideways) Pt(1.0, 0.0) else Pt(0.0, 1.0)) != null
         else -> false
     }
 

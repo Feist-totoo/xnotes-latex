@@ -1882,6 +1882,39 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
     override fun lockSelection() = controller.lockSelection()
     override fun unlockItem(item: com.xnotes.core.model.CanvasItem) = controller.unlockItem(item)
     override fun dismissSelectionMenu() { selectionMenu = null }
+
+    override fun canConvertFormula(): Boolean = com.xnotes.platform.FormulaDraft.accepts(controller.selectedItems())
+
+    override fun createFormulaDraft(): com.xnotes.platform.FormulaDraft? {
+        val picked = controller.selectedItems().toList()
+        if (!com.xnotes.platform.FormulaDraft.accepts(picked)) return null
+        val doc = state.document
+        val page = doc.pages.firstOrNull { p -> picked.all { it in p.items } } ?: run {
+            message = appContext.getString(R.string.formula_one_page)
+            return null
+        }
+        val captured = com.xnotes.core.formula.FormulaSelectionState(picked)
+        return com.xnotes.platform.FormulaDraft(picked, imageDir) { block, keep ->
+            if (state.document !== doc || page !in doc.pages || picked.any { it !in page.items } ||
+                !captured.unchanged()) {
+                false
+            } else {
+                val before = page.items.toList()
+                val after = com.xnotes.core.formula.FormulaReplacement.items(before, picked, block, keep)
+                controller.clearSelection()
+                val command = com.xnotes.core.history.ReplacePageItems(page, before, after)
+                command.redo()
+                history.push(command)
+                doc.dirty = true
+                state.refreshAllInk()
+                controller.setTool(Tool.SELECT)
+                controller.selectPlaced(doc.pages.indexOf(page), listOf(block))
+                refreshContent()
+                view.requestRender()
+                true
+            }
+        }
+    }
     override fun dismissContextMenu() { contextMenu = null }
     fun dismissScreenshot() = controller.clearScreenshot()
 
@@ -1907,7 +1940,7 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
 
     // --- crop: a lone picture cut down to part of itself, for good ---
 
-    override fun canCropSelection(): Boolean = controller.selectedItems().singleOrNull() is ImageItem
+    override fun canCropSelection(): Boolean = (controller.selectedItems().singleOrNull() as? ImageItem)?.let { it.formula == null } == true
 
     override var cropFrame by mutableStateOf<CropFrame?>(null)
         private set
@@ -1917,6 +1950,7 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
 
     override fun startCrop() {
         val item = controller.selectedItems().singleOrNull() as? ImageItem ?: return
+        if (item.formula != null) return
         val index = itemPageLocator()(item)?.let { page -> state.document.pages.indexOfFirst { it === page } }?.takeIf { it >= 0 } ?: return
         controller.clearSelection()
         cropping = item

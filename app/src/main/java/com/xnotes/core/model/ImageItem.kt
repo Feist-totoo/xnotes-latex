@@ -30,10 +30,13 @@ class ImageItem(
     var flip: Flip = Flip.NONE,
     /** The share of [image] that fills [rect], as fractions of the image as stored (left, top, right, bottom); null for all of it. */
     var part: Rect? = null,
+    /** Editable math source. The image is a portable, high resolution rendering cache. */
+    val formula: FormulaSource? = null,
 ) : CanvasItem, Resizable {
 
     override val kind = KIND
     override val resizable = true
+    override val mirrorable: Boolean get() = formula == null
     override var locked = false
     override var group: Int? = null
     override var sync: SyncMark? = null
@@ -120,6 +123,8 @@ class ImageItem(
         const val KIND = "image"
     }
 }
+
+data class FormulaSource(val latex: String, val color: Rgba = Rgba(24, 24, 24), val pointSize: Double = 24.0)
 
 /** Snapshot of an image's transformable geometry. */
 private data class ImageSnapshot(val rect: Rect, val angle: Double, val flip: Flip, val part: Rect?) : GeometrySnapshot

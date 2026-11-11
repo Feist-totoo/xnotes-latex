@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="formula_convert">Convert / edit formula</string>
+    <string name="formula_title">Turn handwriting into a formula</string>
+    <string name="formula_edit">Edit formula</string>
+    <string name="formula_local">Works entirely on this device. Your handwriting is never uploaded.</string>
+    <string name="formula_original">Original selection</string>
+    <string name="formula_preview">Formula preview</string>
+    <string name="formula_recognizing">Recognizing the selected ink on this device…</string>
+    <string name="formula_recognition_failed">Recognition did not finish. Try a smaller selection, retry, or enter the formula below. Your ink is unchanged.</string>
+    <string name="formula_uncertain">Some symbols may be uncertain. Check the preview, especially signs, fractions and subscripts.</string>
+    <string name="formula_review">Check the preview before inserting. You can edit the LaTeX below. Undo restores the original ink.</string>
+    <string name="formula_invalid">Check the braces, environments and supported math commands. A valid preview is required.</string>
+    <string name="formula_keep">Keep handwriting; place formula underneath</string>
+    <string name="formula_copy">Copy LaTeX</string>
+    <string name="formula_retry">Retry recognition</string>
+    <string name="formula_stale">The selection changed or could not be saved. Close this dialog and select it again.</string>
+    <string name="formula_insert">Insert formula block</string>
+    <string name="formula_update">Update formula</string>
+    <string name="formula_one_page">Select handwriting on a single page to convert it.</string>
+</resources>

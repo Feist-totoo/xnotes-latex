@@ -57,9 +57,9 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-private const val REPO_URL = "https://github.com/shardulvs/xnotes-android"
+private const val REPO_URL = "https://github.com/Feist-totoo/xnotes-latex"
 private const val SPONSOR_URL = "https://github.com/sponsors/shardulvs"
-private const val ISSUES_URL = "https://github.com/shardulvs/xnotes-android/issues/new"
+private const val ISSUES_URL = "https://github.com/Feist-totoo/xnotes-latex/issues/new"
 private const val FDROID_URL = "https://f-droid.org/en/packages/com.xnotes"
 private const val LICENSE_URL = "https://github.com/shardulvs/xnotes-android/blob/master/LICENSE"
 private const val MIN_FILL_MS = 120L
@@ -102,7 +102,7 @@ fun AboutPane() {
         ) {
             AppIconImage(icon, 72.dp, "xnotes", Modifier.holdForIconPicker(openPicker))
             Spacer(Modifier.height(16.dp))
-            Text("xnotes", color = palette.text.toComposeColor(), fontWeight = FontWeight.Bold, fontSize = 24.sp)
+            Text("xnotes LaTeX", color = palette.text.toComposeColor(), fontWeight = FontWeight.Bold, fontSize = 24.sp)
             Spacer(Modifier.height(5.dp))
             Text(
                 stringResource(R.string.app_tagline),
@@ -151,8 +151,13 @@ fun AboutPane() {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(stringResource(R.string.mit_license), color = palette.textDim.toComposeColor(), fontSize = 11.sp, modifier = Modifier.clickable { open(LICENSE_URL) })
                 Text("   ·   ", color = palette.textDim.toComposeColor(), fontSize = 11.sp)
-                Text("F-Droid", color = palette.textDim.toComposeColor(), fontSize = 11.sp, modifier = Modifier.clickable { open(FDROID_URL) })
+                Text("Upstream F-Droid", color = palette.textDim.toComposeColor(), fontSize = 11.sp, modifier = Modifier.clickable { open(FDROID_URL) })
             }
+            Spacer(Modifier.height(12.dp))
+            Text("LaTeX fork · AGPL-3.0 · source & licenses", color = palette.accent.toComposeColor(), fontSize = 12.sp,
+                modifier = Modifier.clickable { open("$REPO_URL/blob/master/docs/FORMULA.md") })
+            Text("Offline OCR: Texo / FormulaNet · AGPL-3.0", color = palette.textDim.toComposeColor(), fontSize = 11.sp,
+                modifier = Modifier.clickable { open("https://github.com/alephpi/Texo") })
         }
     }
     if (picking) IconPicker(icon, onPick = { AppIcons.apply(ctx, it); icon = it }, onDismiss = { picking = false })

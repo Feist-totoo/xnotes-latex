@@ -1,0 +1,4 @@
+# The bundled guide and its upstream format test use literal LF delimiters.
+app/src/main/assets/templates/AI.md text eol=lf
+# These bytes are pinned by SHA-256 and must survive a Windows checkout unchanged.
+app/src/main/assets/formula/*.json text eol=lf

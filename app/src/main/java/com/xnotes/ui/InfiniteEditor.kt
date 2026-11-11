@@ -505,6 +505,35 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
         selectionMenuRect = null
     }
 
+    override fun canConvertFormula(): Boolean = com.xnotes.platform.FormulaDraft.accepts(selection.items)
+
+    override fun createFormulaDraft(): com.xnotes.platform.FormulaDraft? {
+        val picked = selection.items.toList()
+        val dir = imageDir ?: return null
+        if (!com.xnotes.platform.FormulaDraft.accepts(picked)) return null
+        val doc = document
+        val captured = com.xnotes.core.formula.FormulaSelectionState(picked)
+        return com.xnotes.platform.FormulaDraft(picked, dir) { block, keep ->
+            if (document !== doc || picked.any { !doc.containsRef(it) } ||
+                !captured.unchanged()) {
+                false
+            } else {
+                val before = doc.items.toList()
+                val after = com.xnotes.core.formula.FormulaReplacement.items(before, picked, block, keep)
+                interaction.clearSelection()
+                val command = com.xnotes.core.infinite.ReplaceCanvasItems(doc, before, after)
+                command.redo()
+                history.push(command)
+                armTool(Tool.SELECT)
+                selection.select(listOf(block))
+                markDirty()
+                refresh()
+                publishOverlay()
+                true
+            }
+        }
+    }
+
     /** Delete whatever is selected, as one undoable edit. */
     override fun deleteSelection() {
         val items = selection.items
@@ -629,7 +658,7 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
 
     // --- crop: a lone picture cut down to part of itself, for good ---
 
-    override fun canCropSelection(): Boolean = selection.items.singleOrNull() is ImageItem
+    override fun canCropSelection(): Boolean = (selection.items.singleOrNull() as? ImageItem)?.let { it.formula == null } == true
 
     override var cropFrame by mutableStateOf<CropFrame?>(null)
         private set
@@ -639,6 +668,7 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
 
     override fun startCrop() {
         val item = selection.items.singleOrNull() as? ImageItem ?: return
+        if (item.formula != null) return
         interaction.clearSelection()
         publishOverlay()
         cropping = item

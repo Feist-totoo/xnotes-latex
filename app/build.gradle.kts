@@ -22,11 +22,12 @@ android {
     ndkVersion = "27.0.12077973"
 
     defaultConfig {
-        applicationId = "com.xnotes"
+        applicationId = "com.xnotes.latex"
         minSdk = 26
         targetSdk = 36
         versionCode = 69
-        versionName = "0.9.8"
+        versionName = "0.9.8-latex.1"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64")
         }
@@ -118,6 +119,7 @@ tasks.configureEach {
 }
 
 dependencies {
+    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.23.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
@@ -140,4 +142,23 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.json)
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
+
+// Never ship a build that silently needs an online model download at first use.
+val verifyFormulaModel by tasks.registering {
+    val modelDir = layout.projectDirectory.dir("src/main/assets/formula")
+    inputs.dir(modelDir)
+    doLast {
+        for (name in listOf("encoder_model.onnx", "decoder_model_merged.onnx", "tokenizer.json", "manifest.json")) {
+            check(modelDir.file(name).asFile.let { it.isFile && it.length() > 0 }) {
+                "Missing offline formula asset $name. Run: python tools/prepare_formula_model.py"
+            }
+        }
+    }
+}
+tasks.named("preBuild").configure { dependsOn(verifyFormulaModel) }

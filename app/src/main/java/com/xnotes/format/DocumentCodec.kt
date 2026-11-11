@@ -455,6 +455,12 @@ class DocumentCodec(
     private fun writeImage(j: JsonWrite, item: ImageItem, assetName: String, id: Int?) {
         j.beginObject()
         j.name("kind").value(ImageItem.KIND)
+        item.formula?.let {
+            j.name("latex").value(it.latex)
+            j.name("latex_rgba")
+            writeRgba(j, it.color)
+            j.name("latex_size").value(it.pointSize)
+        }
         // Only on an item a connector glues to.
         id?.let { j.name("id").value(it) }
         j.name("asset").value(assetName)
@@ -942,6 +948,7 @@ class DocumentCodec(
         val sync: SyncMark?,
         val group: Int? = null,
         val part: Rect? = null,
+        val formula: com.xnotes.core.model.FormulaSource? = null,
     ) : Pending(index, asset)
 
     private class PendingAudio(
@@ -1118,6 +1125,9 @@ class DocumentCodec(
 
     /** Union of every kind's fields, so an item parses in one pass whatever its key order. */
     private class ItemScratch {
+        var latex: String? = null
+        var latexColor: Rgba? = null
+        var latexSize = 24.0
         var locked = false
         var group: Int? = null
         var kind: String? = null
@@ -1204,6 +1214,9 @@ class DocumentCodec(
         while (p.hasNext()) {
             when (p.nextName()) {
                 "kind" -> s.kind = stringOr(p, "")
+                "latex" -> s.latex = stringOrNull(p)?.takeIf { it.isNotBlank() && it.length <= 4096 }
+                "latex_rgba" -> s.latexColor = rgbaOrNull(p)
+                "latex_size" -> s.latexSize = doubleOr(p, 24.0).takeIf { it.isFinite() && it in 6.0..144.0 } ?: 24.0
                 "id" -> s.id = intOrNull(p)
                 "connector" -> s.connector = parseConnector(p)
                 "tool" -> s.tool = stringOr(p, "")
@@ -1273,6 +1286,7 @@ class DocumentCodec(
                         PendingImage(
                             items.size + pending.size, asset, s.rect, s.srcW, s.srcH,
                             s.orientation, s.angle, Flip.fromId(s.flip), s.locked, s.id, sync, s.group, s.part,
+                            s.latex?.let { com.xnotes.core.model.FormulaSource(it, s.latexColor ?: Rgba(24, 24, 24), s.latexSize) },
                         ),
                     )
                 }
@@ -1698,7 +1712,7 @@ class DocumentCodec(
             h = probed.height
         }
         val rect = spec.rect ?: Rect(0.0, 0.0, w.toDouble(), h.toDouble())
-        return ImageItem(ImageData(file, w, h), rect, spec.orientation, spec.angle, spec.flip, spec.part)
+        return ImageItem(ImageData(file, w, h), rect, spec.orientation, spec.angle, spec.flip, spec.part, spec.formula)
             .also {
                 it.locked = spec.locked
                 it.sync = spec.sync

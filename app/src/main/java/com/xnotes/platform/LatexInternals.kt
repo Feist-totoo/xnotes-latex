@@ -34,6 +34,12 @@ object LatexInternals {
     fun parse(latex: String): List<LatexNode> =
         IncrementalLatexParser().apply { append(latex) }.getCurrentDocument().children
 
+    /** Unknown commands are shown as red source by the renderer; never accept those as formulas. */
+    fun recognizesMath(latex: String): Boolean {
+        val nodes = parse("\\displaystyle $latex")
+        return nodes.isNotEmpty() && nodes.none { root -> root.fold(false) { found, n -> found || n is LatexNode.Command } }
+    }
+
     /** The font metrics every [layout] shares; the library builds a fresh one per formula otherwise. */
     internal fun metrics(fonts: LatexFontFamilies): Any = MathFontProviderFactory.create(fonts)
 

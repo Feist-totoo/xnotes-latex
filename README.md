@@ -1,3 +1,19 @@
+# xnotes LaTeX — 套索手写转可移动公式
+
+这是面向 Android 平板白板的独立 fork。**套索圈选笔画 → 本地 OCR → LaTeX 预览纠错 → 插入可拖动公式块**，支持分页笔记和无限画布。
+
+- 公式保留可编辑源码，可移动、缩放、再次编辑；支持撤销和保留原笔迹。
+- 模型内置 APK，识别不联网。不是整页中文 OCR；每次选择一个数学公式并检查预览。
+- 基于 xnotes 原生 Android 画布和 Texo / FormulaNet；此 fork 按 AGPL-3.0 发布，保留原始 xnotes 的 MIT 许可与署名。
+- **[使用、构建与许可说明](docs/FORMULA.md)**。构建前运行 `python tools/prepare_formula_model.py`。
+- 已通过 2501 项单元测试和 4 项 Android 设备测试；三星平板 / S Pen 实机表现仍需验证。
+- 此 fork 的包名与官方版不同。下方保留上游介绍；其中商店和上游 release 链接不包含本 fork 新功能。
+
+<p align="center"><img src="docs/screenshots/formula-dialog.png" width="90%" alt="套索选中笔迹后，在本机识别并预览 LaTeX 公式" /></p>
+<p align="center"><img src="docs/screenshots/formula-edit.png" width="90%" alt="公式块保留可再次编辑的 LaTeX 源码" /></p>
+
+---
+
 <p align="center">
   <img src="docs/readme-banner.png" width="100%" alt="xnotes: a handwriting-first notebook for Android" />
 </p>
@@ -5,7 +21,7 @@
 <p align="center">
   <a href="https://github.com/shardulvs/xnotes-android/releases/latest"><img src="https://img.shields.io/github/v/release/shardulvs/xnotes-android?style=flat-square&label=release&color=blue" alt="Release" /></a>
   <a href="https://f-droid.org/en/packages/com.xnotes"><img src="https://img.shields.io/f-droid/v/com.xnotes?style=flat-square" alt="F-Droid" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange?style=flat-square" alt="License" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-orange?style=flat-square" alt="License" /></a>
   <img src="https://img.shields.io/badge/Android-8.0%2B-3ddc84?style=flat-square&logo=android&logoColor=white" alt="Android 8.0+" />
   <a href="https://github.com/sponsors/shardulvs"><img src="https://img.shields.io/badge/sponsor-%E2%9D%A4-ec6cb9?style=flat-square&logo=githubsponsors&logoColor=white" alt="Sponsor" /></a>
 </p>
