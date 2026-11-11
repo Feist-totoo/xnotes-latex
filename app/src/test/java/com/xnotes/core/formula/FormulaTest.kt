@@ -12,6 +12,20 @@ import org.junit.Test
 import java.io.File
 
 class FormulaTest {
+    @Test fun ocrSeparatorsDoNotTurnExponentsIntoBaselineText() {
+        assertEquals("e^{ a v c \\tan c 1 + x }", LatexSource.clean("e ^ { a v c \\tan c 1 + x }"))
+        assertEquals("x_{ i }^{ 2 }", LatexSource.clean("x _ { i } ^ { 2 }"))
+        assertEquals("\\int_{0}^{1} x\\,dx", LatexSource.clean("\\int _ {0} ^ {1} x\\,dx"))
+        assertEquals("e^{\\arctan(1+x)}", LatexSource.clean("e \n ^ \t {\\arctan(1+x)}"))
+    }
+
+    @Test fun normalizationPreservesLiteralTextEscapesAndCommandBoundaries() {
+        for (source in listOf("\\text{a _ b ^ c}", "\\text{a {b ^ c} d}", "\\textbf { a _ b }", "\\verb|a ^ b|", "\\sin x", "x\\_ y", "x\\^ y", "e\\ ^2", "x% ^ comment\n+y")) {
+            assertEquals(source, source, LatexSource.clean(source))
+        }
+        assertEquals("\\text{ a _ b }^{2}", LatexSource.clean("\\text{ a _ b } ^ {2}"))
+    }
+
     @Test fun insertingSpaceCannotSliceAnEditableFormulaIntoImages() {
         val block = item("x=1")
         val page = Page(1000.0, 1400.0, mutableListOf(block))

@@ -17,6 +17,8 @@
 
 ## 本地 OCR 与准确性
 
+**准确性诊断与后续方案：**见 [平板离线识别优化与十个学科包](FORMULA_ACCURACY.md)。`0.9.8-latex.2` 修复 OCR 空格导致的上下标排版错误；识别模型尚未更换，学科包尚未训练或发布。
+
 - 使用 [Texo / FormulaNet](https://github.com/alephpi/Texo) 的 ONNX encoder + cached decoder，通过 ONNX Runtime Android **在设备 CPU 上**运行。
 - 两个模型文件合计约 80 MB（十进制）。模型与词表直接打包进 APK；首次使用只从 APK 解包到应用私有目录，不联网下载。
 - 没有新增网络权限、云端 API、账号或订阅。原笔迹不上传。
@@ -71,8 +73,8 @@ Android 真机或模拟器测试（包含真实 OCR 推理，不使用识别 moc
 
 2026-11-12，在 Windows / JDK 17 上构建调试 APK；Android 14（API 34）x86_64 模拟器，1920 × 1200、240 dpi。
 
-- `:app:testDebugUnitTest`：**2501 项通过，0 失败**。包括两个文件格式的公式源码 / 图片缓存往返、复制移动、撤销重做、保留原笔迹、陈旧选区拒绝以及插入空白不切割公式。
-- `:app:connectedDebugAndroidTest`：**4 项通过，0 失败**。真实套索手势、真实离线 ONNX 识别 `X = 1`、预览、插入、手势拖动、编辑为分式、连续撤销恢复笔迹；另测取消、未知命令拒绝、分式 / 上下标 / 积分 / 矩阵渲染，以及无限画布提交与撤销。
+- `:app:testDebugUnitTest`：**2503 项通过，0 失败**。包括两个文件格式的公式源码 / 图片缓存往返、复制移动、撤销重做、保留原笔迹、陈旧选区拒绝、插入空白不切割公式，以及 OCR 上下标空格规范化和文字/转义保留。
+- `:app:connectedDebugAndroidTest`：**5 项通过，0 失败**。真实套索手势、真实离线 ONNX 识别 `X = 1`、预览、插入、手势拖动、编辑为分式、连续撤销恢复笔迹；另测取消、错误命令拒绝、分式 / 上下标 / 积分 / 矩阵渲染，以及无限画布提交与撤销。新增测试验证带空格的 OCR 上下标与紧凑源码的渲染逐像素一致，并检查解析树中的指数确实附着于 `e`。
 - 截图来自实际运行的 APK：[识别预览](screenshots/formula-dialog.png)、[可移动公式块](screenshots/formula-block.png)、[再次编辑](screenshots/formula-edit.png)。
 
 这些是功能回归和少量样例验证，不是识别准确率评测。尚未在三星平板 / S Pen 真机上测量延迟、耗电和课堂笔迹表现。

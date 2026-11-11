@@ -91,6 +91,29 @@ class FormulaWorkflowTest {
             rendered.bitmap.recycle()
         }
         assertFalse(com.xnotes.platform.LatexInternals.recognizesMath("\\thisCommandDoesNotExist{x}"))
+        assertFalse(com.xnotes.platform.LatexInternals.recognizesMath("x^2^3"))
+        assertFalse(com.xnotes.platform.LatexInternals.recognizesMath("x^"))
+        assertFalse(com.xnotes.platform.LatexInternals.recognizesMath("x_{}"))
+    }
+
+    @Test fun spacedOcrScriptsAttachToTheirBaseAndMatchCompactRendering() {
+        compose.waitForIdle()
+        val draft = FormulaDraft(handwriting(), compose.activity.cacheDir) { _, _ -> false }
+        for ((spaced, compact) in listOf(
+            "e ^ {\\arctan(1+x)}" to "e^{\\arctan(1+x)}",
+            "x _ {i} ^ {2}" to "x_{i}^{2}",
+            "\\int _ {0} ^ {1} x\\,dx" to "\\int_{0}^{1} x\\,dx",
+            "\\sum _ {n=1} ^ {\\infty} a _ n" to "\\sum_{n=1}^{\\infty} a_n",
+        )) {
+            val a = runBlocking(Dispatchers.Default) { draft.render(spaced) }
+            val b = runBlocking(Dispatchers.Default) { draft.render(compact) }
+            assertTrue("OCR whitespace must not change formula layout: $spaced", a.bitmap.sameAs(b.bitmap))
+            a.bitmap.recycle(); b.bitmap.recycle()
+        }
+        val clean = com.xnotes.core.formula.LatexSource.clean("e ^ { a v c \\tan c 1 + x }")
+        val script = com.xnotes.platform.LatexInternals.parse(clean).single() as com.hrm.latex.parser.model.LatexNode.Superscript
+        assertEquals("e", (script.base as com.hrm.latex.parser.model.LatexNode.Text).content)
+        assertTrue(script.exponent is com.hrm.latex.parser.model.LatexNode.Group)
     }
 
     private fun gesture(ed: Editor, localPoints: List<Pt>) {

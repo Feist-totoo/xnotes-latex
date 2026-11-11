@@ -8,6 +8,8 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.unit.Density
 import com.hrm.latex.parser.IncrementalLatexParser
+import com.hrm.latex.parser.LatexParser
+import com.hrm.latex.parser.ParseDiagnostic
 import com.hrm.latex.parser.model.LatexNode
 import com.hrm.latex.renderer.font.MathFontProvider
 import com.hrm.latex.renderer.font.MathFontProviderFactory
@@ -36,8 +38,21 @@ object LatexInternals {
 
     /** Unknown commands are shown as red source by the renderer; never accept those as formulas. */
     fun recognizesMath(latex: String): Boolean {
-        val nodes = parse("\\displaystyle $latex")
-        return nodes.isNotEmpty() && nodes.none { root -> root.fold(false) { found, n -> found || n is LatexNode.Command } }
+        val result = LatexParser().parseWithDiagnostics("\\displaystyle $latex")
+        if (result.diagnostics.any { it.severity == ParseDiagnostic.Severity.ERROR }) return false
+        val nodes = result.document.children
+        return nodes.isNotEmpty() && nodes.none { root -> root.fold(false) { found, n ->
+            found || n is LatexNode.Command ||
+                (n is LatexNode.Superscript && n.exponent.emptyScript()) ||
+                (n is LatexNode.Subscript && n.index.emptyScript())
+        } }
+    }
+
+    private fun LatexNode.emptyScript(): Boolean = when (this) {
+        is LatexNode.Text -> content.isBlank()
+        is LatexNode.Space -> true
+        is LatexNode.Group -> children.all { it.emptyScript() }
+        else -> false
     }
 
     /** The font metrics every [layout] shares; the library builds a fresh one per formula otherwise. */
