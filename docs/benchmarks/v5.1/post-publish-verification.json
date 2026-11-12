@@ -1,0 +1,30 @@
+{
+  "releaseUrl": "https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5.1-full",
+  "tag": "v0.9.8-latex.5.1-full",
+  "sourceCommit": "e838052fc5ac81a2b0230109fee9ec7fa9e1262b",
+  "prerelease": true,
+  "latestStable": "v0.9.8-latex.3",
+  "verifiedAssets": [
+    {
+      "name": "xnotes-latex-0.9.8-latex.5.1-full.apk",
+      "bytes": 1013105865,
+      "sha256": "73478b5229639b4760acb4490f19717383535841669c022f13b11da4cec9239e",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5.1-full/xnotes-latex-0.9.8-latex.5.1-full.apk",
+      "publicHttpStatus": 200
+    },
+    {
+      "name": "TEST-REPORT.json",
+      "bytes": 2480,
+      "sha256": "eee29d24f58c21b01b625d7ab6e9279922c8049678e8202d88769eb04529ecd1",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5.1-full/TEST-REPORT.json",
+      "publicHttpStatus": 200
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 105,
+      "sha256": "7215bc9a1d81c4d1a1230180c901693c847388212ac7c9a713676b429e476f19",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5.1-full/SHA256SUMS.txt",
+      "publicHttpStatus": 200
+    }
+  ]
+}
