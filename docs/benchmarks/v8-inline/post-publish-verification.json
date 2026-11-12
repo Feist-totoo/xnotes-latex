@@ -1,0 +1,30 @@
+{
+  "releaseUrl": "https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.8-inline",
+  "tag": "v0.9.8-latex.8-inline",
+  "sourceCommit": "cc8c7b4408d0444c85b0c9a0f50ca4295ab4de96",
+  "prerelease": true,
+  "latestStable": "v0.9.8-latex.3",
+  "verifiedAssets": [
+    {
+      "name": "xnotes-latex-0.9.8-latex.8-inline.apk",
+      "bytes": 67825851,
+      "sha256": "c5aefe010016a239a012f2424361d1e9e38b45a885a09de350e2f596d7c2c4c9",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.8-inline/xnotes-latex-0.9.8-latex.8-inline.apk",
+      "publicHttpStatus": 200
+    },
+    {
+      "name": "TEST-REPORT.json",
+      "bytes": 3605,
+      "sha256": "6e335896ddc8fdd62288e8dc3ac5df311e3079cdd9b3117b6836edae59bf2d3f",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.8-inline/TEST-REPORT.json",
+      "publicHttpStatus": 200
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 189,
+      "sha256": "02b7fe55653b3a5cf5cd464eb699e1e8388a45a344ee4c4ee2f20b994345291f",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.8-inline/SHA256SUMS.txt",
+      "publicHttpStatus": 200
+    }
+  ]
+}
