@@ -1,0 +1,67 @@
+{
+  "apk": "xnotes-latex-0.9.8-latex.6-paddle-lite.apk",
+  "bytes": 52354430,
+  "sha256": "4383c4510c3e0acd38cb8f0f73951e15740bcf2334a0b88a7d668779efa2b5c2",
+  "offlineModels": 0,
+  "offlineRuntimes": 0,
+  "subjectPacks": 10,
+  "nativeLibraries": [
+    "lib/arm64-v8a/libandroidx.graphics.path.so",
+    "lib/arm64-v8a/libxnotespdf.so",
+    "lib/arm64-v8a/libxnotests.so",
+    "lib/x86_64/libandroidx.graphics.path.so",
+    "lib/x86_64/libxnotespdf.so",
+    "lib/x86_64/libxnotests.so"
+  ],
+  "privateTestData": false,
+  "version": "0.9.8-latex.6-paddle-lite",
+  "versionCode": 75,
+  "applicationId": "com.xnotes.latex.debug",
+  "abis": [
+    "arm64-v8a",
+    "x86_64"
+  ],
+  "minimumApi": 26,
+  "signatureSha256": "dbde9527283a1432beee854febc94fb79a8710968f3566bb7763b6ec0a41b6bc",
+  "signatureSchemes": [
+    "v2",
+    "v3"
+  ],
+  "zipalign16KiB": true,
+  "unitTests": {
+    "tests": 2518,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "androidTests": {
+    "passed": 13,
+    "failures": 0,
+    "classes": {
+      "PaddleFormulaTest": 4,
+      "FormulaWorkflowTest": 6,
+      "FormulaPackDeviceTest": 2,
+      "CompleteFormulaTest": 1
+    },
+    "airplaneMode": true,
+    "finalSignedApkTested": true,
+    "paddleTransport": "simulated",
+    "liveCloudRecognitionTested": false
+  },
+  "upgrade": {
+    "filesChecked": 15,
+    "unchanged": 15,
+    "changed": [],
+    "noteDocumentPreserved": true,
+    "canvasSessionPreserved": true,
+    "settingsPreserved": true,
+    "oldModelCacheDirectoriesRemaining": 0
+  },
+  "previousApkBytes": 1013105865,
+  "sizeReductionPercent": 94.83,
+  "emulatorVisualRecheck": {
+    "reason": "Initial emulator boot had a SystemUI service ANR before installing lite; rebooted for a clean visual check",
+    "postRebootWorkflowPassed": true,
+    "postRebootAnrOrCrashEvents": 0
+  }
+}

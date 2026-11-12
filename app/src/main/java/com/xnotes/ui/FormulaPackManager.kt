@@ -65,7 +65,7 @@ fun FormulaPackManager(source: String, onChanged: () -> Unit, onDismiss: () -> U
         title = { Text(if (chinese) "学科包管理" else "Subject pack manager") },
         text = {
             Column(Modifier.heightIn(max = 480.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(if (chinese) "十个学科包已内置，可分别启停、卸载和离线恢复。可主动从 GitHub Releases 下载更新；笔迹不会上传。" else "All ten subject packs are included. Enable, remove or restore them offline; GitHub Releases provides optional updates. Your ink is never uploaded.")
+                Text(if (chinese) "十个编辑辅助包已内置，可分别启停、卸载和离线恢复。可主动从 GitHub Releases 下载更新；下载学科包不上传笔迹。" else "All ten editing packs are included. Enable, remove or restore them offline. Optional GitHub updates do not upload handwriting.")
                 Text(if (chinese) "高数、线代 v3 包含符号序列统计，其余包提供编辑辅助。统计数据源于 Google MathWriting，遵循 CC BY-NC-SA 4.0（非商业、署名、相同方式共享）。" else "Calculus and linear algebra v3 include symbol sequence statistics; other packs assist editing. Statistics derived from Google MathWriting: CC BY-NC-SA 4.0 (noncommercial, attribution, share-alike).", style = MaterialTheme.typography.bodySmall)
                 Row {
                     TextButton(enabled = !busy, onClick = { operation { entries = FormulaPacks.refreshCatalog(context) } }) {
@@ -75,7 +75,7 @@ fun FormulaPackManager(source: String, onChanged: () -> Unit, onDismiss: () -> U
                         Text(if (chinese) "本地导入" else "Import file")
                     }
                 }
-                if (suggestions.isNotEmpty()) Text((if (chinese) "本机识图建议：" else "Local recognition suggests: ") +
+                if (suggestions.isNotEmpty()) Text((if (chinese) "根据当前公式推荐：" else "Suggested for this formula: ") +
                     suggestions.joinToString { suggestion -> entries.first { it.id == suggestion.id }.name(chinese) + " (" + suggestion.evidence.joinToString() + ")" },
                     style = MaterialTheme.typography.bodySmall)
                 if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
@@ -89,7 +89,6 @@ fun FormulaPackManager(source: String, onChanged: () -> Unit, onDismiss: () -> U
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
                             Text(pack?.name(chinese) ?: entry!!.name(chinese), style = MaterialTheme.typography.titleSmall)
-                            if (pack?.recognition != null) Text(if (chinese) "含本地候选评分" else "Includes local candidate scoring", style = MaterialTheme.typography.bodySmall)
                             Text(if (pack != null) "v${pack.version} · " + if (chinese) "已安装" else "Installed"
                                 else if (chinese) "未安装 · ${entry!!.bytes} B" else "Not installed · ${entry!!.bytes} B",
                                 style = MaterialTheme.typography.bodySmall)

@@ -20,7 +20,7 @@ import com.xnotes.platform.PaddleFormulaSettings
 import kotlinx.coroutines.*
 
 @Composable
-fun PaddleFormulaPanel(ink: Bitmap?, enabled: Boolean, onStart: () -> Unit = {},
+fun PaddleFormulaPanel(ink: Bitmap?, enabled: Boolean,
     recognize: suspend (Bitmap, PaddleFormulaApi.Config) -> String = PaddleFormulaSettings::recognize,
     onApply: (String) -> Unit) {
     val context = LocalContext.current
@@ -39,7 +39,6 @@ fun PaddleFormulaPanel(ink: Bitmap?, enabled: Boolean, onStart: () -> Unit = {},
             OutlinedButton(modifier = Modifier.testTag("paddle-recognize"), enabled = enabled && !working && ink != null && config != null, onClick = {
                 val bitmap = ink ?: return@OutlinedButton
                 val selected = config ?: return@OutlinedButton
-                onStart()
                 working = true; error = 0; result = null
                 job = scope.launch {
                     try { result = recognize(bitmap, selected) }

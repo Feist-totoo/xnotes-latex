@@ -29,12 +29,12 @@ import org.junit.runner.RunWith
 import org.junit.rules.ExternalResource
 import java.io.File
 
-/** Runs the real Android OCR, editor, lasso, dialog, renderer and undo stack; no mock recognizer. */
+/** Runs the real editor, lasso, renderer and undo stack without requiring a cloud account. */
 @RunWith(AndroidJUnit4::class)
 class FormulaWorkflowTest {
     // The production splash waits for a Compose SideEffect before allowing the first draw.
     // Espresso's launch-idle wait precedes its test clock, so release only that visual gate.
-    // The real activity, session restore, editor, fonts and OCR still run unchanged.
+    // The real activity, session restore, editor and fonts still run unchanged.
     @get:Rule(order = 0) val firstFrame = object : ExternalResource() {
         private val app get() = InstrumentationRegistry.getInstrumentation().targetContext.applicationContext as Application
         private val callback = object : Application.ActivityLifecycleCallbacks {
@@ -193,7 +193,7 @@ class FormulaWorkflowTest {
             .performScrollTo().assertIsDisplayed()
     }
 
-    @Test fun lassoRecognizeInsertDragEditAndUndo() {
+    @Test fun lassoManualFormulaInsertDragEditAndUndo() {
         compose.waitForIdle()
         val ed = editor()
         val ink = handwriting()
@@ -209,16 +209,10 @@ class FormulaWorkflowTest {
         }
         compose.onNodeWithContentDescription(compose.activity.getString(R.string.formula_convert)).performClick()
         val insert = compose.activity.getString(R.string.formula_insert)
-        compose.waitUntil(240_000) { compose.onAllNodes(hasText(insert) and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
-        val rawRecognized = compose.onNode(hasSetTextAction()).fetchSemanticsNode()
-            .config[androidx.compose.ui.semantics.SemanticsProperties.EditableText].text
-        assertTrue(com.xnotes.platform.LatexInternals.recognizesMath(rawRecognized))
-        // Keep this known x/chi recognition regression visible. This fixture tests
-        // interaction, while recognition accuracy is measured on the real held-out set.
-        File(compose.activity.getExternalFilesDir(null),"synthetic-recognition-regression.json").writeText(
-            org.json.JSONObject().put("expected","x=1").put("actual",rawRecognized)
-                .put("match",rawRecognized.replace(" ","").lowercase()=="x=1").toString(2))
-        screenshot("formula-initial-recognition.png")
+        compose.onNodeWithTag("paddle-settings").assertExists()
+        compose.onNodeWithText(insert).assertIsNotEnabled()
+        assertEquals("Opening the dialog must not submit handwriting", "", compose.onNode(hasSetTextAction()).fetchSemanticsNode()
+            .config[androidx.compose.ui.semantics.SemanticsProperties.EditableText].text)
         val recognized = "x=1"
         compose.onNode(hasSetTextAction()).performTextReplacement(recognized)
         compose.waitUntil(15_000) { compose.onAllNodes(hasText(insert) and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
@@ -243,18 +237,6 @@ class FormulaWorkflowTest {
         screenshot("formula-pack-manager.png")
         compose.onNodeWithText(if (chinese) "完成" else "Done").performClick()
         compose.onNodeWithText(packButton).performScrollTo().performClick()
-        compose.onNodeWithText(compose.activity.getString(R.string.formula_precision)).performScrollTo().performClick()
-        compose.waitUntil(180_000) { compose.onAllNodesWithText(compose.activity.getString(R.string.formula_precision_use)).fetchSemanticsNodes().isNotEmpty() }
-        assertEquals("Detailed review must not overwrite manual edits", "x=2", compose.onNode(hasSetTextAction()).fetchSemanticsNode()
-            .config[androidx.compose.ui.semantics.SemanticsProperties.EditableText].text)
-        val detailed = compose.onNodeWithTag("formula-precision-result").fetchSemanticsNode()
-            .config[androidx.compose.ui.semantics.SemanticsProperties.Text].single().text
-        File(compose.activity.getExternalFilesDir(null), "synthetic-detailed-review.json").writeText(
-            org.json.JSONObject().put("expected", "x=1").put("actual", detailed).toString(2))
-        screenshot("formula-full-review.png")
-        compose.onNodeWithText(compose.activity.getString(R.string.formula_precision_use)).performScrollTo().performClick()
-        assertEquals(detailed, compose.onNode(hasSetTextAction()).fetchSemanticsNode()
-            .config[androidx.compose.ui.semantics.SemanticsProperties.EditableText].text)
         compose.onNode(hasSetTextAction()).performTextReplacement(recognized)
         compose.waitUntil(15_000) { compose.onAllNodes(hasText(insert) and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText(insert).performClick()
@@ -291,7 +273,7 @@ class FormulaWorkflowTest {
         }
     }
 
-    @Test fun cancelledRecognitionNeverChangesInkAndInvalidSourceCannotCommit() {
+    @Test fun closingDialogNeverChangesInkAndInvalidSourceCannotCommit() {
         compose.waitForIdle()
         val ed = editor()
         val ink = handwriting()

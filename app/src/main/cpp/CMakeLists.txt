@@ -1,5 +1,5 @@
 # Native PDF and syntax libraries use pinned source revisions.
-# Formula recognition uses the bundled ONNX Runtime AAR and offline model assets.
+# Formula recognition uses Paddle API; no native OCR runtime is compiled.
 cmake_minimum_required(VERSION 3.22.1)
 project(xnotests C CXX)
 
@@ -90,33 +90,3 @@ set(XNOTESPDF_EXPORTS ${CMAKE_CURRENT_SOURCE_DIR}/pdf_jni.map)
 target_link_options(xnotespdf PRIVATE ${XNOTES_LINK_OPTIONS}
     "-Wl,--version-script=${XNOTESPDF_EXPORTS}")
 set_target_properties(xnotespdf PROPERTIES LINK_DEPENDS ${XNOTESPDF_EXPORTS})
-
-# Handwritten formula inference uses the bundled ONNX Runtime Android library.
-
-# CPU-only GLM-OCR. Source/weights are prepared on the developer machine;
-# the recognizer has no downloader or HTTP server. Optional package downloads
-# are handled separately and never carry image data.
-set(LLAMA_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../../build/references/llama.cpp)
-if(NOT EXISTS "${LLAMA_DIR}/include/llama.h")
-    message(FATAL_ERROR "Run python tools/prepare_full_formula.py before building")
-endif()
-set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-set(LLAMA_BUILD_COMMON OFF CACHE BOOL "" FORCE)
-set(LLAMA_BUILD_TESTS OFF CACHE BOOL "" FORCE)
-set(LLAMA_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
-set(LLAMA_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(LLAMA_BUILD_MTMD ON CACHE BOOL "" FORCE)
-set(LLAMA_CURL OFF CACHE BOOL "" FORCE)
-set(GGML_NATIVE OFF CACHE BOOL "" FORCE)
-set(GGML_OPENMP OFF CACHE BOOL "" FORCE)
-set(GGML_BACKEND_DL OFF CACHE BOOL "" FORCE)
-set(MTMD_VIDEO OFF CACHE BOOL "" FORCE)
-add_subdirectory(${LLAMA_DIR} llama-build EXCLUDE_FROM_ALL)
-foreach(ocr_target ggml-base ggml-cpu llama mtmd)
-    target_compile_options(${ocr_target} PRIVATE -O3)
-endforeach()
-add_library(xnotesprecision SHARED precision_formula_jni.cpp)
-target_compile_features(xnotesprecision PRIVATE cxx_std_17)
-target_link_libraries(xnotesprecision PRIVATE mtmd llama log)
-target_link_options(xnotesprecision PRIVATE ${XNOTES_LINK_OPTIONS})

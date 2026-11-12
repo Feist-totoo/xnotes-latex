@@ -1,18 +1,17 @@
-# xnotes LaTeX — 套索手写转可移动公式
+# xnotes LaTeX — Paddle API 轻量白板
 
-面向 Android 平板白板的独立 fork：**套索圈选笔画 → 本地识别 → LaTeX 预览纠错 → 插入可拖动公式块**，支持分页笔记和无限画布。
+面向 Android 平板白板的独立 fork：**套索圈选 → Paddle API 识别 → LaTeX 预览纠错 → 可拖动公式块**，支持分页笔记和无限画布。识别需要联网，白板和公式排版可以离线使用。
 
-- **[下载 v5.1 完整 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5.1-full/xnotes-latex-0.9.8-latex.5.1-full.apk)** · [Release / 十个独立学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。约 1.01 GB，Android 8.0+，arm64-v8a / x86_64；沿用此 fork 的签名，可覆盖升级。
-- **v5.1 新增**：修复公式多余空格；可选 Paddle 官方 AI Studio API，令牌在应用内加密保存，主动点击才上传当前选区。默认保持离线；云端准确率尚未实测。[使用与验证说明](docs/FORMULA_PADDLE.md)。
-- APK 内置 GryphOne Q8 快速笔画识别、压缩 GLM-OCR 图片识别 / 精细复核，以及全部十个学科包。安装后不需要下载模型或学科包就能断网使用；包仍可独立启停、卸载、本地恢复、导入和通过 GitHub 更新。
-- 原始笔画先快速识别，需要时点“离线精细复核”，检查后手动采用结果；也可选择单张公式图片识别。复核不会覆盖手动编辑。公式源码可再次编辑，块可移动、缩放、撤销或保留原内容。
-- **准确率仍有限**：开发机同组 200 条真实样本由 v3 的 89/200 改善到 104/200；Android 新增 160 条为 95/160。高数、线代包改用训练集符号序列统计，旧专项集 116→117/200，新增集没有增益。不能宣称对大多数本科公式已可靠；发布标记为 prerelease，保留 v3 稳定渠道。
-- [完整验证报告](docs/FORMULA_ACCURACY_V5.md) · [使用、构建与许可](docs/FORMULA.md)。构建前运行 `python tools/prepare_full_formula.py`。没有三星 / S Pen 真机测试数据。
-- 此 fork 代码为 AGPL-3.0，保留原 xnotes MIT 署名。高数、线代统计资源源于 Google MathWriting HUMAN TRAIN，遵循 **CC BY-NC-SA 4.0**；原始笔迹、测试图片和用户截图不随应用分发。其余八个学科包是编辑辅助，并非八个另行训练的 OCR 模型。
-- 下方保留上游介绍；商店和上游 Release 链接不包含此 fork 功能。
+- **[下载 v6 轻量 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.6-paddle-lite/xnotes-latex-0.9.8-latex.6-paddle-lite.apk)** · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.6-paddle-lite)。**52.4 MB**，比 v5.1 缩小 **94.83%**；Android 8.0+，arm64-v8a / x86_64，沿用签名，可覆盖升级。
+- 已去掉全部本地 OCR 模型、ONNX Runtime 和 GLM/llama.cpp 推理库。没有首次模型下载或本地 OCR 自动加载。
+- 圈选公式后在 **Paddle API 设置**填写自己的 AI Studio 令牌。主动点击识别才上传当前选区；结果需手动采用。令牌在本机加密保存，不进入备份。
+- 保留白板、LaTeX 空格修复、原生排版、可移动/缩放/编辑公式块、保留原笔迹和撤销。十个学科包作为符号、模板与校对辅助保留，可独立管理；不对 Paddle 结果做本地模型候选评分。
+- **2518 项 JVM 测试、13 项 Android 检查通过**。覆盖升级后 15 个笔记、画布、设置、学科包文件哈希不变，旧模型缓存已清理。未配置真实 AI Studio 令牌，云端准确率和延迟尚未实测。没有三星 / S Pen 真机测试数据。
+- [轻量版验证与升级说明](docs/FORMULA_PADDLE_LITE.md) · [使用与构建](docs/FORMULA.md) · [旧离线完整版](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5.1-full) · [十个独立学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。
+- 本 fork 代码为 AGPL-3.0，保留原 xnotes MIT 署名。高数、线代包中的历史统计数据遵循 CC BY-NC-SA 4.0，轻量版不使用它们评分。测试图片与用户截图不随应用分发。
+- 下方保留上游介绍；商店与上游 Release 不包含此 fork 功能。
 
-<p align="center"><img src="docs/screenshots/v5/formula-pack-manager.png" width="90%" alt="完整 APK 内置十个可独立管理的学科包" /></p>
-<p align="center"><img src="docs/screenshots/v5/formula-full-review.png" width="90%" alt="精细复核保留手工输入的 x=2，等待用户选择是否采用结果" /><br /><em>交互测试：合成 x=1 被快速模型读作 χ=1、精细模型读作 X=1，均非正确。图中 x=2 是人工输入，用于验证复核不会覆盖编辑。</em></p>
+<p align="center"><img src="docs/screenshots/v6-paddle-lite/formula-dialog.png" width="90%" alt="Paddle 轻量版的选区、排版预览和 API 设置" /><br /><em>交互测试画面：x=1 为手动输入，用于验证排版和编辑流程，不代表云端识别准确率。</em></p>
 
 ---
 
@@ -76,7 +75,7 @@
 - **Your notes, your folders**: notes are saved as files in a folder you choose, not locked away in an app's database, so you stay in full control of them.
 - **Works with stylus pens**: S Pen and many others.
 - **Always editable**: nothing gets flattened, so every stroke can be moved, restyled or erased later.
-- **Private**: open source, no account, no ads, no tracking. This fork recognizes offline by default. Networking is opt-in: GitHub package downloads or explicitly uploading a selected formula to Paddle AI Studio.
+- **Private**: open source, no account, no ads, no tracking. Whiteboard editing and LaTeX typesetting work offline. Handwriting recognition uses Paddle AI Studio after you explicitly upload a selection; GitHub package updates are optional.
 
 ## Install
 

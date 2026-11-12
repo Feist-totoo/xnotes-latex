@@ -15,6 +15,17 @@ val keystoreProperties = Properties().apply {
     if (hasReleaseSigning) keystorePropertiesFile.inputStream().use { load(it) }
 }
 
+// Use an explicit staging tree: AGP's asset merger does not consistently honour
+// AndroidSourceDirectorySet.exclude. Models must never enter its input tree.
+val preparePaddleAssets by tasks.registering(Sync::class) {
+    from("src/main/assets") { exclude("formula-gryph/**", "formula-precision/**", "formula-texo/**") }
+    into(layout.buildDirectory.dir("generated/paddleAssets"))
+}
+val preparePaddleTestAssets by tasks.registering(Sync::class) {
+    from("src/androidTest/assets") { exclude("handwriting*/**") }
+    into(layout.buildDirectory.dir("generated/paddleTestAssets"))
+}
+
 android {
     namespace = "com.xnotes"
     compileSdk = 36
@@ -25,8 +36,8 @@ android {
         applicationId = "com.xnotes.latex"
         minSdk = 26
         targetSdk = 36
-        versionCode = 74
-        versionName = "0.9.8-latex.5.1-full"
+        versionCode = 75
+        versionName = "0.9.8-latex.6-paddle-lite"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")
@@ -98,6 +109,11 @@ android {
         compose = true
     }
 
+    // Historical evaluation assets can remain in a developer checkout, but must
+    // never be packaged in the Paddle-only app or its device-test companion.
+    sourceSets.getByName("main").assets.setSrcDirs(listOf(layout.buildDirectory.dir("generated/paddleAssets")))
+    sourceSets.getByName("androidTest").assets.setSrcDirs(listOf(layout.buildDirectory.dir("generated/paddleTestAssets")))
+
     // Lists every values-* translation in the manifest so Android 13+ offers a per-app language.
     androidResources {
         generateLocaleConfig = true
@@ -118,6 +134,7 @@ kotlin {
 tasks.configureEach {
     if (name.contains("ArtProfile")) enabled = false
 }
+tasks.named("preBuild").configure { dependsOn(preparePaddleAssets, preparePaddleTestAssets) }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
@@ -137,7 +154,6 @@ dependencies {
     implementation(libs.latex.base)
     implementation(libs.latex.parser)
     implementation(libs.latex.renderer)
-    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.23.2")
     implementation(libs.bundles.commonmark)
     debugImplementation(libs.androidx.ui.tooling)
 
@@ -149,24 +165,3 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
-
-// Never ship a build that silently needs an online model download at first use.
-val verifyFormulaModel by tasks.registering {
-    val modelDir = layout.projectDirectory.dir("src/main/assets/formula-gryph")
-    val precisionDir = layout.projectDirectory.dir("src/main/assets/formula-precision")
-    inputs.dir(modelDir)
-    inputs.dir(precisionDir)
-    doLast {
-        for (name in listOf("encoder-q8.onnx", "decoder-q8.onnx", "vocabulary.json", "manifest.json")) {
-            check(modelDir.file(name).asFile.let { it.isFile && it.length() > 0 }) {
-                "Missing offline formula asset $name. Run: python tools/prepare_handwriting_model.py"
-            }
-        }
-        for (name in listOf("GLM-OCR-Q4_K_M-compact.gguf", "mmproj-GLM-OCR-Q8_0.gguf", "manifest.json")) {
-            check(precisionDir.file(name).asFile.let { it.isFile && it.length() > 0 }) {
-                "Missing offline precision asset $name. Run: python tools/prepare_full_formula.py"
-            }
-        }
-    }
-}
-tasks.named("preBuild").configure { dependsOn(verifyFormulaModel) }

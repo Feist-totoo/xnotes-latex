@@ -49,7 +49,7 @@ data class FormulaPack(
 
 data class FormulaPackRecommendation(val id: String, val score: Int, val evidence: List<String>)
 
-/** Reuses local OCR. No second VLM, expression rewrite, downloaded regex or code. */
+/** Suggests editing aids from the current LaTeX. No recognition, expression rewrite or downloaded code. */
 object FormulaPackRouter {
     private val tokenPattern = Regex("\\\\[A-Za-z]+|\\\\.|[^\\s]")
     private fun tokens(source: String): List<String> {

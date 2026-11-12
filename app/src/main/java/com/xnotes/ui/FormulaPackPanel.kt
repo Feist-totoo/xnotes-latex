@@ -14,7 +14,6 @@ import com.xnotes.core.formula.FormulaPackRouter
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun FormulaPackPanel(catalog: List<FormulaPack>, selected: Set<String>, source: String, enabled: Boolean,
-                     recognition: Boolean, onRecognition: (Boolean) -> Unit,
                      automatic: Boolean, onAutomatic: (Boolean) -> Unit, onManage: () -> Unit,
                      onSelect: (Set<String>) -> Unit, onInsert: (String) -> Unit, onTemplate: (String) -> Unit) {
     val chinese = LocalConfiguration.current.locales[0].language == "zh"
@@ -29,13 +28,9 @@ fun FormulaPackPanel(catalog: List<FormulaPack>, selected: Set<String>, source: 
         }
         if (expanded) {
             Text(stringResource(R.string.formula_packs_explanation), style = MaterialTheme.typography.bodySmall)
-            if (catalog.any { it.recognition != null }) Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                Switch(checked = recognition, onCheckedChange = onRecognition, enabled = enabled)
-                Text(if (chinese) "学科候选辅助：只调整接近的候选，仍需核对" else "Subject assistance: rerank close alternatives; review the result", style = MaterialTheme.typography.bodySmall)
-            }
             Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                 Switch(checked = automatic, onCheckedChange = onAutomatic)
-                Text(if (chinese) "按本机识别结果自动选包" else "Route using local recognition", Modifier.weight(1f))
+                Text(if (chinese) "按当前公式推荐编辑辅助" else "Suggest editing aids for this formula", Modifier.weight(1f))
                 TextButton(onClick = onManage) { Text(if (chinese) "管理 / 下载" else "Manage / download") }
             }
             if (automatic && recommendations.isNotEmpty()) {

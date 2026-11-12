@@ -16,6 +16,7 @@ import com.xnotes.core.formula.PaddleFormulaApi
 import com.xnotes.platform.PaddleFormulaSettings
 import com.xnotes.ui.PaddleFormulaPanel
 import kotlinx.coroutines.CompletableDeferred
+import kotlinx.coroutines.awaitCancellation
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
@@ -84,5 +85,55 @@ class PaddleFormulaTest {
             compose.onNodeWithText(base.getString(R.string.paddle_apply)).performScrollTo().performClick()
             assertEquals("e^{\\arctan(1+x)}", applied)
         } finally { PaddleFormulaSettings.clear(isolated); bitmap.recycle() }
+    }
+
+    @Test fun authenticationFailureAndCancellationPreserveEditsAndAllowRetry() {
+        val bitmap = Bitmap.createBitmap(8, 8, Bitmap.Config.ARGB_8888)
+        var calls = 0
+        var applied = "x=original"
+        try {
+            PaddleFormulaSettings.save(isolated, PaddleFormulaApi.Config(token = "TEST_ONLY_token"))
+            compose.setContent {
+                CompositionLocalProvider(LocalContext provides isolated) {
+                    MaterialTheme {
+                        Column(Modifier.verticalScroll(rememberScrollState())) {
+                            PaddleFormulaPanel(bitmap, true, recognize = { _, _ ->
+                                when (++calls) {
+                                    1 -> throw PaddleFormulaApi.Error(PaddleFormulaApi.Failure.AUTH)
+                                    2 -> awaitCancellation()
+                                    else -> "x=3"
+                                }
+                            }) { applied = it }
+                        }
+                    }
+                }
+            }
+            compose.waitUntil(5000) { compose.onAllNodes(hasTestTag("paddle-recognize") and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
+            assertEquals(0, calls)
+            compose.onNodeWithTag("paddle-recognize").performClick()
+            compose.onNodeWithText(base.getString(R.string.paddle_auth_error)).assertExists()
+            assertEquals("x=original", applied)
+            compose.onNodeWithTag("paddle-recognize").performClick()
+            compose.onNodeWithText(base.getString(R.string.paddle_cancel)).performScrollTo().performClick()
+            compose.onNodeWithTag("paddle-result").assertDoesNotExist()
+            assertEquals("x=original", applied)
+            compose.onNodeWithTag("paddle-recognize").performScrollTo().performClick()
+            compose.onNodeWithTag("paddle-result").assertTextEquals("x=3")
+            assertEquals(3, calls)
+            assertEquals("x=original", applied)
+        } finally { PaddleFormulaSettings.clear(isolated); bitmap.recycle() }
+    }
+
+    @Test fun liteHasNoModelAssetsAndCleanupDoesNotFollowLinks() {
+        val assets = base.assets.list("").orEmpty()
+        assertFalse(assets.any { it in setOf("formula-gryph", "formula-precision", "formula-texo") })
+        val outside = File(base.cacheDir, "model-cleanup-outside-${UUID.randomUUID()}").apply { mkdirs() }
+        val preserved = File(outside, "encoder-q8.onnx").apply { writeText("outside scope") }
+        val link = File(isolated.noBackupFilesDir, "formula-gryph-q8-v1")
+        try {
+            java.nio.file.Files.createSymbolicLink(link.toPath(), outside.toPath())
+            assertEquals(0L, com.xnotes.core.formula.LegacyModelCleanup.removeFrom(isolated.noBackupFilesDir))
+            assertEquals("outside scope", preserved.readText())
+        } finally { link.delete(); preserved.delete(); outside.delete() }
     }
 }
