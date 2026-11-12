@@ -32,6 +32,8 @@ class ImageItem(
     var part: Rect? = null,
     /** Editable math source. The image is a portable, high resolution rendering cache. */
     val formula: FormulaSource? = null,
+    /** Visible cut boundary, normalized to the encoded image. Used for picking transparent pieces. */
+    var cutOutline: List<Pt>? = null,
 ) : CanvasItem, Resizable {
 
     override val kind = KIND
@@ -75,7 +77,13 @@ class ImageItem(
         rect = rect.translate(dx, dy)
     }
 
-    override fun contains(p: Pt): Boolean = rect.contains(unturn(p))
+    override fun contains(p: Pt): Boolean {
+        val local = unturn(p)
+        if (!rect.contains(local)) return false
+        val outline = cutOutline ?: return true
+        val source = ImageSliceGeometry.sourcePoint(this, Pt((local.x - rect.x) / rect.w, (local.y - rect.y) / rect.h))
+        return com.xnotes.core.geometry.Geometry.pointInPolygon(outline, source)
+    }
 
     override fun centroid(): Pt = rect.center
 

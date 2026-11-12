@@ -433,19 +433,23 @@ class ReplaceImage(
     private val item: ImageItem,
     private val before: Pair<ImageData, Rect>,
     private val after: Pair<ImageData, Rect>,
+    private val outlineAfter: List<com.xnotes.core.geometry.Pt>? = null,
 ) : Command {
     private val partBefore = item.part
+    private val outlineBefore = item.cutOutline
 
     override fun redo() {
         item.image = after.first
         item.rect = after.second
         item.part = null
+        item.cutOutline = outlineAfter
     }
 
     override fun undo() {
         item.image = before.first
         item.rect = before.second
         item.part = partBefore
+        item.cutOutline = outlineBefore
     }
 
     override fun touched(locate: (CanvasItem) -> Page?) = pagedItems(listOf(item), locate)

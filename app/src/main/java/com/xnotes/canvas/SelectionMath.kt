@@ -107,7 +107,7 @@ object SelectionMath {
         )
         is ShapeItem -> if (item.isFill) fillEdge(item) else outlines(item.paths(), item.strokeWidth)
         is ConnectorItem -> outlines(item.paths(), item.strokeWidth)
-        is ImageItem -> Drawn(listOf(Line(item.corners(), true)), 0.0)
+        is ImageItem -> Drawn(listOf(Line(com.xnotes.core.model.ImageSliceGeometry.worldOutline(item), true)), 0.0)
         // Tape is all body, like a dropped colour, so its edge stands in for an outline.
         is TapeItem -> Drawn(item.shape.outline.map { Line(it.pts, it.closed) }, 0.0)
         else -> Drawn(listOf(Line(corners(item.bounds()), true)), 0.0)

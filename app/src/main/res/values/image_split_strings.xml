@@ -1,0 +1,10 @@
+<resources>
+    <string name="image_split">Split image with a line</string>
+    <string name="image_split_help">Drag across the picture to draw a straight cut. Horizontal, vertical and diagonal cuts are supported. Both pieces stay on the board.</string>
+    <string name="image_split_draw">Draw a line through the picture. You can redraw before confirming.</string>
+    <string name="image_split_ready">Two pieces ready. After splitting, tap a piece to move or split it again. Undo restores the original.</string>
+    <string name="image_split_reset">Redraw</string>
+    <string name="image_split_apply">Split into two pieces</string>
+    <string name="image_split_failed">Could not split this picture. Try another line; both sides need visible content.</string>
+    <string name="image_split_stale">The picture changed. Close this window and select it again.</string>
+</resources>

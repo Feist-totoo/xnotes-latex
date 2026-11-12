@@ -505,6 +505,29 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
         selectionMenuRect = null
     }
 
+    override fun canSplitImage(): Boolean = com.xnotes.platform.ImageSplitDraft.accepts(selection.items)
+
+    override fun createImageSplitDraft(): com.xnotes.platform.ImageSplitDraft? {
+        if (!canSplitImage()) return null
+        val dir = imageDir ?: return null
+        val item = selection.items.single() as ImageItem
+        val doc = document
+        val captured = com.xnotes.core.formula.FormulaSelectionState(listOf(item))
+        return com.xnotes.platform.ImageSplitDraft(item, dir) { pieces ->
+            if (document !== doc || !doc.containsRef(item) || !captured.unchanged()) false
+            else {
+                val before = doc.items.toList()
+                val after = before.flatMap { if (it === item) pieces else listOf(it) }
+                interaction.clearSelection()
+                val command = ReplaceCanvasItems(doc, before, after)
+                command.redo(); history.push(command)
+                armTool(Tool.SELECT)
+                markDirty(); refresh(); publishOverlay()
+                true
+            }
+        }
+    }
+
     override fun canConvertFormula(): Boolean = com.xnotes.platform.FormulaDraft.accepts(selection.items)
 
     override fun createFormulaDraft(): com.xnotes.platform.FormulaDraft? {
@@ -696,7 +719,9 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
                 }
                 val cmd = com.xnotes.core.infinite.OnCanvas(
                     document,
-                    com.xnotes.core.history.ReplaceImage(item, image to item.rect, cut to com.xnotes.core.model.ImageCrop.croppedRect(item, part)),
+                    com.xnotes.core.history.ReplaceImage(item, image to item.rect, cut to com.xnotes.core.model.ImageCrop.croppedRect(item, part),
+                        com.xnotes.core.model.ImageSliceGeometry.cropOutline(item.cutOutline,
+                            Rect(source.x / image.width, source.y / image.height, source.w / image.width, source.h / image.height))),
                     listOf(item),
                 )
                 cmd.redo()

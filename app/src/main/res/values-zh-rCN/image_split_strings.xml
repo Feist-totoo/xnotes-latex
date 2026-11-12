@@ -1,0 +1,10 @@
+<resources>
+    <string name="image_split">直线切块</string>
+    <string name="image_split_help">在图片上拖动划出一条直线，支持横切、竖切和斜切。切开后的两块都会保留在白板上。</string>
+    <string name="image_split_draw">请划一条穿过图片的线，确认前可重新划线。</string>
+    <string name="image_split_ready">将分成两块。切开后可点选任意一块，独立移动或继续切割；撤销可恢复原图。</string>
+    <string name="image_split_reset">重新划线</string>
+    <string name="image_split_apply">切成两块</string>
+    <string name="image_split_failed">未能切割图片，请换一条切线，确保两边都有可见内容。</string>
+    <string name="image_split_stale">图片已经发生变化，请关闭窗口后重新选择。</string>
+</resources>

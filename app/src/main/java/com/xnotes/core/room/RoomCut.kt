@@ -184,7 +184,7 @@ object RoomCut {
         val farPart = if (hi > b + EPS) ImageCrop.split(p, on(b), n)?.second else null
         if (nearPart == null && farPart == null) return Kept(if (lo < a - EPS || hi > b + EPS) p else null, null)
         val far = farPart?.let { f ->
-            ImageItem(p.image, ImageCrop.croppedRect(p, f), p.orientation, p.angle, p.flip, ImageCrop.partOf(p, f)).also {
+            ImageItem(p.image, ImageCrop.croppedRect(p, f), p.orientation, p.angle, p.flip, ImageCrop.partOf(p, f), cutOutline = p.cutOutline).also {
                 it.locked = p.locked
                 it.sync = p.sync
                 it.translate(dx, dy)

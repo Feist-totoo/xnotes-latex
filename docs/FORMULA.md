@@ -1,6 +1,6 @@
 # xnotes LaTeX：Paddle API 轻量版
 
-当前分支是 v6 轻量版，版本 `0.9.8-latex.6-paddle-lite`、versionCode 75、包名 `com.xnotes.latex.debug`。基于 [xnotes Android](https://github.com/shardulvs/xnotes-android) 的白板、PDF 批注、分页笔记和无限画布，新增套索公式转换。历史离线实现见 [v5.1 源码标签](https://github.com/Feist-totoo/xnotes-latex/tree/v0.9.8-latex.5.1-full)。
+当前分支是 v6.1 轻量版，版本 `0.9.8-latex.6.1-paddle-lite`、versionCode 76、包名 `com.xnotes.latex.debug`。基于 [xnotes Android](https://github.com/shardulvs/xnotes-android) 的白板、PDF 批注、分页笔记和无限画布，新增套索公式转换和图片直线切块。历史离线实现见 [v5.1 源码标签](https://github.com/Feist-totoo/xnotes-latex/tree/v0.9.8-latex.5.1-full)。
 
 ## 使用
 
@@ -18,6 +18,10 @@ API 结果不会自动覆盖已有编辑。关闭窗口或停止等待会取消�
 公式源码与透明 PNG 缓存保存在 `.xnote` / `.xcanvas`，重新打开无需联网识别。公式块可移动、缩放、旋转和再次编辑；禁止裁剪、镜像，避免显示与源码含义不一致。PDF 导出使用缓存图片。
 
 十个学科包均已内置，提供符号、模板和校对提示，可独立启用、卸载、恢复、导入与通过 GitHub 更新。推荐依据当前 LaTeX；这些包不改变 Paddle API 的识别结果。
+
+## 图片直线切块
+
+导入题目图片后，用选择工具点选图片，在浮动工具栏点击分叉箭头 **直线切块**。在预览图上拖动划线，确认后两块留在原位。点击其中一块可独立移动、缩放，再次打开直线切块即可继续分割。横切、竖切和斜切都支持，每次切割均可撤销。分页笔记和无限画布均可使用，整个过程不联网。[详细说明](IMAGE_SPLIT.md)。
 
 ## 构建
 

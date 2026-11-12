@@ -292,6 +292,97 @@ class FormulaWorkflowTest {
         assertThrows(IllegalArgumentException::class.java) { draft.render("\\thisCommandDoesNotExist{x}") }
     }
 
+    private fun teachingPicture(): ImageItem {
+        val bitmap = Bitmap.createBitmap(800, 500, Bitmap.Config.ARGB_8888)
+        bitmap.eraseColor(android.graphics.Color.WHITE)
+        val paint = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply { color = android.graphics.Color.BLACK; textSize = 38f }
+        val canvas = android.graphics.Canvas(bitmap)
+        canvas.drawText("1. Find the derivative", 35f, 65f, paint)
+        canvas.drawText("y = x^3 + 2x", 65f, 140f, paint)
+        canvas.drawText("2. Solve the system", 35f, 320f, paint)
+        canvas.drawText("x + y = 5     x - y = 1", 65f, 400f, paint)
+        val file = File(compose.activity.cacheDir, "split-teaching.png")
+        file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }; bitmap.recycle()
+        return ImageItem(com.xnotes.core.model.ImageData(file, 800, 500), com.xnotes.core.geometry.Rect(110.0, 220.0, 440.0, 275.0))
+    }
+
+    @Test fun splitImagePreviewCancelCutPickMoveRecutUndoAndRedo() {
+        val ed = editor()
+        val fixture = teachingPicture()
+        lateinit var original: ImageItem
+        compose.runOnIdle { ed.newNote() }
+        compose.runOnIdle {
+            ed.insertImage(fixture.image.file.readBytes())
+            original = ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single()
+            original.rect = fixture.rect
+            ed.state.refreshAllInk(); ed.view.requestRender()
+            ed.controller.setTool(Tool.SELECT); ed.controller.selectPlaced(0, listOf(original))
+        }
+        val split = compose.activity.getString(R.string.image_split)
+        compose.onNodeWithContentDescription(split).performClick()
+        compose.onNodeWithTag("image-split-apply").assertIsNotEnabled()
+        compose.onNodeWithText(compose.activity.getString(R.string.cancel)).performClick()
+        compose.runOnIdle { assertEquals(listOf(original), ed.state.document.pages.first().items.toList()) }
+        compose.onNodeWithContentDescription(split).performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("image-split-preview").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithTag("image-split-preview").performTouchInput { swipe(centerLeft + androidx.compose.ui.geometry.Offset(5f, 0f), centerRight - androidx.compose.ui.geometry.Offset(5f, 0f), 500) }
+        compose.onNodeWithTag("image-split-apply").assertIsEnabled()
+        screenshot("image-split-preview.png")
+        compose.onNodeWithTag("image-split-apply").performClick()
+        compose.waitUntil(15_000) { ed.state.document.pages.first().items.size == 2 }
+        lateinit var first: ImageItem
+        compose.runOnIdle {
+            val pieces = ed.state.document.pages.first().items.filterIsInstance<ImageItem>()
+            assertEquals(2, pieces.size); assertTrue(pieces.all { it.group == null })
+            first = pieces.minBy { it.rect.y }
+            val center = first.rect.center
+            gesture(ed, listOf(center, center)) // select just this piece
+            assertEquals(listOf(first), ed.controller.selectedItems())
+            gesture(ed, listOf(center, Pt(center.x + 35, center.y - 45), Pt(center.x + 90, center.y - 90), Pt(center.x + 90, center.y - 90)))
+            assertTrue(first.rect.x > original.rect.x + 50)
+            assertEquals(original.rect.x, pieces.single { it !== first }.rect.x, 1e-8)
+        }
+        screenshot("image-split-pieces.png")
+        compose.onNodeWithContentDescription(split).performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("image-split-preview").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithTag("image-split-preview").performTouchInput { swipe(topCenter + androidx.compose.ui.geometry.Offset(0f, 5f), bottomCenter - androidx.compose.ui.geometry.Offset(0f, 5f), 500) }
+        compose.onNodeWithTag("image-split-apply").performClick()
+        compose.waitUntil(15_000) { ed.state.document.pages.first().items.size == 3 }
+        compose.runOnIdle {
+            ed.undo(); assertEquals(2, ed.state.document.pages.first().items.size)
+            ed.undo() // move
+            ed.undo(); assertEquals(listOf(original), ed.state.document.pages.first().items.toList())
+            ed.redo(); assertEquals(2, ed.state.document.pages.first().items.size)
+        }
+    }
+
+    @Test fun infiniteImageSplitPreservesNeighboursAndRejectsStaleDraft() {
+        val ed = editor()
+        val original = teachingPicture()
+        val neighbour = line(550.0, 550.0, 600.0, 590.0)
+        lateinit var draft: com.xnotes.platform.ImageSplitDraft
+        compose.runOnIdle {
+            val canvas = ed.infinite
+            canvas.replaceDocument(com.xnotes.core.infinite.InfiniteDocument().also { it.addAll(listOf(original, neighbour)) })
+            canvas.selection.select(listOf(original))
+            draft = canvas.createImageSplitDraft()!!
+        }
+        val pieces = runBlocking(Dispatchers.IO) { draft.split(Pt(0.0, 0.0), Pt(1.0, 1.0)) }
+        compose.runOnIdle {
+            val canvas = ed.infinite
+            assertTrue(draft.apply(pieces))
+            assertEquals(pieces + neighbour, canvas.document.items)
+            assertEquals(1, pieces.count { it.contains(Pt(original.rect.x + 30, original.rect.y + 170)) })
+            canvas.undo(); assertEquals(listOf(original, neighbour), canvas.document.items)
+            canvas.redo(); assertEquals(3, canvas.document.items.size)
+            canvas.selection.select(listOf(pieces.first()))
+            draft = canvas.createImageSplitDraft()!!
+            pieces.first().translate(40.0, 0.0)
+            assertFalse(draft.apply(pieces))
+            assertTrue(canvas.document.containsRef(neighbour))
+        }
+    }
+
     @Test fun infiniteCanvasKeepsInkSelectsNewBlockAndRejectsStaleResult() {
         compose.waitForIdle()
         val ed = editor()

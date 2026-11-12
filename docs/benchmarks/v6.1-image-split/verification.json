@@ -1,0 +1,64 @@
+{
+  "apk": "xnotes-latex-0.9.8-latex.6.1-paddle-lite.apk",
+  "bytes": 52387198,
+  "sha256": "71850e58e8785545ca11af31f1f444a9b60868569b592c77762bc46df42b75a4",
+  "offlineModels": 0,
+  "offlineRuntimes": 0,
+  "subjectPacks": 10,
+  "nativeLibraries": [
+    "lib/arm64-v8a/libandroidx.graphics.path.so",
+    "lib/arm64-v8a/libxnotespdf.so",
+    "lib/arm64-v8a/libxnotests.so",
+    "lib/x86_64/libandroidx.graphics.path.so",
+    "lib/x86_64/libxnotespdf.so",
+    "lib/x86_64/libxnotests.so"
+  ],
+  "privateTestData": false,
+  "date": "2026-11-13",
+  "version": "0.9.8-latex.6.1-paddle-lite",
+  "versionCode": 76,
+  "applicationId": "com.xnotes.latex.debug",
+  "minimumApi": 26,
+  "targetApi": 36,
+  "certificateSha256": "dbde9527283a1432beee854febc94fb79a8710968f3566bb7763b6ec0a41b6bc",
+  "signatureSchemes": [
+    "v2",
+    "v3"
+  ],
+  "zipalign16KiB": true,
+  "unitTests": {
+    "tests": 2524,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "androidTests": {
+    "passed": 11,
+    "failures": 0,
+    "imagePixelTests": 3,
+    "editorWorkflows": 8,
+    "finalSignedApkTested": true,
+    "airplaneMode": true,
+    "noAnrOrCrashEvents": true
+  },
+  "imageSplit": {
+    "horizontal": true,
+    "vertical": true,
+    "diagonal": true,
+    "repeatedCuts": true,
+    "exactPixelReconstruction": true,
+    "overlappingPixels": 0,
+    "lostPixels": 0,
+    "independentMovement": true,
+    "undoRedo": true,
+    "cancellation": true,
+    "staleCommitRejected": true,
+    "pagedNoteRoundTrip": true,
+    "infiniteCanvasRoundTrip": true,
+    "maximumSidePixels": 4096,
+    "maximumPixels": 8000000,
+    "outputFormat": "PNG"
+  },
+  "liveCloudRecognitionTested": false,
+  "samsungHardwareTested": false
+}

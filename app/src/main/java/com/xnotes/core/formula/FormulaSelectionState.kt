@@ -12,7 +12,7 @@ class FormulaSelectionState(items: List<CanvasItem>) {
 
     private fun stamp(item: CanvasItem): List<Any?> = when (item) {
         is Stroke -> listOf(item.samples.toList(), item.config, item.cuts.toList(), item.bounds(), item.speedScale, item.smoothScale, item.locked, item.group)
-        is ImageItem -> listOf(item.snapshotGeometry(), item.orientation, item.image, item.formula, item.locked, item.group)
+        is ImageItem -> listOf(item.snapshotGeometry(), item.orientation, item.image, item.formula, item.cutOutline, item.locked, item.group, item.sync)
         else -> listOf(item.snapshotGeometry(), item.locked)
     }
 }

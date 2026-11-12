@@ -25,6 +25,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextButton
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Functions
+import androidx.compose.material.icons.outlined.CallSplit
 import androidx.compose.material.icons.outlined.GridOff
 import androidx.compose.material.icons.outlined.TableChart
 import androidx.compose.material3.DropdownMenuItem
@@ -171,6 +172,9 @@ interface SelectionMenuHost : SwatchHost {
 
     /** Put that picture in crop mode, the frame standing over it. */
     fun startCrop()
+
+    fun canSplitImage(): Boolean = false
+    fun createImageSplitDraft(): com.xnotes.platform.ImageSplitDraft? = null
 }
 
 /**
@@ -193,13 +197,15 @@ fun SelectionMenu(
     var arrangeOpen by remember { mutableStateOf(false) }
     var styleOpen by remember { mutableStateOf(false) }
     var formulaDraft by remember(host) { mutableStateOf<com.xnotes.platform.FormulaDraft?>(null) }
+    var imageSplitDraft by remember(host) { mutableStateOf<com.xnotes.platform.ImageSplitDraft?>(null) }
     var renamingAudio by remember { mutableStateOf<com.xnotes.core.model.AudioItem?>(null) }
 
     val audio = host.selectedAudio()
     val crops = host.canCropSelection()
     val formulas = host.canConvertFormula()
+    val splits = host.canSplitImage()
     val barHeightPx = with(density) { 48.dp.toPx() }
-    val barWidthPx = with(density) { ((6 + (if (audio != null) 1 else 0) + (if (crops) 1 else 0) + (if (formulas) 1 else 0)) * 46).dp.toPx() }
+    val barWidthPx = with(density) { ((6 + (if (audio != null) 1 else 0) + (if (crops) 1 else 0) + (if (splits) 1 else 0) + (if (formulas) 1 else 0)) * 46).dp.toPx() }
     val gap = with(density) { 10.dp.toPx() }
     val centerX = ((rect.left + rect.right) / 2.0).toFloat()
     val xPx = (centerX - barWidthPx / 2f).coerceAtLeast(with(density) { 8.dp.toPx() })
@@ -225,6 +231,9 @@ fun SelectionMenu(
                 ActionIcon(if (playing) XnotesIcons.pause else XnotesIcons.play, stringResource(if (playing) R.string.audio_pause else R.string.audio_play)) { host.playSelectedAudio() }
             }
             if (crops) ActionIcon(XnotesIcons.crop, stringResource(R.string.crop)) { host.startCrop() }
+            if (splits) ActionIcon(androidx.compose.material.icons.Icons.Outlined.CallSplit, stringResource(R.string.image_split)) {
+                imageSplitDraft = host.createImageSplitDraft()
+            }
             if (formulas) {
                 ActionIcon(androidx.compose.material.icons.Icons.Outlined.Functions, stringResource(R.string.formula_convert)) {
                     formulaDraft = host.createFormulaDraft()
@@ -346,6 +355,7 @@ fun SelectionMenu(
         }
     }
     formulaDraft?.let { draft -> FormulaDialog(draft) { formulaDraft = null } }
+    imageSplitDraft?.let { draft -> ImageSplitDialog(draft) { imageSplitDraft = null } }
 }
 
 /** The Arrange menu's rows, top of the stack first. */

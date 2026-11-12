@@ -296,6 +296,11 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
         if (item.angle != 0.0) j.name("angle").value(item.angle)
         if (item.flip != Flip.NONE) j.name("flip").value(item.flip.id)
         item.part?.let { j.name("part").beginArray().value(it.x).value(it.y).value(it.w).value(it.h).endArray() }
+        item.cutOutline?.let { points ->
+            j.name("cut_outline").beginArray()
+            points.forEach { j.beginArray().value(it.x).value(it.y).endArray() }
+            j.endArray()
+        }
         item.sync?.let { writeSync(j, it) }
         if (item.locked) j.name("locked").value(true)
         item.group?.let { j.name("group").value(it) }
@@ -642,6 +647,7 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
         val group: Int? = null,
         val part: Rect? = null,
         val formula: com.xnotes.core.model.FormulaSource? = null,
+        val cutOutline: List<Pt>? = null,
     ) : Pending(index, asset)
 
     private class PendingAudio(
@@ -794,6 +800,7 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
         var rgba: Rgba? = null
         var cuts: List<CutEdge> = emptyList()
         var part: Rect? = null
+        var cutOutline: List<Pt>? = null
         var latex: String? = null
         var latexColor: Rgba? = null
         var latexSize = 24.0
@@ -878,6 +885,7 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
                 "rgba" -> s.rgba = rgbaOrNull(p)
                 "cuts" -> s.cuts = parseCuts(p)
                 "part" -> s.part = rectOrNull(p)?.let { partWithin(it) }
+                "cut_outline" -> s.cutOutline = com.xnotes.core.model.ImageSliceGeometry.validOutline(pointsOrNull(p))
                 else -> p.skipValue()
             }
         }
@@ -894,6 +902,7 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
                             items.size + pending.size, asset, s.rect, s.srcW, s.srcH,
                             s.orientation, s.angle, Flip.fromId(s.flip), s.locked, s.id, sync, s.group, s.part,
                             s.latex?.let { com.xnotes.core.model.FormulaSource(it, s.latexColor ?: Rgba(24, 24, 24), s.latexSize) },
+                            s.cutOutline,
                         ),
                     )
                 }
@@ -1199,7 +1208,7 @@ class CanvasCodec(private val imageCodec: ImageCodec, private val textMeasurer: 
             h = probed.height
         }
         val rect = spec.rect ?: Rect(0.0, 0.0, w.toDouble(), h.toDouble())
-        return ImageItem(ImageData(file, w, h), rect, spec.orientation, spec.angle, spec.flip, spec.part, spec.formula)
+        return ImageItem(ImageData(file, w, h), rect, spec.orientation, spec.angle, spec.flip, spec.part, spec.formula, spec.cutOutline)
             .also {
                 it.locked = spec.locked
                 it.sync = spec.sync

@@ -2,11 +2,12 @@
 
 面向 Android 平板白板的独立 fork：**套索圈选 → Paddle API 识别 → LaTeX 预览纠错 → 可拖动公式块**，支持分页笔记和无限画布。识别需要联网，白板和公式排版可以离线使用。
 
-- **[下载 v6 轻量 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.6-paddle-lite/xnotes-latex-0.9.8-latex.6-paddle-lite.apk)** · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.6-paddle-lite)。**52.4 MB**，比 v5.1 缩小 **94.83%**；Android 8.0+，arm64-v8a / x86_64，沿用签名，可覆盖升级。
+- **[下载 v6.1 轻量 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.6.1-paddle-lite/xnotes-latex-0.9.8-latex.6.1-paddle-lite.apk)** · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.6.1-paddle-lite)。**52.4 MB**；Android 8.0+，arm64-v8a / x86_64，沿用签名，可覆盖升级。
+- **新增图片直线切块**：导入题目图片，选中后点分叉箭头“直线切块”，划线预览再确认。支持横切、竖切、斜切，每块可独立拖动、继续切割、保存重开和撤销。切块完全本地运行。[操作与验证](docs/IMAGE_SPLIT.md)。
 - 已去掉全部本地 OCR 模型、ONNX Runtime 和 GLM/llama.cpp 推理库。没有首次模型下载或本地 OCR 自动加载。
 - 圈选公式后在 **Paddle API 设置**填写自己的 AI Studio 令牌。主动点击识别才上传当前选区；结果需手动采用。令牌在本机加密保存，不进入备份。
 - 保留白板、LaTeX 空格修复、原生排版、可移动/缩放/编辑公式块、保留原笔迹和撤销。十个学科包作为符号、模板与校对辅助保留，可独立管理；不对 Paddle 结果做本地模型候选评分。
-- **2518 项 JVM 测试、13 项 Android 检查通过**。覆盖升级后 15 个笔记、画布、设置、学科包文件哈希不变，旧模型缓存已清理。未配置真实 AI Studio 令牌，云端准确率和延迟尚未实测。没有三星 / S Pen 真机测试数据。
+- **v6.1：2524 项 JVM 测试、11 项 Android 检查通过**，含图片像素重建、重复切割、点击拖动、取消、撤销、持久化和原公式流程回归。[v6 的覆盖升级和模型清理记录](docs/FORMULA_PADDLE_LITE.md)保留。未配置真实 AI Studio 令牌，云端准确率和延迟尚未实测。没有三星 / S Pen 真机测试数据。
 - [轻量版验证与升级说明](docs/FORMULA_PADDLE_LITE.md) · [使用与构建](docs/FORMULA.md) · [旧离线完整版](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5.1-full) · [十个独立学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。
 - 本 fork 代码为 AGPL-3.0，保留原 xnotes MIT 署名。高数、线代包中的历史统计数据遵循 CC BY-NC-SA 4.0，轻量版不使用它们评分。测试图片与用户截图不随应用分发。
 - 下方保留上游介绍；商店与上游 Release 不包含此 fork 功能。

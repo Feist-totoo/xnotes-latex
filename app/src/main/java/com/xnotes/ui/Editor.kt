@@ -1883,6 +1883,32 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
     override fun unlockItem(item: com.xnotes.core.model.CanvasItem) = controller.unlockItem(item)
     override fun dismissSelectionMenu() { selectionMenu = null }
 
+    override fun canSplitImage(): Boolean = com.xnotes.platform.ImageSplitDraft.accepts(controller.selectedItems())
+
+    override fun createImageSplitDraft(): com.xnotes.platform.ImageSplitDraft? {
+        if (!canSplitImage()) return null
+        val item = controller.selectedItems().single() as ImageItem
+        val doc = state.document
+        val page = doc.pages.firstOrNull { item in it.items } ?: return null
+        val captured = com.xnotes.core.formula.FormulaSelectionState(listOf(item))
+        return com.xnotes.platform.ImageSplitDraft(item, imageDir) { pieces ->
+            if (state.document !== doc || page !in doc.pages || item !in page.items || !captured.unchanged()) false
+            else {
+                val before = page.items.toList()
+                val after = before.flatMap { if (it === item) pieces else listOf(it) }
+                controller.clearSelection()
+                val command = com.xnotes.core.history.ReplacePageItems(page, before, after)
+                command.redo(); history.push(command)
+                doc.dirty = true
+                state.refreshAllInk()
+                controller.setTool(Tool.SELECT)
+                // Leave the pieces ungrouped and unselected, so the next tap picks just one.
+                refreshContent(); view.requestRender()
+                true
+            }
+        }
+    }
+
     override fun canConvertFormula(): Boolean = com.xnotes.platform.FormulaDraft.accepts(controller.selectedItems())
 
     override fun createFormulaDraft(): com.xnotes.platform.FormulaDraft? {
@@ -1974,7 +2000,9 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
                 if (cut == null) message = appContext.getString(R.string.err_crop)
                 return@launch
             }
-            val cmd = com.xnotes.core.history.ReplaceImage(item, image to item.rect, cut to com.xnotes.core.model.ImageCrop.croppedRect(item, part))
+            val outline = com.xnotes.core.model.ImageSliceGeometry.cropOutline(item.cutOutline,
+                Rect(source.x / image.width, source.y / image.height, source.w / image.width, source.h / image.height))
+            val cmd = com.xnotes.core.history.ReplaceImage(item, image to item.rect, cut to com.xnotes.core.model.ImageCrop.croppedRect(item, part), outline)
             val was = touchedRegions(cmd)
             cmd.redo()
             history.push(cmd)
