@@ -1,16 +1,16 @@
 # xnotes LaTeX — 离线手写公式白板
 
-Android 平板白板 fork：**手写侧栏 → 停笔本机识别 → LaTeX 预览纠错 → 可拖动公式块**，同时保留套索识别、分页笔记和无限画布。
+Android 平板白板 fork：**顶部 Σ 开关 → 白板直接书写 → 停笔本机识别 → 原位同色 LaTeX 块**，保留套索识别、分页笔记和无限画布。
 
-- **[下载 v7 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.7-offline-sidebar/xnotes-latex-0.9.8-latex.7-offline-sidebar.apk)** · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.7-offline-sidebar)。约 **67.8 MB**，Android 8.0+，arm64-v8a / x86_64，沿用旧签名覆盖升级。
-- 在 **偏好设置 → 离线 OCR 设置** 主动下载 **32.2 MB** 数学模型包；随后识别完全离线。Paddle API、令牌入口和云端识别已移除。APK 包含 ONNX 运行库，不内置模型权重。
-- 工具栏 **Σ** 打开数学手写侧栏：上方书写，下方停笔自动预览；换行继续当前块，换块保留草稿，插入通过与图片相同的接口放到白板。支持手动修正 LaTeX。
-- 偏好设置可调整自动识别、快速/均衡/精细模式、停笔等待、CPU 线程和学科包辅助排序。默认精细模式；本版沿用已有模型，没有宣称新的训练准确率提升。
-- 修复工具栏插入图片的目标状态保存、后台读取、插入后定位和选中；保留图片横切/竖切/斜切、拖动、再次切割和撤销。[切图操作](docs/IMAGE_SPLIT.md)。
-- 十个学科包独立启用与管理，高数/线代包的兼容先验参与接近候选的重排；不能保证复杂矩阵、下标或分式正确。保留公式源代码编辑和原有 LaTeX 空格修复。
-- [操作、设置与测试说明](docs/OFFLINE_MATH_SIDEBAR.md) · [逐条真实手写基准](docs/benchmarks/v7-offline-sidebar/) · [模型和学科包 Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。延迟来自 Android 模拟器，没有三星/S Pen 真机结果；“停笔预览”并非逐笔即时识别。
-- **2523 项 JVM 测试、19 项 Android 回归通过**。160 条真实高数/线代手写结构匹配 95 条（59.4%），精细模式热运行引擎中位数约 1.51 秒；现有小模型仍需逐式校对。默认停笔等待另加 550 ms。
-- 代码 AGPL-3.0，保留原 xnotes MIT 署名。模型/运行库许可证随应用附带；高数、线代统计数据为 CC BY-NC-SA 4.0。测试笔迹与用户截图不随应用分发。
+- **[下载 v8 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.8-inline/xnotes-latex-0.9.8-latex.8-inline.apk)** · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.8-inline)。约 **67.8 MB**，Android 8.0+，arm64-v8a / x86_64，沿用旧签名覆盖升级。
+- 在 **偏好设置 → 离线 OCR 设置** 主动下载 **32.2 MB** 数学模型；之后完全离线。已有离线包可继续使用，APK 不内置权重，不含 Paddle API。
+- 移除独立手写侧栏。顶部 **Σ** 启用后，停笔在原笔迹位置生成同色公式块；选中后可 **还原手写** 继续改写，也可直接编辑 LaTeX。原笔迹随笔记保存，移动、缩放、旋转后仍可恢复。
+- 图片剪切使用 **剪刀** 图标，原截图入口隐藏。直接在图片上拖出虚线，两侧显示 **30% alpha 的主题色蒙版**；原位确认后成为两个可独立移动、继续切分的图片块。
+- 偏好设置可调整快速/均衡/精细模式、停笔等待、CPU 线程和十个学科包的辅助排序。新落笔取消旧任务，识别失败保留手写。
+- [v8 操作与验证说明](docs/INLINE_FORMULA_CUT.md) · [v8 测试报告](docs/benchmarks/v8-inline/TEST-REPORT.json) · [离线模型及学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。
+- **2523 项 JVM 测试、19 项 Android 断网回归通过**，包含真实手写回放、同色渲染、保存重开还原和原位切图。尚无三星/S Pen 真机验证。
+- 本次没有训练或替换模型；v7 的 160 条真实高数/线代手写结构匹配为 **95/160（59.4%）**，精细模式热运行引擎中位数约 **1.51 秒**，默认停笔等待另加 550 ms。该历史结果来自 Android 模拟器，不能代替平板实测，仍需逐式校对。[历史基准](docs/benchmarks/v7-offline-sidebar/)。
+- 代码 AGPL-3.0，保留原 xnotes MIT 署名。模型/运行库许可证随应用附带；高数、线代统计数据为 CC BY-NC-SA 4.0。测试笔迹与用户截图不随 APK 分发。
 - 下方保留上游介绍；商店与上游 Release 不包含本 fork 功能。
 
 ---

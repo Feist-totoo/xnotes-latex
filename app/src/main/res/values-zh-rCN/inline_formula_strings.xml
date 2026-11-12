@@ -1,0 +1,10 @@
+<resources>
+    <string name="math_inline">停笔转公式</string>
+    <string name="math_restore_ink">还原手写</string>
+    <string name="math_inline_failed">本次公式未能识别或排版，已保留笔迹；可修改或选中后重试。</string>
+    <string name="image_cut_tool">剪切图片</string>
+    <string name="image_cut_select">请先选中图片，再点剪刀划线切块。</string>
+    <string name="image_cut_inline_help">直接在图片上拉出直线，检查两侧蒙版后确认切分。</string>
+    <string name="image_cut_apply">确认切分</string>
+    <string name="math_inline_settings_hint">通过白板顶部 Σ 按钮开启或关闭停笔转公式。</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="math_inline">Automatic formula rendering</string>
+    <string name="math_restore_ink">Restore handwriting</string>
+    <string name="math_inline_failed">Could not typeset this expression. Your handwriting is kept; edit it or select it to retry.</string>
+    <string name="image_cut_tool">Cut image</string>
+    <string name="image_cut_select">Select a picture, then tap the scissors to cut it.</string>
+    <string name="image_cut_inline_help">Drag a straight line on the picture. Review both tinted pieces before cutting.</string>
+    <string name="image_cut_apply">Cut</string>
+    <string name="math_inline_settings_hint">Use the Σ toolbar button to turn automatic formula rendering on or off.</string>
+</resources>

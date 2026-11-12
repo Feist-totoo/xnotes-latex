@@ -27,9 +27,9 @@ class FormulaDraft(
     }
     val originalFormula = previous?.formula
     val bounds: Rect = items.map { it.bounds() }.reduce(Rect::union)
-    private val strokes = items.filterIsInstance<Stroke>().map { Stroke(it) }
+    private val strokes = items.filterIsInstance<Stroke>().map { Stroke(it).also { copy -> copy.group = it.group; copy.sync = it.sync } }
     val hasPenInput: Boolean get() = strokes.isNotEmpty()
-    val color = originalFormula?.color ?: strokes.firstOrNull()?.config?.rgba?.withAlpha(255) ?: Rgba(24, 24, 24)
+    val color = originalFormula?.color ?: strokes.lastOrNull()?.config?.rgba ?: Rgba(24, 24, 24)
     val initialLatex = originalFormula?.latex?.let(LatexSource::clean).orEmpty()
 
     /** Frozen visible centerlines, including clipping from room/area erasers. */
@@ -48,7 +48,8 @@ class FormulaDraft(
         renderer.scale(scale, scale)
         renderer.translate(-box.x, -box.y)
         previous?.paint(renderer)
-        for (stroke in strokes) {
+        for (originalStroke in strokes) {
+            val stroke = Stroke(originalStroke)
             stroke.config = stroke.config.copy(rgba = Rgba(0, 0, 0), neon = false, colorOverride = null, highlighterAlpha = 1.0)
             stroke.paint(renderer)
         }
@@ -68,7 +69,8 @@ class FormulaDraft(
         val rect = Rect(position.x, if (keepInk && !editing) bounds.bottom + 16.0 else position.y, width, height)
         return ImageItem(ImageData(file, rendered.bitmap.width, rendered.bitmap.height), rect,
             orientation = if (editing) previous!!.orientation else 0, angle = if (editing) previous!!.angle else 0.0,
-            formula = rendered.source).also { it.group = previous?.group; it.sync = previous?.sync }
+            formula = rendered.source.copy(ink = originalFormula?.ink ?: if (!keepInk) com.xnotes.core.model.FormulaInk.valid(rect, strokes) else null))
+            .also { it.group = previous?.group; it.sync = previous?.sync }
     }
 
     companion object {

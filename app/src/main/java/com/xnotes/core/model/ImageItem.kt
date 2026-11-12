@@ -132,7 +132,8 @@ class ImageItem(
     }
 }
 
-data class FormulaSource(val latex: String, val color: Rgba = Rgba(24, 24, 24), val pointSize: Double = 24.0)
+data class FormulaSource(val latex: String, val color: Rgba = Rgba(24, 24, 24), val pointSize: Double = 24.0,
+    val ink: FormulaInk? = null)
 
 /** Snapshot of an image's transformable geometry. */
 private data class ImageSnapshot(val rect: Rect, val angle: Double, val flip: Flip, val part: Rect?) : GeometrySnapshot

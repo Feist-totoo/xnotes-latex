@@ -158,6 +158,9 @@ class InteractionController(
     private val textMeasurer: TextMeasurer,
     private val requestRender: () -> Unit,
     private val onContentChanged: () -> Unit = {},
+    private val onMathStroke: (Stroke, Int) -> Unit = { _, _ -> },
+    private val mathInkMode: () -> Boolean = { false },
+    private val onMathErase: (Stroke, List<Stroke>) -> Unit = { _, _ -> },
     private val onViewChanged: () -> Unit = {},
     /** A pinch just snapped the view to fit-to-width (newly): surface the lock hint. */
     private val onFitWidthSnapped: () -> Unit = {},
@@ -1253,7 +1256,7 @@ class InteractionController(
         // Shape snap: only solid ink pens (not the highlighter or its straight-line mode) arm the
         // "hold still → shape" timer — and never while the ruler is up (you're drawing straight lines),
         // nor under the wand, whose strokes are ephemeral and must never commit a shape to the page.
-        dwellEligible = detectShapes && drawTool.isStroke && drawTool != Tool.HIGHLIGHTER && !straight &&
+        dwellEligible = !mathInkMode() && detectShapes && drawTool.isStroke && drawTool != Tool.HIGHLIGHTER && !straight &&
             !ruler.visible && !wandMode
         if (dwellEligible) {
             dwellAnchor = downViewport
@@ -1439,6 +1442,7 @@ class InteractionController(
         // antialiased edges over each other. It goes into the cache once the pad has let go.
         if (frontInk?.hold(stroke, page) != true) state.appendToCache(page, stroke)
         state.document.dirty = true
+        onMathStroke(stroke, pageIndex)
         return AddItem(page, stroke)
     }
 
@@ -1707,6 +1711,7 @@ class InteractionController(
         for (item in toRemove) {
             page.items.remove(item)
             eraseRemovals.add(page to item)
+            if (item is Stroke) onMathErase(item, emptyList())
             val b = item.paintBounds()
             dirty = dirty?.union(b) ?: b
         }
@@ -1750,6 +1755,7 @@ class InteractionController(
             dirty = dirty?.union(b) ?: b
             page.items.removeAt(i)
             page.items.addAll(i, frags)
+            if (item is Stroke) onMathErase(item, frags.filterIsInstance<Stroke>())
             i += frags.size // step past the freshly-inserted fragments
         }
         return dirty

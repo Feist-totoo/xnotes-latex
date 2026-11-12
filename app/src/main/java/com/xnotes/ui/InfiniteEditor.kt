@@ -86,6 +86,8 @@ private const val INK_TAP_DP = 8.0
 class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongPressMenuHost, TextEditHost, ColorDropHost, AudioHost, CropHost {
 
     private val appContext = context.applicationContext
+    var inlineMath: InlineMathState? = null
+    var imageCut by mutableStateOf<ImageCutSession?>(null)
 
     var document: InfiniteDocument = InfiniteDocument()
         private set
@@ -117,7 +119,7 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
         onWetStroke = { publishWetStroke(it) },
         onCommitStroke = { commitStroke(it) },
         onScribbleErase = { stroke, taken -> commitScribbleErase(stroke, taken) },
-        onEraseBegin = { EraseSession(document) },
+        onEraseBegin = { EraseSession(document) { original, fragments -> inlineMath?.replaceInk(original, fragments) } },
         onEraseEnd = { commitErase(it) },
         onEraseLifted = { maybeSwitchBackAfterErase() },
         onEraserCursor = { at, radius -> view.setEraserCursor(at, radius) },
@@ -125,7 +127,7 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
         onCommitShape = { commitItem(it) },
         shapeConfig = { shapeConfig },
         inkColor = { inkColor },
-        detectShapes = { detectShapes },
+        detectShapes = { detectShapes && inlineMath?.enabled != true },
         selection = { selection },
         itemsIn = { rect -> document.itemsIn(rect) },
         onSelectionChanged = { publishOverlay() },
@@ -291,7 +293,12 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
     }
 
     init {
-        view.input = { interaction.onTouch(it) }
+        view.input = { event ->
+            if (event.actionMasked == android.view.MotionEvent.ACTION_DOWN) inlineMath?.touch(true)
+            val handled = interaction.onTouch(event)
+            if (event.actionMasked == android.view.MotionEvent.ACTION_UP || event.actionMasked == android.view.MotionEvent.ACTION_CANCEL) inlineMath?.touch(false)
+            handled
+        }
         view.genericMotion = { interaction.onGenericMotion(it) }
         view.hover = { interaction.onHover(it) }
         view.afterLayout = { applyInitialView() }
@@ -463,6 +470,7 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
 
     /** Show a tool the gesture layer armed by itself: a long-press grab, and its release. */
     private fun adoptTool(next: Tool) {
+        if (!next.isStroke) inlineMath?.hold()
         val marked = interaction.connecting
         tool = next
         interaction.tool = next
@@ -506,6 +514,49 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
     }
 
     override fun canSplitImage(): Boolean = com.xnotes.platform.ImageSplitDraft.accepts(selection.items)
+
+    override fun startImageCut() {
+        val draft = createImageSplitDraft() ?: run { onMessage?.invoke(appContext.getString(com.xnotes.R.string.image_cut_select), null); armTool(Tool.SELECT); return }
+        val item = selection.items.single() as ImageItem
+        val doc = document
+        val captured = com.xnotes.core.formula.FormulaSelectionState(listOf(item))
+        inlineMath?.clear()
+        imageCut = ImageCutSession(item, draft, { viewport.contentToViewport(it) }, { viewport.viewportToContent(it) },
+            { document === doc && doc.containsRef(item) && captured.unchanged() })
+        dismissSelectionMenu()
+    }
+
+    override fun canRestoreFormulaInk(): Boolean = (selection.items.singleOrNull() as? ImageItem)?.let { !it.locked && it.formula?.ink != null } == true
+
+    override fun restoreFormulaInk() {
+        if (!canRestoreFormulaInk()) return
+        val item = selection.items.single() as ImageItem
+        val strokes = item.formula!!.ink!!.restore(item)
+        val before = document.items.toList()
+        interaction.clearSelection()
+        val command = ReplaceCanvasItems(document, before, before.flatMap { if (it === item) strokes else listOf(it) })
+        command.redo(); history.push(command)
+        inlineMath?.restore(document, strokes); armTool(strokes.last().tool)
+        markDirty(); refresh(); publishOverlay()
+    }
+
+    fun inlineFormulaDraft(): com.xnotes.platform.FormulaDraft? {
+        val state = inlineMath ?: return null
+        val doc = document; val picked = state.strokes.toList(); val dir = imageDir ?: return null
+        if (state.owner !== doc || picked.isEmpty() || picked.any { !doc.containsRef(it) || it.locked } || !tool.isStroke) return null
+        val captured = com.xnotes.core.formula.FormulaSelectionState(picked)
+        return com.xnotes.platform.FormulaDraft(picked, dir) { block, _ ->
+            if (document !== doc || picked.any { !doc.containsRef(it) } || !captured.unchanged()) false
+            else {
+                val before = doc.items.toList()
+                val after = com.xnotes.core.formula.FormulaReplacement.items(before, picked, block, false)
+                interaction.clearSelection()
+                val command = ReplaceCanvasItems(doc, before, after)
+                command.redo(); history.push(command); markDirty(); refresh(); publishOverlay()
+                true
+            }
+        }
+    }
 
     override fun createImageSplitDraft(): com.xnotes.platform.ImageSplitDraft? {
         if (!canSplitImage()) return null
@@ -1735,6 +1786,7 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
             committingWetStroke = false
         }
         history.push(AddCanvasItem(document, item))
+        if (item is Stroke) inlineMath?.offer(document, item)
         markDirty()
         refresh()
     }
@@ -2401,6 +2453,7 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
     // upright and leaves the box turned over it. The paged editor drops the selection for the same
     // reason, so both surfaces behave alike.
     fun undo() {
+        inlineMath?.clear(); imageCut = null
         commitText() // a label being typed is the first thing undo takes back
         history.undo()
         interaction.clearSelection()
@@ -2410,6 +2463,7 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
     }
 
     fun redo() {
+        inlineMath?.clear(); imageCut = null
         commitText()
         history.redo()
         interaction.clearSelection()

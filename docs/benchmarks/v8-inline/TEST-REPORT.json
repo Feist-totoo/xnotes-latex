@@ -1,0 +1,101 @@
+{
+  "version": "0.9.8-latex.8-inline-debug",
+  "versionCode": 78,
+  "releaseTag": "v0.9.8-latex.8-inline",
+  "createdUtc": "2026-11-12T18:45:27.534710+00:00",
+  "sourceBaseCommit": "e4f7ead874997f73716b6a2407877dfd03749296",
+  "sourceCommitProof": "post-publish-verification.json",
+  "packaging": {
+    "apk": "xnotes-latex-0.9.8-latex.8-inline.apk",
+    "bytes": 67825851,
+    "sha256": "c5aefe010016a239a012f2424361d1e9e38b45a885a09de350e2f596d7c2c4c9",
+    "bundledModelWeights": 0,
+    "paddleProvider": false,
+    "runtime": "ONNX Runtime Android 1.23.2",
+    "downloadableModelBytes": 32226621,
+    "subjectPacks": 10,
+    "nativeLibraries": [
+      "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "lib/arm64-v8a/libonnxruntime.so",
+      "lib/arm64-v8a/libonnxruntime4j_jni.so",
+      "lib/arm64-v8a/libxnotespdf.so",
+      "lib/arm64-v8a/libxnotests.so",
+      "lib/x86_64/libandroidx.graphics.path.so",
+      "lib/x86_64/libonnxruntime.so",
+      "lib/x86_64/libonnxruntime4j_jni.so",
+      "lib/x86_64/libxnotespdf.so",
+      "lib/x86_64/libxnotests.so"
+    ],
+    "privateTestData": false
+  },
+  "signature": {
+    "schemes": [
+      "v2",
+      "v3"
+    ],
+    "certificateSha256": "dbde9527283a1432beee854febc94fb79a8710968f3566bb7763b6ec0a41b6bc",
+    "sameAsV7": true,
+    "zipalign16KB": true
+  },
+  "jvm": {
+    "tests": 2523,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android": {
+    "tests": 19,
+    "failures": 0,
+    "seconds": 65.048,
+    "installedApkSha256": "c5aefe010016a239a012f2424361d1e9e38b45a885a09de350e2f596d7c2c4c9",
+    "device": "Android 14 API 34 x86_64 emulator, 2 vCPU, 4 GB RAM, 1920x1200",
+    "airplaneMode": true,
+    "wifi": false,
+    "mobileData": false,
+    "samsungSPenHardwareTested": false,
+    "suites": {
+      "FormulaWorkflowTest": 12,
+      "ImageSplitTest": 3,
+      "FormulaPackDeviceTest": 2,
+      "CompleteFormulaTest": 1,
+      "OfflineMathTest.settingsRoundtripAndNativeCancellationLeaveEngineUsable": 1
+    }
+  },
+  "realHandwritingIntegration": {
+    "dataset": "MathWriting",
+    "sampleId": "a46a061d69f6e3e8",
+    "strokesSha256": "9d2827892039c6082c9d16fa6e973de0986579465768f1d698eab1c51a11a3ef",
+    "coverage": [
+      "Paged native stylus events to local recognition to same-location formula",
+      "Rendered PNG pixel color matches pen color",
+      "Actual ZIP and PNG save/reopen before moving and restoring",
+      "Restored handwriting can be extended, converted, undone and redone",
+      "Infinite canvas local recognition with the same real pen traces"
+    ],
+    "accuracyBenchmark": false
+  },
+  "imageCutCoverage": [
+    "Toolbar image picker",
+    "Inline cancel and cut",
+    "Move one piece without moving its neighbour",
+    "Recut visible portion of an offscreen piece",
+    "Rotated infinite-canvas preview",
+    "Reconstruction of original pixels without overlap",
+    "Repeated rotated, mirrored and cropped cuts",
+    "Atomic rejection of transparent-only cuts",
+    "Undo and redo"
+  ],
+  "model": {
+    "changed": false,
+    "reusedFrom": "v7 offline Q8 model",
+    "inferenceCloudRequests": 0,
+    "newAccuracyClaim": false,
+    "newSpeedBenchmark": false,
+    "historicalReference": "../v7-offline-sidebar/TEST-REPORT.json"
+  },
+  "limitations": [
+    "No Samsung tablet or S Pen hardware test",
+    "Old formula blocks without saved source strokes cannot restore handwriting",
+    "Real handwriting integration sample is not a new accuracy benchmark; model accuracy unchanged"
+  ]
+}

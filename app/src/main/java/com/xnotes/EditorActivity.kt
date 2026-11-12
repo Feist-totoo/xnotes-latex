@@ -1015,8 +1015,7 @@ private fun EditorScreen(
                 BackHandler(enabled = focused.flowEditingActive) { focused.flowText.endSession() }
                 // Otherwise Back closes that pane (guarded for unsaved edits); the other one stays.
                 BackHandler(enabled = focused.editingField == null && !focused.flowEditingActive) {
-                    if (focused.mathPad.open) focused.mathPad.open = false
-                    else guarded(focused) { focused.goHome() }
+                    guarded(focused) { focused.goHome() }
                 }
             }
 
@@ -1460,7 +1459,7 @@ private fun EditorPane(
     }
     // The colour a swatch drag carries rides over the whole pane, toolbar and page alike.
     androidx.compose.foundation.layout.BoxWithConstraints(modifier) {
-        val mathPadWidth = (maxWidth * .42f).coerceIn(280.dp, 480.dp).coerceAtMost(maxWidth * .72f)
+        com.xnotes.ui.InlineMathEffect(editor)
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -1487,7 +1486,7 @@ private fun EditorPane(
                 val bar: @Composable () -> Unit = {
                     com.xnotes.ui.InfiniteToolbar(
                         canvas,
-                        mathPad = editor.mathPad,
+                        inlineMath = editor.inlineMath,
                         onOpenBackstage = actions.onOpenBackstage,
                         onInsertImage = { actions.onInsertCanvasImage(editor, null) },
                         onClosePane = onClose,
@@ -1518,8 +1517,9 @@ private fun EditorPane(
                         com.xnotes.ui.TextStyleBar(canvas)
                         com.xnotes.ui.LongPressMenu(canvas, onInsertImageAt = { c -> actions.onInsertCanvasImage(editor, c) })
                         com.xnotes.ui.CanvasDebugOverlay(canvas)
+                        com.xnotes.ui.ImageCutOverlay(canvas.imageCut) { canvas.imageCut = null }
                     }
-                    if (editor.mathPad.open) com.xnotes.ui.MathPadPanel(editor, Modifier.width(mathPadWidth))
+
                     }
                 }
             } else {
@@ -1580,8 +1580,9 @@ private fun EditorPane(
                             com.xnotes.ui.FlowTableMenu(editor)
                             com.xnotes.ui.TableChrome(editor)
                             ZoomLockHint(editor)
+                            com.xnotes.ui.ImageCutOverlay(editor.imageCut) { editor.imageCut = null }
                         }
-                        if (editor.mathPad.open) com.xnotes.ui.MathPadPanel(editor, Modifier.width(mathPadWidth))
+
                     }
                 }
                 // Last child of the resized column: rides directly above the soft keyboard.

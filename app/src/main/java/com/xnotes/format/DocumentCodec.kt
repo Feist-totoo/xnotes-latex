@@ -460,6 +460,12 @@ class DocumentCodec(
             j.name("latex_rgba")
             writeRgba(j, it.color)
             j.name("latex_size").value(it.pointSize)
+            it.ink?.let { ink ->
+                j.name("latex_ink").beginObject()
+                j.name("reference").beginArray().value(ink.reference.x).value(ink.reference.y).value(ink.reference.w).value(ink.reference.h).endArray()
+                j.name("strokes").beginArray(); ink.strokes.forEach { stroke -> writeStroke(j, stroke) }; j.endArray()
+                j.endObject()
+            }
         }
         // Only on an item a connector glues to.
         id?.let { j.name("id").value(it) }
@@ -1134,6 +1140,7 @@ class DocumentCodec(
         var latex: String? = null
         var latexColor: Rgba? = null
         var latexSize = 24.0
+        var latexInk: com.xnotes.core.model.FormulaInk? = null
         var locked = false
         var group: Int? = null
         var kind: String? = null
@@ -1214,7 +1221,31 @@ class DocumentCodec(
         var highlighterInverse: Boolean? = null
     }
 
-    private fun parseItem(p: JsonPull, items: MutableList<CanvasItem>, pending: MutableList<Pending>, glue: GlueRead) {
+    private fun parseFormulaInk(p: JsonPull): com.xnotes.core.model.FormulaInk? {
+        if (p.peek() != JsonPull.Token.BEGIN_OBJECT) { p.skipValue(); return null }
+        var rect: Rect? = null
+        val strokes = ArrayList<Stroke>(); var count = 0; var samples = 0L; var valid = true
+        p.beginObject()
+        while (p.hasNext()) when (p.nextName()) {
+            "reference" -> rect = rectOrNull(p)
+            "strokes" -> if (p.peek() != JsonPull.Token.BEGIN_ARRAY) p.skipValue() else {
+                p.beginArray()
+                while (p.hasNext()) {
+                    if (++count > 256 || samples > 100_000) { valid = false; p.skipValue(); continue }
+                    val parsed = ArrayList<CanvasItem>()
+                    parseItem(p, parsed, ArrayList(), GlueRead(), allowInk = false)
+                    val stroke = parsed.singleOrNull() as? Stroke
+                    if (stroke == null) valid = false else { samples += stroke.sampleCount; strokes.add(stroke) }
+                }
+                p.endArray()
+            }
+            else -> p.skipValue()
+        }
+        p.endObject()
+        return if (valid) com.xnotes.core.model.FormulaInk.valid(rect, strokes) else null
+    }
+
+    private fun parseItem(p: JsonPull, items: MutableList<CanvasItem>, pending: MutableList<Pending>, glue: GlueRead, allowInk: Boolean = true) {
         if (p.peek() != JsonPull.Token.BEGIN_OBJECT) return p.skipValue()
         val s = ItemScratch()
         p.beginObject()
@@ -1222,6 +1253,7 @@ class DocumentCodec(
             when (p.nextName()) {
                 "kind" -> s.kind = stringOr(p, "")
                 "latex" -> s.latex = stringOrNull(p)?.takeIf { it.isNotBlank() && it.length <= 4096 }
+                "latex_ink" -> if (allowInk) s.latexInk = parseFormulaInk(p) else p.skipValue()
                 "latex_rgba" -> s.latexColor = rgbaOrNull(p)
                 "latex_size" -> s.latexSize = doubleOr(p, 24.0).takeIf { it.isFinite() && it in 6.0..144.0 } ?: 24.0
                 "id" -> s.id = intOrNull(p)
@@ -1294,7 +1326,7 @@ class DocumentCodec(
                         PendingImage(
                             items.size + pending.size, asset, s.rect, s.srcW, s.srcH,
                             s.orientation, s.angle, Flip.fromId(s.flip), s.locked, s.id, sync, s.group, s.part,
-                            s.latex?.let { com.xnotes.core.model.FormulaSource(it, s.latexColor ?: Rgba(24, 24, 24), s.latexSize) },
+                            s.latex?.let { com.xnotes.core.model.FormulaSource(it, s.latexColor ?: Rgba(24, 24, 24), s.latexSize, s.latexInk) },
                             s.cutOutline,
                         ),
                     )

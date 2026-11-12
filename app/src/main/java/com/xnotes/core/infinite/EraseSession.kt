@@ -28,7 +28,7 @@ import java.util.IdentityHashMap
  *
  * Pure Kotlin, so the whole of the eraser's behaviour is unit-testable without a canvas.
  */
-class EraseSession(private val doc: InfiniteDocument) {
+class EraseSession(private val doc: InfiniteDocument, private val onInkSplit: (Stroke, List<Stroke>) -> Unit = { _, _ -> }) {
 
     private class Entry(val at: Int, val original: CanvasItem, val fragments: MutableList<CanvasItem>)
 
@@ -88,6 +88,7 @@ class EraseSession(private val doc: InfiniteDocument) {
             val at = doc.replaceItem(item, fragments)
             if (at < 0) continue
             record(item, at, fragments)
+            if (item is Stroke) onInkSplit(item, fragments.filterIsInstance<Stroke>())
             dirty = dirty?.union(touched) ?: touched
         }
         return dirty

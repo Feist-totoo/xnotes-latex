@@ -125,7 +125,8 @@ fun Toolbar(
     var renaming by remember { mutableStateOf(false) }
     // Pinned outside the scrolling strip so closing a split pane is always one tap away.
     ToolbarFrame(armed = editor.tool, trailing = onClosePane?.let { { ClosePaneButton(it) } }) {
-        MathPadToolbarButton(editor.mathPad)
+        InlineMathToolbarButton(editor.inlineMath)
+        ImageCutToolbarButton(editor)
         // The bar is driven by the user-customisable layout; separators sit between non-empty
         // sections, and each item dispatches to its renderer (see ToolbarItemView).
         editor.toolbarLayout.visibleSections.forEachIndexed { si, section ->
@@ -186,6 +187,7 @@ private fun ToolbarItemView(
     onRecordAudio: () -> Unit,
     onTakePhoto: () -> Unit,
 ) {
+    if (item == ToolbarItem.SCREENSHOT) return
     when (item) {
         // Canvas-only items; a stored paged layout can never hold one, so nothing is drawn.
         ToolbarItem.WAYPOINTS, ToolbarItem.MINIMAP -> Unit

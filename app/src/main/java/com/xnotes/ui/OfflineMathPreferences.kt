@@ -14,7 +14,7 @@ import com.xnotes.platform.*
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
-/** The same settings card is available in Preferences and as a shortcut from the handwriting panel. */
+/** Downloadable offline engine settings; the whiteboard toolbar controls automatic conversion. */
 @Composable
 fun OfflineMathPreferences() {
     val context = LocalContext.current
@@ -37,10 +37,7 @@ fun OfflineMathPreferences() {
             if (installed) TextButton(onClick = { scope.launch { OfflineMathModel.uninstall(context) } }) { Text(stringResource(R.string.math_pack_remove)) }
         }
         if (status.error) Text(stringResource(R.string.math_download_failed), color = MaterialTheme.colorScheme.error)
-        Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-            Switch(checked = config.automatic, onCheckedChange = { save(config.copy(automatic = it)) })
-            Text(stringResource(R.string.math_automatic), Modifier.padding(start = 8.dp))
-        }
+        Text(stringResource(R.string.math_inline_settings_hint), style = MaterialTheme.typography.bodySmall)
         Text(stringResource(R.string.math_mode))
         Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             MathRecognitionMode.entries.forEach { mode ->

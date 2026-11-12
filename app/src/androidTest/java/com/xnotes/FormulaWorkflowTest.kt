@@ -148,51 +148,6 @@ class FormulaWorkflowTest {
         compose.runOnIdle { canvasMode(ed, false) }
     }
 
-    @Test fun mathSidebarLinesBlocksPreviewAndInsertSharePicturePlacement() {
-        val ed = editor(); val context = compose.activity
-        compose.runOnIdle { canvasMode(ed, false); ed.newNote(); ed.mathPad.open = false }
-        compose.onNodeWithContentDescription(context.getString(R.string.math_pad)).performClick()
-        compose.onNodeWithTag("math-pad-panel").assertExists()
-        compose.onNodeWithTag("math-pad-insert").assertIsNotEnabled()
-        compose.onNodeWithTag("math-pad-ink").performTouchInput { swipe(centerLeft, centerRight, 250) }
-        compose.runOnIdle { assertTrue(ed.mathPad.current.current.strokes.isNotEmpty()) }
-        // Explicit correction must stay authoritative even if automatic OCR was running.
-        compose.runOnIdle { ed.mathPad.current.current.edit("x^{2}+1") }
-        compose.onNodeWithText(context.getString(R.string.math_new_line)).performClick()
-        compose.runOnIdle { ed.mathPad.current.current.edit("y=2") }
-        compose.onNodeWithText(context.getString(R.string.math_new_block)).performClick()
-        compose.runOnIdle {
-            ed.mathPad.current.current.edit("z=3"); ed.mathPad.activeBlock = 0
-        }
-        compose.waitUntil(15_000) { !compose.onNodeWithTag("math-pad-insert").fetchSemanticsNode().config.contains(androidx.compose.ui.semantics.SemanticsProperties.Disabled) && ed.mathPad.current.source() != null }
-        compose.waitForIdle()
-        screenshot("math-sidebar-preview.png")
-        compose.onNodeWithTag("math-pad-insert").performClick()
-        compose.waitUntil(15_000) { ed.state.document.pages.first().items.any { it is ImageItem } }
-        compose.runOnIdle {
-            val item = ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single()
-            assertEquals("\\begin{aligned}&x^{2}+1\\\\&y=2\\end{aligned}", item.formula!!.latex)
-            val page = ed.state.document.pages.first()
-            val expected = com.xnotes.core.model.ImagePlacement.place(item.image.width, item.image.height, 0,
-                com.xnotes.core.geometry.Rect(0.0, 0.0, page.width, page.height), clamp = true)
-            assertEquals(expected, item.rect); assertEquals(listOf(item), ed.controller.selectedItems())
-            assertEquals("z=3", ed.mathPad.current.source())
-            ed.undo(); assertTrue(page.items.isEmpty()); ed.redo(); assertEquals(1, page.items.size)
-        }
-        screenshot("math-sidebar-inserted.png")
-        compose.runOnIdle { ed.infinite.replaceDocument(com.xnotes.core.infinite.InfiniteDocument()); canvasMode(ed, true) }
-        compose.waitUntil(15_000) { !compose.onNodeWithTag("math-pad-insert").fetchSemanticsNode().config.contains(androidx.compose.ui.semantics.SemanticsProperties.Disabled) }
-        compose.onNodeWithTag("math-pad-insert").performClick()
-        compose.waitUntil(15_000) { ed.infinite.document.items.any { it is ImageItem } }
-        compose.runOnIdle {
-            val item = ed.infinite.document.items.filterIsInstance<ImageItem>().single()
-            assertEquals("z=3", item.formula!!.latex); assertEquals(listOf(item), ed.infinite.selection.items)
-            assertEquals(ed.infinite.viewport.centerContent, item.rect.center)
-            ed.infinite.undo(); assertTrue(ed.infinite.document.items.isEmpty()); ed.infinite.redo()
-            ed.mathPad.open = false; canvasMode(ed, false)
-        }
-    }
-
     @Test fun offlineOcrOptionsAreEditableInMainPreferences() {
         val ed = editor(); val context = compose.activity
         val original = com.xnotes.platform.OfflineMathSettings.load(context)
@@ -204,34 +159,6 @@ class FormulaWorkflowTest {
             assertEquals(com.xnotes.platform.MathRecognitionMode.BALANCED, com.xnotes.platform.OfflineMathSettings.load(context).mode)
             screenshot("offline-ocr-preferences.png")
         } finally { com.xnotes.platform.OfflineMathSettings.save(context, original) }
-    }
-
-    @Test fun realHandwritingAutomaticallyPreviewsOfflineAndKeepsManualCorrection() {
-        val ed = editor(); val context = compose.activity
-        val original = com.xnotes.platform.OfflineMathSettings.load(context)
-        com.xnotes.platform.OfflineMathSettings.save(context, com.xnotes.platform.OfflineMathConfig())
-        try {
-            val directory = File(context.filesDir, "handwriting-v5")
-            val sample = org.json.JSONArray(File(directory, "manifest.json").readText()).getJSONObject(1)
-            val raw = org.json.JSONArray(File(directory, sample.getString("strokes")).readText())
-            val traces = List(raw.length()) { i -> raw.getJSONArray(i).let { trace -> List(trace.length()) { j -> trace.getJSONArray(j).let { Pt(it.getDouble(0), it.getDouble(1)) } } } }
-            val all = traces.flatten(); val left = all.minOf { it.x }; val top = all.minOf { it.y }
-            val scale = minOf(940.0 / (all.maxOf { it.x } - left), 270.0 / (all.maxOf { it.y } - top))
-            compose.runOnIdle { canvasMode(ed, false); ed.newNote(); ed.mathPad.newBlock(); ed.mathPad.open = true }
-            compose.runOnIdle { ed.mathPad.current.current.ink(traces.map { t -> t.map { Pt(30 + (it.x - left) * scale, 20 + (it.y - top) * scale) } }) }
-            compose.waitUntil(60_000) { ed.mathPad.current.current.ready }
-            compose.waitUntil(15_000) { !compose.onNodeWithTag("math-pad-insert").fetchSemanticsNode().config.contains(androidx.compose.ui.semantics.SemanticsProperties.Disabled) }
-            screenshot("math-sidebar-real-handwriting.png")
-            compose.runOnIdle { ed.mathPad.current.current.edit("x^{2}+1") }
-            compose.waitForIdle()
-            compose.runOnIdle { assertEquals("x^{2}+1", ed.mathPad.current.current.latex) }
-            compose.waitUntil(15_000) { !compose.onNodeWithTag("math-pad-insert").fetchSemanticsNode().config.contains(androidx.compose.ui.semantics.SemanticsProperties.Disabled) }
-            compose.onNodeWithTag("math-pad-insert").performClick()
-            compose.waitUntil(15_000) { ed.state.document.pages.first().items.any { it is ImageItem } }
-        } finally {
-            com.xnotes.platform.OfflineMathSettings.save(context, original)
-            compose.runOnIdle { ed.mathPad.open = false }
-        }
     }
 
     @Test fun spacedOcrScriptsAttachToTheirBaseAndMatchCompactRendering() {
@@ -300,9 +227,123 @@ class FormulaWorkflowTest {
             val coords = arrayOf(MotionEvent.PointerCoords().apply { x = point.x.toFloat(); y = point.y.toFloat(); pressure = 1f; size = 1f })
             val action = when (index) { 0 -> MotionEvent.ACTION_DOWN; points.lastIndex -> MotionEvent.ACTION_UP; else -> MotionEvent.ACTION_MOVE }
             val event = MotionEvent.obtain(down, down + index * 16L, action, 1, properties, coords, 0, 0, 1f, 1f, 0, 0, InputDevice.SOURCE_STYLUS, 0)
-            ed.controller.onTouch(event)
+            ed.view.input!!.invoke(event)
             event.recycle()
         }
+    }
+
+    private fun cutLine(session: com.xnotes.ui.ImageCutSession, a: Pt, b: Pt) {
+        val start = session.screen(a); val end = session.screen(b)
+        compose.onNodeWithTag("image-cut-canvas").performTouchInput {
+            swipe(androidx.compose.ui.geometry.Offset(start.x.toFloat(), start.y.toFloat()),
+                androidx.compose.ui.geometry.Offset(end.x.toFloat(), end.y.toFloat()), 500)
+        }
+    }
+
+    /** Real MathWriting pen traces, replayed through the actual whiteboard input callback. */
+    private fun realInk(): List<List<Pt>> {
+        val folder = File(compose.activity.filesDir, "handwriting-v5")
+        val entry = org.json.JSONArray(File(folder, "manifest.json").readText()).getJSONObject(1)
+        val json = org.json.JSONArray(File(folder, entry.getString("strokes")).readText())
+        val traces = List(json.length()) { i -> json.getJSONArray(i).let { t -> List(t.length()) { j -> t.getJSONArray(j).let { Pt(it.getDouble(0), it.getDouble(1)) } } } }
+        val all = traces.flatten(); val left = all.minOf { it.x }; val top = all.minOf { it.y }
+        val scale = minOf(280.0 / (all.maxOf { it.x } - left), 120.0 / (all.maxOf { it.y } - top))
+        return traces.map { t -> t.map { Pt(180 + (it.x-left)*scale, 220 + (it.y-top)*scale) } }
+    }
+
+    @Test fun inlineRealInkConvertsInPlaceWithPenColorAndRestoresAfterMoving() {
+        val ed = editor(); val context = compose.activity
+        val ink = realInk(); val color = com.xnotes.core.model.Rgba(25, 100, 195)
+        compose.runOnIdle { canvasMode(ed, false); ed.newNote(); ed.controller.setTool(Tool.PEN); ed.controller.pickInk(color) }
+        compose.onNodeWithContentDescription(context.getString(R.string.math_inline)).performClick()
+        compose.onNodeWithTag("math-pad-panel").assertDoesNotExist()
+        compose.onNodeWithContentDescription(context.getString(R.string.tool_screenshot)).assertDoesNotExist()
+        compose.runOnIdle { ink.forEach { gesture(ed, it) } }
+        compose.waitUntil(60_000) { ed.state.document.pages.first().items.any { it is ImageItem && it.formula != null } }
+        lateinit var block: ImageItem
+        compose.runOnIdle {
+            val items = ed.state.document.pages.first().items
+            block = items.filterIsInstance<ImageItem>().single()
+            assertFalse(items.any { it is Stroke }); assertEquals(color, block.formula!!.color)
+            assertNotNull(block.formula!!.ink); assertEquals(Tool.PEN, ed.controller.tool)
+            assertTrue(kotlin.math.abs(block.rect.left-180.0) < 30)
+            assertTrue(kotlin.math.abs(block.rect.top-220.0) < 30)
+            assertTrue(block.formula!!.ink!!.strokes.all { it.config.rgba == color })
+            val bitmap = android.graphics.BitmapFactory.decodeFile(block.image.file.path)
+            val pixels = IntArray(bitmap.width * bitmap.height); bitmap.getPixels(pixels, 0, bitmap.width, 0, 0, bitmap.width, bitmap.height)
+            assertTrue("Rendered pixels must use the pen color", pixels.any { android.graphics.Color.alpha(it) > 240 &&
+                kotlin.math.abs(android.graphics.Color.blue(it)-color.b) < 3 && kotlin.math.abs(android.graphics.Color.red(it)-color.r) < 3 })
+            bitmap.recycle()
+            // Exercise the real ZIP codec and PNG assets before moving and restoring the block.
+            val codec = com.xnotes.format.DocumentCodec(com.xnotes.platform.AndroidImageCodec(), com.xnotes.platform.AndroidTextMeasurer())
+            val bytes = java.io.ByteArrayOutputStream(); codec.write(ed.state.document, bytes)
+            val reopened = codec.read(java.io.ByteArrayInputStream(bytes.toByteArray()), imageDir = File(context.cacheDir, "inline-reopened").apply { mkdirs() })
+            val saved = reopened.pages.first().items.filterIsInstance<ImageItem>().single()
+            assertNotNull(saved.formula!!.ink)
+            items[items.indexOf(block)] = saved; block = saved
+            ed.state.refreshAllInk()
+            ed.controller.setTool(Tool.SELECT); ed.controller.selectPlaced(0, listOf(block))
+        }
+        screenshot("inline-formula-color.png")
+        compose.runOnIdle {
+            val center = block.rect.center
+            gesture(ed, listOf(center, center + Pt(20.0,30.0), center + Pt(50.0,50.0), center + Pt(50.0,50.0)))
+        }
+        compose.onNodeWithContentDescription(context.getString(R.string.math_restore_ink)).performClick()
+        compose.runOnIdle {
+            val restored = ed.state.document.pages.first().items.filterIsInstance<Stroke>()
+            assertTrue(restored.isNotEmpty()); assertTrue(ed.inlineMath.waitingForEdit)
+            assertTrue(restored.all { it.config.rgba == color })
+            assertFalse(ed.state.document.pages.first().items.any { it is ImageItem })
+        }
+        screenshot("inline-formula-restored.png")
+        // A subsequent stroke extends the restored batch rather than discarding it.
+        compose.runOnIdle { gesture(ed, listOf(Pt(460.0, 320.0), Pt(470.0, 320.0), Pt(480.0, 320.0))) }
+        compose.waitUntil(60_000) { ed.state.document.pages.first().items.any { it is ImageItem } }
+        compose.runOnIdle {
+            ed.undo(); assertTrue(ed.state.document.pages.first().items.any { it is Stroke })
+            assertTrue(ed.inlineMath.strokes.isEmpty())
+            ed.redo(); assertTrue(ed.state.document.pages.first().items.any { it is ImageItem })
+        }
+        compose.onNodeWithContentDescription(context.getString(R.string.math_inline)).performClick()
+        compose.runOnIdle { assertFalse(ed.inlineMath.enabled) }
+    }
+
+    @Test fun infiniteInlineFormulaAndRotatedInlineCutUseCanvasCoordinates() {
+        val ed = editor(); val context = compose.activity
+        compose.runOnIdle {
+            ed.infinite.replaceDocument(com.xnotes.core.infinite.InfiniteDocument()); canvasMode(ed, true); ed.newNote()
+        }
+        compose.waitForIdle()
+        compose.onNodeWithContentDescription(context.getString(R.string.math_inline)).performClick()
+        val color = com.xnotes.core.model.Rgba(170, 45, 100)
+        compose.runOnIdle {
+            val canvas = ed.infinite
+            canvas.armTool(Tool.PEN)
+            val samples = realInk().map { pts -> Stroke(Tool.PEN, ToolConfig(rgba = color), pts.map { Sample(it.x,it.y,1.0) }) }
+            canvas.document.addAll(samples)
+            samples.forEach { ed.inlineMath.offer(canvas.document, it) }
+        }
+        compose.waitUntil(60_000) { ed.infinite.document.items.any { it is ImageItem && it.formula != null } }
+        compose.runOnIdle {
+            val block = ed.infinite.document.items.filterIsInstance<ImageItem>().single()
+            assertEquals(color, block.formula!!.color)
+            ed.infinite.armTool(Tool.SELECT); ed.infinite.selection.select(listOf(block)); ed.infinite.restoreFormulaInk()
+            assertTrue(ed.infinite.document.items.all { it is Stroke }); assertTrue(ed.inlineMath.waitingForEdit)
+            ed.inlineMath.toggle()
+            ed.infinite.replaceDocument(com.xnotes.core.infinite.InfiniteDocument())
+            ed.infinite.insertImage(teachingPicture().image.file.readBytes())
+            val picture = ed.infinite.document.items.filterIsInstance<ImageItem>().single()
+            picture.angle = .3; ed.infinite.document.itemsChanged(listOf(picture))
+            ed.infinite.selection.select(listOf(picture))
+        }
+        compose.onNodeWithContentDescription(context.getString(R.string.image_cut_tool)).performClick()
+        cutLine(ed.infinite.imageCut!!, Pt(.05,.15), Pt(.95,.85))
+        compose.onNodeWithTag("image-cut-apply").assertIsEnabled()
+        screenshot("inline-cut-rotated-infinite.png")
+        compose.onNodeWithTag("image-cut-apply").performClick()
+        compose.waitUntil(15_000) { ed.infinite.document.items.size == 2 }
+        compose.runOnIdle { ed.infinite.undo(); assertEquals(1, ed.infinite.document.items.size); canvasMode(ed, false) }
     }
 
     private fun screenshot(name: String) {
@@ -454,17 +495,18 @@ class FormulaWorkflowTest {
             ed.state.refreshAllInk(); ed.view.requestRender()
             ed.controller.setTool(Tool.SELECT); ed.controller.selectPlaced(0, listOf(original))
         }
-        val split = compose.activity.getString(R.string.image_split)
+        val split = compose.activity.getString(R.string.image_cut_tool)
         compose.onNodeWithContentDescription(split).performClick()
-        compose.onNodeWithTag("image-split-apply").assertIsNotEnabled()
+        compose.onNodeWithTag("image-cut-overlay").assertExists()
+        compose.onNodeWithTag("image-cut-apply").assertIsNotEnabled()
         compose.onNodeWithText(compose.activity.getString(R.string.cancel)).performClick()
         compose.runOnIdle { assertEquals(listOf(original), ed.state.document.pages.first().items.toList()) }
         compose.onNodeWithContentDescription(split).performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("image-split-preview").fetchSemanticsNodes().isNotEmpty() }
-        compose.onNodeWithTag("image-split-preview").performTouchInput { swipe(centerLeft + androidx.compose.ui.geometry.Offset(5f, 0f), centerRight - androidx.compose.ui.geometry.Offset(5f, 0f), 500) }
-        compose.onNodeWithTag("image-split-apply").assertIsEnabled()
-        screenshot("image-split-preview.png")
-        compose.onNodeWithTag("image-split-apply").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("image-cut-canvas").fetchSemanticsNodes().isNotEmpty() }
+        cutLine(ed.imageCut!!, Pt(.03, .5), Pt(.97, .5))
+        compose.onNodeWithTag("image-cut-apply").assertIsEnabled()
+        screenshot("image-cut-canvas.png")
+        compose.onNodeWithTag("image-cut-apply").performClick()
         compose.waitUntil(15_000) { ed.state.document.pages.first().items.size == 2 }
         lateinit var first: ImageItem
         compose.runOnIdle {
@@ -480,9 +522,10 @@ class FormulaWorkflowTest {
         }
         screenshot("image-split-pieces.png")
         compose.onNodeWithContentDescription(split).performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("image-split-preview").fetchSemanticsNodes().isNotEmpty() }
-        compose.onNodeWithTag("image-split-preview").performTouchInput { swipe(topCenter + androidx.compose.ui.geometry.Offset(0f, 5f), bottomCenter - androidx.compose.ui.geometry.Offset(0f, 5f), 500) }
-        compose.onNodeWithTag("image-split-apply").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("image-cut-canvas").fetchSemanticsNodes().isNotEmpty() }
+        cutLine(ed.imageCut!!, Pt(.5, .25), Pt(.5, .85))
+        compose.onNodeWithTag("image-cut-apply").assertIsEnabled()
+        compose.onNodeWithTag("image-cut-apply").performClick()
         compose.waitUntil(15_000) { ed.state.document.pages.first().items.size == 3 }
         compose.runOnIdle {
             ed.undo(); assertEquals(2, ed.state.document.pages.first().items.size)

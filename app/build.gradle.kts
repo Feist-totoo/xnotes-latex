@@ -36,8 +36,8 @@ android {
         applicationId = "com.xnotes.latex"
         minSdk = 26
         targetSdk = 36
-        versionCode = 77
-        versionName = "0.9.8-latex.7-offline-sidebar"
+        versionCode = 78
+        versionName = "0.9.8-latex.8-inline"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")

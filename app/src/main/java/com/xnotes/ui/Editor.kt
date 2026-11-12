@@ -349,7 +349,8 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
      *  reclaimable cacheDir). */
     private val imageDir = tempDir("noteimg")
     val imageAssetDirectory: java.io.File get() = imageDir
-    val mathPad = MathPadState()
+    val inlineMath = InlineMathState()
+    var imageCut by mutableStateOf<ImageCutSession?>(null)
 
     fun resumeImageInsertTarget(target: com.xnotes.platform.ImageInsertTarget): Boolean {
         if (!target.matches(this)) return false
@@ -731,6 +732,7 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
     val infinite: InfiniteEditor
         get() = infiniteOrNull ?: InfiniteEditor(appContext).also {
             infiniteOrNull = it
+            it.inlineMath = inlineMath
             it.applyPalette(palette)
             // Both editors write inserted images into the same purged-on-launch temp dir.
             it.imageDir = imageDir
@@ -953,11 +955,15 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
         textMeasurer,
         requestRender = { onRender() },
         onContentChanged = { refreshContent() },
+        onMathStroke = { stroke, index -> state.document.pages.getOrNull(index)?.let { inlineMath.offer(it, stroke) } },
+        mathInkMode = { inlineMath.enabled },
+        onMathErase = { stroke, fragments -> inlineMath.replaceInk(stroke, fragments) },
         onViewChanged = { refreshView() },
         onFitWidthSnapped = { showZoomLockHint() },
         onFitWidthReleased = { hideZoomLockHint() },
         onSelectionChanged = { selected -> hasSelection = selected; refreshTextBar() },
         onToolChanged = { t ->
+            if (!t.isStroke) inlineMath.hold()
             tool = t
             if (t != Tool.TEXT) {
                 endTableEdit()
@@ -1627,7 +1633,10 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
                     settlePdfTextMenu()
                 }
             }
-            controller.onTouch(ev)
+            if (ev.actionMasked == android.view.MotionEvent.ACTION_DOWN) inlineMath.touch(true)
+            val handled = controller.onTouch(ev)
+            if (ev.actionMasked == android.view.MotionEvent.ACTION_UP || ev.actionMasked == android.view.MotionEvent.ACTION_CANCEL) inlineMath.touch(false)
+            handled
         }
         view.onTwoFingerTap = { dispatchTapGesture(preferences.twoFingerTap) }
         view.onThreeFingerTap = { dispatchTapGesture(preferences.threeFingerTap) }
@@ -1892,6 +1901,57 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
     override fun dismissSelectionMenu() { selectionMenu = null }
 
     override fun canSplitImage(): Boolean = com.xnotes.platform.ImageSplitDraft.accepts(controller.selectedItems())
+
+    override fun startImageCut() {
+        val draft = createImageSplitDraft() ?: run { message = appContext.getString(R.string.image_cut_select); controller.setTool(Tool.SELECT); return }
+        val item = controller.selectedItems().single() as ImageItem
+        val doc = state.document
+        val page = doc.pages.first { item in it.items }
+        val captured = com.xnotes.core.formula.FormulaSelectionState(listOf(item))
+        inlineMath.clear()
+        imageCut = ImageCutSession(item, draft,
+            { state.contentToViewport(state.fromPageSpace(doc.pages.indexOf(page), it)) },
+            { state.toPageSpace(doc.pages.indexOf(page), state.viewportToContent(it)) },
+            { state.document === doc && page in doc.pages && item in page.items && captured.unchanged() })
+        dismissSelectionMenu()
+    }
+
+    override fun canRestoreFormulaInk(): Boolean = (controller.selectedItems().singleOrNull() as? ImageItem)?.let { !it.locked && it.formula?.ink != null } == true
+
+    override fun restoreFormulaInk() {
+        if (!canRestoreFormulaInk()) return
+        val item = controller.selectedItems().single() as ImageItem
+        val page = state.document.pages.firstOrNull { item in it.items } ?: return
+        val strokes = item.formula!!.ink!!.restore(item)
+        controller.clearSelection()
+        val before = page.items.toList()
+        val command = com.xnotes.core.history.ReplacePageItems(page, before, before.flatMap { if (it === item) strokes else listOf(it) })
+        command.redo(); history.push(command); state.document.dirty = true
+        inlineMath.restore(page, strokes)
+        controller.setTool(strokes.last().tool)
+        state.refreshAllInk(); refreshContent(); view.requestRender()
+    }
+
+    fun inlineFormulaDraft(): com.xnotes.platform.FormulaDraft? {
+        if (canvasOpen) return infinite.inlineFormulaDraft()
+        val doc = state.document
+        val page = inlineMath.owner as? com.xnotes.core.model.Page ?: return null
+        val picked = inlineMath.strokes.toList()
+        if (page !in doc.pages || picked.isEmpty() || picked.any { it !in page.items || it.locked } || !controller.tool.isStroke) return null
+        val captured = com.xnotes.core.formula.FormulaSelectionState(picked)
+        return com.xnotes.platform.FormulaDraft(picked, imageDir) { block, _ ->
+            if (!noteOpen || canvasOpen || state.document !== doc || page !in doc.pages || picked.any { it !in page.items } || !captured.unchanged()) false
+            else {
+                val before = page.items.toList()
+                val after = com.xnotes.core.formula.FormulaReplacement.items(before, picked, block, false)
+                controller.clearSelection()
+                val command = com.xnotes.core.history.ReplacePageItems(page, before, after)
+                command.redo(); history.push(command); doc.dirty = true
+                state.refreshAllInk(); refreshContent(); view.requestRender()
+                true
+            }
+        }
+    }
 
     override fun createImageSplitDraft(): com.xnotes.platform.ImageSplitDraft? {
         if (!canSplitImage()) return null
@@ -6543,6 +6603,7 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
     // --- history ---
 
     fun undo() {
+        inlineMath.clear(); imageCut = null
         flowText.flushBurst() // the open typing burst is the first thing Ctrl+Z takes back
         if (controller.isEditingLabel) controller.commitTextEdit() // and so is a label being typed
         val command = history.nextUndo
@@ -6555,6 +6616,7 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
     }
 
     fun redo() {
+        inlineMath.clear(); imageCut = null
         flowText.flushBurst()
         if (controller.isEditingLabel) controller.commitTextEdit()
         val command = history.nextRedo
@@ -9090,6 +9152,7 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
     }
 
     fun newNote() {
+        inlineMath.clear(); imageCut = null
         AudioRecording.stopFor(this) // closing the note places its recording
         AudioPlayback.closeFor(this)
         saveViewState()
