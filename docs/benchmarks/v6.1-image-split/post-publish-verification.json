@@ -1,0 +1,30 @@
+{
+  "releaseUrl": "https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.6.1-paddle-lite",
+  "tag": "v0.9.8-latex.6.1-paddle-lite",
+  "sourceCommit": "3cc5bf3b827b9816b922fb9da48e20ec72ce55a2",
+  "prerelease": true,
+  "latestStable": "v0.9.8-latex.3",
+  "verifiedAssets": [
+    {
+      "name": "xnotes-latex-0.9.8-latex.6.1-paddle-lite.apk",
+      "bytes": 52387198,
+      "sha256": "71850e58e8785545ca11af31f1f444a9b60868569b592c77762bc46df42b75a4",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.6.1-paddle-lite/xnotes-latex-0.9.8-latex.6.1-paddle-lite.apk",
+      "publicHttpStatus": 200
+    },
+    {
+      "name": "TEST-REPORT.json",
+      "bytes": 1768,
+      "sha256": "07fc750a98c5ee9265ee07fc17926d0adc1e80c049df964274bd69f5c65031b8",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.6.1-paddle-lite/TEST-REPORT.json",
+      "publicHttpStatus": 200
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 112,
+      "sha256": "d3471013ba4bbe089962b5a5a079b82feaa55af5dbab3287ac3bb97e9c48d7a7",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.6.1-paddle-lite/SHA256SUMS.txt",
+      "publicHttpStatus": 200
+    }
+  ]
+}
