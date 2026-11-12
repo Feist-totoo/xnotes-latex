@@ -2,5 +2,7 @@
 app/src/main/assets/templates/AI.md text eol=lf
 # These bytes are pinned by SHA-256 and must survive a Windows checkout unchanged.
 app/src/main/assets/formula-gryph/*.json text eol=lf
+# This exported vocabulary's checksum includes its CRLF terminator.
+app/src/main/assets/formula-gryph/vocabulary.json -text whitespace=cr-at-eol
 app/src/main/assets/formula-packs/*.json text eol=lf
 *.xformula text eol=lf
