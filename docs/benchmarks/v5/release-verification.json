@@ -68,14 +68,15 @@
     "physicalTabletTested": false,
     "network": "airplane mode ON, Wi-Fi/data OFF during recognition",
     "finalApkUpgradeInstall": "PASS",
-    "testsPassed": 16,
+    "testsPassed": 17,
     "testGroups": {
       "workflow": 8,
       "confirmation": 1,
       "roundtrip": 1,
       "matrixWitness": 1,
       "calculusWitness": 1,
-      "enginesAndImages": 4
+      "enginesAndImages": 4,
+      "githubReleasePack": 1
     },
     "newHumanConfirmation": 160,
     "productionFloatRastersRerun": 5,
@@ -96,7 +97,13 @@
     },
     "privateImageNotPublished": true,
     "engineSwitchingAndCancellation": "PASS",
-    "githubPackDownload": "Pending publication"
+    "githubPackDownload": {
+      "status": "PASS",
+      "tests": 1,
+      "evidence": "PASS: https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/quantum-v1.xformula\nversion=1\nsha256=001661b1f652a88ba3be138b7bf4026f25cccd3fe898ead466a4894caf124bca\nindependent install, enable/disable, routing and uninstall\n",
+      "networkRestored": "airplane mode on, Wi-Fi/data off"
+    },
+    "offlineTestsPassed": 16
   },
   "quality": {
     "sameLegacy200Desktop": {
@@ -119,6 +126,11 @@
     "tag": "v0.9.8-latex.5-full",
     "prerelease": true,
     "replaceLatestStable": false,
-    "remoteVerification": "Pending publication"
+    "remoteVerification": "PASS",
+    "latestStable": "v0.9.8-latex.3",
+    "remoteAssetsVerified": 18,
+    "sourceCommit": "39840cae406e809798ca65421cabb501e3a57468",
+    "postPublicationEvidence": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/POST-PUBLISH-VERIFICATION.json",
+    "postPublicationEvidenceSha256": "e56b0cd3fcf9165c74488010136089ce7273de05d3c6c861e9594af7ce9c3cbf"
   }
 }

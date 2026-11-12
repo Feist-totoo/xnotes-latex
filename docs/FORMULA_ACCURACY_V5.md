@@ -83,3 +83,6 @@ APK 为 `com.xnotes.latex.debug`、versionCode 73，沿用此 fork 原签名，�
 代码 AGPL-3.0；GryphOne、GLM-OCR、llama.cpp、ONNX Runtime 为 MIT，DINO 为 Apache-2.0。高数 / 线代统计资源由 Google LLC MathWriting 派生，**CC BY-NC-SA 4.0（署名、非商业、相同方式共享）**。原始笔迹、评测图片、私有截图不随主 APK 分发。详见各模型 NOTICE 与包内来源。
 
 [公开结果与复现索引](benchmarks/v5/README.md) 保留全部分母、预测、指纹、转换报告和发布验证。通用物理、完整本科高数 / 线代课程题型没有专项覆盖证明；准确率仍是后续的主要限制。
+
+
+发布后校验：18 个原始 Release 资源的大小 / SHA-256 与本地一致，公开 APK 返回 HTTP 200，十个公开包与目录均实际下载验证。应用内联网下载、独立安装、启停和卸载另通过 1 项 Android 检查，随后恢复飞行模式；共 16 项离线 + 1 项发布下载检查。追加的 [发布后验证记录](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/POST-PUBLISH-VERIFICATION.json) 保留具体资产和测试证据。v3 仍是 latest 稳定版本。

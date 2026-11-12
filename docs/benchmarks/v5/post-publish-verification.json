@@ -1,0 +1,128 @@
+{
+  "releaseId": 442995937,
+  "releaseUrl": "https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full",
+  "tag": "v0.9.8-latex.5-full",
+  "sourceCommit": "39840cae406e809798ca65421cabb501e3a57468",
+  "prerelease": true,
+  "latestStable": "v0.9.8-latex.3",
+  "verifiedAssets": [
+    {
+      "name": "xnotes-latex-0.9.8-latex.5-full-offline.apk",
+      "bytes": 1013056713,
+      "sha256": "5971325cc61554934d9b7347f35ba07b2dcc89476b48f3324ef207223d14211d",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/xnotes-latex-0.9.8-latex.5-full-offline.apk"
+    },
+    {
+      "name": "calculus-v3.xformula",
+      "bytes": 76048,
+      "sha256": "8b2e5cf885f6f43c49c8b3883d728d3ee6e03dd11872f1de9b4631f25ffa4d89",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/calculus-v3.xformula"
+    },
+    {
+      "name": "discrete-v1.xformula",
+      "bytes": 1018,
+      "sha256": "3f491814f5a949511f9bd640d8b83972956c6e67ddb7008abb8be29151d31fff",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/discrete-v1.xformula"
+    },
+    {
+      "name": "electromagnetism-v1.xformula",
+      "bytes": 995,
+      "sha256": "0e1181a21fd3115618317b43689bdcc41d37cc786ea015e5bf60369daac06c90",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/electromagnetism-v1.xformula"
+    },
+    {
+      "name": "linear_algebra-v3.xformula",
+      "bytes": 33612,
+      "sha256": "572a164463b964f19407cc3ba542e56e801ddf5c5841bf1d34b4bd876a0d2af2",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/linear_algebra-v3.xformula"
+    },
+    {
+      "name": "mechanics-v1.xformula",
+      "bytes": 884,
+      "sha256": "4ea0e1666b68dab161d7c23deeb1dcc5ceb54b32cb35d51a96e9c571d4a90e57",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/mechanics-v1.xformula"
+    },
+    {
+      "name": "probability-v1.xformula",
+      "bytes": 920,
+      "sha256": "3c956ac7e44ee230d31300f8b19e61b2bceb0903d9d39e5e427ba31536e35a64",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/probability-v1.xformula"
+    },
+    {
+      "name": "quantum-v1.xformula",
+      "bytes": 960,
+      "sha256": "001661b1f652a88ba3be138b7bf4026f25cccd3fe898ead466a4894caf124bca",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/quantum-v1.xformula"
+    },
+    {
+      "name": "school_math-v1.xformula",
+      "bytes": 1003,
+      "sha256": "b7be00cad1c817b6c333d643e76afae815bb2e1d68a08eb3d6912bf243f7c9b8",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/school_math-v1.xformula"
+    },
+    {
+      "name": "thermal-v1.xformula",
+      "bytes": 894,
+      "sha256": "1f7131299a439edbfc44ee51e60b3fc6c4ecaf6050032cc1333351958f45136e",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/thermal-v1.xformula"
+    },
+    {
+      "name": "waves_optics-v1.xformula",
+      "bytes": 902,
+      "sha256": "4a61ce16c8ea4219459b5d82e1890a4ab7f0bd94a35ccac37365fd429000d1fa",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/waves_optics-v1.xformula"
+    },
+    {
+      "name": "formula-packs-index.json",
+      "bytes": 5545,
+      "sha256": "369ea4848218e8040af8fdf200c0b62ae4b6534ba75236c858a577ce28a35483",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/formula-packs-index.json"
+    },
+    {
+      "name": "encoder-q8.onnx",
+      "bytes": 25056585,
+      "sha256": "7ed2dbc6a9248c8fa57a33af1c833d34f48b5855f512928b32773dc68034e456",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/encoder-q8.onnx"
+    },
+    {
+      "name": "decoder-q8.onnx",
+      "bytes": 7170036,
+      "sha256": "e8b06ed1f3337872e2f85f6f10e3478a49d3f0eeb1ff912b592594d410a4c0c8",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/decoder-q8.onnx"
+    },
+    {
+      "name": "GLM-OCR-Q4_K_M-compact.gguf",
+      "bytes": 423701152,
+      "sha256": "8ede263d18b8d9dac49ef602bac272afab93fb8b28efe4214a34fafca316ba40",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/GLM-OCR-Q4_K_M-compact.gguf"
+    },
+    {
+      "name": "mmproj-GLM-OCR-Q8_0.gguf",
+      "bytes": 484403648,
+      "sha256": "9c4b58e33e316ed142eb5dcb41abec3844d3e6e5dc361ffb782c3fa9d175141f",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/mmproj-GLM-OCR-Q8_0.gguf"
+    },
+    {
+      "name": "TEST-REPORT.txt",
+      "bytes": 3901,
+      "sha256": "b309941757e8747620181165bbc1f63c168d6e564dc9a295fb99824241ed7ac5",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/TEST-REPORT.txt"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1542,
+      "sha256": "ae9488813e7ce91edf5f8b4b6d2b2f4f95c7a0271d0e5999f2429f0694e7fdd7",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/SHA256SUMS.txt"
+    }
+  ],
+  "publicPackDownloadsVerified": 10,
+  "publicCatalogVerified": true,
+  "publicApkHttpStatus": 200,
+  "publicApkBytes": 1013056713,
+  "androidPackageIntegration": {
+    "status": "PASS",
+    "tests": 1,
+    "evidence": "PASS: https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/quantum-v1.xformula\nversion=1\nsha256=001661b1f652a88ba3be138b7bf4026f25cccd3fe898ead466a4894caf124bca\nindependent install, enable/disable, routing and uninstall\n",
+    "networkRestored": "airplane mode on, Wi-Fi/data off"
+  }
+}
