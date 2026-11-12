@@ -69,6 +69,12 @@ class FormulaWorkflowTest {
         return value!!
     }
 
+    private fun canvasMode(ed: Editor, value: Boolean) {
+        @Suppress("UNCHECKED_CAST")
+        val state = Editor::class.java.getDeclaredField("canvasOpen\$delegate").apply { isAccessible = true }.get(ed) as androidx.compose.runtime.MutableState<Boolean>
+        state.value = value
+    }
+
     private fun line(vararg xy: Double): Stroke = Stroke(
         Tool.PEN, ToolConfig(baseWidth = 3.5, pressureEnabled = false),
         xy.toList().chunked(2).map { Sample(it[0], it[1], 1.0) }, straight = xy.size == 4,
@@ -95,6 +101,137 @@ class FormulaWorkflowTest {
         assertFalse(com.xnotes.platform.LatexInternals.recognizesMath("x^2^3"))
         assertFalse(com.xnotes.platform.LatexInternals.recognizesMath("x^"))
         assertFalse(com.xnotes.platform.LatexInternals.recognizesMath("x_{}"))
+    }
+
+    @Test fun toolbarImagePickerInsertsVisibleSelectedImageAndSupportsUndoInBothEditors() {
+        val ed = editor()
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        val context = instrumentation.targetContext
+        val fixture = File(context.cacheDir, "share/picker-fixture.png").also { it.parentFile!!.mkdirs() }
+        fixture.writeBytes(teachingPicture().image.file.readBytes())
+        val uri = androidx.core.content.FileProvider.getUriForFile(context, context.packageName + ".fileprovider", fixture)
+        val filter = android.content.IntentFilter(android.content.Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(android.content.Intent.CATEGORY_OPENABLE); addDataType("image/*")
+        }
+        for (canvas in listOf(false, true)) {
+            compose.runOnIdle {
+                canvasMode(ed, false); ed.newNote()
+                if (canvas) { ed.infinite.replaceDocument(com.xnotes.core.infinite.InfiniteDocument()); canvasMode(ed, true) }
+            }
+            compose.waitForIdle()
+            val monitor = instrumentation.addMonitor(filter, android.app.Instrumentation.ActivityResult(Activity.RESULT_OK,
+                android.content.Intent().setData(uri).addFlags(android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION)), true)
+            try {
+                compose.onNodeWithContentDescription(context.getString(R.string.insert)).performClick()
+                compose.onNodeWithText(context.getString(R.string.insert_image_ellipsis)).performClick()
+                compose.waitUntil(15_000) {
+                    (if (canvas) ed.infinite.document.items else ed.state.document.pages.first().items).any { it is ImageItem }
+                }
+                compose.runOnIdle {
+                    assertTrue("Real OpenDocument launcher was used", monitor.hits > 0)
+                    val items = if (canvas) ed.infinite.document.items else ed.state.document.pages.first().items
+                    val image = items.filterIsInstance<ImageItem>().single()
+                    assertTrue(image.image.file.isFile); assertTrue(image.rect.w > 0)
+                    if (canvas) {
+                        assertEquals(listOf(image), ed.infinite.selection.items)
+                        assertEquals(ed.infinite.viewport.centerContent, image.rect.center)
+                        ed.infinite.undo(); assertTrue(ed.infinite.document.items.isEmpty()); ed.infinite.redo()
+                    } else {
+                        assertEquals(listOf(image), ed.controller.selectedItems())
+                        assertEquals(ed.state.document.pages.first().width / 2, image.rect.center.x, 1e-6)
+                        ed.undo(); assertTrue(ed.state.document.pages.first().items.isEmpty()); ed.redo()
+                    }
+                }
+                screenshot(if (canvas) "toolbar-image-infinite.png" else "toolbar-image-paged.png")
+            } finally { instrumentation.removeMonitor(monitor) }
+        }
+        compose.runOnIdle { canvasMode(ed, false) }
+    }
+
+    @Test fun mathSidebarLinesBlocksPreviewAndInsertSharePicturePlacement() {
+        val ed = editor(); val context = compose.activity
+        compose.runOnIdle { canvasMode(ed, false); ed.newNote(); ed.mathPad.open = false }
+        compose.onNodeWithContentDescription(context.getString(R.string.math_pad)).performClick()
+        compose.onNodeWithTag("math-pad-panel").assertExists()
+        compose.onNodeWithTag("math-pad-insert").assertIsNotEnabled()
+        compose.onNodeWithTag("math-pad-ink").performTouchInput { swipe(centerLeft, centerRight, 250) }
+        compose.runOnIdle { assertTrue(ed.mathPad.current.current.strokes.isNotEmpty()) }
+        // Explicit correction must stay authoritative even if automatic OCR was running.
+        compose.runOnIdle { ed.mathPad.current.current.edit("x^{2}+1") }
+        compose.onNodeWithText(context.getString(R.string.math_new_line)).performClick()
+        compose.runOnIdle { ed.mathPad.current.current.edit("y=2") }
+        compose.onNodeWithText(context.getString(R.string.math_new_block)).performClick()
+        compose.runOnIdle {
+            ed.mathPad.current.current.edit("z=3"); ed.mathPad.activeBlock = 0
+        }
+        compose.waitUntil(15_000) { !compose.onNodeWithTag("math-pad-insert").fetchSemanticsNode().config.contains(androidx.compose.ui.semantics.SemanticsProperties.Disabled) && ed.mathPad.current.source() != null }
+        compose.waitForIdle()
+        screenshot("math-sidebar-preview.png")
+        compose.onNodeWithTag("math-pad-insert").performClick()
+        compose.waitUntil(15_000) { ed.state.document.pages.first().items.any { it is ImageItem } }
+        compose.runOnIdle {
+            val item = ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single()
+            assertEquals("\\begin{aligned}&x^{2}+1\\\\&y=2\\end{aligned}", item.formula!!.latex)
+            val page = ed.state.document.pages.first()
+            val expected = com.xnotes.core.model.ImagePlacement.place(item.image.width, item.image.height, 0,
+                com.xnotes.core.geometry.Rect(0.0, 0.0, page.width, page.height), clamp = true)
+            assertEquals(expected, item.rect); assertEquals(listOf(item), ed.controller.selectedItems())
+            assertEquals("z=3", ed.mathPad.current.source())
+            ed.undo(); assertTrue(page.items.isEmpty()); ed.redo(); assertEquals(1, page.items.size)
+        }
+        screenshot("math-sidebar-inserted.png")
+        compose.runOnIdle { ed.infinite.replaceDocument(com.xnotes.core.infinite.InfiniteDocument()); canvasMode(ed, true) }
+        compose.waitUntil(15_000) { !compose.onNodeWithTag("math-pad-insert").fetchSemanticsNode().config.contains(androidx.compose.ui.semantics.SemanticsProperties.Disabled) }
+        compose.onNodeWithTag("math-pad-insert").performClick()
+        compose.waitUntil(15_000) { ed.infinite.document.items.any { it is ImageItem } }
+        compose.runOnIdle {
+            val item = ed.infinite.document.items.filterIsInstance<ImageItem>().single()
+            assertEquals("z=3", item.formula!!.latex); assertEquals(listOf(item), ed.infinite.selection.items)
+            assertEquals(ed.infinite.viewport.centerContent, item.rect.center)
+            ed.infinite.undo(); assertTrue(ed.infinite.document.items.isEmpty()); ed.infinite.redo()
+            ed.mathPad.open = false; canvasMode(ed, false)
+        }
+    }
+
+    @Test fun offlineOcrOptionsAreEditableInMainPreferences() {
+        val ed = editor(); val context = compose.activity
+        val original = com.xnotes.platform.OfflineMathSettings.load(context)
+        try {
+            compose.runOnIdle { ed.goHome() }
+            compose.onNodeWithText(context.getString(R.string.preferences)).performClick()
+            compose.onNodeWithTag("offline-math-preferences").assertExists()
+            compose.onNodeWithText(context.getString(R.string.math_mode_balanced)).performClick()
+            assertEquals(com.xnotes.platform.MathRecognitionMode.BALANCED, com.xnotes.platform.OfflineMathSettings.load(context).mode)
+            screenshot("offline-ocr-preferences.png")
+        } finally { com.xnotes.platform.OfflineMathSettings.save(context, original) }
+    }
+
+    @Test fun realHandwritingAutomaticallyPreviewsOfflineAndKeepsManualCorrection() {
+        val ed = editor(); val context = compose.activity
+        val original = com.xnotes.platform.OfflineMathSettings.load(context)
+        com.xnotes.platform.OfflineMathSettings.save(context, com.xnotes.platform.OfflineMathConfig())
+        try {
+            val directory = File(context.filesDir, "handwriting-v5")
+            val sample = org.json.JSONArray(File(directory, "manifest.json").readText()).getJSONObject(1)
+            val raw = org.json.JSONArray(File(directory, sample.getString("strokes")).readText())
+            val traces = List(raw.length()) { i -> raw.getJSONArray(i).let { trace -> List(trace.length()) { j -> trace.getJSONArray(j).let { Pt(it.getDouble(0), it.getDouble(1)) } } } }
+            val all = traces.flatten(); val left = all.minOf { it.x }; val top = all.minOf { it.y }
+            val scale = minOf(940.0 / (all.maxOf { it.x } - left), 270.0 / (all.maxOf { it.y } - top))
+            compose.runOnIdle { canvasMode(ed, false); ed.newNote(); ed.mathPad.newBlock(); ed.mathPad.open = true }
+            compose.runOnIdle { ed.mathPad.current.current.ink(traces.map { t -> t.map { Pt(30 + (it.x - left) * scale, 20 + (it.y - top) * scale) } }) }
+            compose.waitUntil(60_000) { ed.mathPad.current.current.ready }
+            compose.waitUntil(15_000) { !compose.onNodeWithTag("math-pad-insert").fetchSemanticsNode().config.contains(androidx.compose.ui.semantics.SemanticsProperties.Disabled) }
+            screenshot("math-sidebar-real-handwriting.png")
+            compose.runOnIdle { ed.mathPad.current.current.edit("x^{2}+1") }
+            compose.waitForIdle()
+            compose.runOnIdle { assertEquals("x^{2}+1", ed.mathPad.current.current.latex) }
+            compose.waitUntil(15_000) { !compose.onNodeWithTag("math-pad-insert").fetchSemanticsNode().config.contains(androidx.compose.ui.semantics.SemanticsProperties.Disabled) }
+            compose.onNodeWithTag("math-pad-insert").performClick()
+            compose.waitUntil(15_000) { ed.state.document.pages.first().items.any { it is ImageItem } }
+        } finally {
+            com.xnotes.platform.OfflineMathSettings.save(context, original)
+            compose.runOnIdle { ed.mathPad.open = false }
+        }
     }
 
     @Test fun spacedOcrScriptsAttachToTheirBaseAndMatchCompactRendering() {
@@ -209,7 +346,7 @@ class FormulaWorkflowTest {
         }
         compose.onNodeWithContentDescription(compose.activity.getString(R.string.formula_convert)).performClick()
         val insert = compose.activity.getString(R.string.formula_insert)
-        compose.onNodeWithTag("paddle-settings").assertExists()
+        compose.onNodeWithTag("offline-settings").assertExists()
         compose.onNodeWithText(insert).assertIsNotEnabled()
         assertEquals("Opening the dialog must not submit handwriting", "", compose.onNode(hasSetTextAction()).fetchSemanticsNode()
             .config[androidx.compose.ui.semantics.SemanticsProperties.EditableText].text)
@@ -314,7 +451,6 @@ class FormulaWorkflowTest {
         compose.runOnIdle {
             ed.insertImage(fixture.image.file.readBytes())
             original = ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single()
-            original.rect = fixture.rect
             ed.state.refreshAllInk(); ed.view.requestRender()
             ed.controller.setTool(Tool.SELECT); ed.controller.selectPlaced(0, listOf(original))
         }

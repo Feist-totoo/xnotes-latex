@@ -100,7 +100,7 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
                             }
                         }
                     }
-                    if (draft.originalFormula == null) PaddleFormulaPanel(ink, !preparing && !committing) { alternative ->
+                    if (draft.originalFormula == null) OfflineFormulaPanel(ink, remember(draft) { draft.recognitionStrokes() }, !preparing && !committing) { alternative ->
                         field = TextFieldValue(alternative, TextRange(alternative.length))
                     }
                     if (selectionFailed) Text(stringResource(R.string.formula_selection_failed), color = MaterialTheme.colorScheme.error)

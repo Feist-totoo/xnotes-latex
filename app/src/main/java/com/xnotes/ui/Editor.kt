@@ -348,6 +348,14 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
      *  bytes into the heap; the renderer decodes from these files on demand. Under filesDir (not the
      *  reclaimable cacheDir). */
     private val imageDir = tempDir("noteimg")
+    val imageAssetDirectory: java.io.File get() = imageDir
+    val mathPad = MathPadState()
+
+    fun resumeImageInsertTarget(target: com.xnotes.platform.ImageInsertTarget): Boolean {
+        if (!target.matches(this)) return false
+        noteOpen = true
+        return true
+    }
 
     /** Scratch dir for [writeNoteSafely]: a note is encoded here in full before any SAF file is
      *  touched, so a failed encode can never truncate a good note. Lives under filesDir (not the
@@ -2500,7 +2508,7 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
     fun insertImage(bytes: ByteArray) = insertImageAt(bytes, null)
 
     /** Insert an image, centred on [atContent] (or on the current page when null). */
-    fun insertImageAt(bytes: ByteArray, atContent: com.xnotes.core.geometry.Pt?) {
+    fun insertImageAt(bytes: ByteArray, atContent: com.xnotes.core.geometry.Pt?): Boolean {
         val file = runCatching {
             java.io.File.createTempFile("img", null, imageDir).apply { writeBytes(bytes) }
         }.getOrNull()
@@ -2508,38 +2516,40 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
         if (file == null || size == null || size.width <= 0 || size.height <= 0) {
             file?.delete()
             message = appContext.getString(R.string.err_read_image)
-            return
+            return false
         }
+        val placed = insertImageData(ImageData(file, size.width, size.height), com.xnotes.platform.ImageDecoder.exifTurn(file.path), atContent)
+        if (placed == null) file.delete()
+        return placed != null
+    }
+
+    /** One insertion/history/placement path for pictures and typeset math from the sidebar. */
+    fun insertImageData(image: ImageData, orientation: Int = 0, atContent: Pt? = null,
+        formula: com.xnotes.core.model.FormulaSource? = null): ImageItem? {
+        if (state.document.pages.isEmpty()) { message = appContext.getString(R.string.err_read_image); return null }
         val index = (atContent?.let { state.pageIndexAtContent(it) } ?: state.currentPageIndex())
             .coerceIn(0, state.document.pages.lastIndex)
         val page = state.document.pages[index]
         val pr = state.pageRects.getOrNull(index)
         // A photo stands the way its camera's EXIF data says, turned in place rather than re-encoded.
-        val turn = com.xnotes.platform.ImageDecoder.exifTurn(file.path)
-        val (iw, ih) = if (turn % 180 != 0) size.height to size.width else size.width to size.height
-        val maxW = page.width * 0.6
-        val maxH = page.height * 0.6
-        val scale = minOf(1.0, maxW / iw, maxH / ih)
-        val w = iw * scale
-        val h = ih * scale
         // Placed anywhere on the paper, margins included, but never hanging off it.
         val cover = state.footprint(page)
-        val rect = if (atContent != null && pr != null) {
-            Rect(
-                (atContent.x - pr.left - w / 2 + cover.left).coerceIn(cover.left, cover.right - w),
-                (atContent.y - pr.top - h / 2 + cover.top).coerceIn(cover.top, cover.bottom - h),
-                w, h,
-            )
-        } else {
-            Rect((page.width - w) / 2.0, (page.height - h) / 2.0, w, h)
-        }
-        val item = ImageItem(ImageData(file, size.width, size.height), rect, orientation = turn)
+        val local = if (atContent != null && pr != null) Pt(atContent.x - pr.left + cover.left, atContent.y - pr.top + cover.top) else null
+        val rect = runCatching { com.xnotes.core.model.ImagePlacement.place(image.width, image.height, orientation,
+            if (local != null) cover else Rect(0.0, 0.0, page.width, page.height), local, clamp = true) }.getOrNull() ?: return null
+        val item = ImageItem(image, rect, orientation = orientation, formula = formula)
         page.items.add(item)
         state.appendToCache(page, item)
         history.push(AddItem(page, item))
         state.document.dirty = true
         refreshContent()
         view.requestRender()
+        // A newly inserted item must be immediately visible and draggable, even on a zoomed page.
+        controller.setTool(Tool.SELECT)
+        val contentCenter = state.fromPageSpace(index, rect.center)
+        state.scrollIntoView(Rect(contentCenter.x - rect.w / 2, contentCenter.y - rect.h / 2, rect.w, rect.h), 24.0)
+        controller.selectPlaced(index, listOf(item))
+        return item
     }
 
     /**

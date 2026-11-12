@@ -1,0 +1,33 @@
+<resources>
+    <string name="math_pad">数学手写侧栏</string>
+    <string name="math_offline">本地公式识别</string>
+    <string name="math_settings">离线 OCR 设置</string>
+    <string name="math_settings_short">设置</string>
+    <string name="math_pack_installed">离线数学包已安装（32.2 MB），手写内容仅在本机处理。</string>
+    <string name="math_pack_needed">请先在偏好设置中安装离线数学包。</string>
+    <string name="math_pack_download">下载离线包 · 32.2 MB</string>
+    <string name="math_pack_verify">校验 / 修复离线包</string>
+    <string name="math_pack_remove">移除离线包</string>
+    <string name="math_download_failed">下载失败，请检查网络后重试；已校验的文件会复用。</string>
+    <string name="math_automatic">停笔后自动识别</string>
+    <string name="math_mode">识别模式</string>
+    <string name="math_mode_fast">快速</string>
+    <string name="math_mode_balanced">均衡</string>
+    <string name="math_mode_accurate">精细</string>
+    <string name="math_pause">停笔等待：%1$d 毫秒</string>
+    <string name="math_threads">CPU 线程数：%1$d</string>
+    <string name="math_subjects">使用已启用学科包辅助候选排序</string>
+    <string name="math_accuracy_note">快速模式以部分准确率换取速度，精细模式比较更多候选。耗时取决于平板性能，结果仍需校对。</string>
+    <string name="math_recognize">识别</string>
+    <string name="math_use_result">使用本地结果</string>
+    <string name="math_recognition_failed">本行未能识别，请改写、重试或直接修改 LaTeX。</string>
+    <string name="math_block_number">第 %1$d / %2$d 块</string>
+    <string name="math_line_number">第 %1$d / %2$d 行</string>
+    <string name="math_new_line">换行</string>
+    <string name="math_new_block">换块</string>
+    <string name="math_clear_line">清空本行</string>
+    <string name="math_line_latex">本行 LaTeX（可修改）</string>
+    <string name="math_insert_failed">未能插入，草稿已保留；请检查当前笔记后重试。</string>
+    <string name="math_elapsed">上次识别：%1$d 毫秒</string>
+    <string name="math_review_note">在上方书写一行式子，停笔后更新预览。换行继续当前块；换块保留上一块草稿；插入按图片的默认位置放到白板。</string>
+</resources>

@@ -222,6 +222,8 @@ fun PreferencesPane(
                 .onGloballyPositioned { viewport = it.boundsInRoot() },
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
+            OfflineMathPreferences()
+            HorizontalDivider()
             SectionTitle(stringResource(R.string.pref_general))
             FieldLabel(stringResource(R.string.pref_ui_theme))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {

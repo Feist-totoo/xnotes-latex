@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <!-- Networking is opt-in: GitHub package downloads or explicit Paddle API recognition. -->
+    <!-- Networking is opt-in: explicit GitHub subject/model package downloads. Handwriting is never uploaded. -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- The apps that act on selected text ("Translate", "Search"), listed in a PDF text

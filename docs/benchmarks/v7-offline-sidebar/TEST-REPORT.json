@@ -1,0 +1,164 @@
+{
+  "version": "0.9.8-latex.7-offline-sidebar",
+  "versionCode": 77,
+  "applicationId": "com.xnotes.latex.debug",
+  "generatedUtc": "2026-11-12T17:48:21.993603+00:00",
+  "packaging": {
+    "apk": "xnotes-latex-0.9.8-latex.7-offline-sidebar.apk",
+    "bytes": 67838139,
+    "sha256": "18daa2f936f0b3ce9b7b849c873fb4b146b73f6c4bedef1cc5efaf5a90044572",
+    "bundledModelWeights": 0,
+    "paddleProvider": false,
+    "runtime": "ONNX Runtime Android 1.23.2",
+    "downloadableModelBytes": 32226621,
+    "subjectPacks": 10,
+    "nativeLibraries": [
+      "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "lib/arm64-v8a/libonnxruntime.so",
+      "lib/arm64-v8a/libonnxruntime4j_jni.so",
+      "lib/arm64-v8a/libxnotespdf.so",
+      "lib/arm64-v8a/libxnotests.so",
+      "lib/x86_64/libandroidx.graphics.path.so",
+      "lib/x86_64/libonnxruntime.so",
+      "lib/x86_64/libonnxruntime4j_jni.so",
+      "lib/x86_64/libxnotespdf.so",
+      "lib/x86_64/libxnotests.so"
+    ],
+    "privateTestData": false
+  },
+  "signatureSha256": "dbde9527283a1432beee854febc94fb79a8710968f3566bb7763b6ec0a41b6bc",
+  "jvm": {
+    "tests": 2523,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "androidRegression": {
+    "tests": 19,
+    "failures": 0,
+    "finalSignedApk": true
+  },
+  "modelDownload": {
+    "publicGithubRelease": true,
+    "completed": true,
+    "sha256Verified": true,
+    "elapsedSeconds": 12.541
+  },
+  "fixtureProtocol": {
+    "source": "MathWriting real human handwriting, frozen v5 confirmation manifest",
+    "samples": 160,
+    "subjects": {
+      "calculus": 80,
+      "linear_algebra": 80
+    },
+    "manifest_sha256": "c2a626f097b4a31cbaf5d888f6a9a1a3bd863f853494740adca829a106e455b7",
+    "fixtures_bundled": false,
+    "retrained": false,
+    "tuned_on_test": false,
+    "engine": "GryphOne Q8 existing v5 weights",
+    "network_during_inference": false,
+    "enabled_subject_packs": [
+      "school_math",
+      "calculus",
+      "linear_algebra"
+    ],
+    "automatic_pack_routing": true,
+    "threads": 2,
+    "device": "Android 14 x86_64 AVD; 2 vCPU; 4096 MB RAM; NOT a physical tablet"
+  },
+  "accuracy160": {
+    "samples": 160,
+    "structuralMatches": 95,
+    "errors": 0,
+    "warmSamples": 159,
+    "warmMedianMs": 1508,
+    "warmP95Ms": 4706,
+    "coldMs": 1835,
+    "subjects": {
+      "calculus": {
+        "samples": 80,
+        "matches": 49
+      },
+      "linear_algebra": {
+        "samples": 80,
+        "matches": 46
+      }
+    }
+  },
+  "modes20": {
+    "fast": {
+      "samples": 20,
+      "structuralMatches": 10,
+      "errors": 0,
+      "warmSamples": 19,
+      "warmMedianMs": 461,
+      "warmP95Ms": 485,
+      "coldMs": 739,
+      "subjects": {
+        "calculus": {
+          "samples": 10,
+          "matches": 7
+        },
+        "linear_algebra": {
+          "samples": 10,
+          "matches": 3
+        }
+      }
+    },
+    "balanced": {
+      "samples": 20,
+      "structuralMatches": 10,
+      "errors": 0,
+      "warmSamples": 19,
+      "warmMedianMs": 923,
+      "warmP95Ms": 1026,
+      "coldMs": 1194,
+      "subjects": {
+        "calculus": {
+          "samples": 10,
+          "matches": 7
+        },
+        "linear_algebra": {
+          "samples": 10,
+          "matches": 3
+        }
+      }
+    },
+    "accurate": {
+      "samples": 20,
+      "structuralMatches": 10,
+      "errors": 0,
+      "warmSamples": 19,
+      "warmMedianMs": 1522,
+      "warmP95Ms": 1783,
+      "coldMs": 1907,
+      "subjects": {
+        "calculus": {
+          "samples": 10,
+          "matches": 7
+        },
+        "linear_algebra": {
+          "samples": 10,
+          "matches": 3
+        }
+      }
+    }
+  },
+  "timingDefinition": "Recognizer engine elapsed_ms; excludes pause, subject reranking, typesetting and UI. Emulator only. First call is cold; warm summaries exclude it.",
+  "limitations": [
+    "Existing v5 weights, no retraining or claim of improved accuracy.",
+    "160 reused v5 real handwriting confirmation cases; cannot compare directly to old 89/200.",
+    "The same fixed 20 cases all match 10/20 in these modes; too small to establish overall mode accuracy.",
+    "Final APK 20-case accurate rerun matches all corresponding predictions in the 160-case run.",
+    "No physical Samsung/S Pen test. Picker tests use ActivityMonitor and FileProvider URIs.",
+    "Uninserted sidebar drafts survive closing the sidebar, not process death."
+  ],
+  "features": [
+    "No Paddle API; downloadable offline model with per-file length and SHA-256 checks",
+    "Preferences: automatic recognition, mode, pause, CPU threads, subject candidate ranking",
+    "Upper ink, lower preview, new line/block, editable LaTeX, insert/drag/undo on both boards",
+    "Shared picture/formula insertion, persistable picker destination, background streaming import",
+    "Stale recognition rejection and cancellation on new pen input; warm-session reuse",
+    "Retained straight-line image splitting and 10 independent subject packs"
+  ]
+}

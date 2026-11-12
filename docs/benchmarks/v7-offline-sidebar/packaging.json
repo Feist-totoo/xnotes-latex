@@ -1,0 +1,23 @@
+{
+  "apk": "xnotes-latex-0.9.8-latex.7-offline-sidebar.apk",
+  "bytes": 67838139,
+  "sha256": "18daa2f936f0b3ce9b7b849c873fb4b146b73f6c4bedef1cc5efaf5a90044572",
+  "bundledModelWeights": 0,
+  "paddleProvider": false,
+  "runtime": "ONNX Runtime Android 1.23.2",
+  "downloadableModelBytes": 32226621,
+  "subjectPacks": 10,
+  "nativeLibraries": [
+    "lib/arm64-v8a/libandroidx.graphics.path.so",
+    "lib/arm64-v8a/libonnxruntime.so",
+    "lib/arm64-v8a/libonnxruntime4j_jni.so",
+    "lib/arm64-v8a/libxnotespdf.so",
+    "lib/arm64-v8a/libxnotests.so",
+    "lib/x86_64/libandroidx.graphics.path.so",
+    "lib/x86_64/libonnxruntime.so",
+    "lib/x86_64/libonnxruntime4j_jni.so",
+    "lib/x86_64/libxnotespdf.so",
+    "lib/x86_64/libxnotests.so"
+  ],
+  "privateTestData": false
+}

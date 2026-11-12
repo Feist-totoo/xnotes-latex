@@ -1754,20 +1754,24 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
             file?.delete()
             return false
         }
+        val placed = insertImageData(ImageData(file, size.width, size.height), com.xnotes.platform.ImageDecoder.exifTurn(file.path), atContent)
+        if (placed == null) file.delete()
+        return placed != null
+    }
+
+    fun insertImageData(image: ImageData, orientation: Int = 0, atContent: Pt? = null,
+        formula: com.xnotes.core.model.FormulaSource? = null): ImageItem? {
         // Land it at a comfortable size for the current view rather than at its pixel size, which
         // on an unbounded canvas would be arbitrary.
-        val turn = com.xnotes.platform.ImageDecoder.exifTurn(file.path)
-        val (iw, ih) = if (turn % 180 != 0) size.height to size.width else size.width to size.height
         val visible = viewport.visibleContentRect()
-        val maxW = visible.w * 0.6
-        val maxH = visible.h * 0.6
-        val scale = minOf(1.0, maxW / iw, maxH / ih)
-        val w = iw * scale
-        val h = ih * scale
-        val centre = atContent ?: viewport.centerContent
-        val rect = Rect(centre.x - w / 2.0, centre.y - h / 2.0, w, h)
-        commitItem(ImageItem(ImageData(file, size.width, size.height), rect, orientation = turn))
-        return true
+        val rect = runCatching { com.xnotes.core.model.ImagePlacement.place(image.width, image.height, orientation, visible,
+            atContent ?: viewport.centerContent, clamp = false) }.getOrNull() ?: return null
+        val item = ImageItem(image, rect, orientation = orientation, formula = formula)
+        commitItem(item)
+        armTool(Tool.SELECT)
+        selection.select(listOf(item))
+        publishOverlay()
+        return item
     }
 
     /** Place [audio] as a pill in the middle of the view, sized for this zoom, selected so it can be dragged at once. */

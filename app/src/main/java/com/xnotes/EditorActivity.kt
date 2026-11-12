@@ -65,6 +65,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
@@ -327,9 +328,8 @@ private fun EditorScreen(
     var pendingAfterSave by remember { mutableStateOf<(() -> Unit)?>(null) }
     // The pane an image was picked for, and where a long-press menu asked it to land. Held together
     // so the picker's result lands in the pane that opened it, whatever the focus does meanwhile.
-    var pendingInsert by remember { mutableStateOf<PendingInsert?>(null) }
-    // The same, for the infinite canvas.
-    var pendingCanvasInsert by remember { mutableStateOf<PendingInsert?>(null) }
+    var pendingImageTarget by rememberSaveable { mutableStateOf<String?>(null) }
+    var returnedImageUri by rememberSaveable { mutableStateOf<String?>(null) }
     // The pane and page a side-panel "Insert PDF" picked a file for.
     var pendingPdfInsert by remember { mutableStateOf<PendingPdfInsert?>(null) }
     var pendingShareUri by remember { mutableStateOf<String?>(null) }
@@ -472,12 +472,41 @@ private fun EditorScreen(
     }
 
     val insertImageLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-        val pending = pendingInsert; pendingInsert = null
-        if (uri != null && pending != null) {
-            runCatching {
-                resolver.openInputStream(uri)?.use { s -> pending.editor.insertImageAt(s.readBytes(), pending.at) }
-            }.onFailure { editor.message = context.getString(R.string.err_read_image) }
+        if (uri == null) pendingImageTarget = null
+        else {
+            runCatching { resolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION) }
+            returnedImageUri = uri.toString()
         }
+    }
+
+    LaunchedEffect(returnedImageUri, pendingImageTarget) {
+        val uri = returnedImageUri?.let(Uri::parse) ?: return@LaunchedEffect
+        var prepared: com.xnotes.platform.ImageImport.Prepared? = null
+        var targetEditor = editor
+        try {
+            val target = com.xnotes.platform.ImageInsertTarget.decode(pendingImageTarget ?: error("Missing insert target"))
+            targetEditor = if (target.pane == com.xnotes.ui.Pane.PRIMARY.name) editor else editor.secondary
+                ?: editor.secondaryPane().also { it.restoreSession() }
+            check(targetEditor.resumeImageInsertTarget(target)) { "Note changed while choosing an image" }
+            kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                prepared = com.xnotes.platform.ImageImport.read(context, uri, targetEditor.imageAssetDirectory)
+            }
+            // A restored pane needs its first layout before placement and scrolling.
+            check(kotlinx.coroutines.withTimeoutOrNull(5_000) {
+                while (if (target.canvas) targetEditor.infinite.viewport.visibleContentRect().let { it.w <= 0 || it.h <= 0 }
+                    else targetEditor.view.width <= 0 || targetEditor.view.height <= 0) kotlinx.coroutines.delay(16)
+                true
+            } == true) { "Image destination has no viewport" }
+            check(target.matches(targetEditor))
+            val result = prepared!!
+            val inserted = if (target.canvas) targetEditor.infinite.insertImageData(result.image, result.orientation, target.at)
+                else targetEditor.insertImageData(result.image, result.orientation, target.at)
+            check(inserted != null)
+            prepared = null
+        } catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled }
+        catch (_: Exception) { targetEditor.message = context.getString(R.string.err_read_image) }
+        finally { prepared?.image?.file?.delete() }
+        returnedImageUri = null; pendingImageTarget = null
     }
 
     // Recording asks for the microphone the first time, and on Android 13 and later for notifications
@@ -667,20 +696,6 @@ private fun EditorScreen(
         } catch (_: android.content.ActivityNotFoundException) {
             pendingPhoto = null
             pane.message = context.getString(R.string.err_no_camera)
-        }
-    }
-
-    // An image picked for the infinite canvas: read the bytes and hand them straight over.
-    val insertCanvasImageLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.OpenDocument(),
-    ) { uri ->
-        val pending = pendingCanvasInsert; pendingCanvasInsert = null
-        if (uri == null || pending == null) return@rememberLauncherForActivityResult
-        scope.launch {
-            val bytes = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
-                runCatching { resolver.openInputStream(uri)?.use { input -> input.readBytes() } }.getOrNull()
-            }
-            if (bytes != null) pending.editor.infinite.insertImage(bytes, pending.at)
         }
     }
 
@@ -1000,7 +1015,8 @@ private fun EditorScreen(
                 BackHandler(enabled = focused.flowEditingActive) { focused.flowText.endSession() }
                 // Otherwise Back closes that pane (guarded for unsaved edits); the other one stays.
                 BackHandler(enabled = focused.editingField == null && !focused.flowEditingActive) {
-                    guarded(focused) { focused.goHome() }
+                    if (focused.mathPad.open) focused.mathPad.open = false
+                    else guarded(focused) { focused.goHome() }
                 }
             }
 
@@ -1012,12 +1028,16 @@ private fun EditorScreen(
                 },
                 onClosePane = { pane -> guarded(pane) { pane.goHome() } },
                 onInsertImage = { pane, at ->
-                    pendingInsert = PendingInsert(pane, at)
-                    insertImageLauncher.launch(arrayOf("image/*"))
+                    pendingImageTarget = com.xnotes.platform.ImageInsertTarget.capture(pane, false, at).encode()
+                    runCatching { insertImageLauncher.launch(arrayOf("image/*")) }.onFailure {
+                        pendingImageTarget = null; pane.message = context.getString(R.string.err_read_image)
+                    }
                 },
                 onInsertCanvasImage = { pane, at ->
-                    pendingCanvasInsert = PendingInsert(pane, at)
-                    insertCanvasImageLauncher.launch(arrayOf("image/*"))
+                    pendingImageTarget = com.xnotes.platform.ImageInsertTarget.capture(pane, true, at).encode()
+                    runCatching { insertImageLauncher.launch(arrayOf("image/*")) }.onFailure {
+                        pendingImageTarget = null; pane.message = context.getString(R.string.err_read_image)
+                    }
                 },
                 onTakePhoto = { pane -> takePhoto(pane) },
                 onShareImage = { file ->
@@ -1206,9 +1226,6 @@ private fun EditorScreen(
 
 /** A pending "unsaved changes" prompt: the pane it asks about, and what to run once it's settled. */
 private class GuardRequest(val editor: Editor, val action: () -> Unit)
-
-/** A picked image on its way into [editor], at [at] when a long-press chose the spot. */
-private class PendingInsert(val editor: Editor, val at: com.xnotes.core.geometry.Pt?)
 
 /** Side-panel pages of [editor] waiting on a SAF "Save as" destination. */
 private class PendingPages(val editor: Editor, val pages: List<Int>)
@@ -1442,7 +1459,8 @@ private fun EditorPane(
         }
     }
     // The colour a swatch drag carries rides over the whole pane, toolbar and page alike.
-    Box(modifier) {
+    androidx.compose.foundation.layout.BoxWithConstraints(modifier) {
+        val mathPadWidth = (maxWidth * .42f).coerceIn(280.dp, 480.dp).coerceAtMost(maxWidth * .72f)
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -1469,6 +1487,7 @@ private fun EditorPane(
                 val bar: @Composable () -> Unit = {
                     com.xnotes.ui.InfiniteToolbar(
                         canvas,
+                        mathPad = editor.mathPad,
                         onOpenBackstage = actions.onOpenBackstage,
                         onInsertImage = { actions.onInsertCanvasImage(editor, null) },
                         onClosePane = onClose,
@@ -1478,7 +1497,8 @@ private fun EditorPane(
                     )
                 }
                 ToolbarAround(bar, onCover = canvas::setToolbarCover) { floatingBar ->
-                    Box(modifier = Modifier.fillMaxSize().clipToBounds()) {
+                    Row(Modifier.fillMaxSize()) {
+                    Box(modifier = Modifier.weight(1f).fillMaxHeight().clipToBounds()) {
                         AndroidView(
                             factory = { detached(canvas.surfaces) },
                             modifier = Modifier.fillMaxSize(),
@@ -1498,6 +1518,8 @@ private fun EditorPane(
                         com.xnotes.ui.TextStyleBar(canvas)
                         com.xnotes.ui.LongPressMenu(canvas, onInsertImageAt = { c -> actions.onInsertCanvasImage(editor, c) })
                         com.xnotes.ui.CanvasDebugOverlay(canvas)
+                    }
+                    if (editor.mathPad.open) com.xnotes.ui.MathPadPanel(editor, Modifier.width(mathPadWidth))
                     }
                 }
             } else {
@@ -1559,6 +1581,7 @@ private fun EditorPane(
                             com.xnotes.ui.TableChrome(editor)
                             ZoomLockHint(editor)
                         }
+                        if (editor.mathPad.open) com.xnotes.ui.MathPadPanel(editor, Modifier.width(mathPadWidth))
                     }
                 }
                 // Last child of the resized column: rides directly above the soft keyboard.

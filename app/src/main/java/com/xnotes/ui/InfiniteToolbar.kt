@@ -53,6 +53,7 @@ fun InfiniteToolbar(
     onInsertAudio: () -> Unit = {},
     onRecordAudio: () -> Unit = {},
     onTakePhoto: () -> Unit = {},
+    mathPad: MathPadState? = null,
 ) {
     // The stroke tools use the same designed drawables the paged toolbar does, so a pen looks like
     // a pen on either canvas rather than like a generic glyph.
@@ -83,6 +84,7 @@ fun InfiniteToolbar(
 
     // Pinned outside the scrolling strip so closing a split pane is always one tap away.
     ToolbarFrame(armed = editor.tool, trailing = onClosePane?.let { { ClosePaneButton(it) } }) {
+        mathPad?.let { MathPadToolbarButton(it) }
         val sections = editor.toolbarLayout.visibleSections
         sections.forEachIndexed { index, section ->
             if (index > 0) Separator()

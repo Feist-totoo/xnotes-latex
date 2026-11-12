@@ -1,18 +1,17 @@
-# xnotes LaTeX — Paddle API 轻量白板
+# xnotes LaTeX — 离线手写公式白板
 
-面向 Android 平板白板的独立 fork：**套索圈选 → Paddle API 识别 → LaTeX 预览纠错 → 可拖动公式块**，支持分页笔记和无限画布。识别需要联网，白板和公式排版可以离线使用。
+Android 平板白板 fork：**手写侧栏 → 停笔本机识别 → LaTeX 预览纠错 → 可拖动公式块**，同时保留套索识别、分页笔记和无限画布。
 
-- **[下载 v6.1 轻量 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.6.1-paddle-lite/xnotes-latex-0.9.8-latex.6.1-paddle-lite.apk)** · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.6.1-paddle-lite)。**52.4 MB**；Android 8.0+，arm64-v8a / x86_64，沿用签名，可覆盖升级。
-- **新增图片直线切块**：导入题目图片，选中后点分叉箭头“直线切块”，划线预览再确认。支持横切、竖切、斜切，每块可独立拖动、继续切割、保存重开和撤销。切块完全本地运行。[操作与验证](docs/IMAGE_SPLIT.md)。
-- 已去掉全部本地 OCR 模型、ONNX Runtime 和 GLM/llama.cpp 推理库。没有首次模型下载或本地 OCR 自动加载。
-- 圈选公式后在 **Paddle API 设置**填写自己的 AI Studio 令牌。主动点击识别才上传当前选区；结果需手动采用。令牌在本机加密保存，不进入备份。
-- 保留白板、LaTeX 空格修复、原生排版、可移动/缩放/编辑公式块、保留原笔迹和撤销。十个学科包作为符号、模板与校对辅助保留，可独立管理；不对 Paddle 结果做本地模型候选评分。
-- **v6.1：2524 项 JVM 测试、11 项 Android 检查通过**，含图片像素重建、重复切割、点击拖动、取消、撤销、持久化和原公式流程回归。[v6 的覆盖升级和模型清理记录](docs/FORMULA_PADDLE_LITE.md)保留。未配置真实 AI Studio 令牌，云端准确率和延迟尚未实测。没有三星 / S Pen 真机测试数据。
-- [轻量版验证与升级说明](docs/FORMULA_PADDLE_LITE.md) · [使用与构建](docs/FORMULA.md) · [旧离线完整版](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5.1-full) · [十个独立学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。
-- 本 fork 代码为 AGPL-3.0，保留原 xnotes MIT 署名。高数、线代包中的历史统计数据遵循 CC BY-NC-SA 4.0，轻量版不使用它们评分。测试图片与用户截图不随应用分发。
-- 下方保留上游介绍；商店与上游 Release 不包含此 fork 功能。
-
-<p align="center"><img src="docs/screenshots/v6-paddle-lite/formula-dialog.png" width="90%" alt="Paddle 轻量版的选区、排版预览和 API 设置" /><br /><em>交互测试画面：x=1 为手动输入，用于验证排版和编辑流程，不代表云端识别准确率。</em></p>
+- **[下载 v7 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.7-offline-sidebar/xnotes-latex-0.9.8-latex.7-offline-sidebar.apk)** · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.7-offline-sidebar)。约 **67.8 MB**，Android 8.0+，arm64-v8a / x86_64，沿用旧签名覆盖升级。
+- 在 **偏好设置 → 离线 OCR 设置** 主动下载 **32.2 MB** 数学模型包；随后识别完全离线。Paddle API、令牌入口和云端识别已移除。APK 包含 ONNX 运行库，不内置模型权重。
+- 工具栏 **Σ** 打开数学手写侧栏：上方书写，下方停笔自动预览；换行继续当前块，换块保留草稿，插入通过与图片相同的接口放到白板。支持手动修正 LaTeX。
+- 偏好设置可调整自动识别、快速/均衡/精细模式、停笔等待、CPU 线程和学科包辅助排序。默认精细模式；本版沿用已有模型，没有宣称新的训练准确率提升。
+- 修复工具栏插入图片的目标状态保存、后台读取、插入后定位和选中；保留图片横切/竖切/斜切、拖动、再次切割和撤销。[切图操作](docs/IMAGE_SPLIT.md)。
+- 十个学科包独立启用与管理，高数/线代包的兼容先验参与接近候选的重排；不能保证复杂矩阵、下标或分式正确。保留公式源代码编辑和原有 LaTeX 空格修复。
+- [操作、设置与测试说明](docs/OFFLINE_MATH_SIDEBAR.md) · [逐条真实手写基准](docs/benchmarks/v7-offline-sidebar/) · [模型和学科包 Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。延迟来自 Android 模拟器，没有三星/S Pen 真机结果；“停笔预览”并非逐笔即时识别。
+- **2523 项 JVM 测试、19 项 Android 回归通过**。160 条真实高数/线代手写结构匹配 95 条（59.4%），精细模式热运行引擎中位数约 1.51 秒；现有小模型仍需逐式校对。默认停笔等待另加 550 ms。
+- 代码 AGPL-3.0，保留原 xnotes MIT 署名。模型/运行库许可证随应用附带；高数、线代统计数据为 CC BY-NC-SA 4.0。测试笔迹与用户截图不随应用分发。
+- 下方保留上游介绍；商店与上游 Release 不包含本 fork 功能。
 
 ---
 

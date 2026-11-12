@@ -17,13 +17,13 @@ val keystoreProperties = Properties().apply {
 
 // Use an explicit staging tree: AGP's asset merger does not consistently honour
 // AndroidSourceDirectorySet.exclude. Models must never enter its input tree.
-val preparePaddleAssets by tasks.registering(Sync::class) {
+val prepareAppAssets by tasks.registering(Sync::class) {
     from("src/main/assets") { exclude("formula-gryph/**", "formula-precision/**", "formula-texo/**") }
-    into(layout.buildDirectory.dir("generated/paddleAssets"))
+    into(layout.buildDirectory.dir("generated/appAssets"))
 }
-val preparePaddleTestAssets by tasks.registering(Sync::class) {
+val prepareTestAssets by tasks.registering(Sync::class) {
     from("src/androidTest/assets") { exclude("handwriting*/**") }
-    into(layout.buildDirectory.dir("generated/paddleTestAssets"))
+    into(layout.buildDirectory.dir("generated/testAssets"))
 }
 
 android {
@@ -36,8 +36,8 @@ android {
         applicationId = "com.xnotes.latex"
         minSdk = 26
         targetSdk = 36
-        versionCode = 76
-        versionName = "0.9.8-latex.6.1-paddle-lite"
+        versionCode = 77
+        versionName = "0.9.8-latex.7-offline-sidebar"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")
@@ -110,9 +110,9 @@ android {
     }
 
     // Historical evaluation assets can remain in a developer checkout, but must
-    // never be packaged in the Paddle-only app or its device-test companion.
-    sourceSets.getByName("main").assets.setSrcDirs(listOf(layout.buildDirectory.dir("generated/paddleAssets")))
-    sourceSets.getByName("androidTest").assets.setSrcDirs(listOf(layout.buildDirectory.dir("generated/paddleTestAssets")))
+    // never be packaged in the downloadable-model app or its device-test companion.
+    sourceSets.getByName("main").assets.setSrcDirs(listOf(layout.buildDirectory.dir("generated/appAssets")))
+    sourceSets.getByName("androidTest").assets.setSrcDirs(listOf(layout.buildDirectory.dir("generated/testAssets")))
 
     // Lists every values-* translation in the manifest so Android 13+ offers a per-app language.
     androidResources {
@@ -134,7 +134,7 @@ kotlin {
 tasks.configureEach {
     if (name.contains("ArtProfile")) enabled = false
 }
-tasks.named("preBuild").configure { dependsOn(preparePaddleAssets, preparePaddleTestAssets) }
+tasks.named("preBuild").configure { dependsOn(prepareAppAssets, prepareTestAssets) }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
@@ -154,6 +154,7 @@ dependencies {
     implementation(libs.latex.base)
     implementation(libs.latex.parser)
     implementation(libs.latex.renderer)
+    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.23.2")
     implementation(libs.bundles.commonmark)
     debugImplementation(libs.androidx.ui.tooling)
 

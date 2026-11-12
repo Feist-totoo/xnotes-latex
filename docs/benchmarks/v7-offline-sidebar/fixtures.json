@@ -1,0 +1,22 @@
+{
+  "source": "MathWriting real human handwriting, frozen v5 confirmation manifest",
+  "samples": 160,
+  "subjects": {
+    "calculus": 80,
+    "linear_algebra": 80
+  },
+  "manifest_sha256": "c2a626f097b4a31cbaf5d888f6a9a1a3bd863f853494740adca829a106e455b7",
+  "fixtures_bundled": false,
+  "retrained": false,
+  "tuned_on_test": false,
+  "engine": "GryphOne Q8 existing v5 weights",
+  "network_during_inference": false,
+  "enabled_subject_packs": [
+    "school_math",
+    "calculus",
+    "linear_algebra"
+  ],
+  "automatic_pack_routing": true,
+  "threads": 2,
+  "device": "Android 14 x86_64 AVD; 2 vCPU; 4096 MB RAM; NOT a physical tablet"
+}

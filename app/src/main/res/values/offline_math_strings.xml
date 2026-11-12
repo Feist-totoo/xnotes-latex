@@ -1,0 +1,33 @@
+<resources>
+    <string name="math_pad">Math handwriting</string>
+    <string name="math_offline">Offline math recognition</string>
+    <string name="math_settings">Offline OCR settings</string>
+    <string name="math_settings_short">Settings</string>
+    <string name="math_pack_installed">Offline math pack installed (32.2 MB). Handwriting stays on this device.</string>
+    <string name="math_pack_needed">Install the offline math pack in Preferences first.</string>
+    <string name="math_pack_download">Download offline pack · 32.2 MB</string>
+    <string name="math_pack_verify">Verify / repair pack</string>
+    <string name="math_pack_remove">Remove pack</string>
+    <string name="math_download_failed">Download failed. Check the connection and try again; verified files will be reused.</string>
+    <string name="math_automatic">Recognize after a short pause</string>
+    <string name="math_mode">Recognition mode</string>
+    <string name="math_mode_fast">Fast</string>
+    <string name="math_mode_balanced">Balanced</string>
+    <string name="math_mode_accurate">Accurate</string>
+    <string name="math_pause">Pause before recognition: %1$d ms</string>
+    <string name="math_threads">CPU threads: %1$d</string>
+    <string name="math_subjects">Use enabled subject packs to rank candidates</string>
+    <string name="math_accuracy_note">Fast mode trades recognition quality for speed. Accurate mode compares more candidates. Processing time depends on the tablet; results still need checking.</string>
+    <string name="math_recognize">Recognize</string>
+    <string name="math_use_result">Use local result</string>
+    <string name="math_recognition_failed">Could not recognize this line. Rewrite it, retry, or edit the LaTeX.</string>
+    <string name="math_block_number">Block %1$d / %2$d</string>
+    <string name="math_line_number">Line %1$d / %2$d</string>
+    <string name="math_new_line">New line</string>
+    <string name="math_new_block">New block</string>
+    <string name="math_clear_line">Clear line</string>
+    <string name="math_line_latex">Current line LaTeX (editable)</string>
+    <string name="math_insert_failed">Could not insert. The draft is kept; check the open note and try again.</string>
+    <string name="math_elapsed">Last recognition: %1$d ms</string>
+    <string name="math_review_note">Write one expression above. Pausing updates the preview. New line continues this block; new block keeps the previous draft. Insert places this block like a picture.</string>
+</resources>

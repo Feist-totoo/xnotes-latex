@@ -1,0 +1,15 @@
+
+s_glBindAttribLocation: bind attrib 0 name position
+s_glBindAttribLocation: bind attrib 1 name color
+s_glBindAttribLocation: bind attrib 2 name localCoord
+com.xnotes.FormulaWorkflowTest:............
+com.xnotes.ImageSplitTest:...
+com.xnotes.FormulaPackDeviceTest:..
+com.xnotes.CompleteFormulaTest:.
+com.xnotes.OfflineMathTest:.
+
+Time: 68.441
+
+OK (19 tests)
+
+
