@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <!-- Only the opt-in GitHub Release package downloader uses networking. -->
+    <!-- Networking is opt-in: GitHub package downloads or explicit Paddle API recognition. -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- The apps that act on selected text ("Translate", "Search"), listed in a PDF text

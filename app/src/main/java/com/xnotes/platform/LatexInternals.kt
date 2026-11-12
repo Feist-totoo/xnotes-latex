@@ -7,10 +7,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.unit.Density
-import com.hrm.latex.parser.IncrementalLatexParser
-import com.hrm.latex.parser.LatexParser
+import com.hrm.latex.parser.ParseResult
 import com.hrm.latex.parser.ParseDiagnostic
 import com.hrm.latex.parser.model.LatexNode
+import com.hrm.latex.parser.model.SourceRange
+import com.hrm.latex.parser.tokenizer.LatexToken
+import com.hrm.latex.parser.tokenizer.LatexTokenizer
+import com.xnotes.core.formula.LatexSource
 import com.hrm.latex.renderer.font.MathFontProvider
 import com.hrm.latex.renderer.font.MathFontProviderFactory
 import com.hrm.latex.renderer.layout.LatexRenderResult
@@ -33,14 +36,42 @@ object LatexInternals {
     fun defaultFonts(): LatexFontFamilies = defaultLatexFontFamilies()
 
     /** [latex] parsed; empty when nothing in it sets. */
-    fun parse(latex: String): List<LatexNode> =
-        IncrementalLatexParser().apply { append(latex) }.getCurrentDocument().children
+    fun parse(latex: String): List<LatexNode> = parseMath(latex).document.children
+
+    /** TeX math ignores ordinary whitespace; the library treats it as visible Space nodes.
+     * Adapt tokens, retaining source offsets, text groups and explicit spacing commands.
+     * Split math text into atoms so compact `ab^2` scripts b, not the entire string ab.
+     */
+    private fun parseMath(latex: String): ParseResult {
+        val literal = LatexSource.literalMask(latex)
+        val tokens = LatexTokenizer(latex).tokenize().flatMap { token ->
+            when {
+                token is LatexToken.Whitespace && !literal.getOrElse(token.range.start) { false } &&
+                    latex.substring(token.range.start, token.range.end).all { it.isWhitespace() } -> emptyList()
+                token is LatexToken.Text && !(token.range.start until token.range.end).all { literal[it] } -> buildList {
+                    var offset = 0
+                    while (offset < token.content.length) {
+                        var end = offset + Character.charCount(token.content.codePointAt(offset))
+                        if (literal[token.range.start + offset]) {
+                            while (end < token.content.length && literal[token.range.start + end])
+                                end += Character.charCount(token.content.codePointAt(end))
+                        }
+                        add(LatexToken.Text(token.content.substring(offset, end),
+                            SourceRange(token.range.start + offset, token.range.start + end)))
+                        offset = end
+                    }
+                }
+                else -> listOf(token)
+            }
+        }
+        return LatexParserBridge.parse(tokens, latex.length)
+    }
 
     /** Unknown commands are shown as red source by the renderer; never accept those as formulas. */
     fun recognizesMath(latex: String): Boolean {
-        val result = LatexParser().parseWithDiagnostics("\\displaystyle $latex")
-        if (result.diagnostics.any { it.severity == ParseDiagnostic.Severity.ERROR }) return false
+        val result = parseMath("\\displaystyle $latex")
         val nodes = result.document.children
+        if (result.diagnostics.any { it.severity == ParseDiagnostic.Severity.ERROR }) return false
         return nodes.isNotEmpty() && nodes.none { root -> root.fold(false) { found, n ->
             found || n is LatexNode.Command ||
                 (n is LatexNode.Superscript && n.exponent.emptyScript()) ||

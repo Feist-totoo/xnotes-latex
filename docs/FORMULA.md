@@ -15,15 +15,19 @@
 
 公式源代码和透明高分辨率 PNG 缓存一起写入 `.xnote` / `.xcanvas`。重新打开不需要再次识别；复制、粘贴、拖动、旋转、缩放沿用原生图片对象的操作。公式块禁用裁剪和镜像，避免显示缓存与源码含义不一致。PDF 导出使用缓存图片，因此公式显示正常，但不是 PDF 中可选取的矢量数学文本。
 
+## 可选 Paddle API 与空格修复
+
+v5.1 新增官方 AI Studio 云端识别，可在转换窗口配置令牌，主动上传当前选区并选择是否采用结果。默认离线路径不变。见 [配置、隐私和测试边界](FORMULA_PADDLE.md)。本次同时修复 LaTeX 无意义空格；旧公式进入编辑后保存即可重新排版。
+
 ## 本地 OCR 与准确性
 
-`0.9.8-latex.5-full` 内置两个共享调度的本地 CPU 引擎：原始笔画用 [GryphOne](https://github.com/JG1VPP/GryphOne) Q8 ONNX，图片与手动精细复核用 [GLM-OCR](https://huggingface.co/ggml-org/GLM-OCR-GGUF) Q4_K_M / Q8_0 GGUF，通过 JNI 直接运行。识别不依赖 HTTP、云服务或局域网主机。网络只用于主动刷新 / 下载 GitHub 学科包。
+`0.9.8-latex.5-full` 内置两个共享调度的本地 CPU 引擎：原始笔画用 [GryphOne](https://github.com/JG1VPP/GryphOne) Q8 ONNX，图片与手动精细复核用 [GLM-OCR](https://huggingface.co/ggml-org/GLM-OCR-GGUF) Q4_K_M / Q8_0 GGUF，通过 JNI 直接运行。识别不依赖 HTTP、云服务或局域网主机。本地模式不上传内容；网络用于主动下载 GitHub 学科包，或明确点击 Paddle API 上传选区识别。
 
-四份权重共 940,331,421 字节。首次使用从 APK 校验、解包到不参与云备份的私有目录，因此首次使用比模型复用慢，安装及首次运行也需要额外可用存储。完整 APK 为 1,013,056,713 字节。支持 Android 8.0+、arm64-v8a / x86_64。后台串行推理，两种引擎切换前释放另一种，空闲 30 秒或内存紧张时释放。取消不提交公式。
+四份权重共 940,331,421 字节。首次使用从 APK 校验、解包到不参与云备份的私有目录，因此首次使用比模型复用慢，安装及首次运行也需要额外可用存储。v5 完整 APK 为 1,013,056,713 字节，v5.1 体积接近。支持 Android 8.0+、arm64-v8a / x86_64。后台串行推理，两种引擎切换前释放另一种，空闲 30 秒或内存紧张时释放。取消不提交公式。
 
 套索原始笔画保留擦除后分段，并按训练方式绘制为 224×224 单像素中心线，不受笔色、笔压、粗细和纸张网格干扰。图片输入冻结当前裁剪、旋转和镜像；替换后的公式正常排版。一次选择一个表达式，快速模型最多 150 位置，不适合整页或很长的推导。精细模型也可能误认大小写、括号或结构；第二结果不是自动正确答案。
 
-十个包全部随完整 APK 提供：高中数学、高数、线性代数、概率统计、离散数学、力学、电磁学、热学、波动光学、量子物理。它们独立安装、启停、更新、卸载和导入，卸载后可从 APK 本地恢复；选择会记忆，升级保留已禁用 / 已主动卸载的包。只有包更新需要网络。
+十个包全部随完整 APK 提供：高中数学、高数、线性代数、概率统计、离散数学、力学、电磁学、热学、波动光学、量子物理。它们独立安装、启停、更新、卸载和导入，卸载后可从 APK 本地恢复；选择会记忆，升级保留已禁用 / 已主动卸载的包。本地使用这些包不需要网络，更新需要网络。
 
 高数、线代 v3 包使用 HUMAN TRAIN 的符号序列统计，只重排视觉评分接近的现有候选，不生成教材公式或重新识图。首次安装默认开启，已有明确关闭设置保留。可以在学科面板关闭候选辅助。自动推荐复用识别文本特征，不额外加载识图模型；用户编辑和明确选择的候选不会被包切换覆盖。其余八个包仍只有符号、模板和校对辅助。
 
@@ -31,7 +35,7 @@
 
 ## 构建
 
-需要 JDK 17、Python 3.11+、Git、Android SDK 36、NDK 27.0.12077973、CMake 3.22.1。
+需要 JDK 21 或 22（本次使用 22；Gradle 8.13 不支持 JDK 25）、Python 3.11+、Git、Android SDK 36、NDK 27.0.12077973、CMake 3.22.1。
 
 ```sh
 python tools/prepare_full_formula.py
@@ -39,9 +43,9 @@ python tools/package_formula_mods.py
 ./gradlew :app:testDebugUnitTest :app:assembleDebug
 ```
 
-Windows 使用 `gradlew.bat`。准备脚本在开发机器下载固定 Release 的 ONNX / GGUF 模型并校验 SHA-256，准备固定版本的 llama.cpp。应用本身不下载模型，只在用户操作时下载独立学科包。旧 Texo 模型不再进入 APK，旧评测脚本仅为复现基线保留。
+Windows 使用 `gradlew.bat`。准备脚本在开发机器下载固定 Release 的 ONNX / GGUF 模型并校验 SHA-256，准备固定版本的 llama.cpp。应用本身不下载模型；只在用户操作时下载独立学科包，或按明确点击调用 Paddle API。旧 Texo 模型不再进入 APK，旧评测脚本仅为复现基线保留。
 
-输出 `app/build/outputs/apk/debug/app-debug.apk`，包名 `com.xnotes.latex.debug`，versionCode 73。沿用旧版调试签名，可覆盖此前本 fork 的调试安装。不要先卸载旧版，以免删除应用内存储的笔记。
+输出 `app/build/outputs/apk/debug/app-debug.apk`，包名 `com.xnotes.latex.debug`，versionCode 74。沿用旧版调试签名，可覆盖此前本 fork 的调试安装。不要先卸载旧版，以免删除应用内存储的笔记。
 
 真实笔迹测试准备（只进入 androidTest APK，不进入应用 APK）：
 

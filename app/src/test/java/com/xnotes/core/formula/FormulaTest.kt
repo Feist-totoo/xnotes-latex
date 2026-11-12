@@ -12,18 +12,38 @@ import org.junit.Test
 import java.io.File
 
 class FormulaTest {
-    @Test fun ocrSeparatorsDoNotTurnExponentsIntoBaselineText() {
-        assertEquals("e^{ a v c \\tan c 1 + x }", LatexSource.clean("e ^ { a v c \\tan c 1 + x }"))
-        assertEquals("x_{ i }^{ 2 }", LatexSource.clean("x _ { i } ^ { 2 }"))
-        assertEquals("\\int_{0}^{1} x\\,dx", LatexSource.clean("\\int _ {0} ^ {1} x\\,dx"))
-        assertEquals("e^{\\arctan(1+x)}", LatexSource.clean("e \n ^ \t {\\arctan(1+x)}"))
+    @Test fun ocrSeparatorsAreNotExportedAsVisibleMathSpaces() {
+        val cases = listOf(
+            "e ^ { a v c \\tan c 1 + x }" to "e^{avc\\tan c1+x}",
+            "x _ { i } ^ { 2 }" to "x_{i}^{2}",
+            "\\int _ {0} ^ {1} x\\,dx" to "\\int_{0}^{1}x\\,dx",
+            "e \n ^ \t {\\arctan(1+x)}" to "e^{\\arctan(1+x)}",
+            "1 2 . 3 4 x + y = 5" to "12.34x+y=5",
+            "\\frac { 1 5 } { 4 } - 1 0 x" to "\\frac{15}{4}-10x",
+            "\\begin {pmatrix} a & b \\\\ c & d \\end {pmatrix}" to "\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}",
+            "a b ^ 2 + x _ i j" to "ab^2+x_ij",
+            "\\sin   x + \\alpha   y + \\beta 2" to "\\sin x+\\alpha y+\\beta2",
+            "\\frac a b" to "\\frac ab",
+            "x\u00a0+\u2003y" to "x+y",
+        )
+        for ((raw, compact) in cases) {
+            assertEquals(raw, compact, LatexSource.clean(raw))
+            assertEquals(raw, compact, LatexSource.clean(compact))
+        }
     }
 
     @Test fun normalizationPreservesLiteralTextEscapesAndCommandBoundaries() {
-        for (source in listOf("\\text{a _ b ^ c}", "\\text{a {b ^ c} d}", "\\textbf { a _ b }", "\\verb|a ^ b|", "\\sin x", "x\\_ y", "x\\^ y", "e\\ ^2", "x% ^ comment\n+y")) {
+        for (source in listOf("\\text{a _ b ^ c}", "\\text{a {b ^ c} d}", "\\verb|a ^ b|",
+            "\\verb*|\\rarr a b|", "\\sin x", "e\\ ^2", "x% ^ comment\n+y",
+            "a\\,b\\;c\\!d\\quad e\\qquad f", "x~y", "\\operatorname*{arg max}_{x}f(x)",
+            "\\ce{2 H2 + O2 -> 2 H2O}", "\\text{keep \\{ a b \\} and \\% spaces}")) {
             assertEquals(source, source, LatexSource.clean(source))
         }
+        assertEquals("\\textbf{ a _ b }", LatexSource.clean("\\textbf { a _ b }"))
         assertEquals("\\text{ a _ b }^{2}", LatexSource.clean("\\text{ a _ b } ^ {2}"))
+        assertEquals("x\\_y", LatexSource.clean("x\\_ y"))
+        assertEquals("x\\^y", LatexSource.clean("x\\^ y"))
+        assertEquals("\\alpha%keep newline\nx", LatexSource.clean("\\alpha %keep newline\n x"))
     }
 
     @Test fun insertingSpaceCannotSliceAnEditableFormulaIntoImages() {
@@ -58,7 +78,7 @@ class FormulaTest {
     @Test fun wrappersAndAliasesNormalizeWithoutChangingLongerCommands() {
         assertEquals("x^{2}", LatexSource.clean("  \$\$x^{2}\$\$  "))
         assertEquals("\\int_0^{\\infty}", LatexSource.clean("\\[\\int_0^{\\infin}\\]"))
-        assertEquals("\\rightarrow \\infinite", LatexSource.clean("\\rarr \\infinite"))
+        assertEquals("\\rightarrow\\infinite", LatexSource.clean("\\rarr \\infinite"))
     }
 
     @Test fun escapedBracesAndNestedEnvironmentsAreValid() {

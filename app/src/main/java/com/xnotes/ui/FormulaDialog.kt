@@ -66,6 +66,7 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
     var automaticText by remember(draft) { mutableStateOf(draft.initialLatex) }
     var userEdited by remember(draft) { mutableStateOf(false) }
     var reviewing by remember(draft) { mutableStateOf(false) }
+    var localJob by remember(draft) { mutableStateOf<Job?>(null) }
     var reviewJob by remember(draft) { mutableStateOf<Job?>(null) }
     var preciseLatex by remember(draft) { mutableStateOf<String?>(null) }
     var reviewFailed by remember(draft) { mutableStateOf(false) }
@@ -80,6 +81,7 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
     }
 
     LaunchedEffect(draft, generation) {
+        localJob = coroutineContext[Job]
         recognizing = draft.originalFormula == null
         recognitionFailed = false
         userEdited = false
@@ -180,6 +182,11 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
                                 recognitionFailed = false; uncertain = true
                             }) { Text(stringResource(R.string.formula_precision_use)) }
                         }
+                    }
+                    if (draft.originalFormula == null) PaddleFormulaPanel(ink, !reviewing && !committing,
+                        onStart = { localJob?.cancel() }) { alternative ->
+                        field = TextFieldValue(alternative, TextRange(alternative.length)); userEdited = true
+                        recognitionFailed = false; uncertain = true
                     }
                     if (ranking.packageIds.isNotEmpty()) {
                         val chinese = LocalConfiguration.current.locales[0].language == "zh"

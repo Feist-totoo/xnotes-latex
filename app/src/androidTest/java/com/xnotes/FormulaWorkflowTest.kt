@@ -117,6 +117,43 @@ class FormulaWorkflowTest {
         assertTrue(script.exponent is com.hrm.latex.parser.model.LatexNode.Group)
     }
 
+    @Test fun mathWhitespaceIsInvisibleButTextAndExplicitSpacingSurvive() {
+        compose.waitForIdle()
+        val draft = FormulaDraft(handwriting(), compose.activity.cacheDir) { _, _ -> false }
+        for ((spaced, compact) in listOf(
+            "1 2 . 3 4 x + y = 5" to "12.34x+y=5",
+            "e ^ { \\arctan ( 1 + x ) }" to "e^{\\arctan(1+x)}",
+            "\\frac { 1 5 } { 4 } - 1 0 x" to "\\frac{15}{4}-10x",
+            "\\begin {pmatrix} a & b \\\\ c & d \\end {pmatrix}" to "\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}",
+            "\\sin   x + \\alpha   y" to "\\sin{x}+\\alpha{}y",
+            "\\frac a b" to "\\frac{a}{b}",
+            "a b ^ 2 + x _ i j" to "ab^2+x_ij",
+            "x% comment\n + y" to "x+y",
+            "\\text { for all } x > 0" to "\\text{ for all }x>0",
+        )) {
+            val a = runBlocking(Dispatchers.Default) { draft.render(spaced) }
+            val b = runBlocking(Dispatchers.Default) { draft.render(compact) }
+            assertTrue("Whitespace changed pixels: $spaced", a.bitmap.sameAs(b.bitmap))
+            a.bitmap.recycle(); b.bitmap.recycle()
+        }
+        val compact = runBlocking(Dispatchers.Default) { draft.render("ab") }
+        for (spaced in listOf("a\\,b", "a\\quad b", "a\\ b", "a~b")) {
+            val explicit = runBlocking(Dispatchers.Default) { draft.render(spaced) }
+            assertTrue("Explicit spacing must remain: $spaced", explicit.bitmap.width > compact.bitmap.width)
+            explicit.bitmap.recycle()
+        }
+        compact.bitmap.recycle()
+        val a = runBlocking(Dispatchers.Default) { draft.render("\\text{a b}") }
+        val b = runBlocking(Dispatchers.Default) { draft.render("\\text{ab}") }
+        assertTrue("Text word spaces must remain", a.bitmap.width > b.bitmap.width)
+        a.bitmap.recycle(); b.bitmap.recycle()
+        val nodes = com.xnotes.platform.LatexInternals.parse("ab^2")
+        assertEquals(2, nodes.size)
+        val power = nodes.last() as com.hrm.latex.parser.model.LatexNode.Superscript
+        assertEquals("b", (power.base as com.hrm.latex.parser.model.LatexNode.Text).content)
+        assertTrue(com.xnotes.platform.LatexInternals.parse("\\alpha x").none { it is com.hrm.latex.parser.model.LatexNode.Space })
+    }
+
     private fun gesture(ed: Editor, localPoints: List<Pt>) {
         val offset = ed.state.pageRects.first()
         val points = localPoints.map { ed.state.contentToViewport(Pt(it.x + offset.x, it.y + offset.y)) }
@@ -140,6 +177,20 @@ class FormulaWorkflowTest {
             output.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
             bitmap.recycle()
         }
+    }
+
+    private fun showPreview() {
+        // Editing opens the IME and shortens the dialog's scroll viewport. Dismiss it
+        // as a user would before inspecting the entire preview, then scroll to it.
+        val imeVisible = androidx.core.view.ViewCompat.getRootWindowInsets(compose.activity.window.decorView)
+            ?.isVisible(androidx.core.view.WindowInsetsCompat.Type.ime()) == true
+        if (imeVisible) InstrumentationRegistry.getInstrumentation().sendKeyDownUpSync(android.view.KeyEvent.KEYCODE_BACK)
+        compose.waitUntil(5000) {
+            androidx.core.view.ViewCompat.getRootWindowInsets(compose.activity.window.decorView)
+                ?.isVisible(androidx.core.view.WindowInsetsCompat.Type.ime()) != true
+        }
+        compose.onNodeWithContentDescription(compose.activity.getString(R.string.formula_preview))
+            .performScrollTo().assertIsDisplayed()
     }
 
     @Test fun lassoRecognizeInsertDragEditAndUndo() {
@@ -171,7 +222,7 @@ class FormulaWorkflowTest {
         val recognized = "x=1"
         compose.onNode(hasSetTextAction()).performTextReplacement(recognized)
         compose.waitUntil(15_000) { compose.onAllNodes(hasText(insert) and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
-        compose.onNodeWithContentDescription(compose.activity.getString(R.string.formula_preview)).assertIsDisplayed()
+        showPreview()
         screenshot("formula-dialog.png")
         val catalog = com.xnotes.platform.FormulaPacks.load(compose.activity)
         val beforePacks = com.xnotes.platform.FormulaPacks.selected(compose.activity, catalog)
@@ -225,7 +276,7 @@ class FormulaWorkflowTest {
         compose.onNode(hasSetTextAction()).performTextReplacement("\\frac{x^{2}+1}{2}")
         val update = compose.activity.getString(R.string.formula_update)
         compose.waitUntil(15_000) { compose.onAllNodes(hasText(update) and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
-        compose.onNodeWithContentDescription(compose.activity.getString(R.string.formula_preview)).assertIsDisplayed()
+        showPreview()
         screenshot("formula-edit.png")
         compose.onNodeWithText(update).performClick()
         compose.waitUntil(15_000) { ed.state.document.pages.first().items.filterIsInstance<ImageItem>().singleOrNull()?.formula?.latex == "\\frac{x^{2}+1}{2}" }

@@ -1,0 +1,69 @@
+{
+  "apk": "xnotes-latex-0.9.8-latex.5.1-full.apk",
+  "bytes": 1013105865,
+  "sha256": "73478b5229639b4760acb4490f19717383535841669c022f13b11da4cec9239e",
+  "unchanged_resource_count": 27,
+  "model_count": 4,
+  "source_apk": "v0.9.8-latex.5-full",
+  "no_test_or_private_fixtures": true,
+  "version": "0.9.8-latex.5.1-full",
+  "versionCode": 74,
+  "applicationId": "com.xnotes.latex.debug",
+  "minimumAndroidApi": 26,
+  "abis": [
+    "arm64-v8a",
+    "x86_64"
+  ],
+  "signatureCertificateSha256": "dbde9527283a1432beee854febc94fb79a8710968f3566bb7763b6ec0a41b6bc",
+  "signatureSchemes": [
+    "v2",
+    "v3"
+  ],
+  "zipalign16KiB": true,
+  "bundledSubjectPacks": 10,
+  "unitTests": {
+    "tests": 2516,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "androidTests": {
+    "passedDistinct": 13,
+    "classes": {
+      "PaddleFormulaTest": 2,
+      "FormulaWorkflowTest": 6,
+      "OfflineHandwritingTest": 4,
+      "CompleteFormulaTest.selectedImageCropIsFrozenAndCanKeepOriginal": 1
+    },
+    "airplaneMode": true,
+    "finalSignedApkInstalledAndWorkflowVerified": true,
+    "testHarnessAdjustment": "After editing, dismiss IME with Back and scroll to preview before asserting visibility. Production code unchanged by this adjustment."
+  },
+  "spacingCorpus": {
+    "unique_sources": 1525,
+    "before_parseable": 1510,
+    "both_unparseable": 15,
+    "changed_sources": 1342,
+    "structural_differences": [],
+    "corpus_source": "Distinct latex/truth/reference strings from docs/benchmarks/v5/*.json",
+    "normalizer": "Actual compiled com.xnotes.core.formula.LatexSource, not a Python reimplementation",
+    "comparison": "tools/formula_metrics/compare.cjs + tools/score_formula_structure.py canonical_mathml",
+    "corpus_sha256": "9335d4d91cc773b30de0255ca6af7cd8b81a2ea521d1312fb9001704560e59cf"
+  },
+  "handwritingRegression": {
+    "publicImageCases": 12,
+    "structureMatches": 1,
+    "privateScreenshotLocalOnlyPassed": true,
+    "modelWeightsChanged": false,
+    "newAccuracyClaim": false
+  },
+  "paddle": {
+    "protocolTests": "simulated transport based on official SDK/docs",
+    "uiTests": "simulated recognition, explicit upload and apply actions",
+    "liveServiceTested": false,
+    "liveHandwritingAccuracyMeasured": false,
+    "reason": "No user AI Studio token configured",
+    "automaticUpload": false,
+    "credentials": "Android Keystore AES-GCM; noBackupFilesDir"
+  }
+}

@@ -30,7 +30,7 @@ class FormulaDraft(
     private val strokes = items.filterIsInstance<Stroke>().map { Stroke(it) }
     val hasPenInput: Boolean get() = strokes.isNotEmpty()
     val color = originalFormula?.color ?: strokes.firstOrNull()?.config?.rgba?.withAlpha(255) ?: Rgba(24, 24, 24)
-    val initialLatex = originalFormula?.latex.orEmpty()
+    val initialLatex = originalFormula?.latex?.let(LatexSource::clean).orEmpty()
 
     /** Frozen visible centerlines, including clipping from room/area erasers. */
     fun recognitionStrokes() = strokes.flatMap { it.visibleRuns() }

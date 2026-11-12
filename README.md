@@ -2,7 +2,8 @@
 
 面向 Android 平板白板的独立 fork：**套索圈选笔画 → 本地识别 → LaTeX 预览纠错 → 插入可拖动公式块**，支持分页笔记和无限画布。
 
-- **[下载 v5 完整离线 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/xnotes-latex-0.9.8-latex.5-full-offline.apk)** · [Release / 十个独立学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。约 1.01 GB，Android 8.0+，arm64-v8a / x86_64；沿用此 fork 的签名，可覆盖升级。
+- **[下载 v5.1 完整 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5.1-full/xnotes-latex-0.9.8-latex.5.1-full.apk)** · [Release / 十个独立学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。约 1.01 GB，Android 8.0+，arm64-v8a / x86_64；沿用此 fork 的签名，可覆盖升级。
+- **v5.1 新增**：修复公式多余空格；可选 Paddle 官方 AI Studio API，令牌在应用内加密保存，主动点击才上传当前选区。默认保持离线；云端准确率尚未实测。[使用与验证说明](docs/FORMULA_PADDLE.md)。
 - APK 内置 GryphOne Q8 快速笔画识别、压缩 GLM-OCR 图片识别 / 精细复核，以及全部十个学科包。安装后不需要下载模型或学科包就能断网使用；包仍可独立启停、卸载、本地恢复、导入和通过 GitHub 更新。
 - 原始笔画先快速识别，需要时点“离线精细复核”，检查后手动采用结果；也可选择单张公式图片识别。复核不会覆盖手动编辑。公式源码可再次编辑，块可移动、缩放、撤销或保留原内容。
 - **准确率仍有限**：开发机同组 200 条真实样本由 v3 的 89/200 改善到 104/200；Android 新增 160 条为 95/160。高数、线代包改用训练集符号序列统计，旧专项集 116→117/200，新增集没有增益。不能宣称对大多数本科公式已可靠；发布标记为 prerelease，保留 v3 稳定渠道。
@@ -75,7 +76,7 @@
 - **Your notes, your folders**: notes are saved as files in a folder you choose, not locked away in an app's database, so you stay in full control of them.
 - **Works with stylus pens**: S Pen and many others.
 - **Always editable**: nothing gets flattened, so every stroke can be moved, restyled or erased later.
-- **Private**: open source, no account, no ads, no tracking. This fork recognizes offline and accesses GitHub only when you request package downloads.
+- **Private**: open source, no account, no ads, no tracking. This fork recognizes offline by default. Networking is opt-in: GitHub package downloads or explicitly uploading a selected formula to Paddle AI Studio.
 
 ## Install
 
@@ -89,7 +90,7 @@ GitHub and F-Droid ship the same signed APK, so you can switch between them with
 
 ## Build from source
 
-Needs JDK 17, NDK 27.0.12077973 and CMake 3.22.1.
+Needs JDK 21 or 22 (tested with 22), NDK 27.0.12077973 and CMake 3.22.1.
 
 ```bash
 git clone https://github.com/shardulvs/xnotes-android.git

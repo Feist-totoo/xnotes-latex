@@ -1,0 +1,11 @@
+{
+  "unique_sources": 1525,
+  "before_parseable": 1510,
+  "both_unparseable": 15,
+  "changed_sources": 1342,
+  "structural_differences": [],
+  "corpus_source": "Distinct latex/truth/reference strings from docs/benchmarks/v5/*.json",
+  "normalizer": "Actual compiled com.xnotes.core.formula.LatexSource, not a Python reimplementation",
+  "comparison": "tools/formula_metrics/compare.cjs + tools/score_formula_structure.py canonical_mathml",
+  "corpus_sha256": "9335d4d91cc773b30de0255ca6af7cd8b81a2ea521d1312fb9001704560e59cf"
+}
