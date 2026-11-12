@@ -4,13 +4,14 @@
 
 - 公式保留可编辑源码，可移动、缩放、再次编辑；支持撤销和保留原笔迹。
 - 模型内置 APK，识别不联网。十个学科包可从 GitHub Releases 独立下载、启停、更新和本地导入；下载后离线调用。不是整页中文 OCR；每次选择一个数学公式并检查预览。
-- 基于 xnotes 原生 Android 画布和完全离线的 GLM-OCR / llama.cpp；此 fork 按 AGPL-3.0 发布，保留原始 xnotes 的 MIT 许可与署名。
-- **[使用、构建与许可说明](docs/FORMULA.md)**。构建前运行 `python tools/prepare_glm_formula.py`。
-- 真实手写对照与 Android 原生验证见 [识别验证报告](docs/FORMULA_ACCURACY.md)；三星平板 / S Pen 实机表现仍需验证。
-- **[新版 APK](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.3)** · **[十个独立学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/formula-packs-v1.0.0)**。当前仍需逐式核对，未达到大部分任意手写公式可靠识别的目标。
+- 基于 xnotes 原生 Android 画布和完全离线的 GryphOne Q8 / ONNX Runtime；此 fork 按 AGPL-3.0 发布，保留原始 xnotes 的 MIT 许可与署名。
+- **[使用、构建与许可说明](docs/FORMULA.md)**。构建前运行 `python tools/prepare_handwriting_model.py`。
+- 真实手写对照与 Android 原生验证见 [v4 验证报告](docs/FORMULA_ACCURACY_V4.md)；三星平板 / S Pen 实机表现仍需验证。
+- **[v4 原始笔迹测试版 APK / 学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.4-preview)** · **[v3 正式版](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.3)**。v4 权重约 32 MB，重点支持套索中的原始笔迹；图片 OCR 回退显著退化，不能替代图片识别版。学科评分未证明稳定净增益，默认关闭，仍未达到完整目标。
+- 高数、线代统计资源来自 Google MathWriting HUMAN TRAIN，遵循 **CC BY-NC-SA 4.0**；原始笔迹与用户图片不随应用分发。
 - 此 fork 的包名与官方版不同。下方保留上游介绍；其中商店和上游 release 链接不包含本 fork 新功能。
 
-<p align="center"><img src="docs/screenshots/formula-dialog.png" width="90%" alt="套索选中笔迹后，在本机识别并预览 LaTeX 公式" /></p>
+<p align="center"><img src="docs/screenshots/formula-dialog.png" width="90%" alt="人工纠正识别结果后，预览可插入的 LaTeX 公式" /><br /><em>交互测试示例：原输出为 χ=1，已人工改为 x=1；不是自动识别成功示例。</em></p>
 <p align="center"><img src="docs/screenshots/formula-edit.png" width="90%" alt="公式块保留可再次编辑的 LaTeX 源码" /></p>
 <p align="center"><img src="docs/screenshots/formula-pack-manager.png" width="90%" alt="从 GitHub Releases 独立下载和管理学科包" /></p>
 
@@ -76,7 +77,7 @@
 - **Your notes, your folders**: notes are saved as files in a folder you choose, not locked away in an app's database, so you stay in full control of them.
 - **Works with stylus pens**: S Pen and many others.
 - **Always editable**: nothing gets flattened, so every stroke can be moved, restyled or erased later.
-- **Private**: open source, no account, no ads, no tracking, no internet access.
+- **Private**: open source, no account, no ads, no tracking. This fork recognizes offline and accesses GitHub only when you request package downloads.
 
 ## Install
 

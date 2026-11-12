@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-12",
+  "selection": "SHA256 stable order; excluded v3 excerpt valid/test IDs; matrix expressions and calculus markers; no model prediction used",
+  "source_sha256": "d76e4a4fe27c7bbee1ae51da8843f04bdbf3a36c354bde37650a2b2326c378f4",
+  "splits": {
+    "valid": {
+      "samples": 160,
+      "sha256": "f7e6d7c1bc6699c697ab84fef8b528c9b6029b3785bf9d0df7efd38df3f79884"
+    },
+    "test": {
+      "samples": 200,
+      "sha256": "2c65e0bad8245da6b0121666997e8225153563ace3988e14426a031a1c09e99b"
+    }
+  }
+}

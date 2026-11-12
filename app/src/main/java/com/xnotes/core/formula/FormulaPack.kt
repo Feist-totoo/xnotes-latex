@@ -9,6 +9,7 @@ data class FormulaPack(
     val id: String, val version: Int, val nameZh: String, val nameEn: String,
     val reviewZh: String, val reviewEn: String, val signals: Map<String, Int>,
     val symbols: List<FormulaSnippet>, val templates: List<FormulaSnippet>,
+    val recognition: FormulaRecognitionPrior? = null,
 ) {
     fun name(chinese: Boolean) = if (chinese) nameZh else nameEn
     fun review(chinese: Boolean) = if (chinese) reviewZh else reviewEn
@@ -18,7 +19,7 @@ data class FormulaPack(
             require(bytes.size in 1..MAX_BYTES) { "Invalid pack size" }
             val p = JSONObject(bytes.toString(Charsets.UTF_8))
             require(p.getString("format") == "xnotes-formula-pack" && p.getInt("schema") == 1)
-            require(p.getString("type") == "vocabulary" && p.getInt("minAppVersionCode") <= 71) { "Unsupported pack type/version" }
+            require(p.getString("type") == "vocabulary" && p.getInt("minAppVersionCode") <= 72) { "Unsupported pack type/version" }
             val id = p.getString("id")
             require(Regex("[a-z][a-z0-9_]{0,47}").matches(id)) { "Invalid pack ID" }
             val version = p.getInt("version"); require(version in 1..1_000_000)
@@ -40,7 +41,8 @@ data class FormulaPack(
                 signals.getInt(key).also { require(it in 1..8) }
             }
             return FormulaPack(id, version, text("nameZh", 80), text("nameEn", 80),
-                text("reviewZh"), text("reviewEn"), weights, snippets("symbols"), snippets("templates"))
+                text("reviewZh"), text("reviewEn"), weights, snippets("symbols"), snippets("templates"),
+                p.optJSONObject("recognition")?.let(FormulaRecognitionPrior::parse))
         }
     }
 }

@@ -1,0 +1,20 @@
+{
+  "engine": "gryphone-sat-q8-v1",
+  "steps": 20,
+  "seeds": [
+    1,
+    17,
+    37,
+    101
+  ],
+  "scoring": "masked-quarter-v1, four deterministic positional masks; skip when all candidates have identical tokens",
+  "prior": {
+    "strength": 0.1,
+    "maxVisualGap": 0.03,
+    "alpha": 0.25
+  },
+  "selected_on": "original 160-case subject validation only: base 141, profiles 142, 1 fix, 0 regression; smallest strength/gap retaining best observed result",
+  "original_test_status": "original 200 became a regression set after initial pack configuration failed; initial and revised results both must be reported",
+  "confirmation": "240 unused official valid samples, selected and original-human verified before revised predictions inspected",
+  "confirmation_manifest_sha256": "8178eeca76102c916904b47597a81e07f2df9d94bd94226731d5a67d57f1ae73"
+}

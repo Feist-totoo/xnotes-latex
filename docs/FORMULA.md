@@ -17,29 +17,29 @@
 
 ## 本地 OCR 与准确性
 
-`0.9.8-latex.3` 使用 [GLM-OCR](https://huggingface.co/zai-org/GLM-OCR) 的 Q8 权重，通过 [llama.cpp](https://github.com/ggml-org/llama.cpp) C++ / JNI 在设备 CPU 上运行。模型与分词器随 APK 安装，识别全程在平板上完成。网络权限只用于用户主动从 GitHub Releases 下载独立学科包；不使用云端 OCR 或局域网服务。
+`0.9.8-latex.4-preview` 的原始笔画路径使用 [GryphOne](https://github.com/JG1VPP/GryphOne) 的 Q8 ONNX 权重，ONNX Runtime 直接在设备 CPU 上运行。模型随 APK 安装，识别全程在平板上完成。网络权限只用于用户主动从 GitHub Releases 下载独立学科包；不使用云端 OCR 或局域网服务。
 
-模型文件合计 1,434,837,056 字节；APK 约 1.49 GB。首次使用将模型校验、解包到不参与云备份的应用私有目录，额外占用约 1.44 GB。安装和首次解包请预留约 5 GB 可用空间。仅支持 64 位 Android（arm64-v8a、x86_64），Android 8.0 及以上。不同平板的速度、内存压力尚需真机验证；4 GB RAM 模拟器可以运行，但有明显内存压力，建议使用 6 GB 或更多内存的设备。
+两份模型权重合计 32,226,621 字节，首次使用校验并解包到不参与云备份的应用私有目录。支持 Android 8.0+ 的 arm64-v8a、x86_64。后台串行推理，短时复用模型，空闲 30 秒或内存紧张时释放。升级后首次成功识别会移除旧版可重新获取的 GLM 模型缓存，不涉及笔记文件。
 
-输入仅含选中的笔画，黑字白底，不含纸张网格、PDF 背景或相邻内容。一次圈选一个表达式。模型不会求解或判断等式是否成立；识别结果必须对照预览。超过长度、内存、时间或排版器支持范围时不替换笔迹。取消后保持原笔迹，native worker 在安全点退出并释放模型。
+套索输入直接取冻结的可见笔画坐标，保留擦除后的分段，按模型训练方式绘制为 224×224 的单像素中心线；不受笔色、笔压、粗细、纸张网格和页面缩放影响。一次圈选一个表达式。模型不会求解或判断等式是否成立；识别结果必须对照预览。未完成的输出不能插入。用户可选择候选并编辑源码。
 
-10 个学科包可以独立下载、安装、启停、更新、卸载和导入，选择会记忆：高中数学、高等数学、线性代数、概率统计、离散数学、力学、电磁学与电路、热学与统计物理、振动波动与光学、近代与量子物理。高中数学包随 APK 提供，其余包在“管理 / 下载”中从 GitHub Releases 获取，下载后可断网使用。自动选包复用本机识别结果，可关闭；未知类别保持通用辅助。展开“学科包”后可在编辑框光标处插入符号，也可明确确认后套用模板，并查看匹配学科的校对提示。这些是**离线编辑与词表辅助包**，共用一个识别模型；没有宣称训练了十个专用模型，也不自动把陌生写法改成教科书公式。
+10 个学科包可以独立下载、安装、启停、更新、卸载和导入，选择会记忆。高中数学、高数、线代随 APK 提供，首次使用即可断网工作；其他包可从 GitHub Releases 下载。高数、线代 v2 包含从真实训练标签统计得到的识别约束，可对模型已产生的候选重新评分；确认测试未证明稳定净增益，默认关闭，需主动开启实验选项；不增加图像编码，不编造新表达式。用户手改的文字或明确选择的候选不会被切换包覆盖。其余八个包当前只提供符号、模板和校对辅助。
 
-真实手写的旧/新模型对照、错误、数据限制和复现命令见 [识别验证报告](FORMULA_ACCURACY.md)。不能把排版成功率或模型厂商的文档 OCR 成绩当作本应用手写整式准确率。
+真实手写对照、失败结果、学科包消融、Android 验证和数据限制见 [v4 验证报告](FORMULA_ACCURACY_V4.md)。[v3 历史报告](FORMULA_ACCURACY.md) 保留原始 89/200 的样本及评估口径。数字笔画与相机图片的表现不能混为一谈；不能把排版成功率算作手写整式正确率。
 
 ## 构建
 
 需要 JDK 17、Python 3.11+、Git、Android SDK 36、NDK 27.0.12077973、CMake 3.22.1。
 
 ```sh
-python tools/prepare_glm_formula.py
+python tools/prepare_handwriting_model.py
 python tools/package_formula_mods.py
 ./gradlew :app:testDebugUnitTest :app:assembleDebug
 ```
 
-Windows 使用 `gradlew.bat`。准备脚本在开发机器下载固定 revision 的模型、llama.cpp 源码，并校验模型 SHA-256。应用本身不下载模型，只在用户操作时下载独立学科包。旧 Texo 模型不再进入 APK，旧评测脚本仅为复现基线保留。
+Windows 使用 `gradlew.bat`。准备脚本在开发机器下载固定 Release 的 ONNX 模型，并校验模型 SHA-256。应用本身不下载模型，只在用户操作时下载独立学科包。旧 Texo 模型不再进入 APK，旧评测脚本仅为复现基线保留。
 
-输出 `app/build/outputs/apk/debug/app-debug.apk`，包名 `com.xnotes.latex.debug`，versionCode 71。沿用旧版调试签名，可覆盖此前本 fork 的调试安装。不要先卸载旧版，以免删除应用内存储的笔记。
+输出 `app/build/outputs/apk/debug/app-debug.apk`，包名 `com.xnotes.latex.debug`，versionCode 72。沿用旧版调试签名，可覆盖此前本 fork 的调试安装。不要先卸载旧版，以免删除应用内存储的笔记。
 
 真实笔迹测试准备（只进入 androidTest APK，不进入应用 APK）：
 
@@ -54,12 +54,15 @@ python tools/handwriting_benchmark.py fixtures --data build/handwriting/mathwrit
 
 ## 实现与来源
 
-- `FormulaDraft` 冻结套索笔画，产生黑白输入和透明公式图片，提交前核对选区是否变化。
-- `LocalFormulaRecognizer` 校验本地模型、转换 RGB、串行调度可取消 JNI 工作；短时复用模型，空闲 30 秒或内存紧张时释放。
-- `formula_jni.cpp` 直接调用 llama / mtmd CPU 库，使用固定公式识别提示、greedy 解码和 512 token 上限。推理超时为 180 秒，不返回截断的公式。
-- `FormulaDialog` 提供原笔迹/预览、光标编辑、保留笔迹、学科包选择与确认插入。
-- 公式源码随 `.xnote` / `.xcanvas` 保存；可拖动、缩放、旋转、编辑、撤销。PDF 导出使用栅格缓存。未知数学命令会阻止插入。
+- `FormulaDraft` 冻结套索笔画，提交前核对选区是否变化。
+- `FormulaInkRaster` 保留原始中心线几何；桌面与 Android 逐样本核对输入像素哈希。
+- `LocalFormulaRecognizer` 校验本地模型并串行调度可取消的 ONNX 工作。编码器一次计算并缓存跨注意力特征，多个候选共用图像特征。
+- `FormulaRecognitionPrior` 只使用兼容模型词表的有界统计数据；不执行下载包中的代码。
+- `FormulaDialog` 提供原笔迹/预览、候选选择、光标编辑、保留笔迹、学科包选择与确认插入。
+- `.xnote` / `.xcanvas` 保留公式源码；公式块可拖动、缩放、旋转、编辑、撤销。PDF 导出使用栅格缓存。
 
-本 fork 继续按根目录 AGPL-3.0 发布。原 xnotes MIT 署名保留在 `LICENSE-XNOTES`。新模型 GLM-OCR 和 llama.cpp 均采用 MIT；固定版本、哈希和许可在 `app/src/main/assets/formula-glm/`。未训练或微调这些权重。Google MathWriting 仅用于测试，不作为训练数据，不随应用发布。
+本 fork 代码继续按 AGPL-3.0 发布，原 xnotes MIT 署名保留在 `LICENSE-XNOTES`。GryphOne 上游为 MIT，DINO 为 Apache-2.0，ONNX Runtime 为 MIT；固定版本、哈希和署名在 `app/src/main/assets/formula-gryph/`。本次没有训练或微调神经网络权重。
 
-没有三星平板 / S Pen 真机测试数据。模拟器性能不应作为目标平板的性能承诺。
+**高数、线代的统计数据资源**从 Google LLC 的 MathWriting 2024 HUMAN TRAIN 标签派生，遵循 **CC BY-NC-SA 4.0**（署名、非商业、相同方式共享），不是 MIT。验证/测试样本未参与统计训练；原始轨迹、测试图片和用户截图不随应用发布。其余编辑资源与应用代码遵循各自现有许可。
+
+没有三星平板 / S Pen 真机测试数据。模拟器性能不作为目标平板的性能承诺。

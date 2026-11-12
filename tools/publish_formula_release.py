@@ -21,6 +21,7 @@ def main():
     parser.add_argument("--title", required=True)
     parser.add_argument("--body-file", type=Path, required=True)
     parser.add_argument("--publish", action="store_true")
+    parser.add_argument("--prerelease", action="store_true", help="Publish a preview without replacing the latest stable release")
     parser.add_argument("assets", type=Path, nargs="+")
     args = parser.parse_args()
     credential = subprocess.run(["git", "credential", "fill"], input="protocol=https\nhost=github.com\n\n",
@@ -32,14 +33,14 @@ def main():
     response = session.get(api + "/tags/" + quote(args.tag, safe=""), timeout=30)
     if response.status_code == 404:
         response = session.post(api, json=dict(tag_name=args.tag, target_commitish=args.commit, name=args.title,
-            body=args.body_file.read_text(encoding="utf-8"), draft=True, prerelease=False), timeout=30)
+            body=args.body_file.read_text(encoding="utf-8"), draft=True, prerelease=args.prerelease), timeout=30)
     response.raise_for_status()
     release = response.json()
     if not release["draft"]:
         raise RuntimeError("Refusing to overwrite a published release; use a new version")
     existing = {asset["name"]: asset for asset in release["assets"]}
     for path in args.assets:
-        if path.suffix not in {".apk", ".xformula", ".json", ".txt"}:
+        if path.suffix not in {".apk", ".xformula", ".json", ".txt", ".onnx"}:
             raise ValueError(f"Unexpected release asset type: {path.name}")
         with path.open("rb") as stream:
             digest = hashlib.file_digest(stream, "sha256").hexdigest()
@@ -60,7 +61,7 @@ def main():
             raise RuntimeError(f"GitHub upload digest mismatch: {path.name}")
         print("Verified", path.name, digest, flush=True)
     if args.publish:
-        response = session.patch(api + "/" + str(release["id"]), json={"draft": False, "make_latest": "true"}, timeout=30)
+        response = session.patch(api + "/" + str(release["id"]), json={"draft": False, "prerelease": args.prerelease, "make_latest": "false" if args.prerelease else "true"}, timeout=30)
         response.raise_for_status()
         print("Published", response.json()["html_url"], flush=True)
     else:

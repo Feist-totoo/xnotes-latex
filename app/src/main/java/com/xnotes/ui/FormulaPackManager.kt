@@ -65,6 +65,7 @@ fun FormulaPackManager(source: String, onChanged: () -> Unit, onDismiss: () -> U
         text = {
             Column(Modifier.heightIn(max = 480.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(if (chinese) "包从 GitHub Releases 下载，安装后独立在本机调用。基础识别始终离线可用；下载不会上传笔迹。" else "Packages come from GitHub Releases and run independently on this device. Core recognition always works offline; downloads never upload ink.")
+                Text(if (chinese) "高数、线代 v2 包含识别统计约束，其余包提供编辑辅助。统计数据源于 Google MathWriting，遵循 CC BY-NC-SA 4.0（非商业、署名、相同方式共享）。" else "Calculus and linear algebra v2 include recognition statistics; other packs assist editing. Statistics derived from Google MathWriting: CC BY-NC-SA 4.0 (noncommercial, attribution, share-alike).", style = MaterialTheme.typography.bodySmall)
                 Row {
                     TextButton(enabled = !busy, onClick = { operation { entries = FormulaPacks.refreshCatalog(context) } }) {
                         Text(if (chinese) "刷新 Release 目录" else "Refresh release catalog")
@@ -87,6 +88,7 @@ fun FormulaPackManager(source: String, onChanged: () -> Unit, onDismiss: () -> U
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
                             Text(pack?.name(chinese) ?: entry!!.name(chinese), style = MaterialTheme.typography.titleSmall)
+                            if (pack?.recognition != null) Text(if (chinese) "含实验候选评分（默认关闭）" else "Experimental recognition scoring (off by default)", style = MaterialTheme.typography.bodySmall)
                             Text(if (pack != null) "v${pack.version} · " + if (chinese) "已安装" else "Installed"
                                 else if (chinese) "未安装 · ${entry!!.bytes} B" else "Not installed · ${entry!!.bytes} B",
                                 style = MaterialTheme.typography.bodySmall)

@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "45e0a245a7185970",
+    "image": "45e0a245a7185970.png",
+    "strokes": "45e0a245a7185970.strokes.json",
+    "latex": "\\frac { d v } { d t } = M v",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "4cf9f8d672a9a1c328ebf17e2a5eb5326af13e05d9b7c1ceef4a02f9bf5954cd",
+    "image_sha256": "8ecb1efffb06349f5648d1f4ea0791766a0c36c439f63847537069948ca463ab"
+  },
+  {
+    "id": "5be9ac7cc441b172",
+    "image": "5be9ac7cc441b172.png",
+    "strokes": "5be9ac7cc441b172.strokes.json",
+    "latex": "\\int e ^ { x } s i n ( x ) d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "58f43cb39190598d46d7debff7326601c92387c51ca0e913462dc81828cea25b",
+    "image_sha256": "efbb12ae59831e78320e6a47789d585944bfa332f8b3d0f262627e854e3c8d7d"
+  },
+  {
+    "id": "fe1136a6df8e7318",
+    "image": "fe1136a6df8e7318.png",
+    "strokes": "fe1136a6df8e7318.strokes.json",
+    "latex": "\\int \\phi d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "57817bdf0d2a2e6e7e3bd863e48ec52bb91ee4c73703823ce2a5c3817db482f8",
+    "image_sha256": "d83014a7dcc14931f1396637d9012899b05896c4144314fe2d6503ae9bdccfa0"
+  },
+  {
+    "id": "64023c7b362428bc",
+    "image": "64023c7b362428bc.png",
+    "strokes": "64023c7b362428bc.strokes.json",
+    "latex": "\\int _ { 0 } ^ { t } B _ { s } ^ { 2 } d s",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "e74afaba1514aeb3fa81026e436d62b1ec445bec798bfc6c686d29cbcc80b397",
+    "image_sha256": "c840f4532382edd0fbeeb40dd6507d4dff21e50fc290d7b17fc29acec50efe6e"
+  },
+  {
+    "id": "75ce71395eead72f",
+    "image": "75ce71395eead72f.png",
+    "strokes": "75ce71395eead72f.strokes.json",
+    "latex": "\\frac { \\partial ^ { 2 } z } { \\partial t ^ { 2 } }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "4850fcf326e8177da5cd25aa33d8aab288168ed954fd8a9c0d5442eb35702cc0",
+    "image_sha256": "02d523bcbbda4f92771ce0d879f0c9ebd81c34efb34d8ace29c9f55ea81e3463"
+  },
+  {
+    "id": "ccd22003fdf0cbd9",
+    "image": "ccd22003fdf0cbd9.png",
+    "strokes": "ccd22003fdf0cbd9.strokes.json",
+    "latex": "E = E _ { 0 } - \\int P d V",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "92b6fcc6a032270eacc722ee87d723f02f38651fa0aabed74b469cbb8c84e460",
+    "image_sha256": "4fe0934e2ee46963a4bbfb745793ea0f104321097469e1cdb38253f48b595d8d"
+  },
+  {
+    "id": "600ded194042afd2",
+    "image": "600ded194042afd2.png",
+    "strokes": "600ded194042afd2.strokes.json",
+    "latex": "l i m _ { n \\rightarrow \\pm \\infty } x ^ { 2 } f ( x ) = 0",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "794c39f1b8e68ec88d3cc1ed37b53c906c8a6c736268ad11372b9b1072b678dc",
+    "image_sha256": "550029c18496755b9c73487902ebed4e01e2a20a58ec434b13d3c9a36e0eacf2"
+  },
+  {
+    "id": "a77345a353faa465",
+    "image": "a77345a353faa465.png",
+    "strokes": "a77345a353faa465.strokes.json",
+    "latex": "l i m _ { t \\rightarrow \\infty } \\overline { x } ( t )",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "a83fe8cdd3a720a332fa7f11a3c74b782533202b1200602846c31e7846cfb23c",
+    "image_sha256": "ed0cf21a59e0c23321320be786a4450d96f7523a2ecbbf99944b1859b462f5b9"
+  },
+  {
+    "id": "602968f41246de45",
+    "image": "602968f41246de45.png",
+    "strokes": "602968f41246de45.strokes.json",
+    "latex": "\\frac { d q } { d t } = \\frac { M } { B }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "129b5e0a9ee27e07a0f0c7e2c0b1e6f584ec192526c780cc322d5edc4f0161b4",
+    "image_sha256": "94cc29df89f9b7fbd8787c380512112b58cafb89fa0c3e9b4a5b1e6cebbce414"
+  },
+  {
+    "id": "b67024f188d5cb68",
+    "image": "b67024f188d5cb68.png",
+    "strokes": "b67024f188d5cb68.strokes.json",
+    "latex": "W ^ { 1 - \\frac { 1 } { p } , p } ( \\partial \\Omega )",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "57eb9e01c4ad437a4918b74a8d108e1a52d0de8372f3535a47c87ef8ca60dad9",
+    "image_sha256": "fbfe738291b6d171243ea557179414bfdc7e16945c63246d68198ef5390e0fec"
+  },
+  {
+    "id": "6b4ae2f3eb450b2b",
+    "image": "6b4ae2f3eb450b2b.png",
+    "strokes": "6b4ae2f3eb450b2b.strokes.json",
+    "latex": "\\int x ^ { x } d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "7ab445c01563deff6a78605bbe90462f43dc029d19ca9bb10773f40afc18d8e3",
+    "image_sha256": "c6db057e3f4348d8651d14f749147183a43f2e1a45a7f097621576939d864bf8"
+  },
+  {
+    "id": "3846563815e31394",
+    "image": "3846563815e31394.png",
+    "strokes": "3846563815e31394.strokes.json",
+    "latex": "\\int c o s x d x = s i n x + C",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "ac87b3f4213cb60dc8be29c8794f38d0cf342ce992ef1eee828219d286746fac",
+    "image_sha256": "f901fa34986c2b06880ca626fdd5a6145833dcb3b27fd2bbd224dc43186933f2"
+  },
+  {
+    "id": "b26db84e31387581",
+    "image": "b26db84e31387581.png",
+    "strokes": "b26db84e31387581.strokes.json",
+    "latex": "\\frac { d x } { d t } = r \\pm x ^ { 2 }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "2fda4596104d33e14e5feb1505eb950ec5268f82ecf19eb1ab36483545ba62ba",
+    "image_sha256": "0345bcabe32771d075f0f0b22771cbd46a033756676c57ab58a174b8e7d20fff"
+  },
+  {
+    "id": "8bdda13d856d22ad",
+    "image": "8bdda13d856d22ad.png",
+    "strokes": "8bdda13d856d22ad.strokes.json",
+    "latex": "\\frac { d F } { d L }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "6ca9a0f9e361cfdcfc2ab900fe616b314b7aa9d1d8793242abe910ff32b8124c",
+    "image_sha256": "94356b6565d9e7d088ea5f0907445039f0c4f62b678b10157185e307dec4ba2b"
+  },
+  {
+    "id": "136ec8e24b61ca2f",
+    "image": "136ec8e24b61ca2f.png",
+    "strokes": "136ec8e24b61ca2f.strokes.json",
+    "latex": "d m = ( \\frac { d y } { L } ) m",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "329471f3bf57421261ee1204152102bdb8945b9d01a940ca7f9079704ba9e8fc",
+    "image_sha256": "8895765401201edafd398ffcd45372d64490bbdffdb2c9293a7e953e5c4c2905"
+  },
+  {
+    "id": "0caeb7dd4c6a4070",
+    "image": "0caeb7dd4c6a4070.png",
+    "strokes": "0caeb7dd4c6a4070.strokes.json",
+    "latex": "\\int _ { D } f \\Delta g = 0",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "22831642c479eeb7ba34c35bdf85bbbd6a9bbe0a37f792159766b6d2f2386a76",
+    "image_sha256": "711d63d2d06c9b78ed272318b48b2a317334685719eafdab4b1a8d757087a71c"
+  },
+  {
+    "id": "1b2a82e0a16aeef7",
+    "image": "1b2a82e0a16aeef7.png",
+    "strokes": "1b2a82e0a16aeef7.strokes.json",
+    "latex": "\\frac { d V } { d t } = Q _ { 0 }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "af2c3f34ed9f3d0eb7b4e4df8c2742f0d180abf9256050da91283cc0e4579c08",
+    "image_sha256": "63db56a66c9d39b0e9675197cf8fc197e80e40de6534f42df4e4b1a2a1dd889b"
+  },
+  {
+    "id": "08c960fe9e27ec93",
+    "image": "08c960fe9e27ec93.png",
+    "strokes": "08c960fe9e27ec93.strokes.json",
+    "latex": "\\int _ { a } ^ { b } \\cdot \\cdot \\cdot d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "3d13233b93a95c400aa2a29a984ace9a6462689ee260ecbe2b4313462f1d1fc1",
+    "image_sha256": "52ccad1bb1c63963321db4d6b33b3b5b75c46a04e9b095e441e4200c5a7b17c4"
+  },
+  {
+    "id": "fb9a0dcaf433a843",
+    "image": "fb9a0dcaf433a843.png",
+    "strokes": "fb9a0dcaf433a843.strokes.json",
+    "latex": "\\frac { d f } { d x }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "e63d6d0ff33bfc1b00d83f8cec5817978e5b3ad34110e736a694829f690cd719",
+    "image_sha256": "5b75223fcc12dd6a4b904d8fac7d3e5c82900e08e4712945ae00937a1050b934"
+  },
+  {
+    "id": "c0f901147fb51475",
+    "image": "c0f901147fb51475.png",
+    "strokes": "c0f901147fb51475.strokes.json",
+    "latex": "\\frac { d P } { d \\tau }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "44dc296bdd0489253c989ada467312ce1e5447fc4b11537d0ebd540aeec57ee4",
+    "image_sha256": "a59eb74403c1ea91e6cfd0ad9b15d92ea2966cec454f4b9ce598e5014db272d2"
+  },
+  {
+    "id": "f75f63d03a06d866",
+    "image": "f75f63d03a06d866.png",
+    "strokes": "f75f63d03a06d866.strokes.json",
+    "latex": "| | f | | _ { 1 } = \\int | f | d \\mu",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "83d86aaf0f5e7b082bfb6cf7efd8c4850855d0290d70fca15453643f59ef7f4c",
+    "image_sha256": "dce7536c0eec751da45034bae81c1d7eb919b38cf60b28007b1d2f8bbdbf2e76"
+  },
+  {
+    "id": "1bea5e1efc8bcc18",
+    "image": "1bea5e1efc8bcc18.png",
+    "strokes": "1bea5e1efc8bcc18.strokes.json",
+    "latex": "\\frac { \\partial Y } { \\partial K }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "bc2aa9becd8896e1cf470d3970bc2766481f18cfeaf090dad7bc11909bd25869",
+    "image_sha256": "c2d83e4caa6e546755821dfc8b3ee2381829f144961d448419dc146cc9870333"
+  },
+  {
+    "id": "86e5fb9dccaeb032",
+    "image": "86e5fb9dccaeb032.png",
+    "strokes": "86e5fb9dccaeb032.strokes.json",
+    "latex": "l i m _ { y \\rightarrow 0 } g ^ { \\prime } ( y ) = - \\infty",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "d1ed8a11692a2f65691e13727a9fcf192483fc9503079606761f49c2d9b0b345",
+    "image_sha256": "3bc7675ad6a102d9b72452e589df5b1411a197c5c01f262c36b308bf0a9a4e67"
+  },
+  {
+    "id": "a1dfee50bc53eaa5",
+    "image": "a1dfee50bc53eaa5.png",
+    "strokes": "a1dfee50bc53eaa5.strokes.json",
+    "latex": "\\int u ^ { 1 / 2 } d u",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "999ec7a06c6178da6096502e69cf491ce8cefe47a09fab4857f2fa03241abc38",
+    "image_sha256": "a5d076ff3f2fcb9b5ee45a79b0ea8358625f5ce440bc53cf6fd5db64717489f8"
+  },
+  {
+    "id": "546c7ad776963b67",
+    "image": "546c7ad776963b67.png",
+    "strokes": "546c7ad776963b67.strokes.json",
+    "latex": "W _ { 1 - 2 } = \\int P d V = 0",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "1d7a1ef5852c7fe08f8370de4ba99715d0e0827282045cab2e996c218a638113",
+    "image_sha256": "650b831bff35fa4a8056cc6a2707839756c47f5ba0930c2be84d160d54dcc369"
+  },
+  {
+    "id": "b351284218fa2f70",
+    "image": "b351284218fa2f70.png",
+    "strokes": "b351284218fa2f70.strokes.json",
+    "latex": "H = \\int \\rho h d V",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "0ebe79d1028db2e314c73ef8408d4d022dcf5d8441453f39ee7f947497667553",
+    "image_sha256": "a25579a79e893374abf5c0c0353779b817f93951fcfa56e9b5ba52aaebc1225a"
+  },
+  {
+    "id": "e3694ebfe71264f3",
+    "image": "e3694ebfe71264f3.png",
+    "strokes": "e3694ebfe71264f3.strokes.json",
+    "latex": "\\int _ { 0 } ^ { L } d s",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "3418fa001eebc8a37298680691882f681716e601b99f62e928078c1eb386ff2a",
+    "image_sha256": "d3071d8ce8f4e75edb4d41dadf3d7c2385a0064e6c9af6d8ade852dfbf69a3e2"
+  },
+  {
+    "id": "44f9e62e574de4e9",
+    "image": "44f9e62e574de4e9.png",
+    "strokes": "44f9e62e574de4e9.strokes.json",
+    "latex": "H = \\int \\rho h d V",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "f5e09acece2838a9e80baf8ee52a5650d061a618f1582d04a2db75896447373c",
+    "image_sha256": "9e8c3b5964f903d037f52fa4e9898a4d2b44753897b4f9e379c6abbb110efb7e"
+  },
+  {
+    "id": "6d7a21645b4efb73",
+    "image": "6d7a21645b4efb73.png",
+    "strokes": "6d7a21645b4efb73.strokes.json",
+    "latex": "\\int _ { \\Omega } f ( x ) d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "67357fbf60df005cc655715bf5e2f3bffc9e16015b00df918fbbc788d5c33b10",
+    "image_sha256": "e509fd30b08034be1ef4b73e914d23f6550416489b5735034e46fbd5906ab96f"
+  },
+  {
+    "id": "a0b9a1edeceba539",
+    "image": "a0b9a1edeceba539.png",
+    "strokes": "a0b9a1edeceba539.strokes.json",
+    "latex": "\\int \\frac { x d x } { r } = r",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "df49a83fb64bcab831ca15e53d43bb1fe4673bba2c3d878b82fe789cde17f5fd",
+    "image_sha256": "c74ba265d6ad5c8ecc86a9c84fcab3b8c5c5f88d4438cc24e4a5860135ac010d"
+  },
+  {
+    "id": "e9f3ffdcdc04f6bc",
+    "image": "e9f3ffdcdc04f6bc.png",
+    "strokes": "e9f3ffdcdc04f6bc.strokes.json",
+    "latex": "\\frac { \\partial } { \\partial x ^ { \\sigma } } j ^ { \\sigma } = 0",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "018be71b91f343ccd43edd5d1a11ddb4efbb5f31991a6af76a9ad3821945f557",
+    "image_sha256": "d9505f61b792f437bbadae8107fb9bc0644122acc42c884b4aaceda23de180e1"
+  },
+  {
+    "id": "5a1fe42fe086f620",
+    "image": "5a1fe42fe086f620.png",
+    "strokes": "5a1fe42fe086f620.strokes.json",
+    "latex": "\\frac { d S } { d T }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "f7881c9ebc44964a5f91229751848061b761c248d951b7a0feac2411dbae6602",
+    "image_sha256": "9dd948f0e0602236319840d5a7cc0186f5c273f5ad5c9606641de1ba1d3ef2ed"
+  },
+  {
+    "id": "37077c3d65c9b34d",
+    "image": "37077c3d65c9b34d.png",
+    "strokes": "37077c3d65c9b34d.strokes.json",
+    "latex": "\\tau = \\int d t ^ { \\prime } f ^ { 2 } ( t ^ { \\prime } )",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "f50a8871b12e82fbe58b259fb7423ac833b0b378d2c8b1151705a0da7e45922e",
+    "image_sha256": "6035f66bb3689d9c9813927b04364d232046aabebfa96fd4d57aa80e3c71ea4b"
+  },
+  {
+    "id": "4df2d702cd516d78",
+    "image": "4df2d702cd516d78.png",
+    "strokes": "4df2d702cd516d78.strokes.json",
+    "latex": "\\Delta f = \\frac { \\partial ^ { 2 } f } { \\partial x ^ { 2 } } + \\frac { \\partial ^ { 2 } f } { \\partial y ^ { 2 } }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "28d9579013289dc66340fb88bece866fee22dad02a5311c0bc8f96cc64a55a3d",
+    "image_sha256": "a2951dda86b897b9438eb4b5be414fd63801c438fd001732fe7c08024c96b73d"
+  },
+  {
+    "id": "d6a1f1553f777b22",
+    "image": "d6a1f1553f777b22.png",
+    "strokes": "d6a1f1553f777b22.strokes.json",
+    "latex": "\\frac { \\partial p } { \\partial z } = 0",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "98a1aeba5ce323bb020a3dd71d5ed8f1904607feca1a375cf50d77d687b3260b",
+    "image_sha256": "49726fcb23130adb41972afd8edf65216145bd636b606173d813474ea320bc04"
+  },
+  {
+    "id": "2b00ae3dfdb8f1bf",
+    "image": "2b00ae3dfdb8f1bf.png",
+    "strokes": "2b00ae3dfdb8f1bf.strokes.json",
+    "latex": "\\int d y",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "858ecf924de9802c68de37c8ad3fa25e5a909ad9e17c830e8035150d6d71b844",
+    "image_sha256": "d4451de55126c9ad41e8b8317a9140059e44991fdb108793d87d546f82524d4f"
+  },
+  {
+    "id": "515f925744e9517e",
+    "image": "515f925744e9517e.png",
+    "strokes": "515f925744e9517e.strokes.json",
+    "latex": "- E = \\nabla V + \\frac { \\partial A } { \\partial t }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "2075f0485150164c75fd807176c0366bf0330f84b9c6c5e17f38344b1a01cb0d",
+    "image_sha256": "20d81ecb891f946570aaf01ffb6c03b0bea6e6bb657b58181a9a7ffbb181879f"
+  },
+  {
+    "id": "bc96950516557b55",
+    "image": "bc96950516557b55.png",
+    "strokes": "bc96950516557b55.strokes.json",
+    "latex": "\\int p ( x ) d x = 1",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "caff8e15ceef62e62ee33503e669f7d6d2369a74b7c9bd4ee413a851b2d82087",
+    "image_sha256": "97e6a3013bcd8257627afaa0f955d87057bf1753aa8f093cdc03310c3ae9ec59"
+  },
+  {
+    "id": "3f9ed97683a71f74",
+    "image": "3f9ed97683a71f74.png",
+    "strokes": "3f9ed97683a71f74.strokes.json",
+    "latex": "v = \\frac { d r } { d t }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "af1e63c97639010b8e19e2fd53c09a6d79cbca16ff3fe367fa49885e6b605743",
+    "image_sha256": "f934da9e214f05cab3b597edd1e7d59ea3f3c12afbbaa73c7dcf8815b479c7fb"
+  },
+  {
+    "id": "ce6ecb9ca93a7cf1",
+    "image": "ce6ecb9ca93a7cf1.png",
+    "strokes": "ce6ecb9ca93a7cf1.strokes.json",
+    "latex": "\\int p d q",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "ba93831370ec415ab0a44edc1fb437d22164feaf7b018e95ecd167e008b308cd",
+    "image_sha256": "1e8fbe9a22627b54a4f2e01357688893d3a7060a4fde08f6372561ab73c82856"
+  },
+  {
+    "id": "74aa3972ec65f132",
+    "image": "74aa3972ec65f132.png",
+    "strokes": "74aa3972ec65f132.strokes.json",
+    "latex": "g ( x ) \\int f ( x ) d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "60ae7225dfc3ad8f0908eb1fbf7f19db7a66855c5cbab04c7a5a0aa6ab2042ad",
+    "image_sha256": "41fa4d0c9ed85f47fb7a6bd7897a17aa0c74d91b0ec89e440d0c29b90282a5a4"
+  },
+  {
+    "id": "644be8f9d6585574",
+    "image": "644be8f9d6585574.png",
+    "strokes": "644be8f9d6585574.strokes.json",
+    "latex": "\\int _ { 1 } ^ { 5 } 2 x d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "71a40f11f796a0559e7c33ca0dc7a7ef6142aa7b967ce6a3fc6e1c67e59643ad",
+    "image_sha256": "bf4cfcae8c25302a396a8b6894225d020c2853e64bd427a5b818aeafb83eba6c"
+  },
+  {
+    "id": "5a2d832697293ef0",
+    "image": "5a2d832697293ef0.png",
+    "strokes": "5a2d832697293ef0.strokes.json",
+    "latex": "A = \\int _ { 0 } ^ { a } e ^ { x } d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "977c030653dd393246699d0d784a9fd494f5df5ec52ced9797b5e45951dfbc5b",
+    "image_sha256": "ce565619e300affb6bc799adb119964ba134178144fcceb7b352254717619d2e"
+  },
+  {
+    "id": "fed885d5270ab858",
+    "image": "fed885d5270ab858.png",
+    "strokes": "fed885d5270ab858.strokes.json",
+    "latex": "\\int _ { 0 } ^ { 1 } f ( x ) d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "24ead6adc8dfc173adc278a3825cf895eb863d34cd4108bd1b0e269ac909e272",
+    "image_sha256": "667ffe8faaa9d001c121eed0381a09455e289b9fc2b3cfca3fcfb1de66d8f6e0"
+  },
+  {
+    "id": "a76d2c3591a2f9e3",
+    "image": "a76d2c3591a2f9e3.png",
+    "strokes": "a76d2c3591a2f9e3.strokes.json",
+    "latex": "S = \\int _ { M } B F",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "1b56f271672bfc355307aefd8f8a599566f980866a5db04fc6589d407c9bc221",
+    "image_sha256": "155c3782e59f4d18b1d9b27a293c01ed82a88a6510e935183a8a5f3f4db5b216"
+  },
+  {
+    "id": "c4785f5003dfdd7c",
+    "image": "c4785f5003dfdd7c.png",
+    "strokes": "c4785f5003dfdd7c.strokes.json",
+    "latex": "s = \\int d s",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "a1b33db38b27d9aa09fe628ea6b854a19468b1fee5253cb30aa7a563def286ac",
+    "image_sha256": "be97483add1c6cfdbc2fcabe561a93838a98153d09cf6e479018aa6f8d911691"
+  },
+  {
+    "id": "fb00af319466dacf",
+    "image": "fb00af319466dacf.png",
+    "strokes": "fb00af319466dacf.strokes.json",
+    "latex": "\\frac { d ^ { 4 } y } { d x ^ { 4 } }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "669a999eeba582185e85f53269e1fc480fd74c370e645b501980423ee2ff31e4",
+    "image_sha256": "41b50ce2f59fc3ca5cd4574047b16d25e0271a2395c6fe5bb441b5619fbb7fd6"
+  },
+  {
+    "id": "216b22a7c919e367",
+    "image": "216b22a7c919e367.png",
+    "strokes": "216b22a7c919e367.strokes.json",
+    "latex": "\\int _ { S } H ^ { 2 } d A",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "f405830691fefd508670bc2487dcbaa205b56f04b0daebe0ab05535763ebb662",
+    "image_sha256": "cd4b87d93734b7944d47dd97b57c6df7a8bf654870788d3b5353f28b62a26b6a"
+  },
+  {
+    "id": "42c626636010ac76",
+    "image": "42c626636010ac76.png",
+    "strokes": "42c626636010ac76.strokes.json",
+    "latex": "\\varphi = \\frac { d \\varphi } { d z } = 0",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "1824d57384955652d7959187d806a04b39f8cf6792870aaa0ba4d87ef2cdaec8",
+    "image_sha256": "152a08511f803a02bdf4e6fa98b281dd8de0e2781093bc2bb298c70653aafbb5"
+  },
+  {
+    "id": "45073b51cb133553",
+    "image": "45073b51cb133553.png",
+    "strokes": "45073b51cb133553.strokes.json",
+    "latex": "\\int f d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "a92d8d2291fa02b0b062e965b48964e8abe912ff46a27c8e02cdad7fc800e6b4",
+    "image_sha256": "e070ee0b6f8a29f3e3e3a7604cf9ff73dc1a29d5ed4848174d6107b1717d7c50"
+  },
+  {
+    "id": "afdeefd253a54528",
+    "image": "afdeefd253a54528.png",
+    "strokes": "afdeefd253a54528.strokes.json",
+    "latex": "\\frac { \\partial \\omega } { \\partial k }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "1e28baa4f39a6b8b51bbb574260ad95af4da7114188446a6276275d4f2e24565",
+    "image_sha256": "f3ad2d8bc7794eae66e71bb3ddae0515bc8a3a59060ef8e02d3ff9e019312e78"
+  },
+  {
+    "id": "56130d8156ea637f",
+    "image": "56130d8156ea637f.png",
+    "strokes": "56130d8156ea637f.strokes.json",
+    "latex": "\\frac { d y } { d s } = 1",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "a2203760d49b2dfa6384101498050da52bf6a0004f97cf9d087cfe5b2eea5fe9",
+    "image_sha256": "fdb85ac28b30aa88272a3bf2f9456481967fe7bb293e372195a49e7057a1af2c"
+  },
+  {
+    "id": "5e1f6d45e01a9bd1",
+    "image": "5e1f6d45e01a9bd1.png",
+    "strokes": "5e1f6d45e01a9bd1.strokes.json",
+    "latex": "\\int _ { \\gamma } \\rho | d z |",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "127715847778b2b7e7f66c85331666414559f1370de2ffbf3aaa4f1fb93eac42",
+    "image_sha256": "87d49a6c0a2c9b8f071b82e290e93fa897fb91ba3436cd5a40da9a0177a017a5"
+  },
+  {
+    "id": "27ee2ea5c1ca0752",
+    "image": "27ee2ea5c1ca0752.png",
+    "strokes": "27ee2ea5c1ca0752.strokes.json",
+    "latex": "\\int _ { 1 } ^ { 0 } \\frac { d t } { t } = - \\infty",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "d282388873dfee64b339a8d9f5ce69cc3cfdb0b8f15f6fa9bdc931afa3a3e9ff",
+    "image_sha256": "0f2b01d82baeddb154f26c3b4623fb598590e32fed2c437dea796d2bcf780868"
+  },
+  {
+    "id": "d73fd357be649184",
+    "image": "d73fd357be649184.png",
+    "strokes": "d73fd357be649184.strokes.json",
+    "latex": "G = \\int _ { 0 } ^ { T } k ( t ) x ( t ) d t",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "b8b54f2d0afb1b21a01fc7a098f783f2be450d61a071c3414fee264b21866e7f",
+    "image_sha256": "6876cb837b460cf12db5931489f757417f7e07befab6ff2a9019a9fd6e4acbfa"
+  },
+  {
+    "id": "96fb76b34b8abcee",
+    "image": "96fb76b34b8abcee.png",
+    "strokes": "96fb76b34b8abcee.strokes.json",
+    "latex": "\\frac { d ^ { 2 } x } { d t ^ { 2 } }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "74e56680e0efbe5fbcea346c04d1ac75af4f3025d4c304a3a83fc2e3233c9a54",
+    "image_sha256": "238b323b1595e84e72dfe62a8289240bfed246974c43425a02e857de46847adf"
+  },
+  {
+    "id": "8130c40aa8bd5ee3",
+    "image": "8130c40aa8bd5ee3.png",
+    "strokes": "8130c40aa8bd5ee3.strokes.json",
+    "latex": "- 2 \\int E d l",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "cff871829bdcd8860efd5c8244f642d6968a97da6802e004d22cd09a12db3bde",
+    "image_sha256": "b3b571f2f65c661ca5fc64b5fe6378c852d3e338705ba316f90eef608bf2ed4a"
+  },
+  {
+    "id": "c24b97d5d4878b0c",
+    "image": "c24b97d5d4878b0c.png",
+    "strokes": "c24b97d5d4878b0c.strokes.json",
+    "latex": "\\frac { \\partial I } { \\partial y }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "877310384790c143e89feff0061bf562b197bee4984da64ff498a11fd34242a7",
+    "image_sha256": "6d32564dae3a7c0a0a86dac304ca2072a87473db07d4144b7ed325bb619564a6"
+  },
+  {
+    "id": "50b5972949eabaf1",
+    "image": "50b5972949eabaf1.png",
+    "strokes": "50b5972949eabaf1.strokes.json",
+    "latex": "2 \\frac { d A } { d t } = n a b",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "b8eb1d3b914fb4410a6d18c82d5db37ae4960f6567993b4df2397dd33034eddc",
+    "image_sha256": "6d1c97eae8dc27f0ebb0899e356bb1acec632f76c45ceee13a0a3dd5b54bbbc7"
+  },
+  {
+    "id": "f9a44faecdff360d",
+    "image": "f9a44faecdff360d.png",
+    "strokes": "f9a44faecdff360d.strokes.json",
+    "latex": "\\int _ { 0 } ^ { 1 } g _ { n } = 1",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "d58eee6cef71aa6c31c80e8f9d0aa03f85f7337df02e30b6341c7acca8a5d585",
+    "image_sha256": "8075f36a571dbd87128cdcbeadf5c18cf1cee78a131593c8ee8796c8c1ba0443"
+  },
+  {
+    "id": "868059e68885d437",
+    "image": "868059e68885d437.png",
+    "strokes": "868059e68885d437.strokes.json",
+    "latex": "\\frac { \\partial \\theta _ { e } } { \\partial z } > 0",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "1ec4586da9900a49d5cb30f5713ef76d2926d6414871ddf66dd6dc80d8e6ee1a",
+    "image_sha256": "2aa05f00c69467c369fb7cb263f6346c38f83913fccc2c85a32163d93d007e00"
+  },
+  {
+    "id": "f4e0ac8f8a399fcb",
+    "image": "f4e0ac8f8a399fcb.png",
+    "strokes": "f4e0ac8f8a399fcb.strokes.json",
+    "latex": "f ( r ) = \\frac { h ^ { 2 } } { p ^ { 3 } } \\frac { d p } { d r }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "f5efdd987c2203827fb95eb3b3b100d4c8af9bf8f9e6e64a93fc12555c965066",
+    "image_sha256": "51fd5ad70764dc20248e30e62eefea1a9448d52987cbc025308c993456e7e71d"
+  },
+  {
+    "id": "eae31a15f7e471c8",
+    "image": "eae31a15f7e471c8.png",
+    "strokes": "eae31a15f7e471c8.strokes.json",
+    "latex": "\\int d x = 0",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "7a18cfade181dba8d7da36b6e3412745b2a006bb1304c7dcbf53e850618d54af",
+    "image_sha256": "e2a29a7468186e3b79afbf1031c00aa5d11b0dba76c443ee45fdbe258087cc59"
+  },
+  {
+    "id": "c7e43b0b5d410323",
+    "image": "c7e43b0b5d410323.png",
+    "strokes": "c7e43b0b5d410323.strokes.json",
+    "latex": "v = - \\frac { \\partial \\psi } { \\partial x }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "4d49fef8551dcee80929ad550ac82797801d06321c8e79b73ef201cf83aa166e",
+    "image_sha256": "b103577a1b582b200bfcafffac86e692edb21c5a4a6abd57d4e6b969524dfdea"
+  },
+  {
+    "id": "b46038c19eed53f1",
+    "image": "b46038c19eed53f1.png",
+    "strokes": "b46038c19eed53f1.strokes.json",
+    "latex": "y ( x ) = \\int g ( x ) d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "36bf120fc1da685106982aacdc724448431a99d97d1c3cd0ebe2ca7a6540c027",
+    "image_sha256": "831d7c060e7ca7f75ff21aa842f9f5274e06151af9358c28a05ce46d06b73379"
+  },
+  {
+    "id": "a453b229aecf090e",
+    "image": "a453b229aecf090e.png",
+    "strokes": "a453b229aecf090e.strokes.json",
+    "latex": "g ( x ) = \\int _ { 0 } ^ { x } f ( t ) d t",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "43f91c1089f1cd7f42769b853192265438ba1dcc60d0350cb07bab268d34e129",
+    "image_sha256": "3bf2558c164aa1f3567416fa649b7fa8119ebd03eda990717cd81635325bab74"
+  },
+  {
+    "id": "db87d4eb3a524b5e",
+    "image": "db87d4eb3a524b5e.png",
+    "strokes": "db87d4eb3a524b5e.strokes.json",
+    "latex": "\\int v d p",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "23f827f9b712ca23968ec459b77ca33e24de78850c7f977a74288ed66fe284dc",
+    "image_sha256": "8dd8874927236ee2fe607b88b85e1d9f5932d596ea3b929433ddf47e5c227efd"
+  },
+  {
+    "id": "32ef4a652fbe674d",
+    "image": "32ef4a652fbe674d.png",
+    "strokes": "32ef4a652fbe674d.strokes.json",
+    "latex": "U = \\int f ( v ) E ( v ) d v",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "cb3e35642781f910f877c8aaf0463143c0b76d2d4edbc371f89ea77aef4dcc8f",
+    "image_sha256": "b8480cc19c7f7ec2c31e177d2bda8b9a2c288d601c5471e71207edecc5704304"
+  },
+  {
+    "id": "badd00f97316b455",
+    "image": "badd00f97316b455.png",
+    "strokes": "badd00f97316b455.strokes.json",
+    "latex": "\\frac { \\partial i _ { l } } { \\partial x } = - i _ { m }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "7668522e43180e3468f5ebaf3150b64ec07f05e8189288e8d8b12be75c804fcd",
+    "image_sha256": "d29f9acf75f4586e823ce8730c46f7575200f3aeae6c2629f7dbe13109c666d4"
+  },
+  {
+    "id": "805b8c34734c8267",
+    "image": "805b8c34734c8267.png",
+    "strokes": "805b8c34734c8267.strokes.json",
+    "latex": "W = - \\int F d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "8aa364576be01492bf54dabdd26404f90fd515ebc2b5af8a38163563330776c1",
+    "image_sha256": "78928fc0ac6b326be7cbef2a25c7b1045fce06087ec49be8ccfe668eae6f300a"
+  },
+  {
+    "id": "fb60d15c7bd369b1",
+    "image": "fb60d15c7bd369b1.png",
+    "strokes": "fb60d15c7bd369b1.strokes.json",
+    "latex": "\\frac { d I } { d t }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "d44dffc88c9b87dc6bd663d6039cd239420e0fbee42a59d3c1aa657d83e66a3f",
+    "image_sha256": "e0ab0f11a3cbbe40973f2d0407e5eb15d902202d3aeec91697be19d62bcfeeb5"
+  },
+  {
+    "id": "a7e8bd735afc77a0",
+    "image": "a7e8bd735afc77a0.png",
+    "strokes": "a7e8bd735afc77a0.strokes.json",
+    "latex": "\\partial C / \\partial Y _ { d } = b",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "b37740d30bb987acfe310314b4bf98031715107acaab8e99ce393b36ba2c7ca6",
+    "image_sha256": "5668ee18e78db4453a54a420bcd17ad79d1b0962b7f040658323ac891f1684e7"
+  },
+  {
+    "id": "2c1545285612240f",
+    "image": "2c1545285612240f.png",
+    "strokes": "2c1545285612240f.strokes.json",
+    "latex": "E = \\int F u d t",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "9836b7e863ddf87ac3f8ae962c95c1d1f2c8268cd9ecb8f673e05b6218b66d2a",
+    "image_sha256": "bc7dcf4cb8d7adf856ee665b3ae282fc8882fd9873ee6e2fb0a4f28697064a27"
+  },
+  {
+    "id": "c74ba026d755a1a6",
+    "image": "c74ba026d755a1a6.png",
+    "strokes": "c74ba026d755a1a6.strokes.json",
+    "latex": "l i m _ { x \\rightarrow 0 ^ { + } } \\frac { 2 x } { x } = 2",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "64a88b09857ec42d5297bfe8ba33f8d00f29ef3286fc957b42479001749347c4",
+    "image_sha256": "d78b9617e3bd1346a5cd6cefc3974d0e074f0e5e778ec6ed8e6348d1a4dda442"
+  },
+  {
+    "id": "1f8ab5ba92377b4b",
+    "image": "1f8ab5ba92377b4b.png",
+    "strokes": "1f8ab5ba92377b4b.strokes.json",
+    "latex": "\\frac { \\partial \\Phi } { \\partial t } = \\frac { 1 } { i \\hbar } H \\Phi",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "125d5bac43d4a827a5f8d46387e42c9d590959dab45cb5a89cdf9c46f566e014",
+    "image_sha256": "1f646060663df219382191c6ebfe85ebd523ceddb302d3642cdb50c46a1bf146"
+  },
+  {
+    "id": "2b0579f9bbeb0f43",
+    "image": "2b0579f9bbeb0f43.png",
+    "strokes": "2b0579f9bbeb0f43.strokes.json",
+    "latex": "| \\frac { \\partial S } { \\partial y } | \\ll 1",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "e72c8524637b4d7110c47889ef7721e399cbe37e99e8f820bb00346a0e565499",
+    "image_sha256": "cb2ce73a4f3c8482728f01362fc84c2a881a00284be5b1402cc5635ad8aa6243"
+  },
+  {
+    "id": "4a466726d728b491",
+    "image": "4a466726d728b491.png",
+    "strokes": "4a466726d728b491.strokes.json",
+    "latex": "2 \\pi I b | d b | = I \\frac { d \\sigma } { d \\Omega } d \\Omega",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "6d274f99cfb29ccb07346ec11db41d7f1bef40935e2b1ce009ffe0d4f154fda6",
+    "image_sha256": "28d608f2ba72daf68299145ef52b6036ab2aab30de5c3dc914208baee03112f6"
+  },
+  {
+    "id": "3952d81ce8f44195",
+    "image": "3952d81ce8f44195.png",
+    "strokes": "3952d81ce8f44195.strokes.json",
+    "latex": "\\int _ { a } ^ { b } f ( x ) d x",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "4a85879c84f37fd07afafaf3c1c71e8ccdeb7aefbb5e08d6e00b3a0ed1fcab47",
+    "image_sha256": "6264cc9920a3c6017283785a1ec906b77f536ec770d2c0d25588837e2e56cdea"
+  },
+  {
+    "id": "c516d38cd0951db0",
+    "image": "c516d38cd0951db0.png",
+    "strokes": "c516d38cd0951db0.strokes.json",
+    "latex": "\\int _ { 0 } ^ { T } \\lambda ( t ) d t = 1",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "8c04088b4c3e798552031ac51ca87d5dc7b2c5b988e93adaff6c1c2c88d7b0a9",
+    "image_sha256": "402fd52b24fad9086bb9001ad4fabb85b20f85a067e3cccc450f481b43109781"
+  },
+  {
+    "id": "62aacaa886d08588",
+    "image": "62aacaa886d08588.png",
+    "strokes": "62aacaa886d08588.strokes.json",
+    "latex": "T = \\frac { \\partial U } { \\partial S }",
+    "subject": "calculus",
+    "split": "valid",
+    "strokes_sha256": "ceb8eb915e6c90aaddc9246f25ce8b4408ab194909c6d3bbe79d094def2b8968",
+    "image_sha256": "f533dab8c42ffcf3210fdf776d0efa622082411e93b48d54eba0198908dbe5b2"
+  },
+  {
+    "id": "bed3c89c8e1f1f2e",
+    "image": "bed3c89c8e1f1f2e.png",
+    "strokes": "bed3c89c8e1f1f2e.strokes.json",
+    "latex": "M = ( \\begin{matrix} - i & i \\\\ e x p ( i t ) & e x p ( - i t ) \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "074e633cfde941edd1fbc4ea348299cea4dc79e0fd17648019e22c445c7c5ebc",
+    "image_sha256": "d5c06a3df2efad7e673c5c8b38cbd1647af10d32b50d8187d4279468f1c33d37"
+  },
+  {
+    "id": "8c3c5e9f4963a21e",
+    "image": "8c3c5e9f4963a21e.png",
+    "strokes": "8c3c5e9f4963a21e.strokes.json",
+    "latex": "( \\begin{matrix} 0 & 0 \\\\ 0 & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "86dfd3b3372b5f93ee7abc800321073a287a8da2b1e3ab964a9f4319a012fc53",
+    "image_sha256": "32a489a5b8f7f6bf07eb4328b3507b82f1cc4bdb53cd655c82b082513aad4a1f"
+  },
+  {
+    "id": "db3929a7e5b72323",
+    "image": "db3929a7e5b72323.png",
+    "strokes": "db3929a7e5b72323.strokes.json",
+    "latex": "( \\begin{matrix} a & b \\\\ c & d \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "1772f94b711d70731e30f73c68d09b1185587529cbccd38aa0f52eec11518076",
+    "image_sha256": "f546e5bcb17922164cb4365b0c8eebb39927af80aaa1c1d21330c72ab25ce924"
+  },
+  {
+    "id": "b4811912513376df",
+    "image": "b4811912513376df.png",
+    "strokes": "b4811912513376df.strokes.json",
+    "latex": "[ \\begin{matrix} 1 & 2 & 1 \\\\ - 2 & - 3 & 1 \\\\ 3 & 5 & 0 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "07d98a410b88b19c835511e7d71383d09b876051524191afbb80c9c36b13be37",
+    "image_sha256": "8967163bfb46e399bbb08fe9e1ae32b875567210e5f50f5794f4dd31b961c98a"
+  },
+  {
+    "id": "065054ce7c6ae498",
+    "image": "065054ce7c6ae498.png",
+    "strokes": "065054ce7c6ae498.strokes.json",
+    "latex": "( \\begin{matrix} 1 & \\nu \\\\ 1 & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "1d3cce6cf3bc271a70389dac687ab5d9d4e1393c16faa420e126405697e8de31",
+    "image_sha256": "fa0de33272c47063adaec37fbae8d3c4ef8a73e6a3dcfe3e9275bae7786157df"
+  },
+  {
+    "id": "1624e27a5c6a0989",
+    "image": "1624e27a5c6a0989.png",
+    "strokes": "1624e27a5c6a0989.strokes.json",
+    "latex": "( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "47d2614fa7252bceaec71bb5833ef1448aad887d819cc3c697442cbdb7dcc7d9",
+    "image_sha256": "7378e33d85cabefa211fdb62f1fb36f46302678d4fd8692f8e25ea6b19d8fc4d"
+  },
+  {
+    "id": "bf976f55abd6b0c3",
+    "image": "bf976f55abd6b0c3.png",
+    "strokes": "bf976f55abd6b0c3.strokes.json",
+    "latex": "( \\begin{matrix} 1 & 1 \\\\ - a & - c \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "a1e7fde677fc7edc8e736f5b8a0e9060da62d90544828e5d528ed3241e0c8e51",
+    "image_sha256": "82a6729736b218207785f85045d6e519374ed7b341f93c8129cacf05a625efa6"
+  },
+  {
+    "id": "d4afbfd266f98414",
+    "image": "d4afbfd266f98414.png",
+    "strokes": "d4afbfd266f98414.strokes.json",
+    "latex": "[ \\begin{matrix} 2 & 2 & 4 \\\\ 3 & 5 \\\\ 6 & 6 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "a3a0066f028e64e3f2206a8840eff018ef62a5d38e8b72c3c584ba81d6d11aa7",
+    "image_sha256": "f52023552c24f5422fa7be45947d54a9b49561f4ddc5347d52e7629c8664c0a4"
+  },
+  {
+    "id": "5abc30e227fdda78",
+    "image": "5abc30e227fdda78.png",
+    "strokes": "5abc30e227fdda78.strokes.json",
+    "latex": "A = ( \\begin{matrix} 1 & 1 & 2 \\\\ 3 & 1 & - 1 \\\\ \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "a8f3f79de641a06d836ed012566fc2fb2491c46b854c7a0e2d992a99ca742912",
+    "image_sha256": "83cf677655e5b39cfedaa6b67477c3425150d8cf7808e6a23037604b17d49de5"
+  },
+  {
+    "id": "b9e5216ea56e1114",
+    "image": "b9e5216ea56e1114.png",
+    "strokes": "b9e5216ea56e1114.strokes.json",
+    "latex": "[ \\begin{matrix} S / I & S / I \\\\ 0 & S \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "d2b6385fe490b4ecf06cb8c170f26bbe01fcbcf09bc310e8c60a42f92ad570b0",
+    "image_sha256": "95fbeaecc48995b5252ce08ad0a6bcbb9461ba2b4392f4c7ccffce527844e9cc"
+  },
+  {
+    "id": "916f9d23b923686e",
+    "image": "916f9d23b923686e.png",
+    "strokes": "916f9d23b923686e.strokes.json",
+    "latex": "[ \\begin{matrix} 1 & 2 \\\\ 2 & 4 \\\\ \\end{matrix} ] \\sim [ \\begin{matrix} 1 & 2 \\\\ 0 & 0 \\\\ \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "9de722d4b9a8af413709138286d404977727388496eeb4801f900f8f3ba8c605",
+    "image_sha256": "3181856cc21bb5645870d156f9036522ae8a2f4cb5c054c03979068f5804e5bf"
+  },
+  {
+    "id": "c68b0a777bb0d38c",
+    "image": "c68b0a777bb0d38c.png",
+    "strokes": "c68b0a777bb0d38c.strokes.json",
+    "latex": "S = ( \\begin{matrix} I _ { p } & 0 \\\\ 0 & - I _ { 2 } \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "dfa21a004344f7f567dcdb3e76484754d4b117bc178384172dedc555c605329e",
+    "image_sha256": "2a25ae62c6a9e35cb27a1d11eb775cc9e85da62bd610132a59957290c78a6504"
+  },
+  {
+    "id": "1bad7517f375276a",
+    "image": "1bad7517f375276a.png",
+    "strokes": "1bad7517f375276a.strokes.json",
+    "latex": "( \\begin{matrix} 0 & 1 \\\\ - 1 & 0 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "8abda3d06e03e9a1d01e8734ac3250f8bea8efe7162b091372760eae1354daf2",
+    "image_sha256": "11ae7118bbe58fb42e5a552ca25b49586ab2545a699606cb72941b651f5cbbd4"
+  },
+  {
+    "id": "c65bf1d1586756b0",
+    "image": "c65bf1d1586756b0.png",
+    "strokes": "c65bf1d1586756b0.strokes.json",
+    "latex": "( \\begin{matrix} 2 & - 2 \\\\ - 1 & 2 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "d6234fc177e0755468c779c2e2f9c52e6f313d797a47b11b5ccc06dc15b0e8cf",
+    "image_sha256": "20017227b1f063f32eb6b0abc7b0d21831b2a9a941dfb6343d5929c2eb29dfc2"
+  },
+  {
+    "id": "e52b2e527d18cd4e",
+    "image": "e52b2e527d18cd4e.png",
+    "strokes": "e52b2e527d18cd4e.strokes.json",
+    "latex": "( \\begin{matrix} 2 & - 4 \\\\ - 1 & 2 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "2587ff18a9c78ff4514c6998779ae6e63ee703bdb54587e3d3a441d7eb15d79d",
+    "image_sha256": "5c813dd91fa0d6bd75258f0ab37e48acec6bc7a491f8fd4a1816acca9683b522"
+  },
+  {
+    "id": "d7cfa19fccb43a29",
+    "image": "d7cfa19fccb43a29.png",
+    "strokes": "d7cfa19fccb43a29.strokes.json",
+    "latex": "[ \\begin{matrix} 0 & 0 \\\\ 1 & - 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "776b11fa5dce59e4e7fb6de8c746f0c38d8e2ae5c622fe999c06727cdcadfd92",
+    "image_sha256": "5771a2b2af80209db60ce318fec055fe4a47247b08ee80a6fc6aa8d3dc49925f"
+  },
+  {
+    "id": "4c96c7887545eac9",
+    "image": "4c96c7887545eac9.png",
+    "strokes": "4c96c7887545eac9.strokes.json",
+    "latex": "( \\begin{matrix} e & f \\\\ 0 & g \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "a461e88ce987aaf9fff1f844b21e077d855dc2268775b4bedc2fa7dcde03046b",
+    "image_sha256": "cdc93d812fc4302e86cb94c44eb78b15b4f05beea1d13463453e464ed152b2f2"
+  },
+  {
+    "id": "fc8a4d942ba6c4f2",
+    "image": "fc8a4d942ba6c4f2.png",
+    "strokes": "fc8a4d942ba6c4f2.strokes.json",
+    "latex": "[ \\begin{matrix} k & 0 \\\\ 0 & k \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "dff996e08ee0d6d768075bb0e394e24dee0165054ff05cada8ab4a1c625be3e9",
+    "image_sha256": "f23dc7bbfe5e1e97c3dfe29289faf7cf236aff8dc6db5cac97a8d5b345a1ec1e"
+  },
+  {
+    "id": "8daf67f4935f76dc",
+    "image": "8daf67f4935f76dc.png",
+    "strokes": "8daf67f4935f76dc.strokes.json",
+    "latex": "( \\begin{matrix} x & y \\\\ - y & x \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "ad83fcf56c23e3130af1107c1aecd0138d53d787fff305041746542653294bec",
+    "image_sha256": "8024675e4f16bf8ebf76f2466dc81dccf2ef297e43349e469292d60a8a2569a0"
+  },
+  {
+    "id": "2fdab8df85049eed",
+    "image": "2fdab8df85049eed.png",
+    "strokes": "2fdab8df85049eed.strokes.json",
+    "latex": "H = ( \\begin{matrix} 1 & - 1 \\\\ - 1 & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "2214ee29f5ffbdf69861caa2ee8bf60ef575c31086a87f773ec434a9d3ad7e7d",
+    "image_sha256": "f17f95bc0413cb591629f52aa223ca7c5d7786e194e695b6332803210597d8bc"
+  },
+  {
+    "id": "8922137aefc69c80",
+    "image": "8922137aefc69c80.png",
+    "strokes": "8922137aefc69c80.strokes.json",
+    "latex": "( \\begin{matrix} u & 0 \\\\ a z & u \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "e5ffd13263b8ffdac2a002ccaebac89c6fa88a73a18a53487d36fc0903518a19",
+    "image_sha256": "05f04f1b0e3753fcedbde493c4bd585f7a224693d7207516d1913c76db9b3318"
+  },
+  {
+    "id": "9aacda4710099280",
+    "image": "9aacda4710099280.png",
+    "strokes": "9aacda4710099280.strokes.json",
+    "latex": "( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "a43f44fc1bbdcc35b91a9b106737c0753a4955050a574bf85c2da4a40e75959c",
+    "image_sha256": "1d5a60a9dc9846ff2cc6f1187d26a97b8a8434dfb894fcb6763762a588b4d86f"
+  },
+  {
+    "id": "cef30c1d08ada57a",
+    "image": "cef30c1d08ada57a.png",
+    "strokes": "cef30c1d08ada57a.strokes.json",
+    "latex": "V = ( \\begin{matrix} 0 & 1 \\\\ 1 & 0 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "20ac43de2fd66d5a784cb0c1179c210b5de2c0d1f0b0c6b2a1798336860baeee",
+    "image_sha256": "9732a04fc1eae8a37b75c40e8a5da6d10497cd30cb490c613eabb43d3bb80a28"
+  },
+  {
+    "id": "c916a79f6837e9db",
+    "image": "c916a79f6837e9db.png",
+    "strokes": "c916a79f6837e9db.strokes.json",
+    "latex": "[ \\begin{matrix} 0 & 0 \\\\ 1 & - 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "7e37ebebf991e27386bee36f9bbb0e61a3786aff085548f4bc50b3d1322d2f25",
+    "image_sha256": "f293cffde0d24cb4bbc12f0dbb8c0314ddc25e99fbd3f2dd1661c7d69b2e8cf1"
+  },
+  {
+    "id": "8fa350220fbcd4fc",
+    "image": "8fa350220fbcd4fc.png",
+    "strokes": "8fa350220fbcd4fc.strokes.json",
+    "latex": "( \\begin{matrix} I & 0 \\\\ 0 & F \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "456c1b6550391fd4e543c48e9fb98dab8c7df15746998510de555c8c79a16c39",
+    "image_sha256": "75145b9699162bd61d49ab6888755f2d3f4c1cff9ad756ba0bf28c2c9aab4115"
+  },
+  {
+    "id": "bc6d023956d33e26",
+    "image": "bc6d023956d33e26.png",
+    "strokes": "bc6d023956d33e26.strokes.json",
+    "latex": "\\lambda ^ { 3 } = ( \\begin{matrix} 1 & 0 & 0 \\\\ 0 & - 1 & 0 \\\\ 0 & 0 & 0 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "0d96f63e38e5fd2e3c7825584f79a42c62a82c32298ed1bc0aae867ae17d193a",
+    "image_sha256": "3f8a6061da073588059446c0e9e57e1d94dc92d40044e381df83466d587eb6e2"
+  },
+  {
+    "id": "c839d5b6f14518e8",
+    "image": "c839d5b6f14518e8.png",
+    "strokes": "c839d5b6f14518e8.strokes.json",
+    "latex": "( \\begin{matrix} 1 & 0 \\\\ - \\frac { 2 } { R _ { e } } & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "94a766f635e3ec2503ed1b4f3bfd416c5c7fc2d36df587acdb8299789b54ba09",
+    "image_sha256": "60326c1c9f9484107b8a3d80ca80b3e5f5e60d0cbd2a2e23cbe34b793db63a6a"
+  },
+  {
+    "id": "354f67de8c58dff4",
+    "image": "354f67de8c58dff4.png",
+    "strokes": "354f67de8c58dff4.strokes.json",
+    "latex": "K = ( \\begin{matrix} 3 & 3 \\\\ 2 & 5 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "027b888926cade53cb654a4a8cbca214776950baf517e5daeba8bed5e54e5906",
+    "image_sha256": "9060ccc813290d3d8bc4c8e072d7e787b941679ed4278ee55c3f941992fb6d1a"
+  },
+  {
+    "id": "521dc7266587a5bf",
+    "image": "521dc7266587a5bf.png",
+    "strokes": "521dc7266587a5bf.strokes.json",
+    "latex": "( \\begin{matrix} 1 & 0 \\\\ 0 & \\frac { n _ { 1 } } { n _ { 2 } } \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "2f9df8c4c5ddb2b9879ba000e813ac2539070db198118faea3220bb93b26cf4c",
+    "image_sha256": "eeef1871175cc0878955c23bdb4183707a68d2a33e4340d102778a4a25064ec4"
+  },
+  {
+    "id": "20f50e29f5e5d535",
+    "image": "20f50e29f5e5d535.png",
+    "strokes": "20f50e29f5e5d535.strokes.json",
+    "latex": "( \\begin{matrix} 0 & 1 \\\\ - 1 & 0 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "6a706637c5b7c7043cb43e28b2f6c3b904b3630b6e9040d3d1e31288e1fe26bc",
+    "image_sha256": "11bcb6f81fe655fb48562280fd9d253771e32eb65f4b42640624d45cf9dae6b7"
+  },
+  {
+    "id": "f8e0611b6d83c2c1",
+    "image": "f8e0611b6d83c2c1.png",
+    "strokes": "f8e0611b6d83c2c1.strokes.json",
+    "latex": "C _ { \\beta } ( s ) = [ \\begin{matrix} 1 & 0 \\\\ s & 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "1864d686f8ccdf1d407f4d306d284c9ddc9fe57a3da3266837765340ba0fc558",
+    "image_sha256": "4fcc4e9b3180b086761fbbb9a06d8149d9cbb20d4be088cce47c22332120f87c"
+  },
+  {
+    "id": "4115c2a8239dd14e",
+    "image": "4115c2a8239dd14e.png",
+    "strokes": "4115c2a8239dd14e.strokes.json",
+    "latex": "( \\begin{matrix} a & b / 2 \\\\ b / 2 & c \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "3ace2767828e7145f9b1e7b9255acf4875dbdabf312233a3ac94feef5e095bc9",
+    "image_sha256": "98cb32cea17aadc622d4888b1048f5e55911d07de70e70737a9a2ca3828422a9"
+  },
+  {
+    "id": "f69a362ea6f375d8",
+    "image": "f69a362ea6f375d8.png",
+    "strokes": "f69a362ea6f375d8.strokes.json",
+    "latex": "( \\begin{matrix} 1 & 0 \\\\ 0 & 0 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "8f93e2a60d0f35be9a68bb7d14e51c87f0804d1116b2b7a014723a9d83906004",
+    "image_sha256": "dd6969706bd618c3633f7a5b00bc1d465144c03c99a66d06ae2c7687e0d0cfc4"
+  },
+  {
+    "id": "8d55e6b2ea113180",
+    "image": "8d55e6b2ea113180.png",
+    "strokes": "8d55e6b2ea113180.strokes.json",
+    "latex": "C = ( \\begin{matrix} 1 & i \\\\ i & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "a1e46e86f2797d75af39f97e3d3a033eff361a01d821204ea00aa69de1afd047",
+    "image_sha256": "e3c5a59be6d4816cdaf7d2f5dc8dc807568b03534ee30321059df9968576a8a6"
+  },
+  {
+    "id": "ffaa161d5abe5006",
+    "image": "ffaa161d5abe5006.png",
+    "strokes": "ffaa161d5abe5006.strokes.json",
+    "latex": "[ \\begin{matrix} c & s \\\\ s & c \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "6eedb8b52072c2aff65a9750677ad2b6e9d1b9395ba416d015ff83e965cd15b8",
+    "image_sha256": "faec8c46cbd5a3b9161c5119c7390f3a6594188743ea40699ea385beb80b0c21"
+  },
+  {
+    "id": "09fb6a2bc4ce6026",
+    "image": "09fb6a2bc4ce6026.png",
+    "strokes": "09fb6a2bc4ce6026.strokes.json",
+    "latex": "( \\begin{matrix} 1 & 1 \\\\ 1 & - \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "f36b043117a4e78e6a1bdbcdba49e46bdaac05b76c10cee1c5392c91d21be701",
+    "image_sha256": "1f222d04e64864edacc245623d76a6f811891eab31840e399cd8c8ab544e7831"
+  },
+  {
+    "id": "c641300594b28aab",
+    "image": "c641300594b28aab.png",
+    "strokes": "c641300594b28aab.strokes.json",
+    "latex": "M = [ \\begin{matrix} a & b - a \\\\ 0 & b \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "d79d8aa0de189d426be49dd655a6268317da1d0fa1df65564c93f1938d96dd25",
+    "image_sha256": "0f0bbc89260049e7ce4bb705d62721354c3f55ee306f1b52839dab420475910e"
+  },
+  {
+    "id": "64d93f1f102cceae",
+    "image": "64d93f1f102cceae.png",
+    "strokes": "64d93f1f102cceae.strokes.json",
+    "latex": "[ \\begin{matrix} 1 & - 1 \\\\ - 1 & - 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "a8de5001ee7e3fc65d160b06bb36b8a3c61406e214277bcb6eeba565a4422c6b",
+    "image_sha256": "c1219bb9b62c4e316f89754437823aeb7ea52d5adece15089278298ab173ec70"
+  },
+  {
+    "id": "ef847efe42c5cccf",
+    "image": "ef847efe42c5cccf.png",
+    "strokes": "ef847efe42c5cccf.strokes.json",
+    "latex": "[ \\begin{matrix} p & 2 \\\\ 2 & q \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "1cd75d8a31900e0f540e1d7489f7a7fc055e35c4208aa6ed3764a9c07311acf1",
+    "image_sha256": "f1254a8f0aebe6ace71d97b6a0fe3c206c73968ba324d6c468b69c58ab09eeeb"
+  },
+  {
+    "id": "f6bb1a949a2e6d33",
+    "image": "f6bb1a949a2e6d33.png",
+    "strokes": "f6bb1a949a2e6d33.strokes.json",
+    "latex": "[ \\begin{matrix} 1 & s L \\\\ 0 & 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "c10824baeaa22e5a478842c5d2b88b01c3871a8a867e560b0508f3e623e4a316",
+    "image_sha256": "f5b0f73276febeead286bb2752108394b83b8baa0523e150619e05f54e7f15c8"
+  },
+  {
+    "id": "f37655d28b3919fa",
+    "image": "f37655d28b3919fa.png",
+    "strokes": "f37655d28b3919fa.strokes.json",
+    "latex": "g = ( \\begin{matrix} a & b \\\\ c & d \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "64302ed4d38cdaca392b21775914c3c5613e39b220fb4cc02fa1af5740646b4b",
+    "image_sha256": "fc488349f85d3a86f0343602c203359183c07a98c723ca58b234d47f79135ee7"
+  },
+  {
+    "id": "b36c732d2bbbff8b",
+    "image": "b36c732d2bbbff8b.png",
+    "strokes": "b36c732d2bbbff8b.strokes.json",
+    "latex": "[ \\begin{matrix} E & F \\\\ F & G \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "6961068b8351b795ec2c0b9bbbce2532aa3798a5ba9b6e7d57f5b0be064caa66",
+    "image_sha256": "915e8221b9e5a7b6501feae865dd18d6ca07169c55d7d8f2efc565fb2e66168d"
+  },
+  {
+    "id": "cd5bf58ca23a04eb",
+    "image": "cd5bf58ca23a04eb.png",
+    "strokes": "cd5bf58ca23a04eb.strokes.json",
+    "latex": "[ \\begin{matrix} 4 & 3 \\\\ 2 & 1 \\\\ 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "0c2785a80254ebaee5539d39f2ac9fa59a3ae2d1bada573c2f845dfa9d5446da",
+    "image_sha256": "d4a80a15eda464b1a2b20cb3781a66ebfa43308d1ce0ad22c0eeda4c3cd3fd86"
+  },
+  {
+    "id": "cd201ac5311d63c5",
+    "image": "cd201ac5311d63c5.png",
+    "strokes": "cd201ac5311d63c5.strokes.json",
+    "latex": "\\sigma ^ { z } = ( \\begin{matrix} 1 & 0 \\\\ 0 & - 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "35aff585a44168412614da0dee5cc3ea71e6f753502c3cf438898605ca79ab39",
+    "image_sha256": "a76ae97dd807d0dd64bb1bd699a9ed599502f0d3371dfc213fa031b0a42371fe"
+  },
+  {
+    "id": "619cf0736c240241",
+    "image": "619cf0736c240241.png",
+    "strokes": "619cf0736c240241.strokes.json",
+    "latex": "[ \\begin{matrix} x & y \\\\ z & v \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "65a37f2512b97c8f44ceb8a690b2376ac12e9d0f5847faf9c0a495b4d8988c8b",
+    "image_sha256": "d6bc61f6760405365779f2ee43aee6c302b4cf39ec71964f77b40fb0c373003a"
+  },
+  {
+    "id": "fc0f345fa9e6c4fc",
+    "image": "fc0f345fa9e6c4fc.png",
+    "strokes": "fc0f345fa9e6c4fc.strokes.json",
+    "latex": "( \\begin{matrix} 0 & 1 \\\\ - 1 & 0 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "f8ff998055ab2d0b7781234f500e898ce3128c0c084cef9a536912d7e2bb49ee",
+    "image_sha256": "95e18d8950ad2d08ef4ed3a48b1344392a37518b54f09e3f00f37627a3cd9c6a"
+  },
+  {
+    "id": "647bf67343240c3c",
+    "image": "647bf67343240c3c.png",
+    "strokes": "647bf67343240c3c.strokes.json",
+    "latex": "( \\begin{matrix} 1 & 0 \\\\ 1 & - 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "36862379345fc20bd4c09c80e2e1f99953d89cd9b509b22a2a57caf202dfdfa1",
+    "image_sha256": "110132267d7b154f5ecfe4f308e15980e09975bc0174d55e63dde63fa214b49a"
+  },
+  {
+    "id": "fa4d1c97077326af",
+    "image": "fa4d1c97077326af.png",
+    "strokes": "fa4d1c97077326af.strokes.json",
+    "latex": "[ \\begin{matrix} 1 & 4 & 4 \\\\ 3 & 5 \\\\ 4 & 7 \\\\ 6 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "62322d5948557ecd42b83823bf1a790bc3ef90809fbd8b21e9c7128bfe3d8ab4",
+    "image_sha256": "68a6b870bcbae0b1702b8fd27aff0b08859ea5c9925f987838a18fa30ca3f544"
+  },
+  {
+    "id": "ed784668bc873a19",
+    "image": "ed784668bc873a19.png",
+    "strokes": "ed784668bc873a19.strokes.json",
+    "latex": "[ \\begin{matrix} . 7 & 0 \\\\ . 3 & 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "f3bdfb32cd34e93872d0bafa745fe8f5aa9a4f06e29566e9212e6fe08cbf53a5",
+    "image_sha256": "6725c02c97c1f9f6f2b365a16237ed0ed1650303271d121abf146551d476b320"
+  },
+  {
+    "id": "6bd81e5a9f77ba2f",
+    "image": "6bd81e5a9f77ba2f.png",
+    "strokes": "6bd81e5a9f77ba2f.strokes.json",
+    "latex": "[ \\begin{matrix} B & A B \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "606fb51f51eafcff118ca123f67e975a4719118dca1b3d2c78de8c8d68ba83da",
+    "image_sha256": "4c5d6beac784f0bab671d663f8941ce0fd8b832bb5d62725937e23174672209d"
+  },
+  {
+    "id": "57998d182d511008",
+    "image": "57998d182d511008.png",
+    "strokes": "57998d182d511008.strokes.json",
+    "latex": "( \\begin{matrix} x & y \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "95b9805e36f438ee4ed16ea855bd955755eccd8513dca67a58b4df514e1ef34d",
+    "image_sha256": "ffe26b5637fe8138eeece604b968396521eeced4439bcd5970031a378b10ee30"
+  },
+  {
+    "id": "d082c9452bef8a0e",
+    "image": "d082c9452bef8a0e.png",
+    "strokes": "d082c9452bef8a0e.strokes.json",
+    "latex": "h = ( \\begin{matrix} a & b \\\\ c & d \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "b79c3eded9b5f7ffe04a20a106b2213a836f76a77d3f2920e1c8e4be00a45c96",
+    "image_sha256": "583a8e855db412149dc36e8b2e54bebf54ae27ea32a3c5bae71d9048829fc85a"
+  },
+  {
+    "id": "a6de10010653d725",
+    "image": "a6de10010653d725.png",
+    "strokes": "a6de10010653d725.strokes.json",
+    "latex": "( \\begin{matrix} a & b & b \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "021f65b3984dd54262d9a8aa1e78095e49ce7799662bf3bc5f1eae174825e5e7",
+    "image_sha256": "9d070ffa70e58b9f6d7bf7b83229687fdc2e8fc977b439ba3877e5b2fcdc52f7"
+  },
+  {
+    "id": "d78f1b3880840d25",
+    "image": "d78f1b3880840d25.png",
+    "strokes": "d78f1b3880840d25.strokes.json",
+    "latex": "A = [ \\begin{matrix} a & b \\\\ c & d \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "9d3ea671280eea99c166983ec8772550c2547e2280861e9fdfe56a44c4dc3af9",
+    "image_sha256": "526be4e8a5dbb28c62c3ee114c7d0c4d875d281d729e9a02f63b52c780bf943c"
+  },
+  {
+    "id": "c5b0519c2be865f1",
+    "image": "c5b0519c2be865f1.png",
+    "strokes": "c5b0519c2be865f1.strokes.json",
+    "latex": "H = ( \\begin{matrix} 0 & - i \\\\ i & 0 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "e84454d5446693da1f94c9eae138f1a498e994ea10ab1e97dcca82a7cb90d891",
+    "image_sha256": "1254dd6cf70739336b51c5d1810d44d46fb85b42bd9860893c8a5071873c2f8a"
+  },
+  {
+    "id": "92e788b6e28e8a36",
+    "image": "92e788b6e28e8a36.png",
+    "strokes": "92e788b6e28e8a36.strokes.json",
+    "latex": "[ \\begin{matrix} 3 / 2 & 0 \\\\ 0 & 2 / 3 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "52d5caea82fda711ba430cbbed9cbea3771f42d26ca6d7b806b292ee471aec5b",
+    "image_sha256": "737262c771ede8f2b3338836600e5118f59eb4f95d3dbdcdd15540807bf5177b"
+  },
+  {
+    "id": "9dd11c1c87e73aa0",
+    "image": "9dd11c1c87e73aa0.png",
+    "strokes": "9dd11c1c87e73aa0.strokes.json",
+    "latex": "( \\begin{matrix} 1 & 1 \\\\ - a & - c \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "655c6a88c54ea44a71fa97de93c46ee211c03e536ab88b6800b74d10b2d6c7fe",
+    "image_sha256": "7c17abbf94350f34caabcc379cc877fe3e8e2da26362bbf01a6a6d1349077992"
+  },
+  {
+    "id": "2b00b3d191ff1b6a",
+    "image": "2b00b3d191ff1b6a.png",
+    "strokes": "2b00b3d191ff1b6a.strokes.json",
+    "latex": "[ \\begin{matrix} a & b \\\\ b & d \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "ff835c82f4acd630aa7594f379404cbac856a950aa5f12299a981ddf0e308506",
+    "image_sha256": "14f023459df03ff9f9724c464bf28d5ebab297d6819ec79aabdf45a3ccfb46a0"
+  },
+  {
+    "id": "4fd1233e76ba1956",
+    "image": "4fd1233e76ba1956.png",
+    "strokes": "4fd1233e76ba1956.strokes.json",
+    "latex": "\\gamma = ( \\begin{matrix} a & b \\\\ c & d \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "ddf77ae0782ba807f041ccdb886de13f7d91428e98fd4a49e71fe3d2bd0cb6e3",
+    "image_sha256": "d9bc538bb224d43f10b61a630f2249513f3832209e7f2e46c0bc12244d629435"
+  },
+  {
+    "id": "2d23c1a8da239f72",
+    "image": "2d23c1a8da239f72.png",
+    "strokes": "2d23c1a8da239f72.strokes.json",
+    "latex": "C = ( \\begin{matrix} 1 & i \\\\ i & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "c2005c577698e6cac9766d6ac7855cf5afeba5e8a8b3466435a16f0db3a19af6",
+    "image_sha256": "f5ffb58d36e538c7c488235e8aa0cfb494edcf0b63781dd5fbc0d336bc6df352"
+  },
+  {
+    "id": "a82de998f63cb231",
+    "image": "a82de998f63cb231.png",
+    "strokes": "a82de998f63cb231.strokes.json",
+    "latex": "[ \\begin{matrix} - 2 & - 1 \\\\ - 1 & 2 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "3246abaf2ceeeda88207343d345b5fa72f469f418ab4d6d6ac8ba5763a0e2e39",
+    "image_sha256": "cb4cdadcb08f86c9c0da2fe5d9dbbbca79a3bddd04149394296c1adb8651aac3"
+  },
+  {
+    "id": "cb3a9cbdf38e55ff",
+    "image": "cb3a9cbdf38e55ff.png",
+    "strokes": "cb3a9cbdf38e55ff.strokes.json",
+    "latex": "[ \\begin{matrix} 1 & \\frac { 1 } { G } \\\\ 0 & 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "0624ffbdc0a6c7030cad271e66496d065992673668eef1766b6e3252c8ed20a9",
+    "image_sha256": "e849922a6986d4e0b1cee56b226abe67b9e0067353edd863a845e1abb23da12d"
+  },
+  {
+    "id": "c1d49326e10d4548",
+    "image": "c1d49326e10d4548.png",
+    "strokes": "c1d49326e10d4548.strokes.json",
+    "latex": "( \\begin{matrix} 2 & - 2 \\\\ - 2 & 2 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "1e3fb6f57adec15fd066de842c664f34cea0eee543154787ef5e7b85b232a490",
+    "image_sha256": "f1a085fe4d394443d6562f2c08abff370255caabfd597b5fb264bf6301231d88"
+  },
+  {
+    "id": "20c0ca25fcb18436",
+    "image": "20c0ca25fcb18436.png",
+    "strokes": "20c0ca25fcb18436.strokes.json",
+    "latex": "( \\begin{matrix} \\alpha & \\beta \\\\ \\overline { \\beta } & \\overline { \\alpha } \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "3daddb94fa209bce26153c65741146255c461eddc74673f7f80438200b029ca0",
+    "image_sha256": "80f134373a6308cb6bde875433892e35d54525e2561bac2c3585b8514908856c"
+  },
+  {
+    "id": "8146d8f9c0bd88b7",
+    "image": "8146d8f9c0bd88b7.png",
+    "strokes": "8146d8f9c0bd88b7.strokes.json",
+    "latex": "( \\begin{matrix} 2 & - 2 \\\\ - 2 & 2 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "ff4a351107eb38132db27e9043da7d468fcbd615f70f7be484467c7d85294813",
+    "image_sha256": "029e58ef9a8c6a2d7c362e379d587f633d66a6707d0d1c09739697e6a5d4e3bc"
+  },
+  {
+    "id": "cbb00399be24284f",
+    "image": "cbb00399be24284f.png",
+    "strokes": "cbb00399be24284f.strokes.json",
+    "latex": "\\frac { 1 } { b _ { 1 2 } } [ \\begin{matrix} - b _ { 1 1 } & 1 \\\\ \\Delta [ b ] & - b _ { 2 2 } \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "237afb256e6c7f7e6e92d62080b54333bf6e402dfe6c9e62621cee19b88c5d30",
+    "image_sha256": "2f39d1bf94d70a4619b626a1400f567cd2df517134774121a93bca3d44ecf841"
+  },
+  {
+    "id": "987a471912e044d9",
+    "image": "987a471912e044d9.png",
+    "strokes": "987a471912e044d9.strokes.json",
+    "latex": "( \\begin{matrix} u & & - v \\\\ v & & u \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "5a7006c40e2dbf4fa3d3830fa8f2cba8c06f0f1281f0da0484824675c1926372",
+    "image_sha256": "848087ce005ab8d15218c9129bb2fb17bbc0437e9fd9d5207f39b151ba7bc6a4"
+  },
+  {
+    "id": "b4c43f0a8e302e6d",
+    "image": "b4c43f0a8e302e6d.png",
+    "strokes": "b4c43f0a8e302e6d.strokes.json",
+    "latex": "[ \\begin{matrix} 1 & 1 \\\\ 0 & 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "f15cb667805aedb089c5ba83820cff3b1cb008cec8b22875d1f1ec1d6b2e112d",
+    "image_sha256": "bfe4bfdbb67557165a6642a22738e614b8c2cf6b85ff907506b12eb22bccec4f"
+  },
+  {
+    "id": "075e4f053df36010",
+    "image": "075e4f053df36010.png",
+    "strokes": "075e4f053df36010.strokes.json",
+    "latex": "[ \\begin{matrix} A & B \\\\ C & D \\\\ \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "9ece32827273708590b102582f10526f7ece2e1613765ba93b4ad741f0dc92f3",
+    "image_sha256": "0b04e6593732fb61a2e7df9d3f15f28b5398a17c3709c0ea3b75d92781a3ebcf"
+  },
+  {
+    "id": "2fc4eadae38990b6",
+    "image": "2fc4eadae38990b6.png",
+    "strokes": "2fc4eadae38990b6.strokes.json",
+    "latex": "[ \\begin{matrix} 0 & - 1 \\\\ 1 & 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "7e0d9cd92557415d569f062f8eb3ae32dd4b4a421a476c4f3dc7fdecf66a6a04",
+    "image_sha256": "fd3d50fea1fc550c71eab376ae8fb514bea36298206863e5153cc884acaca3bd"
+  },
+  {
+    "id": "19c1c26ac144cdc4",
+    "image": "19c1c26ac144cdc4.png",
+    "strokes": "19c1c26ac144cdc4.strokes.json",
+    "latex": "( \\begin{matrix} 1 & 0 \\\\ - \\frac { 1 } { f } & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "7865e6e1dfc5b059a09ece408e121beaaaa05ce4749273a62e72929444cfa662",
+    "image_sha256": "4feb9205890d91d13929a78375c1bfa1709b4e42fd444000c8ce90d7682185db"
+  },
+  {
+    "id": "b28b982ced8c9dc3",
+    "image": "b28b982ced8c9dc3.png",
+    "strokes": "b28b982ced8c9dc3.strokes.json",
+    "latex": "M = ( \\begin{matrix} - i & i \\\\ e x p ( i t ) & e x p ( - i t ) \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "61e8dcc963ca497499cd83f6efe40c8e5e2cbae9819c8c9c0fb97a17d0edcbc5",
+    "image_sha256": "bccefd5344ee0548430f65b9236cdb8adf7d4cbbf3769fe56f0c7ce34c85bc58"
+  },
+  {
+    "id": "a16ba5106011b459",
+    "image": "a16ba5106011b459.png",
+    "strokes": "a16ba5106011b459.strokes.json",
+    "latex": "N = [ \\begin{matrix} 1 & 2 \\\\ 2 & 1 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "b257be7726968813a48e2095a7b9800db07c899b2c38157f5191a902fac3be21",
+    "image_sha256": "989705fba61da3969f3b1ba95f4dc22f3ca3ce6719105d0d2d3939ac606e1ee9"
+  },
+  {
+    "id": "2d4f1be24d01f831",
+    "image": "2d4f1be24d01f831.png",
+    "strokes": "2d4f1be24d01f831.strokes.json",
+    "latex": "( \\begin{matrix} 1 & d \\\\ 0 & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "cde6509f21d1cfd45d1941ce92ecfaaf69ebd919f31f7f4fad504da442d1cc75",
+    "image_sha256": "728ff7e68d9a7089a1ac11842261a80cbd1fe2dbca824330a7a6a55f3c65f19d"
+  },
+  {
+    "id": "7bb0d52696ac6651",
+    "image": "7bb0d52696ac6651.png",
+    "strokes": "7bb0d52696ac6651.strokes.json",
+    "latex": "[ \\begin{matrix} a & c \\\\ 0 & b \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "6dd0a35fe3099cd0d816bc123226dc03b7bfda00e14577f41eaf690e47d48a71",
+    "image_sha256": "3c27dfaa0fcc472fca3fa844e03fcc3a4c452643fbecc1c9d1f5b3c39a6648e6"
+  },
+  {
+    "id": "e219bad9e51c1bf5",
+    "image": "e219bad9e51c1bf5.png",
+    "strokes": "e219bad9e51c1bf5.strokes.json",
+    "latex": "( \\begin{matrix} 0 & 1 \\\\ - 1 & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "cea22bf9cb7fcea752aab190ae265f29e248b62e2bf4fa30756a86bcc7cf6b35",
+    "image_sha256": "8a1851ec86ceb63de2661496274a7f776a47f18337d4f5cbedfc989e8a34617c"
+  },
+  {
+    "id": "9ffd2553ec2aa683",
+    "image": "9ffd2553ec2aa683.png",
+    "strokes": "9ffd2553ec2aa683.strokes.json",
+    "latex": "A = [ \\begin{matrix} a & b \\\\ c & d \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "4b73e842637eb7db36accc610eb18acb6a3fec2eb1445fe5db342ae75b62c066",
+    "image_sha256": "13b52b4790a454c94467dfd63c689ab7746cf6d34f615463e60fcc20186ea925"
+  },
+  {
+    "id": "0b089505335c1e06",
+    "image": "0b089505335c1e06.png",
+    "strokes": "0b089505335c1e06.strokes.json",
+    "latex": "( \\begin{matrix} 1 & 0 \\\\ - \\frac { 2 } { R _ { e } } & 1 \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "2291b3e5fbf0f8712f4a88ee5e074a830513c311590473940abdefc88a0b7325",
+    "image_sha256": "e7b395075150340023b13d80094fa518f2d5ea79a3b08c9dca1e97ff57e28459"
+  },
+  {
+    "id": "acdbb6bb4871d8f4",
+    "image": "acdbb6bb4871d8f4.png",
+    "strokes": "acdbb6bb4871d8f4.strokes.json",
+    "latex": "[ \\begin{matrix} 4 & 6 \\end{matrix} ]",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "1374665aa8c80cc9385b3eeda0690dc5b94b8eff54ecd5fa8fe39169444029e4",
+    "image_sha256": "e5f67513b33a049c2b3b2327d16628b7149fe10e96621e4e638e2da7428e6f75"
+  },
+  {
+    "id": "2a1fcc2a8eeba988",
+    "image": "2a1fcc2a8eeba988.png",
+    "strokes": "2a1fcc2a8eeba988.strokes.json",
+    "latex": "( \\begin{matrix} a & b \\\\ b & c \\end{matrix} )",
+    "subject": "linear_algebra",
+    "split": "valid",
+    "strokes_sha256": "eb50fb61441982758f482f173840f00b655ec2a6cd386892cff9f2021fddf32c",
+    "image_sha256": "bb34bf7d6d663699a2eaebaf3ba1cdffd078c2130cd14aa5abde7ad184e8e7e9"
+  }
+]

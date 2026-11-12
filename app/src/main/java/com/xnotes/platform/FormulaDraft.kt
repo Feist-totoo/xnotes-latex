@@ -27,6 +27,9 @@ class FormulaDraft(
     val color = originalFormula?.color ?: strokes.firstOrNull()?.config?.rgba?.withAlpha(255) ?: Rgba(24, 24, 24)
     val initialLatex = originalFormula?.latex.orEmpty()
 
+    /** Frozen visible centerlines, including clipping from room/area erasers. */
+    fun recognitionStrokes() = strokes.flatMap { it.visibleRuns() }
+
     /** Only selected ink, on white; no paper lines, PDF, annotations or neighbouring ink. */
     fun inkBitmap(): Bitmap? {
         if (originalFormula != null) return BitmapFactory.decodeFile(previous?.image?.file?.path)

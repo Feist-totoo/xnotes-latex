@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-12",
+  "status": "prerelease; full quality target NOT met",
+  "apk": {
+    "name": "xnotes-latex-0.9.8-latex.4-preview-offline.apk",
+    "bytes": 99917659,
+    "sha256": "3f1520cb3e34804f059cacb2eea59524cb61da7515cb82a0fdb15aa7cacf8897",
+    "applicationId": "com.xnotes.latex.debug",
+    "versionCode": 72,
+    "versionName": "0.9.8-latex.4-preview-debug",
+    "minSdk": 26,
+    "targetSdk": 36,
+    "abis": [
+      "arm64-v8a",
+      "x86_64"
+    ],
+    "certificateSha256": "dbde9527283a1432beee854febc94fb79a8710968f3566bb7763b6ec0a41b6bc",
+    "v2Signature": true,
+    "v3Signature": true,
+    "zipalign16K": true,
+    "nativeLibraries": [
+      "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "lib/arm64-v8a/libonnxruntime.so",
+      "lib/arm64-v8a/libonnxruntime4j_jni.so",
+      "lib/arm64-v8a/libxnotespdf.so",
+      "lib/arm64-v8a/libxnotests.so",
+      "lib/x86_64/libandroidx.graphics.path.so",
+      "lib/x86_64/libonnxruntime.so",
+      "lib/x86_64/libonnxruntime4j_jni.so",
+      "lib/x86_64/libxnotespdf.so",
+      "lib/x86_64/libxnotests.so"
+    ],
+    "modelFiles": {
+      "encoder-q8.onnx": {
+        "bytes": 25056585,
+        "sha256": "7ed2dbc6a9248c8fa57a33af1c833d34f48b5855f512928b32773dc68034e456"
+      },
+      "decoder-q8.onnx": {
+        "bytes": 7170036,
+        "sha256": "e8b06ed1f3337872e2f85f6f10e3478a49d3f0eeb1ff912b592594d410a4c0c8"
+      },
+      "vocabulary.json": {
+        "bytes": 2454,
+        "sha256": "500710a20d593b3bd59466dac7ac399e796597484ca1f445b2fc783a5367adaa"
+      }
+    },
+    "containsEvaluationOrPrivateSamples": false
+  },
+  "jvm": {
+    "tests": 2509,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android": {
+    "device": "Xnotes_LaTeX_Test emulator; Android 14 x86_64, 2 vCPU, 4 GiB",
+    "physicalTabletTested": false,
+    "recognitionTestNetwork": "airplane mode enabled, Wi-Fi/data disabled",
+    "initialRealInkCases": 200,
+    "finalConfirmationCases": 240,
+    "productionStrokeRoundingCasesRerun": 19,
+    "allRasterHashesMatched": true,
+    "confirmationDefaultAndRankedOutputsMatchDesktop": true,
+    "initialUiStorageRun": {
+      "tests": 7,
+      "passed": 6,
+      "failed": 1,
+      "failure": "Synthetic x=1 recognized as chi=1; retained as recognition regression"
+    },
+    "finalUiRun": {
+      "tests": 5,
+      "passed": 5,
+      "note": "Interaction fixture explicitly corrects x=1 before insertion; not accuracy evidence. Final screenshots visually inspected after clearing an old emulator System UI boot ANR dialog."
+    },
+    "storageAndModelReloadTestsPassed": 2,
+    "pairedSpeedTestsPassed": 2,
+    "githubPackDownload": "pending post-publication; not part of offline inference"
+  },
+  "quality": {
+    "sameLegacy200": {
+      "v3": 89,
+      "v4": 49
+    },
+    "sameSubject200": {
+      "v3": 60,
+      "v4": 116
+    },
+    "newOfficialValidConfirmation240": {
+      "scoringOff": 201,
+      "scoringOn": 201,
+      "fixes": 1,
+      "regressions": 1
+    },
+    "experimentalScoringDefault": false,
+    "imageOnlyRegression": true,
+    "physicalTabletAccuracyClaim": false
+  },
+  "release": {
+    "tag": "v0.9.8-latex.4-preview",
+    "prerelease": true,
+    "replaceLatestStable": false,
+    "remoteVerification": "pending publication"
+  }
+}

@@ -1,6 +1,6 @@
 """Developer-only preparation. APK inference never connects to the network.
 
-Downloads pinned MIT GLM-OCR weights and MIT llama.cpp source. Run before Gradle.
+Downloads the historical v3 GLM-OCR baseline for developer comparisons only.
 """
 import argparse
 import hashlib
@@ -26,7 +26,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cache", type=Path, help="Optional existing model directory")
     args = parser.parse_args()
-    assets = ROOT / "app/src/main/assets/formula-glm"
+    assets = ROOT / "build/legacy-glm"
     assets.mkdir(parents=True, exist_ok=True)
     for name, spec in FILES.items():
         target = assets / name

@@ -19,7 +19,7 @@
     <string name="formula_update">Update formula</string>
     <string name="formula_one_page">Select handwriting on a single page to convert it.</string>
     <string name="formula_packs_count">Subject packs (%1$d enabled)</string>
-    <string name="formula_packs_explanation">Enable installed packs below. Manage or download independent packs from GitHub Releases. Automatic routing reuses local OCR; it does not rewrite your formula.</string>
+    <string name="formula_packs_explanation">Enable packs independently. Calculus and linear algebra v2 offer experimental candidate scoring, off by default because a consistent accuracy gain is not established. Switching packs reuses existing recognition; other packs assist editing.</string>
     <string name="formula_packs_edit">Insert symbols at the cursor</string>
     <string name="formula_packs_templates">Templates replace the editor text after confirmation; they are not recognition results.</string>
     <string name="formula_packs_review">Review: %1$s</string>

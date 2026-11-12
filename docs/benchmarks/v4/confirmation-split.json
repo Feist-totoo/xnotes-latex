@@ -1,0 +1,7 @@
+{
+  "samples": 240,
+  "sha256": "8178eeca76102c916904b47597a81e07f2df9d94bd94226731d5a67d57f1ae73",
+  "selection": "SHA256 deterministic; original labels/human provenance/coordinates verified; no prediction used",
+  "source_partition": "official valid; disjoint from all development and prior test samples",
+  "seed": "xnotes-v4-confirmation-20261112:"
+}

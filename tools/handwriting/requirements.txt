@@ -1,0 +1,13 @@
+# Developer-only conversion, training-statistics and evaluation environment.
+# Runtime Android inference depends only on ONNX Runtime 1.23.2.
+torch==2.7.0
+torchvision==0.22.0
+transformers==4.40.0
+onnx==1.18.0
+onnxruntime==1.23.2
+numpy==2.5.4
+Pillow==13.0.0
+mmengine==0.10.7
+more-itertools==10.8.0
+positional-encodings==6.0.3
+toolz==1.1.0

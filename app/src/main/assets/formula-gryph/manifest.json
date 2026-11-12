@@ -1,0 +1,33 @@
+{
+  "engine": "gryphone-sat-q8-v1",
+  "revision": "gryph-q8-v1",
+  "source": "https://github.com/JG1VPP/GryphOne",
+  "sourceRevision": "5f5f5f5f29fe9dc8d4f68f2ff851fd549929af58",
+  "checkpointSha256": "d6430f361e144cc64eda9be6451478bcf8268f1ba191536fcb2380fd2708ae3f",
+  "vocabularySha256": "bab4047952478a4ac78a8391da0bbf3ffaaec189b562dae6288d4305fbe3b07c",
+  "steps": 20,
+  "seeds": [
+    1,
+    17,
+    37,
+    101
+  ],
+  "imageSize": 224,
+  "sequenceLength": 150,
+  "vocabularySize": 287,
+  "files": {
+    "encoder-q8.onnx": {
+      "bytes": 25056585,
+      "sha256": "7ed2dbc6a9248c8fa57a33af1c833d34f48b5855f512928b32773dc68034e456"
+    },
+    "decoder-q8.onnx": {
+      "bytes": 7170036,
+      "sha256": "e8b06ed1f3337872e2f85f6f10e3478a49d3f0eeb1ff912b592594d410a4c0c8"
+    },
+    "vocabulary.json": {
+      "bytes": 2454,
+      "sha256": "500710a20d593b3bd59466dac7ac399e796597484ca1f445b2fc783a5367adaa"
+    }
+  },
+  "scoring": "masked-quarter-v1"
+}

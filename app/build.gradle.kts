@@ -25,8 +25,8 @@ android {
         applicationId = "com.xnotes.latex"
         minSdk = 26
         targetSdk = 36
-        versionCode = 71
-        versionName = "0.9.8-latex.3"
+        versionCode = 72
+        versionName = "0.9.8-latex.4-preview"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")
@@ -101,7 +101,7 @@ android {
     // Lists every values-* translation in the manifest so Android 13+ offers a per-app language.
     androidResources {
         generateLocaleConfig = true
-        noCompress += "gguf"
+        noCompress += "onnx"
     }
 }
 
@@ -137,6 +137,7 @@ dependencies {
     implementation(libs.latex.base)
     implementation(libs.latex.parser)
     implementation(libs.latex.renderer)
+    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.23.2")
     implementation(libs.bundles.commonmark)
     debugImplementation(libs.androidx.ui.tooling)
 
@@ -151,12 +152,12 @@ dependencies {
 
 // Never ship a build that silently needs an online model download at first use.
 val verifyFormulaModel by tasks.registering {
-    val modelDir = layout.projectDirectory.dir("src/main/assets/formula-glm")
+    val modelDir = layout.projectDirectory.dir("src/main/assets/formula-gryph")
     inputs.dir(modelDir)
     doLast {
-        for (name in listOf("GLM-OCR-Q8_0.gguf", "mmproj-GLM-OCR-Q8_0.gguf", "manifest.json")) {
+        for (name in listOf("encoder-q8.onnx", "decoder-q8.onnx", "vocabulary.json", "manifest.json")) {
             check(modelDir.file(name).asFile.let { it.isFile && it.length() > 0 }) {
-                "Missing offline formula asset $name. Run: python tools/prepare_glm_formula.py"
+                "Missing offline formula asset $name. Run: python tools/prepare_handwriting_model.py"
             }
         }
     }

@@ -14,6 +14,7 @@ import com.xnotes.core.formula.FormulaPackRouter
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun FormulaPackPanel(catalog: List<FormulaPack>, selected: Set<String>, source: String, enabled: Boolean,
+                     recognition: Boolean, onRecognition: (Boolean) -> Unit,
                      automatic: Boolean, onAutomatic: (Boolean) -> Unit, onManage: () -> Unit,
                      onSelect: (Set<String>) -> Unit, onInsert: (String) -> Unit, onTemplate: (String) -> Unit) {
     val chinese = LocalConfiguration.current.locales[0].language == "zh"
@@ -28,13 +29,17 @@ fun FormulaPackPanel(catalog: List<FormulaPack>, selected: Set<String>, source: 
         }
         if (expanded) {
             Text(stringResource(R.string.formula_packs_explanation), style = MaterialTheme.typography.bodySmall)
+            if (catalog.any { it.recognition != null }) Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                Switch(checked = recognition, onCheckedChange = onRecognition, enabled = enabled)
+                Text(if (chinese) "实验候选评分：尚未验证有稳定的准确率收益" else "Experimental scoring: a consistent accuracy gain is not yet established", style = MaterialTheme.typography.bodySmall)
+            }
             Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                 Switch(checked = automatic, onCheckedChange = onAutomatic)
                 Text(if (chinese) "按本机识别结果自动选包" else "Route using local recognition", Modifier.weight(1f))
                 TextButton(onClick = onManage) { Text(if (chinese) "管理 / 下载" else "Manage / download") }
             }
             if (automatic && recommendations.isNotEmpty()) {
-                Text((if (chinese) "本次调用：" else "Active for this expression: ") + chosen.joinToString { it.name(chinese) }, style = MaterialTheme.typography.bodySmall)
+                Text((if (chinese) "本次编辑辅助：" else "Editing aids for this expression: ") + chosen.joinToString { it.name(chinese) }, style = MaterialTheme.typography.bodySmall)
             }
             FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 catalog.forEach { pack ->

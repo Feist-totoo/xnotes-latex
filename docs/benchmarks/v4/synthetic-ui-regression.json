@@ -1,0 +1,5 @@
+{
+  "expected": "x=1",
+  "actual": "\\chi = 1",
+  "match": false
+}

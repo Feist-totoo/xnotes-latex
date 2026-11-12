@@ -1,0 +1,26 @@
+GryphOne offline formula recognizer
+Source: https://github.com/JG1VPP/GryphOne
+Revision: 5f5f5f5f29fe9dc8d4f68f2ff851fd549929af58
+Checkpoint: gryph_e63e36e_mathwriting_sym_mutual_dino_vits8.pth (ECCV2026 release)
+Checkpoint SHA-256: d6430f361e144cc64eda9be6451478bcf8268f1ba191536fcb2380fd2708ae3f
+Copyright (c) 2026 JG1VPP. MIT; see LICENSE-GryphOne.txt.
+
+Modified for Xnotes: exported the encoder with cached decoder attention keys/values;
+exported a variable-batch decoder step; per-channel dynamic signed 8-bit weight
+quantization for MatMul/Gemm. No neural-weight fine-tuning was performed.
+Model architecture uses the DINO ViT small/8 backbone. DINO by Meta/Facebook
+Research is Apache-2.0; see LICENSE-DINO.txt. Export uses Hugging Face Transformers.
+Runtime: ONNX Runtime 1.23.2, Microsoft Corporation, MIT.
+See LICENSE-ONNX-Runtime.txt and ThirdPartyNotices-ONNX-Runtime.txt.
+
+The separately installable calculus v2 and linear algebra v2 subject resources
+contain statistics derived from Google LLC's MathWriting 2024 HUMAN TRAIN labels.
+These statistics are CC BY-NC-SA 4.0 (attribution, noncommercial, share-alike),
+not MIT. Source: https://github.com/google-research/google-research/tree/master/mathwriting
+License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+Modification: count symbol/structure pairs for each subject, excluding valid/test.
+The profiles do not contain original handwriting traces or images.
+Bundled software and independent data resources retain their respective licenses.
+
+All recognition, candidate ranking and rendering run on the tablet without a
+network connection. Network requests are limited to explicit package downloads.

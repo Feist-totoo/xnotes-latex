@@ -1,8 +1,9 @@
 """Reproducible, developer-only real-handwriting evaluation. No user images uploaded.
 
 fetch downloads public evaluation data. evaluate sends images ONLY to a loopback
-llama.cpp process on the developer machine; the Android app uses JNI, never HTTP.
-MathWriting is CC-BY-NC-SA 4.0 and is used only for evaluation, not model training.
+llama.cpp process on the developer machine; the v3 Android app uses JNI; v4 uses ONNX Runtime, never HTTP.
+This legacy benchmark uses MathWriting (CC-BY-NC-SA 4.0) for evaluation.
+The separate v4 subject profiles learn statistics from its human TRAIN split.
 """
 import argparse
 import base64

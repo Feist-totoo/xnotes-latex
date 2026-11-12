@@ -19,7 +19,7 @@
     <string name="formula_update">更新公式</string>
     <string name="formula_one_page">请在同一页内选择要转换的笔迹。</string>
     <string name="formula_packs_count">学科包（已启用 %1$d）</string>
-    <string name="formula_packs_explanation">在下方启用已安装的包，也可管理和下载 GitHub Release 中的独立包。自动选包复用本机识别结果，不会擅自改写公式。</string>
+    <string name="formula_packs_explanation">可分别启用学科包。高数、线代 v2 提供实验候选评分，尚未证实稳定增益，默认关闭。切换包复用已有识图结果；其余包提供编辑辅助。</string>
     <string name="formula_packs_edit">在光标位置插入符号</string>
     <string name="formula_packs_templates">模板经确认后替换编辑框内容，不代表识别结果。</string>
     <string name="formula_packs_review">请核对：%1$s</string>

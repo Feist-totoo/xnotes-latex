@@ -156,8 +156,8 @@ fun AboutPane() {
             Spacer(Modifier.height(12.dp))
             Text("LaTeX fork · AGPL-3.0 · source & licenses", color = palette.accent.toComposeColor(), fontSize = 12.sp,
                 modifier = Modifier.clickable { open("$REPO_URL/blob/master/docs/FORMULA.md") })
-            Text("Offline OCR: GLM-OCR · llama.cpp · MIT", color = palette.textDim.toComposeColor(), fontSize = 11.sp,
-                modifier = Modifier.clickable { open("https://github.com/zai-org/GLM-OCR") })
+            Text("Offline handwriting: GryphOne · ONNX Runtime · MIT", color = palette.textDim.toComposeColor(), fontSize = 11.sp,
+                modifier = Modifier.clickable { open("https://github.com/JG1VPP/GryphOne") })
         }
     }
     if (picking) IconPicker(icon, onPick = { AppIcons.apply(ctx, it); icon = it }, onDismiss = { picking = false })

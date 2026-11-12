@@ -17,7 +17,8 @@ data class FormulaPackEntry(val id: String, val version: Int, val nameZh: String
 
 /** Package storage only. The recognizer has no dependency on this downloader. */
 object FormulaPacks {
-    const val INDEX_URL = "https://github.com/Feist-totoo/xnotes-latex/releases/latest/download/formula-packs-index.json"
+    // Preview catalog must not replace the stable channel used by v3 installations.
+    const val INDEX_URL = "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.4-preview/formula-packs-index.json"
     private fun directory(context: Context) = File(context.noBackupFilesDir, "formula-packs").apply { mkdirs() }
     private fun preferences(context: Context) = context.getSharedPreferences("formula-packs", Context.MODE_PRIVATE)
 
@@ -26,6 +27,15 @@ object FormulaPacks {
         if (!preferences(context).getBoolean("bootstrapped", false)) {
             install(context, context.assets.open("formula-packs/school_math.xformula").use { it.readBytes() })
             preferences(context).edit().putBoolean("bootstrapped", true).apply()
+        }
+        // Run once on upgrade. Uninstalling a bundled pack remains persistent.
+        if (!preferences(context).getBoolean("recognition-v2", false)) {
+            for (id in listOf("calculus", "linear_algebra")) {
+                val existing = File(folder, "$id.xformula")
+                val version = runCatching { FormulaPack.parse(existing.readBytes()).version }.getOrDefault(0)
+                if (version < 2) install(context, context.assets.open("formula-packs/$id.xformula").use { it.readBytes() })
+            }
+            preferences(context).edit().putBoolean("recognition-v2", true).apply()
         }
         return folder.listFiles().orEmpty().filter { it.extension == "xformula" }.mapNotNull {
             runCatching { require(it.length() <= FormulaPack.MAX_BYTES); FormulaPack.parse(it.readBytes()) }.getOrNull()
@@ -83,7 +93,7 @@ object FormulaPacks {
         if (previousVersion != null) require(previousVersion <= pack.version) { "Package downgrade rejected" }
         atomicWrite(target, bytes)
         val previous = preferences(context).getStringSet("selected", setOf("school_math")).orEmpty()
-        save(context, previous + pack.id)
+        if (previousVersion == null) save(context, previous + pack.id)
         return pack
     }
 
@@ -100,6 +110,9 @@ object FormulaPacks {
     fun save(context: Context, ids: Set<String>) { preferences(context).edit().putStringSet("selected", ids.toSet()).apply() }
     fun automatic(context: Context) = preferences(context).getBoolean("automatic", true)
     fun setAutomatic(context: Context, value: Boolean) { preferences(context).edit().putBoolean("automatic", value).apply() }
+    // Held-out evaluation did not establish a net gain; opt in explicitly for experiments.
+    fun recognitionEnabled(context: Context) = preferences(context).getBoolean("recognition-scoring", false)
+    fun setRecognitionEnabled(context: Context, value: Boolean) { preferences(context).edit().putBoolean("recognition-scoring", value).apply() }
 
     private fun sha256(bytes: ByteArray) = MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it) }
     @Synchronized private fun atomicWrite(target: File, bytes: ByteArray) {
