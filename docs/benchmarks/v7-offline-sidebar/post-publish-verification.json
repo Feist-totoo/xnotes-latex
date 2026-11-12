@@ -1,0 +1,30 @@
+{
+  "releaseUrl": "https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.7-offline-sidebar",
+  "tag": "v0.9.8-latex.7-offline-sidebar",
+  "sourceCommit": "b5098b7d4db1c50e6e17d51fe4b0539016199ec8",
+  "prerelease": true,
+  "latestStable": "v0.9.8-latex.3",
+  "verifiedAssets": [
+    {
+      "name": "xnotes-latex-0.9.8-latex.7-offline-sidebar.apk",
+      "bytes": 67838139,
+      "sha256": "18daa2f936f0b3ce9b7b849c873fb4b146b73f6c4bedef1cc5efaf5a90044572",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.7-offline-sidebar/xnotes-latex-0.9.8-latex.7-offline-sidebar.apk",
+      "publicHttpStatus": 200
+    },
+    {
+      "name": "TEST-REPORT.json",
+      "bytes": 5146,
+      "sha256": "3f7f8f1f392ca1aa3a379ceaaee75e938830186c98e0c1475b26d042151a9741",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.7-offline-sidebar/TEST-REPORT.json",
+      "publicHttpStatus": 200
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 198,
+      "sha256": "f84ee7b28dc65925cf3b83442c0d590ed618704471e4b5dacc55253493457545",
+      "url": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.7-offline-sidebar/SHA256SUMS.txt",
+      "publicHttpStatus": 200
+    }
+  ]
+}
