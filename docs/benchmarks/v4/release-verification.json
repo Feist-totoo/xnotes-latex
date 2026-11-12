@@ -74,7 +74,12 @@
     },
     "storageAndModelReloadTestsPassed": 2,
     "pairedSpeedTestsPassed": 2,
-    "githubPackDownload": "pending post-publication; not part of offline inference"
+    "githubPackDownload": {
+      "status": "PASS",
+      "tests": 1,
+      "evidence": "PASS: https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.4-preview/quantum-v1.xformula\nversion=1\nsha256=001661b1f652a88ba3be138b7bf4026f25cccd3fe898ead466a4894caf124bca\nindependent install, enable/disable, routing and uninstall\n",
+      "networkRestored": "airplane mode on, Wi-Fi/data off"
+    }
   },
   "quality": {
     "sameLegacy200": {
@@ -99,6 +104,11 @@
     "tag": "v0.9.8-latex.4-preview",
     "prerelease": true,
     "replaceLatestStable": false,
-    "remoteVerification": "pending publication"
+    "remoteVerification": "PASS",
+    "latestStable": "v0.9.8-latex.3",
+    "remoteAssetsVerified": 16,
+    "sourceCommit": "e092debcb80770dce6d4c9bf84e57a5d77e8aadd",
+    "postPublicationEvidence": "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.4-preview/POST-PUBLISH-VERIFICATION.json",
+    "postPublicationEvidenceSha256": "39efc4a440ce566b96f99dc8f36db05a1647838532f8b08a1d9a0b853f7fdd6e"
   }
 }
