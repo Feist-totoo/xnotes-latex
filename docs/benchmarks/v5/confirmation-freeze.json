@@ -1,0 +1,9 @@
+{
+  "samples": 160,
+  "source_partition": "official TEST, disjoint from all v3/v4 sets",
+  "sha256": "20745a219dbbe3075d0d00d8db8010ed41a358788f72a9671c0ae4ea9070698a",
+  "selection": "SHA256 stable order, 80 calculus markers / 80 vectors or multicolumn matrices, original HUMAN ink verified; predictions not used",
+  "scope": "Only 4 unused multicolumn matrices remain in official TEST after v4. This new linear-algebra group adds vector notation; do not compare its percentage directly with the old matrix-only group.",
+  "seed": "xnotes-v5-final-test-20261112:",
+  "metric": "unchanged conservative MathML; all cases retained"
+}

@@ -31,7 +31,7 @@ fun FormulaPackPanel(catalog: List<FormulaPack>, selected: Set<String>, source: 
             Text(stringResource(R.string.formula_packs_explanation), style = MaterialTheme.typography.bodySmall)
             if (catalog.any { it.recognition != null }) Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                 Switch(checked = recognition, onCheckedChange = onRecognition, enabled = enabled)
-                Text(if (chinese) "实验候选评分：尚未验证有稳定的准确率收益" else "Experimental scoring: a consistent accuracy gain is not yet established", style = MaterialTheme.typography.bodySmall)
+                Text(if (chinese) "学科候选辅助：只调整接近的候选，仍需核对" else "Subject assistance: rerank close alternatives; review the result", style = MaterialTheme.typography.bodySmall)
             }
             Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                 Switch(checked = automatic, onCheckedChange = onAutomatic)

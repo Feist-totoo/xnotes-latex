@@ -19,7 +19,7 @@ data class FormulaPack(
             require(bytes.size in 1..MAX_BYTES) { "Invalid pack size" }
             val p = JSONObject(bytes.toString(Charsets.UTF_8))
             require(p.getString("format") == "xnotes-formula-pack" && p.getInt("schema") == 1)
-            require(p.getString("type") == "vocabulary" && p.getInt("minAppVersionCode") <= 72) { "Unsupported pack type/version" }
+            require(p.getString("type") == "vocabulary" && p.getInt("minAppVersionCode") <= 73) { "Unsupported pack type/version" }
             val id = p.getString("id")
             require(Regex("[a-z][a-z0-9_]{0,47}").matches(id)) { "Invalid pack ID" }
             val version = p.getInt("version"); require(version in 1..1_000_000)

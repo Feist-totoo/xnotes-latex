@@ -62,7 +62,8 @@ def main():
     (ROOT/'build/accuracy-v4/training-counts.json').write_text(json.dumps(out,separators=(',',':')),encoding='utf-8')
     for name in ['calculus','linear_algebra']:
         path=ROOT/'formula-packs'/f'{name}.json';pack=json.loads(path.read_text(encoding='utf-8'))
-        pack['recognition']['pairs']=[[a,b,n] for (a,b),n in out[name]['pair']]
+        kind='sym2' if pack['recognition'].get('kind')=='symbol-bigram-v1' else 'pair'
+        pack['recognition']['pairs']=[[a,b,n] for (a,b),n in out[name][kind]]
         pack['recognition']['trainingExamples']=out[name]['examples']['count']
         path.write_text(json.dumps(pack,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Finished counts',out['metadata'],[(name,count['examples']) for name,count in sets.items()],flush=True)

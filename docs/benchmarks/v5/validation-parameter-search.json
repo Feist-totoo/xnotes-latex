@@ -1,0 +1,908 @@
+{
+  "input": "build\\accuracy-v4\\validation-mask-score.json",
+  "samples": 160,
+  "baseline": 141,
+  "oracle": 143,
+  "rankings": [
+    {
+      "kind": "symbols",
+      "strength": 0.01,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.01,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.01,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.03,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.03,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.03,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.03,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.03,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.03,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.03,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.03,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.03,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.05,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.05,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.05,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.05,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.05,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.05,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.05,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.05,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.05,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "pair",
+      "strength": 0.1,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.1,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 3
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.1,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.1,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "pair",
+      "strength": 0.1,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.1,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 3
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.1,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.1,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "pair",
+      "strength": 0.1,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.1,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 3
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.1,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.1,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "pair",
+      "strength": 0.2,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.2,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 3
+    },
+    {
+      "kind": "all",
+      "strength": 0.2,
+      "gap": 0.03,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 2
+    },
+    {
+      "kind": "pair",
+      "strength": 0.2,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.2,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 3
+    },
+    {
+      "kind": "all",
+      "strength": 0.2,
+      "gap": 0.06,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 2
+    },
+    {
+      "kind": "pair",
+      "strength": 0.2,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.2,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 3
+    },
+    {
+      "kind": "all",
+      "strength": 0.2,
+      "gap": 0.1,
+      "correct": 142,
+      "fixes": 1,
+      "regressions": 0,
+      "changes": 2
+    },
+    {
+      "kind": "pair",
+      "strength": 0.01,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.01,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.01,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.01,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "all",
+      "strength": 0.01,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.01,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.01,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.01,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "all",
+      "strength": 0.01,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.01,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.01,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.01,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "all",
+      "strength": 0.01,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.01,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.01,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.01,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "all",
+      "strength": 0.01,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.03,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.03,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.03,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.03,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "all",
+      "strength": 0.03,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.03,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.03,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.03,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.03,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.03,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.03,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.05,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.05,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.05,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.05,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "all",
+      "strength": 0.05,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.05,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.05,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.05,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.05,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.05,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.05,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.1,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.1,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "relations",
+      "strength": 0.1,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.1,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "all",
+      "strength": 0.1,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.1,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.1,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.1,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "pair",
+      "strength": 0.2,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.2,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "relations",
+      "strength": 0.2,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "sequence",
+      "strength": 0.2,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 1
+    },
+    {
+      "kind": "all",
+      "strength": 0.2,
+      "gap": 0.01,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.2,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.2,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "relations",
+      "strength": 0.2,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 0,
+      "regressions": 0,
+      "changes": 0
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.2,
+      "gap": 0.03,
+      "correct": 141,
+      "fixes": 1,
+      "regressions": 1,
+      "changes": 4
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.2,
+      "gap": 0.06,
+      "correct": 141,
+      "fixes": 1,
+      "regressions": 1,
+      "changes": 4
+    },
+    {
+      "kind": "symbols",
+      "strength": 0.2,
+      "gap": 0.1,
+      "correct": 141,
+      "fixes": 1,
+      "regressions": 1,
+      "changes": 4
+    }
+  ]
+}

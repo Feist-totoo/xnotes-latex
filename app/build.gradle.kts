@@ -25,8 +25,8 @@ android {
         applicationId = "com.xnotes.latex"
         minSdk = 26
         targetSdk = 36
-        versionCode = 72
-        versionName = "0.9.8-latex.4-preview"
+        versionCode = 73
+        versionName = "0.9.8-latex.5-full"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")
@@ -101,7 +101,7 @@ android {
     // Lists every values-* translation in the manifest so Android 13+ offers a per-app language.
     androidResources {
         generateLocaleConfig = true
-        noCompress += "onnx"
+        noCompress += listOf("onnx", "gguf")
     }
 }
 
@@ -153,11 +153,18 @@ dependencies {
 // Never ship a build that silently needs an online model download at first use.
 val verifyFormulaModel by tasks.registering {
     val modelDir = layout.projectDirectory.dir("src/main/assets/formula-gryph")
+    val precisionDir = layout.projectDirectory.dir("src/main/assets/formula-precision")
     inputs.dir(modelDir)
+    inputs.dir(precisionDir)
     doLast {
         for (name in listOf("encoder-q8.onnx", "decoder-q8.onnx", "vocabulary.json", "manifest.json")) {
             check(modelDir.file(name).asFile.let { it.isFile && it.length() > 0 }) {
                 "Missing offline formula asset $name. Run: python tools/prepare_handwriting_model.py"
+            }
+        }
+        for (name in listOf("GLM-OCR-Q4_K_M-compact.gguf", "mmproj-GLM-OCR-Q8_0.gguf", "manifest.json")) {
+            check(precisionDir.file(name).asFile.let { it.isFile && it.length() > 0 }) {
+                "Missing offline precision asset $name. Run: python tools/prepare_full_formula.py"
             }
         }
     }

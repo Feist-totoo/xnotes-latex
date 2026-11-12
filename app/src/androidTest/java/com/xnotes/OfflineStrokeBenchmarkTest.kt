@@ -28,6 +28,7 @@ class OfflineStrokeBenchmarkTest {
     private val instrumentation get() = InstrumentationRegistry.getInstrumentation()
     private val dataset get() = InstrumentationRegistry.getArguments().getString("dataset", "handwriting-v4")!!
     private val roundTrip get() = InstrumentationRegistry.getArguments().getString("roundtrip") == "true"
+    private val caseIds get() = InstrumentationRegistry.getArguments().getString("caseIds")?.split(",")?.toSet()
     private fun strokes(name: String): List<List<Pt>> {
         val rows=JSONArray(instrumentation.context.assets.open("$dataset/$name").bufferedReader().use { it.readText() })
         val pen=List(rows.length()) { i -> rows.getJSONArray(i).let { a -> List(a.length()) { j ->
@@ -44,11 +45,12 @@ class OfflineStrokeBenchmarkTest {
         for (id in listOf("calculus","linear_algebra")) FormulaPacks.install(context,context.assets.open("formula-packs/$id.xformula").use { it.readBytes() })
         val packs=FormulaPacks.load(context).filter { it.id in setOf("calculus","linear_algebra") }
         assertEquals(2,packs.count { it.recognition!=null })
-        val results=JSONArray();val suffix=if (roundTrip) "-roundtrip" else ""
+        val results=JSONArray();val suffix=(if (roundTrip) "-roundtrip" else "")+(if (caseIds!=null) "-selected" else "")
         val output=File(context.getExternalFilesDir(null),"android-v4-$dataset$suffix.json")
         var expected=0
         for (i in 0 until rows.length()) {
             val row=rows.getJSONObject(i)
+            if (caseIds!=null && row.getString("id") !in caseIds!!) continue
             if (roundTrip && row.getString("raster_sha256")==row.getString("raster_roundtrip_sha256")) continue
             expected++
             val pen=strokes(row.getString("strokes"))

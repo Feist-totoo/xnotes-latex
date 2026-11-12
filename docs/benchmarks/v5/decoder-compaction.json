@@ -1,0 +1,27 @@
+{
+  "sourceSha256": "dc4f447c2c7cd0e53b29f8b15ef429d6981d3b29a1b713f33b0b600c616d84f6",
+  "outputSha256": "8ede263d18b8d9dac49ef602bac272afab93fb8b28efe4214a34fafca316ba40",
+  "sourceBytes": 548511360,
+  "outputBytes": 423701152,
+  "removedTensors": [
+    "blk.16.attn_k.weight",
+    "blk.16.attn_norm.weight",
+    "blk.16.attn_output.weight",
+    "blk.16.attn_q.weight",
+    "blk.16.attn_v.weight",
+    "blk.16.ffn_down.weight",
+    "blk.16.ffn_norm.weight",
+    "blk.16.ffn_up.weight",
+    "blk.16.nextn.eh_proj.weight",
+    "blk.16.nextn.embed_tokens.weight",
+    "blk.16.nextn.enorm.weight",
+    "blk.16.nextn.hnorm.weight",
+    "blk.16.nextn.shared_head_head.weight",
+    "blk.16.nextn.shared_head_norm.weight",
+    "blk.16.post_attention_norm.weight",
+    "blk.16.post_ffw_norm.weight"
+  ],
+  "retainedTensorsByteIdentical": 163,
+  "activeBlocksBefore": 16,
+  "activeBlocksAfter": 16
+}

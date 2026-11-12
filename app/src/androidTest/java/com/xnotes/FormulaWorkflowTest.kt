@@ -192,6 +192,18 @@ class FormulaWorkflowTest {
         screenshot("formula-pack-manager.png")
         compose.onNodeWithText(if (chinese) "完成" else "Done").performClick()
         compose.onNodeWithText(packButton).performScrollTo().performClick()
+        compose.onNodeWithText(compose.activity.getString(R.string.formula_precision)).performScrollTo().performClick()
+        compose.waitUntil(180_000) { compose.onAllNodesWithText(compose.activity.getString(R.string.formula_precision_use)).fetchSemanticsNodes().isNotEmpty() }
+        assertEquals("Detailed review must not overwrite manual edits", "x=2", compose.onNode(hasSetTextAction()).fetchSemanticsNode()
+            .config[androidx.compose.ui.semantics.SemanticsProperties.EditableText].text)
+        val detailed = compose.onNodeWithTag("formula-precision-result").fetchSemanticsNode()
+            .config[androidx.compose.ui.semantics.SemanticsProperties.Text].single().text
+        File(compose.activity.getExternalFilesDir(null), "synthetic-detailed-review.json").writeText(
+            org.json.JSONObject().put("expected", "x=1").put("actual", detailed).toString(2))
+        screenshot("formula-full-review.png")
+        compose.onNodeWithText(compose.activity.getString(R.string.formula_precision_use)).performScrollTo().performClick()
+        assertEquals(detailed, compose.onNode(hasSetTextAction()).fetchSemanticsNode()
+            .config[androidx.compose.ui.semantics.SemanticsProperties.EditableText].text)
         compose.onNode(hasSetTextAction()).performTextReplacement(recognized)
         compose.waitUntil(15_000) { compose.onAllNodes(hasText(insert) and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText(insert).performClick()

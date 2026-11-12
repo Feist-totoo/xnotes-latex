@@ -40,7 +40,7 @@ def main():
         raise RuntimeError("Refusing to overwrite a published release; use a new version")
     existing = {asset["name"]: asset for asset in release["assets"]}
     for path in args.assets:
-        if path.suffix not in {".apk", ".xformula", ".json", ".txt", ".onnx"}:
+        if path.suffix not in {".apk", ".xformula", ".json", ".txt", ".onnx", ".gguf"}:
             raise ValueError(f"Unexpected release asset type: {path.name}")
         with path.open("rb") as stream:
             digest = hashlib.file_digest(stream, "sha256").hexdigest()

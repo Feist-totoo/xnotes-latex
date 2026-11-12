@@ -1,0 +1,1818 @@
+{
+  "summary": {
+    "samples": 200,
+    "off": 116,
+    "on": 117,
+    "fixes": 1,
+    "regressions": 0,
+    "changed": 1
+  },
+  "results": [
+    {
+      "id": "c56f91675e627046",
+      "truth": "\\int x ^ { n - 1 } d x = \\frac { 1 } { n } x ^ { n }",
+      "base": "\\int x ^ { n - 1 } d x = \\frac { 1 } { n } x ^ { n }",
+      "latex": "\\int x ^ { n - 1 } d x = \\frac { 1 } { n } x ^ { n }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "7135d58cf454ba9a",
+      "truth": "\\underline { T } ( t ) = \\frac { d \\gamma } { d t }",
+      "base": "\\underline { T } ( t ) = \\frac { d \\psi } { d t }",
+      "latex": "\\underline { T } ( t ) = \\frac { d \\psi } { d t }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "c8add3f7f45c1541",
+      "truth": "\\int d ^ { 2 } \\theta \\lambda _ { 1 } U ^ { c } D ^ { c } D ^ { c }",
+      "base": "\\int d ^ { 2 } \\theta \\lambda , U ^ { c } D ^ { c } D ^ { c }",
+      "latex": "\\int d ^ { 2 } \\theta \\lambda , U ^ { c } D ^ { c } D ^ { c }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "7cbd0f2b88c26e9b",
+      "truth": "A ( u ) = f ^ { \\prime } ( u ) = \\frac { \\partial f } { \\partial u }",
+      "base": "A ( u ) = f ^ { \\prime } ( u ) = \\frac { \\partial f } { \\partial u }",
+      "latex": "A ( u ) = f ^ { \\prime } ( u ) = \\frac { \\partial f } { \\partial u }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "b26ae94493bf4669",
+      "truth": "\\int d V | \\Psi | ^ { 2 } = N",
+      "base": "\\int d V | \\Psi | ^ { 2 } = N",
+      "latex": "\\int d V | \\Psi | ^ { 2 } = N",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "74d28a1e940fcef5",
+      "truth": "\\int \\frac { \\delta Q } { T } = - N",
+      "base": "\\int \\frac { \\delta Q } { T } = - N",
+      "latex": "\\int \\frac { \\delta Q } { T } = - N",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "defc0ab237680c09",
+      "truth": "\\frac { d z } { d x } = \\alpha = \\frac { g ^ { \\prime } ( 0 ) } { f ^ { \\prime } ( 0 ) }",
+      "base": "\\frac { d z } { d x } = \\alpha = \\frac { g ^ { \\prime } ( 0 ) } { f ^ { \\prime } ( 0 ) }",
+      "latex": "\\frac { d z } { d x } = \\alpha = \\frac { g ^ { \\prime } ( 0 ) } { f ^ { \\prime } ( 0 ) }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "a603a17cd37dd1af",
+      "truth": "\\frac { \\partial c } { \\partial \\tau } = \\frac { \\partial ^ { 2 } c } { \\partial \\zeta ^ { 2 } } + \\frac { \\partial c } { \\partial \\zeta }",
+      "base": "\\frac { \\partial c } { \\partial \\tau } = \\frac { \\partial ^ { 2 } \\zeta } { \\partial \\zeta ^ { 2 } } + \\frac { \\partial c } { \\partial \\zeta }",
+      "latex": "\\frac { \\partial c } { \\partial \\tau } = \\frac { \\partial ^ { 2 } \\zeta } { \\partial \\zeta ^ { 2 } } + \\frac { \\partial c } { \\partial \\zeta }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "f3ef3885df756259",
+      "truth": "l i m _ { n \\rightarrow \\infty } \\hat { S } ( n ) = 0",
+      "base": "l i m _ { n \\rightarrow \\infty } \\hat { S } ( n ) = 0",
+      "latex": "l i m _ { n \\rightarrow \\infty } \\hat { S } ( n ) = 0",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "716187a861260d6b",
+      "truth": "O ( n ^ { \\lceil \\frac { d } { 2 } \\rceil } )",
+      "base": "O ( n ^ { \\lceil \\frac { d } { 2 } \\rceil } )",
+      "latex": "O ( n ^ { \\lceil \\frac { d } { 2 } \\rceil } )",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "1f816cb2c58c03fc",
+      "truth": "l i m _ { n \\rightarrow \\infty } P r ( X _ { n } = 0 )",
+      "base": "l i m _ { n \\rightarrow \\infty } P _ { r } ( x _ { n } = 0 )",
+      "latex": "l i m _ { n \\rightarrow \\infty } P _ { r } ( x _ { n } = 0 )",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "1f744a10191fe3e9",
+      "truth": "\\frac { d } { d x } ( s i n ( x ^ { 2 } ) )",
+      "base": "\\frac { d } { d x } ( s i n ( x ^ { 2 } ) )",
+      "latex": "\\frac { d } { d x } ( s i n ( x ^ { 2 } ) )",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "7210228f09650f42",
+      "truth": "\\frac { d } { d t } | A | ^ { 2 } = 2 A \\cdot \\frac { d A } { d t }",
+      "base": "\\frac { d } { d t } | A | ^ { 2 } = 2 A \\cdot \\frac { d A } { d t }",
+      "latex": "\\frac { d } { d t } | A | ^ { 2 } = 2 A \\cdot \\frac { d A } { d t }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "67d77e565d2d9bc7",
+      "truth": "\\frac { d \\vec { J } } { d t } = \\vec { \\mu } \\times \\vec { B }",
+      "base": "\\frac { d \\vec { J } } { d t } = \\vec { \\mu } \\times \\vec { B }",
+      "latex": "\\frac { d \\vec { J } } { d t } = \\vec { \\mu } \\times \\vec { B }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "eee809cfa9afb2e1",
+      "truth": "\\frac { q } { 2 } \\int _ { - \\infty } ^ { \\infty } \\frac { z ^ { q - 1 } } { 1 + z ^ { p } } d z",
+      "base": "\\frac { q } { 2 } \\int _ { - \\infty } ^ { \\infty } \\frac { z ^ { q } - 1 } { 1 + z ^ { p } } d z",
+      "latex": "\\frac { q } { 2 } \\int _ { - \\infty } ^ { \\infty } \\frac { z ^ { q } - 1 } { 1 + z ^ { p } } d z",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "6f2c08cf55ed136f",
+      "truth": "\\hat { w } = \\frac { d F ( L ) } { d L }",
+      "base": "\\hat { \\omega } = \\frac { d F ( l ) } { d l }",
+      "latex": "\\hat { \\omega } = \\frac { d F ( l ) } { d l }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "8573657d91abd9e0",
+      "truth": "\\frac { d } { d t } | A | ^ { 2 } = 2 A \\cdot \\frac { d A } { d t }",
+      "base": "\\frac { d } { d t } ( A ) ^ { 2 } = 2 A \\cdot \\frac { d A } { d t }",
+      "latex": "\\frac { d } { d t } ( A ) ^ { 2 } = 2 A \\cdot \\frac { d A } { d t }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "dfb1c4de44bbde1d",
+      "truth": "= J + \\epsilon _ { 0 } \\frac { \\partial E } { \\partial t }",
+      "base": "= J + \\epsilon _ { 0 } \\frac { \\partial E } { \\partial t }",
+      "latex": "= J + \\epsilon _ { 0 } \\frac { \\partial E } { \\partial t }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "bd6c016a7eac7f42",
+      "truth": "l i m _ { x \\rightarrow - \\infty } \\frac { 4 x ^ { 3 } + 3 } { 5 x ^ { 3 } - 2 } = \\frac { 4 } { 5 }",
+      "base": "l i m _ { x \\rightarrow - \\infty } \\frac { 4 x ^ { 3 } + 3 } { 5 x ^ { 3 } - 2 } = \\frac { 4 } { 5 }",
+      "latex": "l i m _ { x \\rightarrow - \\infty } \\frac { 4 x ^ { 3 } + 3 } { 5 x ^ { 3 } - 2 } = \\frac { 4 } { 5 }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "a3819397d513d72c",
+      "truth": "| \\frac { d ^ { 2 } y } { d x ^ { 2 } } | \\approx \\frac { 1 } { R }",
+      "base": "| \\frac { d ^ { 2 } y } { d x ^ { 2 } } | \\approx \\frac { 1 } { R }",
+      "latex": "| \\frac { d ^ { 2 } y } { d x ^ { 2 } } | \\approx \\frac { 1 } { R }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "c7b276d55b13d866",
+      "truth": "P _ { \\nu \\mu } = \\sum _ { \\alpha } P _ { \\nu \\mu } ^ { \\alpha } \\frac { \\partial } { \\partial x ^ { \\alpha } }",
+      "base": "P _ { \\nu \\mu } = \\sum _ { \\alpha } P _ { \\nu \\mu } ^ { \\alpha } \\frac { \\partial } { \\partial x ^ { \\alpha } }",
+      "latex": "P _ { \\nu \\mu } = \\sum _ { \\alpha } P _ { \\nu \\mu } ^ { \\alpha } \\frac { \\partial } { \\partial x ^ { \\alpha } }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "69dd418cde23f3e4",
+      "truth": "e ^ { i \\int _ { \\gamma } A }",
+      "base": "e ^ { i \\int _ { \\gamma } A }",
+      "latex": "e ^ { i \\int _ { \\gamma } A }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "4e9d36925088d531",
+      "truth": "l i m _ { x \\rightarrow a } \\frac { b x ^ { n } } { x - a } )",
+      "base": "l i m _ { x \\rightarrow a } \\frac { b x ^ { n } } { x - a }",
+      "latex": "l i m _ { x \\rightarrow a } \\frac { b x ^ { n } } { x - a }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "89315947cb6f2f04",
+      "truth": "\\int _ { - \\infty } ^ { + \\infty } D p ^ { \\prime } V _ { W } ^ { + } ( x ; p ^ { \\prime } )",
+      "base": "\\int _ { - \\infty } ^ { + \\infty } D _ { p ^ { \\prime } } V _ { W } ^ { + } ( x ; p ^ { - } )",
+      "latex": "\\int _ { - \\infty } ^ { + \\infty } D _ { p ^ { \\prime } } V _ { W } ^ { + } ( x ; p ^ { - } )",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "5d85d86027818186",
+      "truth": "A = \\int \\lambda d E _ { A } ( \\lambda )",
+      "base": "A = \\int \\lambda d E _ { A } ( \\lambda )",
+      "latex": "A = \\int \\lambda d E _ { A } ( \\lambda )",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "d1b6184f9e8a88d4",
+      "truth": "l i m _ { x \\rightarrow \\infty } \\frac { x ! } { n ^ { x } } = \\infty",
+      "base": "l i m _ { x \\rightarrow 2 \\infty } \\frac { x ^ { \\prime } } { n ^ { \\prime } } = \\infty",
+      "latex": "l i m _ { x \\rightarrow 2 \\infty } \\frac { x ^ { \\prime } } { n ^ { \\prime } } = \\infty",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "a7979ae956f92505",
+      "truth": "\\Phi _ { e } = \\int \\frac { U _ { e } } { T ^ { 2 } } d T",
+      "base": "\\Phi _ { e } = \\int \\frac { U _ { e } } { T ^ { 2 } } d T",
+      "latex": "\\Phi _ { e } = \\int \\frac { U _ { e } } { T ^ { 2 } } d T",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "1a70a5746d3296cd",
+      "truth": "\\frac { d x _ { i } } { d t } = x _ { i } f _ { i } ( x )",
+      "base": "\\frac { d x _ { i } } { d t } = x _ { i } f _ { i } ( x )",
+      "latex": "\\frac { d x _ { i } } { d t } = x _ { i } f _ { i } ( x )",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "c985fefeae0504a2",
+      "truth": "\\tau = \\frac { 1 } { c } \\int \\sqrt { g _ { 0 0 } } d x ^ { 0 }",
+      "base": "\\tau = \\frac { 1 } { c } \\int \\sqrt { g _ { c _ { 0 } } } d x ^ { 0 }",
+      "latex": "\\tau = \\frac { 1 } { c } \\int \\sqrt { g _ { c _ { 0 } } } d x ^ { 0 }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "4b2e924afae0b356",
+      "truth": "\\vec { e } _ { 0 } = \\sqrt { 2 } \\omega \\partial _ { t }",
+      "base": "\\vec { e } _ { 0 } = \\sqrt { 2 } \\omega \\partial _ { t }",
+      "latex": "\\vec { e } _ { 0 } = \\sqrt { 2 } \\omega \\partial _ { t }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "51cda5e4e1745978",
+      "truth": "\\partial _ { v } f ( x ) = D f ( x ) v",
+      "base": "\\partial _ { u } f ( x ) = D f ( x ) v",
+      "latex": "\\partial _ { u } f ( x ) = D f ( x ) v",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "a1e218d5813de99e",
+      "truth": "\\int _ { \\theta } \\frac { 1 } { 2 } ( r ( \\theta ) ) ^ { 2 } d \\theta",
+      "base": "\\int _ { \\theta } \\frac { 1 } { 2 } ( r ( \\theta ) ) ^ { 2 } d \\theta",
+      "latex": "\\int _ { \\theta } \\frac { 1 } { 2 } ( r ( \\theta ) ) ^ { 2 } d \\theta",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "e38bc3fb76579bc8",
+      "truth": "\\frac { \\partial u } { \\partial \\tau } = \\frac { 1 } { 2 } \\sigma ^ { 2 } \\frac { \\partial ^ { 2 } u } { \\partial x ^ { 2 } }",
+      "base": "\\frac { \\partial u } { \\partial \\tau } = \\frac { 1 } { 2 } \\sigma ^ { 2 } \\frac { \\partial ^ { 2 } u } { \\partial x ^ { 2 } }",
+      "latex": "\\frac { \\partial u } { \\partial \\tau } = \\frac { 1 } { 2 } \\sigma ^ { 2 } \\frac { \\partial ^ { 2 } u } { \\partial x ^ { 2 } }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "9b444fab111f7c4f",
+      "truth": "\\int e ^ { x } d x = e ^ { x } + C",
+      "base": "\\int e ^ { x } d x = e ^ { x } + C",
+      "latex": "\\int e ^ { x } d x = e ^ { x } + C",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "44dd91187a5b6ba3",
+      "truth": "I _ { i } = \\partial S / \\partial E _ { i }",
+      "base": "I _ { i } = \\partial S / \\partial E _ { i }",
+      "latex": "I _ { i } = \\partial S / \\partial E _ { i }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "29581cb4d84d51d5",
+      "truth": "\\approx \\int _ { \\partial N } f ^ { \\mu } d s _ { \\mu }",
+      "base": "\\approx \\int _ { \\partial N } f ^ { \\mu } d s _ { \\mu }",
+      "latex": "\\approx \\int _ { \\partial N } f ^ { \\mu } d s _ { \\mu }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "286a05808b306379",
+      "truth": "\\int K = 1 / 6",
+      "base": "\\int K = 1 / 6",
+      "latex": "\\int K = 1 / 6",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "b47a019043f70f24",
+      "truth": "= J + \\epsilon _ { 0 } \\frac { \\partial E } { \\partial t }",
+      "base": "= J + \\epsilon _ { 0 } \\frac { \\partial E } { \\partial t }",
+      "latex": "= J + \\epsilon _ { 0 } \\frac { \\partial E } { \\partial t }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "8a8db2c7e883dc24",
+      "truth": "m \\frac { d v } { d t } = 1 0 m - k v",
+      "base": "m \\frac { d v } { d t } = 1 0 m - k v",
+      "latex": "m \\frac { d v } { d t } = 1 0 m - k v",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "a405ed541fa30dc4",
+      "truth": "i \\partial _ { t } u + \\Delta u = - A u",
+      "base": "i \\partial _ { i } u + \\Delta u = - A u",
+      "latex": "i \\partial _ { i } u + \\Delta u = - A u",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "11e4197d77bff434",
+      "truth": "\\mu _ { e f f } = K ( \\frac { \\partial u } { \\partial y } ) ^ { n - 1 }",
+      "base": "u _ { e f f } = k ( \\frac { d u } { d y } ) ^ { n - 1 }",
+      "latex": "u _ { e f f } = k ( \\frac { d u } { d y } ) ^ { n - 1 }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "c8a181867584b6dd",
+      "truth": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon _ { f } } \\frac { d \\epsilon _ { p } } { d t }",
+      "base": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon _ { f } } \\frac { d \\epsilon _ { p } } { d t }",
+      "latex": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon _ { f } } \\frac { d \\epsilon _ { p } } { d t }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "35a50037b560cbbb",
+      "truth": "\\frac { d } { d x } y = t ( x ) y",
+      "base": "\\frac { d } { d x } y = t ( x ) y",
+      "latex": "\\frac { d } { d x } y = t ( x ) y",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "21242454877f3bcf",
+      "truth": "\\partial \\{ ( I ^ { 2 } , \\varphi _ { \\lambda } , S _ { \\lambda } ) \\} _ { \\lambda \\in \\Lambda }",
+      "base": "\\partial \\{ ( I ^ { 2 } , \\varphi _ { \\lambda } , S _ { \\lambda } ) \\} _ { A = \\lambda }",
+      "latex": "\\partial \\{ ( I ^ { 2 } , \\varphi _ { \\lambda } , S _ { \\lambda } ) \\} _ { A = \\lambda }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "13f1901dd843e05c",
+      "truth": "F _ { i } * \\frac { d V _ { g } } { d T } = \\frac { d C } { d T }",
+      "base": "F _ { i } * \\frac { d V _ { g } } { d T } = \\frac { d C } { d T }",
+      "latex": "F _ { i } * \\frac { d V _ { g } } { d T } = \\frac { d C } { d T }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "335f2b602f108102",
+      "truth": "\\frac { d x } { d \\xi } = x - y",
+      "base": "\\frac { d X } { d \\xi } = X - Y",
+      "latex": "\\frac { d X } { d \\xi } = X - Y",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "19ea0eda2a7b803f",
+      "truth": "\\frac { \\partial u } { \\partial x } \\frac { \\partial v } { \\partial y } + u v = k",
+      "base": "\\frac { \\partial u } { \\partial x } \\frac { \\partial v } { \\partial y } + u v = k",
+      "latex": "\\frac { \\partial u } { \\partial x } \\frac { \\partial v } { \\partial y } + u v = k",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "d2743c4fc78a759d",
+      "truth": "\\frac { d ^ { 2 } \\theta } { d t ^ { 2 } } + 1 = 0",
+      "base": "\\frac { d ^ { 2 } \\theta } { d t ^ { 2 } } + 1 = 0",
+      "latex": "\\frac { d ^ { 2 } \\theta } { d t ^ { 2 } } + 1 = 0",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "5314e3be154108f7",
+      "truth": "\\int f _ { n } \\le \\int f",
+      "base": "\\int f _ { n } \\le \\int f",
+      "latex": "\\int f _ { n } \\le \\int f",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "64d7493b5d70b589",
+      "truth": "\\omega _ { T } = - l i m _ { \\Delta t \\rightarrow 0 } \\frac { \\Delta \\theta } { \\Delta t }",
+      "base": "\\omega _ { T } = - l i m _ { \\Delta \\epsilon \\rightarrow 0 } \\frac { \\Delta \\theta } { \\Delta t }",
+      "latex": "\\omega _ { T } = - l i m _ { \\Delta \\epsilon \\rightarrow 0 } \\frac { \\Delta \\theta } { \\Delta t }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "95967be41337d705",
+      "truth": "N _ { v } ( \\mu _ { 2 } - \\mu _ { 1 } ) = \\frac { d f } { d c }",
+      "base": "N _ { v } ( \\mu _ { 2 } - \\mu _ { 1 } ) = \\frac { d f } { d c }",
+      "latex": "N _ { v } ( \\mu _ { 2 } - \\mu _ { 1 } ) = \\frac { d f } { d c }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "bc92c2ed1fa66665",
+      "truth": "[ Q ^ { \\dagger } , b \\} = \\frac { d x } { d t } + i F",
+      "base": "[ Q ^ { \\dagger } , b \\} = \\frac { d x } { d t } + i F",
+      "latex": "[ Q ^ { \\dagger } , b \\} = \\frac { d x } { d t } + i F",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "1f5d41b96bab231a",
+      "truth": "\\frac { d } { d x } = i \\frac { 1 } { i } \\frac { d } { d x }",
+      "base": "\\frac { d } { d x } = i \\frac { 1 } { i } \\frac { d } { d x }",
+      "latex": "\\frac { d } { d x } = i \\frac { 1 } { i } \\frac { d } { d x }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "1e912f3558db60b6",
+      "truth": "\\frac { d ^ { 2 } x } { d t ^ { 2 } } + \\frac { \\gamma P A ^ { 2 } } { m V } x = 0",
+      "base": "\\frac { d ^ { 2 } x } { d t ^ { 2 } } + \\frac { \\gamma P A ^ { 2 } } { m V } x = 0",
+      "latex": "\\frac { d ^ { 2 } x } { d t ^ { 2 } } + \\frac { \\gamma P A ^ { 2 } } { m V } x = 0",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "2a4affc0271f2035",
+      "truth": "\\approx \\int _ { \\partial N } f ^ { \\mu } d s _ { \\mu }",
+      "base": "\\approx \\int _ { \\partial N } f ^ { \\mu } d s _ { \\mu }",
+      "latex": "\\approx \\int _ { \\partial N } f ^ { \\mu } d s _ { \\mu }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "e0c1c5aea034a9ec",
+      "truth": "\\frac { d } { d x } y = t ( x ) y",
+      "base": "\\frac { d y } { d x } = t ( x ) y",
+      "latex": "\\frac { d y } { d x } = t ( x ) y",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "464a03b1281e1174",
+      "truth": "\\frac { \\partial } { \\partial y ^ { i } } = \\frac { \\partial x ^ { k } } { \\partial y ^ { i } } \\frac { \\partial } { \\partial x ^ { k } }",
+      "base": "\\frac { \\partial } { \\partial y ^ { i } } = \\frac { \\partial x ^ { k } } { \\partial y ^ { i } } \\frac { \\partial } { \\partial x ^ { k } }",
+      "latex": "\\frac { \\partial } { \\partial y ^ { i } } = \\frac { \\partial x ^ { k } } { \\partial y ^ { i } } \\frac { \\partial } { \\partial x ^ { k } }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "3fb1764a25eb5c43",
+      "truth": "e ^ { i \\int _ { \\gamma } A }",
+      "base": "e ^ { i \\int _ { \\gamma } A }",
+      "latex": "e ^ { i \\int _ { \\gamma } A }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "8b25176b9b6f4d98",
+      "truth": "T _ { t } = e ^ { t \\frac { d } { d x } }",
+      "base": "T _ { t } = e ^ { k \\frac { d } { d x } }",
+      "latex": "T _ { t } = e ^ { k \\frac { d } { d x } }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "d0dcdfd70f0b0ea2",
+      "truth": "\\frac { \\partial f } { \\partial x ^ { \\alpha } } d x ^ { \\alpha } = 0",
+      "base": "\\frac { \\partial f } { \\partial x ^ { \\alpha } } d x ^ { \\alpha } = 0",
+      "latex": "\\frac { \\partial f } { \\partial x ^ { \\alpha } } d x ^ { \\alpha } = 0",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "835c2e579a04e0b7",
+      "truth": "A = \\int \\lambda d E _ { A } ( \\lambda )",
+      "base": "A = \\int \\lambda d E _ { A } ( \\lambda )",
+      "latex": "A = \\int \\lambda d E _ { A } ( \\lambda )",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "89b45cce707baaf6",
+      "truth": "\\partial _ { v } f ( x ) = D f ( x ) v",
+      "base": "\\partial _ { \\nu } f ( x ) = D f ( x ) \\nu",
+      "latex": "\\partial _ { \\nu } f ( x ) = D f ( x ) \\nu",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "75fd4854c88162d3",
+      "truth": "= \\sqrt { l i m _ { a \\rightarrow \\infty } \\frac { 8 a ^ { 2 } } { 1 6 a ^ { 2 } } }",
+      "base": "= \\sqrt { 1 i m _ { a \\rightarrow \\infty } \\frac { 8 a ^ { 2 } } { 1 6 a ^ { 2 } } }",
+      "latex": "= \\sqrt { 1 i m _ { a \\rightarrow \\infty } \\frac { 8 a ^ { 2 } } { 1 6 a ^ { 2 } } }",
+      "off": false,
+      "on": false,
+      "routed": null
+    },
+    {
+      "id": "25d210a714977688",
+      "truth": "T = \\frac { 1 } { n R } l i m _ { p \\rightarrow 0 } p V",
+      "base": "T = \\frac { 1 } { n R } l i m _ { p \\rightarrow 0 } p V",
+      "latex": "T = \\frac { 1 } { n R } l i m _ { p \\rightarrow 0 } p V",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "2410955735c428e0",
+      "truth": "\\frac { d s } { d y } = T _ { 0 } \\frac { \\sqrt { 2 g } } { \\pi } \\frac { 1 } { \\sqrt { y } }",
+      "base": "\\frac { d s } { d y } = T _ { 0 } \\frac { \\sqrt { 2 g } } { \\pi } \\frac { 1 } { \\sqrt { 4 } }",
+      "latex": "\\frac { d s } { d y } = T _ { 0 } \\frac { \\sqrt { 2 g } } { \\pi } \\frac { 1 } { \\sqrt { 4 } }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "1df19b20f84d23a5",
+      "truth": "J _ { \\phi } = D _ { \\phi } \\frac { \\partial \\phi } { \\partial x _ { i } }",
+      "base": "J _ { \\phi } = D _ { \\phi } \\frac { \\partial \\phi } { \\partial x _ { i } }",
+      "latex": "J _ { \\phi } = D _ { \\phi } \\frac { \\partial \\phi } { \\partial x _ { i } }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "2baced53ec2bd97d",
+      "truth": "l i m _ { \\theta \\rightarrow 0 } \\frac { 1 - c o s \\theta } { \\theta } = 0",
+      "base": "l i m _ { \\theta \\rightarrow 0 } \\frac { 1 - c o s \\theta } { \\theta } = 0",
+      "latex": "l i m _ { \\theta \\rightarrow 0 } \\frac { 1 - c o s \\theta } { \\theta } = 0",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "6209130d394a5cbe",
+      "truth": "A _ { \\infty } = l i m _ { \\omega \\rightarrow \\infty } A ( \\omega )",
+      "base": "A _ { \\infty } = l i m _ { \\omega \\rightarrow \\infty } A ( \\omega )",
+      "latex": "A _ { \\infty } = l i m _ { \\omega \\rightarrow \\infty } A ( \\omega )",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "4420711d81d0c206",
+      "truth": "\\frac { d ^ { 2 } x } { d t ^ { 2 } } + \\frac { k } { m } x = 0",
+      "base": "\\frac { d ^ { 2 } x } { d t ^ { 2 } } + \\frac { k } { m } x = 0",
+      "latex": "\\frac { d ^ { 2 } x } { d t ^ { 2 } } + \\frac { k } { m } x = 0",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "7698594a2f824c3c",
+      "truth": "U = \\frac { d _ { f } } { 2 } k _ { B } T",
+      "base": "U = \\frac { d f } { 2 } k _ { B } T",
+      "latex": "U = \\frac { d f } { 2 } k _ { B } T",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "cdab986f4300c986",
+      "truth": "D = \\sum _ { j = 1 } ^ { n } e _ { j } \\frac { \\partial } { \\partial x _ { j } }",
+      "base": "D = \\sum _ { j = 1 } ^ { n } e _ { j } \\frac { \\partial } { \\partial x _ { j } }",
+      "latex": "D = \\sum _ { j = 1 } ^ { n } e _ { j } \\frac { \\partial } { \\partial x _ { j } }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "7b9a198cacb5189a",
+      "truth": "\\partial _ { i } f = \\frac { \\partial f } { \\partial \\xi ^ { i } } : = \\frac { \\partial \\overline { f } } { \\partial \\xi ^ { i } }",
+      "base": "\\partial _ { i } f = \\frac { \\partial f } { \\partial \\xi ^ { i } } : = \\frac { \\partial \\overline { f } } { \\partial \\xi ^ { i } }",
+      "latex": "\\partial _ { i } f = \\frac { \\partial f } { \\partial \\xi ^ { i } } : = \\frac { \\partial \\overline { f } } { \\partial \\xi ^ { i } }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "e5311565b7025f32",
+      "truth": "0 \\le \\frac { d P } { d w }",
+      "base": "0 \\le \\frac { d P } { d w }",
+      "latex": "0 \\le \\frac { d P } { d w }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "cb52b2a4ad197800",
+      "truth": "\\int d ^ { d } x \\overline { \\psi } i D / \\psi",
+      "base": "\\int d ^ { d } x \\overline { \\psi } _ { i } D / \\psi",
+      "latex": "\\int d ^ { d } x \\overline { \\psi } _ { i } D / \\psi",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "c3ef0485eea3860c",
+      "truth": "e = - N S \\mu _ { a p p } \\frac { d B } { d t }",
+      "base": "e = - N S u a p p } \\frac { d B } { d t }",
+      "latex": "e = - N S u a p p } \\frac { d B } { d t }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "7d5b45b02a8a24da",
+      "truth": "e _ { \\lambda } ( f _ { i j } ) = \\frac { f _ { i j } } { \\lambda } \\frac { \\partial \\lambda } { \\partial f _ { i j } }",
+      "base": "e _ { \\lambda } ( f _ { i j } ) = \\frac { f _ { i j } } { \\lambda } \\frac { \\partial \\lambda } { \\partial f _ { i j } }",
+      "latex": "e _ { \\lambda } ( f _ { i j } ) = \\frac { f _ { i j } } { \\lambda } \\frac { \\partial \\lambda } { \\partial f _ { i j } }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "4edd23aecaf0de8d",
+      "truth": "z \\int _ { 0 } ^ { 1 } x ^ { - z x } d x = \\sum _ { n = 1 } ^ { \\infty } \\frac { z ^ { n } } { n ^ { n } }",
+      "base": "z \\int _ { 0 } ^ { 1 } x ^ { - 2 x } d x = \\sum _ { n = 1 } ^ { \\infty } \\frac { z ^ { n } } { n ^ { n } }",
+      "latex": "z \\int _ { 0 } ^ { 1 } x ^ { - 2 x } d x = \\sum _ { n = 1 } ^ { \\infty } \\frac { z ^ { n } } { n ^ { n } }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "10f731d3a4043228",
+      "truth": "\\frac { \\partial V } { \\partial p _ { 1 } } = - \\lambda x _ { 1 } ^ { m }",
+      "base": "\\frac { \\partial V } { \\partial p _ { 1 } } = - \\lambda \\chi _ { 1 } ^ { m }",
+      "latex": "\\frac { \\partial V } { \\partial p _ { 1 } } = - \\lambda \\chi _ { 1 } ^ { m }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "395ee537f6454f6d",
+      "truth": "\\frac { \\partial f } { \\partial t \\partial s } = j \\circ \\frac { \\partial f } { \\partial s \\partial t }",
+      "base": "\\frac { \\partial f } { \\partial t \\partial s } = j 0 \\frac { \\partial f } { \\partial s \\partial t }",
+      "latex": "\\frac { \\partial f } { \\partial t \\partial s } = j 0 \\frac { \\partial f } { \\partial s \\partial t }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "5d06f6547c32f08d",
+      "truth": "( \\frac { \\partial H } { \\partial t } \\equiv 0 )",
+      "base": "( \\frac { \\partial H } { \\partial t } = 0 )",
+      "latex": "( \\frac { \\partial H } { \\partial t } = 0 )",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "4d0e5d1a9af060b7",
+      "truth": "\\frac { d s } { d y } = T _ { 0 } \\frac { \\sqrt { 2 g } } { \\pi } \\frac { 1 } { \\sqrt { y } }",
+      "base": "\\frac { d s } { d y } = T _ { 0 } \\frac { \\sqrt { 2 g } } { \\pi } \\frac { 1 } { \\sqrt { y } }",
+      "latex": "\\frac { d s } { d y } = T _ { 0 } \\frac { \\sqrt { 2 g } } { \\pi } \\frac { 1 } { \\sqrt { y } }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "4782403f73dccd40",
+      "truth": "l i m _ { t \\rightarrow \\infty } \\hat { d } ( w , t ) = d ( w )",
+      "base": "l i m _ { t \\rightarrow u _ { 0 } } d ( \\omega , t ) = d ( \\omega )",
+      "latex": "l i m _ { t \\rightarrow u _ { 0 } } d ( \\omega , t ) = d ( \\omega )",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "b662a13d856f192d",
+      "truth": "\\int f _ { n } \\le \\int f",
+      "base": "\\int f _ { n } \\le \\int f",
+      "latex": "\\int f _ { n } \\le \\int f",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "2638a18dce8d8a75",
+      "truth": "A = \\int \\lambda d E _ { A } ( \\lambda )",
+      "base": "A = \\int \\lambda d E _ { A } ( \\lambda )",
+      "latex": "A = \\int \\lambda d E _ { A } ( \\lambda )",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "3776505931da8d2a",
+      "truth": "Q _ { j } = \\frac { \\partial P } { \\partial \\theta ^ { j } } | _ { \\theta = \\theta _ { 0 } }",
+      "base": "Q _ { j } = \\frac { \\partial P } { \\partial \\phi ^ { j } } | _ { \\theta = \\theta _ { i } }",
+      "latex": "Q _ { j } = \\frac { \\partial P } { \\partial \\phi ^ { j } } | _ { \\theta = \\theta _ { i } }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "6778741e3c1703dd",
+      "truth": "l i m _ { n \\rightarrow \\infty } \\hat { S } ( n ) = 0",
+      "base": "l i m _ { n \\rightarrow \\infty } \\hat { S } ( n ) = 0",
+      "latex": "l i m _ { n \\rightarrow \\infty } \\hat { S } ( n ) = 0",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "8a360691094eec56",
+      "truth": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon _ { f } } \\frac { d \\epsilon _ { p } } { d t }",
+      "base": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon _ { F } } \\frac { d \\epsilon _ { p } } { d t }",
+      "latex": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon _ { F } } \\frac { d \\epsilon _ { p } } { d t }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "9d7fc607db4015fe",
+      "truth": "\\tau \\frac { \\partial q } { \\partial t } + q = - \\kappa \\nabla h",
+      "base": "\\tau \\frac { \\partial q } { \\partial t } + q = - k \\nabla h",
+      "latex": "\\tau \\frac { \\partial q } { \\partial t } + q = - k \\nabla h",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "833fb4f82c208253",
+      "truth": "\\int \\frac { \\delta F } { \\delta \\rho } ( x ) \\phi ( x ) d x",
+      "base": "\\int \\frac { \\delta F } { \\delta \\rho } ( x ) \\phi ( x ) d x",
+      "latex": "\\int \\frac { \\delta F } { \\delta \\rho } ( x ) \\phi ( x ) d x",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "468ef6f41ce9e70a",
+      "truth": "\\int _ { E } f ( x ) \\mu ( d x )",
+      "base": "\\int _ { E } f ( x ) \\mu ( d x )",
+      "latex": "\\int _ { E } f ( x ) \\mu ( d x )",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "12e196c2841e83a1",
+      "truth": "l i m _ { x \\rightarrow 0 } \\frac { f ( x ) } { g ( x ) } = \\frac { 3 } { 2 }",
+      "base": "l i m _ { x \\rightarrow 0 } \\frac { f ( x ) } { g ( x ) } = \\frac { 3 } { 2 }",
+      "latex": "l i m _ { x \\rightarrow 0 } \\frac { f ( x ) } { g ( x ) } = \\frac { 3 } { 2 }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "a2e13e0b20dd0b6f",
+      "truth": "\\frac { d } { d t } ( \\frac { d t } { d \\tau } ) \\approx 0",
+      "base": "\\frac { d } { d t } ( \\frac { d t } { d \\tau } ) \\approx 0",
+      "latex": "\\frac { d } { d t } ( \\frac { d t } { d \\tau } ) \\approx 0",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "d13a9f02fdef9925",
+      "truth": "X _ { j } = i \\frac { \\partial g } { \\partial \\xi _ { j } } | _ { \\xi _ { j } = 0 }",
+      "base": "X _ { j } = i \\frac { \\partial y } { \\partial \\epsilon _ { j } } | _ { \\xi _ { j } = 1 ) }",
+      "latex": "X _ { j } = i \\frac { \\partial y } { \\partial \\epsilon _ { j } } | _ { \\xi _ { j } = 1 ) }",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "c9971e60ce1fa9b1",
+      "truth": "i \\partial _ { t } u + \\nabla ^ { 2 } u = u n",
+      "base": "i \\partial _ { t } u + \\nabla ^ { 2 } u = u m",
+      "latex": "i \\partial _ { t } u + \\nabla ^ { 2 } u = u m",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "aa5673c8fa1312af",
+      "truth": "\\partial ^ { \\alpha } u = \\partial ^ { \\alpha _ { 1 } } \\cdot \\cdot \\cdot \\partial ^ { \\alpha _ { n } } u",
+      "base": "\\partial ^ { \\alpha } u = \\partial ^ { \\alpha _ { 1 } } . . . \\partial ^ { \\alpha _ { n } } u",
+      "latex": "\\partial ^ { \\alpha } u = \\partial ^ { \\alpha _ { 1 } } . . . \\partial ^ { \\alpha _ { n } } u",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "b3e08eb02c98240a",
+      "truth": "\\Pi = \\sum _ { i , j } \\Pi ^ { i j } \\partial _ { i } \\wedge \\partial _ { j }",
+      "base": "\\Pi = \\sum _ { i , j } \\Pi ^ { i j } \\partial _ { i } \\wedge \\partial _ { j }",
+      "latex": "\\Pi = \\sum _ { i , j } \\Pi ^ { i j } \\partial _ { i } \\wedge \\partial _ { j }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "4004463161b3821f",
+      "truth": "\\omega _ { T } = - l i m _ { \\Delta t \\rightarrow 0 } \\frac { \\Delta \\theta } { \\Delta t }",
+      "base": "\\omega _ { T } = - l i m _ { \\Delta t \\rightarrow 0 } \\frac { \\Delta \\theta } { \\Delta t }",
+      "latex": "\\omega _ { T } = - l i m _ { \\Delta t \\rightarrow 0 } \\frac { \\Delta \\theta } { \\Delta t }",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "2f7d4d06388dfaac",
+      "truth": "| \\frac { d ^ { 2 } y } { d x ^ { 2 } } | \\approx \\frac { 1 } { R }",
+      "base": "| \\begin{matrix} d ^ { 2 } y \\\\ d x ^ { 2 } \\end{matrix} | \\approx \\frac { 1 } { r }",
+      "latex": "| \\begin{matrix} d ^ { 2 } y \\\\ d x ^ { 2 } \\end{matrix} | \\approx \\frac { 1 } { r }",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "fdda46140a97737b",
+      "truth": "l i m _ { n \\rightarrow \\infty } \\sum _ { i = n } ^ { \\infty } a _ { i } = 0",
+      "base": "l i m _ { n \\rightarrow \\infty } \\sum _ { i = n } ^ { \\infty } a _ { i } = 0",
+      "latex": "l i m _ { n \\rightarrow \\infty } \\sum _ { i = n } ^ { \\infty } a _ { i } = 0",
+      "off": true,
+      "on": true,
+      "routed": "calculus"
+    },
+    {
+      "id": "9270d1335d9f4070",
+      "truth": "\\frac { d ^ { 2 } y } { d x ^ { 2 } } = f ( x , y )",
+      "base": "\\frac { \\partial ^ { 2 } y } { \\partial x ^ { 2 } } = f ( x , y )",
+      "latex": "\\frac { \\partial ^ { 2 } y } { \\partial x ^ { 2 } } = f ( x , y )",
+      "off": false,
+      "on": false,
+      "routed": "calculus"
+    },
+    {
+      "id": "fc464983a71ece28",
+      "truth": "P _ { 0 | 0 } = [ \\begin{matrix} 0 & 0 \\\\ 0 & 0 \\end{matrix} ]",
+      "base": "R _ { 0 1 0 } = [ \\begin{matrix} 0 & 0 \\\\ 0 & 0 \\end{matrix} ]",
+      "latex": "R _ { 0 1 0 } = [ \\begin{matrix} 0 & 0 \\\\ 0 & 0 \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "c79bc3ccb6b8558f",
+      "truth": "( \\begin{matrix} z I d & D ^ { t } \\\\ X & \\partial _ { z } I d \\end{matrix} )",
+      "base": "( \\begin{matrix} Z I d & D ^ { t } \\\\ X & \\partial _ { z } I d \\end{matrix} )",
+      "latex": "( \\begin{matrix} Z I d & D ^ { t } \\\\ X & \\partial _ { z } I d \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "4af3454a8c8f711e",
+      "truth": "\\begin{matrix} 2 & 2 & 4 \\\\ 3 & 5 \\end{matrix}",
+      "base": "\\begin{matrix} 2 & 2 & \\\\ 3 & 5 \\end{matrix}",
+      "latex": "\\begin{matrix} 2 & 2 & \\\\ 3 & 5 \\end{matrix}",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "90fda53ff5713c23",
+      "truth": "[ \\begin{matrix} L & F & P \\end{matrix} ] [ \\begin{matrix} y _ { L } \\\\ y _ { F } \\\\ y _ { P } \\end{matrix} ]",
+      "base": "[ L F P ] [ \\begin{matrix} y _ { L } \\\\ y _ { F } ^ { 2 } \\\\ y _ { P } \\end{matrix} ]",
+      "latex": "[ L F P ] [ \\begin{matrix} y _ { L } \\\\ y _ { F } ^ { 2 } \\\\ y _ { P } \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "5788afdf8120727d",
+      "truth": "O _ { ( \\begin{matrix} - 1 & 1 \\\\ 0 & - 1 \\end{matrix} ) } ^ { - 1 }",
+      "base": "O ^ { - 1 } ( \\begin{matrix} - 1 & 1 \\\\ 0 & - 1 \\end{matrix} )",
+      "latex": "O ^ { - 1 } ( \\begin{matrix} - 1 & 1 \\\\ 0 & - 1 \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "f2a07ee5c6a01138",
+      "truth": "\\begin{matrix} a & = & b + c & ( 1 ) \\\\ d & = & e - f & ( 2 ) \\end{matrix}",
+      "base": "\\begin{matrix} a = b + c ( 1 ) \\\\ d = e - f ( 2 ) \\end{matrix}",
+      "latex": "\\begin{matrix} a = b + c ( 1 ) \\\\ d = e - f ( 2 ) \\end{matrix}",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "94d900cc2dc7e5af",
+      "truth": "( \\begin{matrix} \\mu _ { 1 } & \\mu _ { 2 } & \\gamma \\\\ \\nu _ { 1 } & \\nu _ { 2 } & \\nu \\end{matrix} )",
+      "base": "( \\begin{matrix} u _ { 1 } & u _ { 2 } & \\gamma \\\\ v _ { 1 } & u _ { 2 } & v \\end{matrix} )",
+      "latex": "( \\begin{matrix} u _ { 1 } & u _ { 2 } & \\gamma \\\\ v _ { 1 } & u _ { 2 } & v \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "f3ca33df25c42c46",
+      "truth": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "base": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "latex": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "783097ed099240bb",
+      "truth": "[ \\begin{matrix} 1 & 0 & - \\overline { c } _ { D } ^ { T } & z _ { B } \\\\ 0 & I & D & b \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 1 & 0 & - c _ { D } ^ { - T } & z _ { B } \\\\ 0 & I & D & b \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 1 & 0 & - c _ { D } ^ { - T } & z _ { B } \\\\ 0 & I & D & b \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "e659df712f350129",
+      "truth": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "base": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "latex": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "ef4781b9df3c2643",
+      "truth": "C = ( \\begin{matrix} 0 & 1 \\\\ - 1 & 0 \\end{matrix} )",
+      "base": "C = ( \\begin{matrix} 0 & 1 \\\\ - 1 & 0 \\end{matrix} )",
+      "latex": "C = ( \\begin{matrix} 0 & 1 \\\\ - 1 & 0 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "4ee2f428920018ab",
+      "truth": "\\frac { 1 } { 1 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "base": "\\frac { 1 } { 1 2 } [ \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} ]",
+      "latex": "\\frac { 1 } { 1 2 } [ \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "a6b856c8dd0ff7f5",
+      "truth": "\\frac { 1 } { a _ { 1 1 } } [ \\begin{matrix} a _ { 2 1 } & - \\Delta [ a ] \\\\ 1 & a _ { 1 2 } \\end{matrix} ]",
+      "base": "\\frac { 1 } { a _ { 1 1 } } [ \\begin{matrix} a _ { 2 } , - \\Delta [ a ] \\\\ 1 & a _ { 1 2 } \\end{matrix} ]",
+      "latex": "\\frac { 1 } { a _ { 1 1 } } [ \\begin{matrix} a _ { 2 } , - \\Delta [ a ] \\\\ 1 & a _ { 1 2 } \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "90cde604dea1e53c",
+      "truth": "[ S _ { x } ] = \\frac { \\hbar } { 2 } \\cdot [ \\begin{matrix} 0 & 1 \\\\ 1 & 0 \\end{matrix} ]",
+      "base": "[ S x ] = \\frac { \\hbar } { 2 } \\cdot [ \\begin{matrix} 0 & 1 \\\\ 1 & 0 \\end{matrix} ]",
+      "latex": "[ S x ] = \\frac { \\hbar } { 2 } \\cdot [ \\begin{matrix} 0 & 1 \\\\ 1 & 0 \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "e0f1f4e74fe47dea",
+      "truth": "\\frac { 1 } { 1 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "base": "\\frac { 1 } { 1 2 } [ \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} ]",
+      "latex": "\\frac { 1 } { 1 2 } [ \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "b3732af0c1f62a8b",
+      "truth": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { t } & 0 \\end{matrix} )",
+      "base": "A = ( \\begin{matrix} 0 & x \\\\ - x ^ { + } & 0 \\end{matrix} )",
+      "latex": "A = ( \\begin{matrix} 0 & x \\\\ - x ^ { + } & 0 \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "cd2ce99cb2712874",
+      "truth": "\\begin{matrix} \\delta + x & = & x \\\\ \\delta \\cdot x & = & \\delta \\end{matrix}",
+      "base": "\\begin{matrix} \\delta + x & = x \\\\ \\delta \\cdot x & = \\delta \\end{matrix}",
+      "latex": "\\begin{matrix} \\delta + x & = x \\\\ \\delta \\cdot x & = \\delta \\end{matrix}",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "84a58f23024197c7",
+      "truth": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "base": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "latex": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "3d51c5e851f1b071",
+      "truth": "H = [ \\begin{matrix} L _ { x x } & L _ { x y } \\\\ L _ { x y } & L _ { y y } \\end{matrix} ]",
+      "base": "H = [ \\begin{matrix} L _ { x x } & L _ { x y } \\\\ L _ { x y } & L _ { y y } \\end{matrix} ]",
+      "latex": "H = [ \\begin{matrix} L _ { x x } & L _ { x y } \\\\ L _ { x y } & L _ { y y } \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "f5d5555041f46be6",
+      "truth": "[ \\begin{matrix} c o s \\theta & s i n \\theta & 0 \\\\ - s i n \\theta & c o s \\theta & 0 \\\\ 0 & 0 & 1 \\end{matrix} ]",
+      "base": "( \\begin{matrix} c o s \\theta & s i n \\theta & 0 \\\\ - s i n \\theta & c o s \\theta & 0 \\\\ 0 & 0 & 1 \\end{matrix} )",
+      "latex": "( \\begin{matrix} c o s \\theta & s i n \\theta & 0 \\\\ - s i n \\theta & c o s \\theta & 0 \\\\ 0 & 0 & 1 \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "a78e56347fc51480",
+      "truth": "[ \\begin{matrix} 1 & \\frac { 1 } { s C } \\\\ 0 & 1 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 1 & \\frac { 1 } { s C } \\\\ 0 & 1 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 1 & \\frac { 1 } { s C } \\\\ 0 & 1 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "dc8c8a455753dd5d",
+      "truth": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot & p _ { i } \\end{matrix} ]",
+      "base": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot & p _ { i } \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot & p _ { i } \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "bbf275d8bfe0e4a3",
+      "truth": "( \\begin{matrix} 1 & 2 & . . . & j \\\\ a _ { 1 } & a _ { 2 } & . . . & a _ { j } \\end{matrix} )",
+      "base": "( \\begin{matrix} 1 & 2 & . . . j \\\\ a . a _ { 2 } & . . . . . a _ { j } \\end{matrix} )",
+      "latex": "( \\begin{matrix} 1 & 2 & . . . j \\\\ a . a _ { 2 } & . . . . . a _ { j } \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "63b2cdf91c5223f5",
+      "truth": "A = ( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+      "base": "A = ( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+      "latex": "A = ( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "2178a8087f095b49",
+      "truth": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+      "base": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+      "latex": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "f6dd891a7372ce0e",
+      "truth": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "2bddaf7ed9581a86",
+      "truth": "\\begin{matrix} \\times & c & d \\\\ a & a c & a d \\\\ b & b c & b d \\end{matrix}",
+      "base": "\\begin{matrix} X & c & d \\\\ a & a c & a d \\\\ b & b c & b d \\end{matrix}",
+      "latex": "\\begin{matrix} X & c & d \\\\ a & a c & a d \\\\ b & b c & b d \\end{matrix}",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "8f9275a7bda0e1be",
+      "truth": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "base": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "latex": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "c9a3c0c928d104c2",
+      "truth": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { t } & 0 \\end{matrix} )",
+      "base": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { * } & 0 \\end{matrix} )",
+      "latex": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { * } & 0 \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "7e58224cbc3d3e96",
+      "truth": "A = [ \\begin{matrix} 2 & - 2 \\\\ - 2 & 1 \\end{matrix} ]",
+      "base": "A = [ \\begin{matrix} 2 & - 2 \\\\ - 2 & 1 \\end{matrix} ]",
+      "latex": "A = [ \\begin{matrix} 2 & - 2 \\\\ - 2 & 1 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "49e381de7f284050",
+      "truth": "C = [ \\begin{matrix} 0 & A \\\\ A ^ { t } & 0 \\end{matrix} ]",
+      "base": "C = [ \\begin{matrix} 0 & A \\\\ A ^ { t } & 0 \\end{matrix} ]",
+      "latex": "C = [ \\begin{matrix} 0 & A \\\\ A ^ { t } & 0 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "ab62667ce85a7dec",
+      "truth": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot & p _ { i } \\end{matrix} ]",
+      "base": "[ \\begin{matrix} p _ { 1 } & . . . & p _ { i } \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} p _ { 1 } & . . . & p _ { i } \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "0f903236cc1621e3",
+      "truth": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "base": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "latex": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "2af8733690d1e879",
+      "truth": "H = [ \\begin{matrix} L _ { x x } & L _ { x y } \\\\ L _ { x y } & L _ { y y } \\end{matrix} ]",
+      "base": "H = [ \\begin{matrix} L _ { x x } & L x } \\\\ L _ { x y } & L _ { y y } \\end{matrix} ]",
+      "latex": "H = [ \\begin{matrix} L _ { x x } & L x } \\\\ L _ { x y } & L _ { y y } \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "2a256c96eb6674c8",
+      "truth": "[ \\begin{matrix} c o s \\theta & s i n \\theta & 0 \\\\ - s i n \\theta & c o s \\theta & 0 \\\\ 0 & 0 & 1 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} c o s \\theta & s i n \\theta & 0 \\\\ - s i n \\theta & c o s \\theta & 0 \\\\ 0 & 0 & 1 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} c o s \\theta & s i n \\theta & 0 \\\\ - s i n \\theta & c o s \\theta & 0 \\\\ 0 & 0 & 1 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "a53b5eea9b0797d0",
+      "truth": "[ \\begin{matrix} 1 & \\lambda D \\\\ 0 & 1 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 1 & \\lambda D \\\\ 0 & 1 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 1 & \\lambda D \\\\ 0 & 1 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "0d92f5d164e8aeeb",
+      "truth": "\\hat { S } = \\frac { 1 } { 2 } [ \\begin{matrix} \\sigma & 0 \\\\ 0 & \\sigma \\end{matrix} ]",
+      "base": "\\hat { S } = \\frac { 1 } { 2 } [ \\begin{matrix} \\sigma & 0 \\\\ 0 & \\sigma \\end{matrix} ]",
+      "latex": "\\hat { S } = \\frac { 1 } { 2 } [ \\begin{matrix} \\sigma & 0 \\\\ 0 & \\sigma \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "2bd82ed4387f6a49",
+      "truth": "( \\begin{matrix} \\alpha & 0 \\\\ \\beta & \\alpha ^ { - 1 } \\end{matrix} )",
+      "base": "( \\begin{matrix} \\alpha & 0 \\\\ \\beta & \\alpha ^ { - 1 } \\end{matrix} )",
+      "latex": "( \\begin{matrix} \\alpha & 0 \\\\ \\beta & \\alpha ^ { - 1 } \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "48a58500dfcd21d9",
+      "truth": "X = [ \\begin{matrix} A & B \\\\ B ^ { T } & C \\end{matrix} ]",
+      "base": "X = [ \\begin{matrix} A & B \\\\ B ^ { T } & C \\end{matrix} ]",
+      "latex": "X = [ \\begin{matrix} A & B \\\\ B ^ { T } & C \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "18521488a731fd6d",
+      "truth": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { t } & 0 \\end{matrix} )",
+      "base": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { t } & 0 \\end{matrix} )",
+      "latex": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { t } & 0 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "2f027df3b4d27587",
+      "truth": "[ \\begin{matrix} f \\\\ g \\end{matrix} ] = [ \\begin{matrix} A & B \\\\ C & D \\end{matrix} ] [ \\begin{matrix} x \\\\ y \\end{matrix} ]",
+      "base": "[ \\begin{matrix} f \\\\ y \\end{matrix} ] = [ \\begin{matrix} A & B \\\\ C & D \\end{matrix} ] [ \\begin{matrix} X \\\\ Y \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} f \\\\ y \\end{matrix} ] = [ \\begin{matrix} A & B \\\\ C & D \\end{matrix} ] [ \\begin{matrix} X \\\\ Y \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "a584061d70dd2922",
+      "truth": "[ \\begin{matrix} a & b & c \\\\ d & e & f \\\\ \\end{matrix} ]",
+      "base": "[ \\begin{matrix} a & b & c \\\\ d & e & f \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} a & b & c \\\\ d & e & f \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "f76866fa55d94c2c",
+      "truth": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "1711c11ce23595c3",
+      "truth": "[ \\begin{matrix} 1 & - \\frac { 1 } { G } \\\\ 0 & 1 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 1 & - \\frac { 1 } { G } \\\\ 0 & 1 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 1 & - \\frac { 1 } { G } \\\\ 0 & 1 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "0625c86dd5028c58",
+      "truth": "\\frac { 1 } { 1 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "base": "\\frac { 1 } { 1 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "latex": "\\frac { 1 } { 1 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "eae94f31a3197065",
+      "truth": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "base": "| ^ { A } \\begin{matrix} B / 2 \\\\ C \\end{matrix}",
+      "latex": "| ^ { A } \\begin{matrix} B / 2 \\\\ C \\end{matrix}",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "4bb4950edf8454e3",
+      "truth": "\\frac { 1 } { g _ { 1 1 } } [ \\begin{matrix} 1 & - g _ { 1 2 } \\\\ g _ { 2 1 } & \\Delta [ g ] \\end{matrix} ]",
+      "base": "\\frac { 1 } { g _ { 1 1 } } [ \\begin{matrix} 1 & - g _ { 1 2 } \\\\ g _ { 2 1 } & \\Delta ( g ) \\end{matrix} ]",
+      "latex": "\\frac { 1 } { g _ { 1 1 } } [ \\begin{matrix} 1 & - g _ { 1 2 } \\\\ g _ { 2 1 } & \\Delta ( g ) \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "627c2c76d8c3f05c",
+      "truth": "A = ( \\begin{matrix} 0 & 1 & 0 \\\\ - 1 & 0 & 0 \\\\ 0 & 0 & 1 \\end{matrix} )",
+      "base": "A = ( \\begin{matrix} 0 & 1 & 0 \\\\ - 1 & 0 & 0 \\\\ 0 & 0 & 1 \\end{matrix} )",
+      "latex": "A = ( \\begin{matrix} 0 & 1 & 0 \\\\ - 1 & 0 & 0 \\\\ 0 & 0 & 1 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "66fa4fea5bb1a77b",
+      "truth": "[ \\begin{matrix} 1 & 0 & - \\overline { c } _ { D } ^ { T } & z _ { B } \\\\ 0 & I & D & b \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 1 & 0 & - c _ { D } ^ { T } & z _ { B } \\\\ 0 & 1 & D & b \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 1 & 0 & - c _ { D } ^ { T } & z _ { B } \\\\ 0 & 1 & D & b \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "4ad01f218482faac",
+      "truth": "\\frac { 1 } { a _ { 1 1 } } [ \\begin{matrix} a _ { 2 1 } & - \\Delta [ a ] \\\\ 1 & a _ { 1 2 } \\end{matrix} ]",
+      "base": "\\frac { 1 } { a _ { 1 1 } } [ \\begin{matrix} a _ { 2 1 } - \\Delta [ a ] \\\\ 1 & a _ { 1 2 } \\end{matrix} ]",
+      "latex": "\\frac { 1 } { a _ { 1 1 } } [ \\begin{matrix} a _ { 2 1 } - \\Delta [ a ] \\\\ 1 & a _ { 1 2 } \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "943d8002b7ebbd6f",
+      "truth": "[ \\begin{matrix} a & b \\\\ c & d \\end{matrix} ] \\rightarrow [ \\begin{matrix} d & b \\\\ c & a \\end{matrix} ]",
+      "base": "[ \\begin{matrix} a & b \\\\ c & d \\end{matrix} ] \\rightarrow [ \\begin{matrix} d & b \\\\ c & d \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} a & b \\\\ c & d \\end{matrix} ] \\rightarrow [ \\begin{matrix} d & b \\\\ c & d \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "39f10ddc2b679ec6",
+      "truth": "[ \\begin{matrix} 1 & 9 & - 1 3 \\\\ 2 0 & 5 & - 6 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 1 & 9 & - 1 3 \\\\ 2 0 & 5 & - 6 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 1 & 9 & - 1 3 \\\\ 2 0 & 5 & - 6 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "7b3d99e9e2a78c3d",
+      "truth": "( \\begin{matrix} 1 & 2 & . . . & j \\\\ a _ { 1 } & a _ { 2 } & . . . & a _ { j } \\end{matrix} )",
+      "base": "( \\begin{matrix} 1 & 2 . . . 5 \\\\ a _ { 1 } & a _ { 2 } . . . . a _ { j } \\end{matrix} )",
+      "latex": "( \\begin{matrix} 1 & 2 . . . 5 \\\\ a _ { 1 } & a _ { 2 } . . . . a _ { j } \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "6cd93ef09d88c3bb",
+      "truth": "[ \\begin{matrix} I _ { l } & 0 \\\\ 0 & 0 _ { u } \\end{matrix} ]",
+      "base": "[ \\begin{matrix} I _ { l } & 0 \\\\ 0 & 0 _ { u } \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} I _ { l } & 0 \\\\ 0 & 0 _ { u } \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "5352864f79e96913",
+      "truth": "[ \\begin{matrix} L & F & P \\end{matrix} ] [ \\begin{matrix} y _ { L } \\\\ y _ { F } \\\\ y _ { P } \\end{matrix} ]",
+      "base": "[ L F P ] [ \\begin{matrix} y _ { L } \\\\ y _ { F } \\\\ y _ { P } \\end{matrix} ]",
+      "latex": "[ L F P ] [ \\begin{matrix} y _ { L } \\\\ y _ { F } \\\\ y _ { P } \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "4e64dea8365e07c2",
+      "truth": "\\begin{matrix} \\times & c & d \\\\ a & a c & a d \\\\ b & b c & b d \\end{matrix}",
+      "base": "\\begin{matrix} x & c & d \\\\ a & & a c & a d \\\\ b & b c & d \\end{matrix}",
+      "latex": "\\begin{matrix} x & c & d \\\\ a & & a c & a d \\\\ b & b c & d \\end{matrix}",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "7ce209db6a205519",
+      "truth": "\\begin{matrix} a & = & b + c & ( 1 ) \\\\ d & = & e - f & ( 2 ) \\end{matrix}",
+      "base": "\\begin{matrix} a = b + c & ( 1 ) \\\\ d = e - f & ( 2 ) \\end{matrix}",
+      "latex": "\\begin{matrix} a = b + c & ( 1 ) \\\\ d = e - f & ( 2 ) \\end{matrix}",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "f34b88baba644f8e",
+      "truth": "[ S _ { x } ] = \\frac { \\hbar } { 2 } \\cdot [ \\begin{matrix} 0 & 1 \\\\ 1 & 0 \\end{matrix} ]",
+      "base": "[ S _ { x } ] = \\frac { \\hbar } { 2 } \\cdot [ \\begin{matrix} 0 & 1 \\\\ 1 & 0 \\end{matrix} ]",
+      "latex": "[ S _ { x } ] = \\frac { \\hbar } { 2 } \\cdot [ \\begin{matrix} 0 & 1 \\\\ 1 & 0 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "6d032adca6747ebf",
+      "truth": "[ \\begin{matrix} s ^ { 2 } & p s z \\\\ p s z & z ^ { 2 } \\end{matrix} ]",
+      "base": "[ \\begin{matrix} s ^ { 2 } & p s z \\\\ p s z & z ^ { 2 } \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} s ^ { 2 } & p s z \\\\ p s z & z ^ { 2 } \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "9ce70a9b93807bbf",
+      "truth": "[ \\begin{matrix} S / I & S / I \\\\ 0 & S \\end{matrix} ]",
+      "base": "[ \\begin{matrix} S / I & S / I \\\\ 0 & S \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} S / I & S / I \\\\ 0 & S \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "97e3613b3e732012",
+      "truth": "[ \\dot { \\Omega } ] = [ \\begin{matrix} 0 & - \\alpha \\\\ \\alpha & 0 \\end{matrix} ]",
+      "base": "[ \\dot { \\Omega } ] = [ \\begin{matrix} 0 & - \\alpha \\\\ \\alpha & 0 \\end{matrix} ]",
+      "latex": "[ \\dot { \\Omega } ] = [ \\begin{matrix} 0 & - \\alpha \\\\ \\alpha & 0 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "bf39c4472b10bf05",
+      "truth": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "bf2129f65c22e665",
+      "truth": "x _ { i j } = ( \\begin{matrix} z _ { 2 } & z _ { 1 } \\\\ - \\overline { z _ { 1 } } & \\overline { z _ { 2 } } \\end{matrix} )",
+      "base": "x _ { 1 j } = ( \\frac { z _ { 2 } } { - z _ { 1 } } & \\frac { z _ { 1 } } { z _ { 2 } } \\end{matrix} )",
+      "latex": "x _ { 1 j } = ( \\frac { z _ { 2 } } { - z _ { 1 } } & \\frac { z _ { 1 } } { z _ { 2 } } \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": null
+    },
+    {
+      "id": "0f8b61fe58da9291",
+      "truth": "\\frac { 1 } { 1 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "base": "\\frac { 1 } { 1 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "latex": "\\frac { 1 } { 1 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "d5be31d99f8dad5c",
+      "truth": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "base": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "latex": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "59f0968a87f6cda2",
+      "truth": "( \\begin{matrix} z I d & D ^ { t } \\\\ X & \\partial _ { z } I d \\end{matrix} )",
+      "base": "( \\begin{matrix} z I d & D ^ { t } \\\\ X & \\partial z I d \\end{matrix} )",
+      "latex": "( \\begin{matrix} z I d & D ^ { t } \\\\ X & \\partial z I d \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "277f22d68cc0af29",
+      "truth": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot & p _ { i } \\end{matrix} ]",
+      "base": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot , p _ { i } ]",
+      "latex": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot , p _ { i } ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "b86563cd4f090628",
+      "truth": "[ \\begin{matrix} S / I & S / I \\\\ 0 & S \\end{matrix} ]",
+      "base": "[ \\begin{matrix} S / I & S / I \\\\ 0 & S \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} S / I & S / I \\\\ 0 & S \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "4e3b8926247cbbaf",
+      "truth": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "base": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "latex": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "c083aea94f245849",
+      "truth": "X = [ \\begin{matrix} A & B \\\\ B ^ { T } & C \\end{matrix} ]",
+      "base": "X = [ \\begin{matrix} A & B \\\\ B ^ { + } & C \\end{matrix} ]",
+      "latex": "X = [ \\begin{matrix} A & B \\\\ B ^ { + } & C \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "d9abf1c5e619578c",
+      "truth": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 0 & 1 \\\\ 0 & 0 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "b4c90dbafd85af3c",
+      "truth": "M = \\frac { 1 } { 9 } [ \\begin{matrix} 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ \\end{matrix} ]",
+      "base": "M = \\frac { 1 } { 9 } [ \\begin{matrix} 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ 1 & 1 & 1 \\end{matrix} ]",
+      "latex": "M = \\frac { 1 } { 9 } [ \\begin{matrix} 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ 1 & 1 & 1 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "50a1559488608034",
+      "truth": "H = ( \\begin{matrix} 1 & - 1 \\\\ - 1 & 1 \\end{matrix} )",
+      "base": "H = ( \\begin{matrix} 1 & - 1 \\\\ - 1 & 1 \\end{matrix} )",
+      "latex": "H = ( \\begin{matrix} 1 & - 1 \\\\ - 1 & 1 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "52e3200af3047670",
+      "truth": "\\frac { 1 } { 1 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "base": "\\frac { 1 } { 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "latex": "\\frac { 1 } { 2 } ( \\begin{matrix} 4 & 8 & 4 \\\\ 5 & 7 & - 4 \\\\ 1 & - 1 & 4 \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "4f375636437b90bf",
+      "truth": "[ \\begin{matrix} - 2 & - 1 \\\\ - 1 & 2 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} - 2 & - 1 \\\\ - 1 & 2 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} - 2 & - 1 \\\\ - 1 & 2 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "42d10d52b893daa9",
+      "truth": "[ \\begin{matrix} s ^ { 2 } & p s z \\\\ p s z & z ^ { 2 } \\end{matrix} ]",
+      "base": "[ \\begin{matrix} s ^ { 2 } & p s z \\\\ s s z & z ^ { 2 } \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} s ^ { 2 } & p s z \\\\ s s z & z ^ { 2 } \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "5cc14ee691e182d0",
+      "truth": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+      "base": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+      "latex": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "5dac3477926d5d0c",
+      "truth": "C _ { \\beta } ( s ) = [ \\begin{matrix} 1 & 0 \\\\ s & 1 \\end{matrix} ]",
+      "base": "C _ { \\beta } ( s ) = [ \\begin{matrix} 1 & 0 \\\\ s & 1 \\end{matrix} ]",
+      "latex": "C _ { \\beta } ( s ) = [ \\begin{matrix} 1 & 0 \\\\ s & 1 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "aece90e5d8951bbd",
+      "truth": "\\lambda _ { 3 } = ( \\begin{matrix} 1 & 0 & 0 \\\\ 0 & - 1 & 0 \\\\ 0 & 0 & 0 \\end{matrix} )",
+      "base": "\\lambda _ { 3 } = ( \\begin{matrix} 1 & 0 & 0 \\\\ 0 & - 1 & 0 \\\\ 0 & 0 & 0 \\end{matrix} )",
+      "latex": "\\lambda _ { 3 } = ( \\begin{matrix} 1 & 0 & 0 \\\\ 0 & - 1 & 0 \\\\ 0 & 0 & 0 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "597321ff3f23d97a",
+      "truth": "[ \\begin{matrix} A _ { 1 1 } & A _ { 1 2 } & A _ { 1 3 } \\\\ A _ { 2 1 } & A _ { 2 2 } & A _ { 2 3 } \\\\ A _ { 3 1 } & A _ { 3 2 } & A _ { 3 3 } \\end{matrix} ]",
+      "base": "[ \\begin{matrix} A _ { 1 1 } & A _ { 1 2 } & A _ { 1 3 } \\\\ A _ { 2 1 } & A _ { 2 2 } & A _ { 2 3 } \\\\ A _ { 3 1 } & A _ { 3 2 } A _ { 3 3 } \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} A _ { 1 1 } & A _ { 1 2 } & A _ { 1 3 } \\\\ A _ { 2 1 } & A _ { 2 2 } & A _ { 2 3 } \\\\ A _ { 3 1 } & A _ { 3 2 } & A _ { 3 3 } \\end{matrix} ]",
+      "off": false,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "df066d33ca653c64",
+      "truth": "L = ( \\begin{matrix} 1 & 0 \\\\ \\frac { - 1 } { f } & 1 \\end{matrix} )",
+      "base": "L = ( \\begin{matrix} 1 & 0 \\\\ \\frac { - 1 } { f } & 1 \\end{matrix} )",
+      "latex": "L = ( \\begin{matrix} 1 & 0 \\\\ \\frac { - 1 } { f } & 1 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "e291070651b4cd68",
+      "truth": "[ \\begin{matrix} 1 & 0 & - \\overline { c } _ { D } ^ { T } & z _ { B } \\\\ 0 & I & D & b \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 1 & 0 & - c _ { D } ^ { T } & z _ { B } \\\\ 0 & I & D & 0 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 1 & 0 & - c _ { D } ^ { T } & z _ { B } \\\\ 0 & I & D & 0 \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "770408abf5a80c3d",
+      "truth": "A = ( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+      "base": "A = ( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+      "latex": "A = ( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "189643ed1ccb950b",
+      "truth": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { t } & 0 \\end{matrix} )",
+      "base": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { 2 } & 0 \\end{matrix} )",
+      "latex": "A = ( \\begin{matrix} 0 & X \\\\ - X ^ { 2 } & 0 \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "9e4f322430c0a691",
+      "truth": "[ \\begin{matrix} - 2 & - 1 \\\\ - 1 & 2 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} - 2 & - 1 \\\\ - 1 & 2 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} - 2 & - 1 \\\\ - 1 & 2 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "9bca1035e96f3869",
+      "truth": "P _ { 0 | 0 } = [ \\begin{matrix} 0 & 0 \\\\ 0 & 0 \\end{matrix} ]",
+      "base": "P _ { 0 | 0 } = [ \\begin{matrix} 0 & 0 \\\\ 0 & 0 \\end{matrix} ]",
+      "latex": "P _ { 0 | 0 } = [ \\begin{matrix} 0 & 0 \\\\ 0 & 0 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "50c0104099d86562",
+      "truth": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "base": "| \\begin{matrix} A & B / Z \\\\ B / 2 & C \\end{matrix} |",
+      "latex": "| \\begin{matrix} A & B / Z \\\\ B / 2 & C \\end{matrix} |",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "d20f61f6d32095fa",
+      "truth": "[ \\begin{matrix} 1 & 0 & 0 & 2 \\\\ 0 & 1 & 0 & 3 \\\\ 0 & 0 & 1 & - 1 \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 1 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & & 0 & 1 & 3 \\\\ - 1 \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 1 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & & 0 & 1 & 3 \\\\ - 1 \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "eeaba3f4cbf30e4f",
+      "truth": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "base": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "latex": "| \\begin{matrix} A & B / 2 \\\\ B / 2 & C \\end{matrix} |",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "2c486482b6ac2d78",
+      "truth": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot & p _ { i } \\end{matrix} ]",
+      "base": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot & p _ { i } \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} p _ { 1 } & \\cdot \\cdot \\cdot & p _ { i } \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "6f89125c550ac905",
+      "truth": "\\begin{matrix} \\times & c & d \\\\ a & a c & a d \\\\ b & b c & b d \\end{matrix}",
+      "base": "\\begin{matrix} X & c & d \\\\ a & a c & a d \\\\ b & b c & b d \\end{matrix}",
+      "latex": "\\begin{matrix} X & c & d \\\\ a & a c & a d \\\\ b & b c & b d \\end{matrix}",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "45c97bd7b7975a86",
+      "truth": "\\frac { 1 } { g _ { 1 1 } } [ \\begin{matrix} 1 & - g _ { 1 2 } \\\\ g _ { 2 1 } & \\Delta [ g ] \\end{matrix} ]",
+      "base": "\\frac { 1 } { g _ { 1 1 } } [ \\begin{matrix} 1 & - g _ { 1 2 } \\\\ g _ { 2 1 } & \\Delta ( g ) \\end{matrix} ]",
+      "latex": "\\frac { 1 } { g _ { 1 1 } } [ \\begin{matrix} 1 & - g _ { 1 2 } \\\\ g _ { 2 1 } & \\Delta ( g ) \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "c89c39f01d67308c",
+      "truth": "P _ { 0 | 0 } = [ \\begin{matrix} 0 & 0 \\\\ 0 & 0 \\end{matrix} ]",
+      "base": "P _ { 0 | 0 } = [ \\begin{matrix} 0 & 0 \\\\ 0 & 0 \\end{matrix} ]",
+      "latex": "P _ { 0 | 0 } = [ \\begin{matrix} 0 & 0 \\\\ 0 & 0 \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "8a276970b3c8a04b",
+      "truth": "O _ { ( \\begin{matrix} - 1 & 1 \\\\ 0 & - 1 \\end{matrix} ) } ^ { - 1 }",
+      "base": "O _ { ( - 1 } \\begin{matrix} - 1 & 1 \\\\ 0 & - 1 \\end{matrix} )",
+      "latex": "O _ { ( - 1 } \\begin{matrix} - 1 & 1 \\\\ 0 & - 1 \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "40a10fe9980df34a",
+      "truth": "[ \\begin{matrix} a & b & c \\\\ d & e & f \\\\ \\end{matrix} ]",
+      "base": "[ \\begin{matrix} a & b & c \\\\ d & e & f \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} a & b & c \\\\ d & e & f \\end{matrix} ]",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "3832764f232cc328",
+      "truth": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "base": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "latex": "( \\begin{matrix} c o s 2 \\theta & s i n 2 \\theta \\\\ s i n 2 \\theta & - c o s 2 \\theta \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "1b68ebd10f8dbd74",
+      "truth": "( \\begin{matrix} \\mu _ { 1 } & \\mu _ { 2 } & \\gamma \\\\ \\nu _ { 1 } & \\nu _ { 2 } & \\nu \\end{matrix} )",
+      "base": "( \\begin{matrix} \\mu _ { 1 } & \\mu _ { 2 } & \\gamma \\\\ \\nu _ { 1 } & \\nu _ { 2 } & \\nu \\end{matrix} )",
+      "latex": "( \\begin{matrix} \\mu _ { 1 } & \\mu _ { 2 } & \\gamma \\\\ \\nu _ { 1 } & \\nu _ { 2 } & \\nu \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "8ffe3505c86609b8",
+      "truth": "J _ { f } = ( \\begin{matrix} 2 x & 3 y ^ { 2 } \\\\ 2 x & - 3 y ^ { 2 } \\end{matrix} )",
+      "base": "J _ { f } = ( \\begin{matrix} 2 x & 3 y ^ { 2 } \\\\ 2 y & - 3 y ^ { 2 } \\end{matrix} )",
+      "latex": "J _ { f } = ( \\begin{matrix} 2 x & 3 y ^ { 2 } \\\\ 2 y & - 3 y ^ { 2 } \\end{matrix} )",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "91f39537dc5cd201",
+      "truth": "A = ( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+      "base": "A = ( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+      "latex": "A = ( \\begin{matrix} 0 & - 1 \\\\ 1 & 0 \\end{matrix} )",
+      "off": true,
+      "on": true,
+      "routed": "linear_algebra"
+    },
+    {
+      "id": "ac89b79f0dfd659d",
+      "truth": "[ \\begin{matrix} 1 & 0 & - \\overline { c } _ { D } ^ { T } & z _ { B } \\\\ 0 & I & D & b \\end{matrix} ]",
+      "base": "[ \\begin{matrix} 1 & 0 & - c _ { D } ^ { - T } & z _ { B } \\\\ 0 & I & D & b \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} 1 & 0 & - c _ { D } ^ { - T } & z _ { B } \\\\ 0 & I & D & b \\end{matrix} ]",
+      "off": false,
+      "on": false,
+      "routed": "linear_algebra"
+    }
+  ],
+  "parameters": {
+    "kind": "symbol-bigram-v1",
+    "strength": 0.01,
+    "gap": 0.03,
+    "alpha": 0.25
+  }
+}

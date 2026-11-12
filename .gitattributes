@@ -6,3 +6,4 @@ app/src/main/assets/formula-gryph/*.json text eol=lf
 app/src/main/assets/formula-gryph/vocabulary.json -text whitespace=cr-at-eol
 app/src/main/assets/formula-packs/*.json text eol=lf
 *.xformula text eol=lf
+docs/benchmarks/v5/*.json text eol=lf

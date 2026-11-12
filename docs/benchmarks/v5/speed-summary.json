@@ -1,0 +1,43 @@
+{
+  "v3": {
+    "warm": {
+      "elapsed_ms": 10253.666666666666,
+      "pss_mib": 1671.5716145833333
+    },
+    "reload": {
+      "elapsed_ms": 11265.666666666666,
+      "pss_mib": 1671.931640625
+    }
+  },
+  "v4": {
+    "warm": {
+      "elapsed_ms": 1622.3333333333333,
+      "pss_mib": 397.4117838541667
+    },
+    "reload": {
+      "elapsed_ms": 1781,
+      "pss_mib": 365.1585286458333
+    }
+  },
+  "v5-fast": {
+    "warm": {
+      "elapsed_ms": 1849.3333333333333,
+      "pss_mib": 403.0673828125
+    },
+    "reload": {
+      "elapsed_ms": 1917.3333333333333,
+      "pss_mib": 365.6520182291667
+    }
+  },
+  "v5-precision": {
+    "warm": {
+      "elapsed_ms": 13512.333333333334,
+      "pss_mib": 1401.2906901041667
+    },
+    "reload": {
+      "elapsed_ms": 14686.666666666666,
+      "pss_mib": 1401.4352213541667
+    }
+  },
+  "scope": "Same three real MathWriting cases, fixed indices 0/100/199, same Android 14 2-vCPU 4-GiB AVD across separate runs; first unpack excluded; PSS snapshots are not peaks; no physical-tablet performance claim. Host inference server stopped before final speed runs. Precision quantization has NOT demonstrated a speedup versus v3."
+}

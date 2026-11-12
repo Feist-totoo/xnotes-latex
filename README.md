@@ -1,19 +1,17 @@
 # xnotes LaTeX — 套索手写转可移动公式
 
-这是面向 Android 平板白板的独立 fork。**套索圈选笔画 → 本地 OCR → LaTeX 预览纠错 → 插入可拖动公式块**，支持分页笔记和无限画布。
+面向 Android 平板白板的独立 fork：**套索圈选笔画 → 本地识别 → LaTeX 预览纠错 → 插入可拖动公式块**，支持分页笔记和无限画布。
 
-- 公式保留可编辑源码，可移动、缩放、再次编辑；支持撤销和保留原笔迹。
-- 模型内置 APK，识别不联网。十个学科包可从 GitHub Releases 独立下载、启停、更新和本地导入；下载后离线调用。不是整页中文 OCR；每次选择一个数学公式并检查预览。
-- 基于 xnotes 原生 Android 画布和完全离线的 GryphOne Q8 / ONNX Runtime；此 fork 按 AGPL-3.0 发布，保留原始 xnotes 的 MIT 许可与署名。
-- **[使用、构建与许可说明](docs/FORMULA.md)**。构建前运行 `python tools/prepare_handwriting_model.py`。
-- 真实手写对照与 Android 原生验证见 [v4 验证报告](docs/FORMULA_ACCURACY_V4.md)；三星平板 / S Pen 实机表现仍需验证。
-- **[v4 原始笔迹测试版 APK / 学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.4-preview)** · **[v3 正式版](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.3)**。v4 权重约 32 MB，重点支持套索中的原始笔迹；图片 OCR 回退显著退化，不能替代图片识别版。学科评分未证明稳定净增益，默认关闭，仍未达到完整目标。
-- 高数、线代统计资源来自 Google MathWriting HUMAN TRAIN，遵循 **CC BY-NC-SA 4.0**；原始笔迹与用户图片不随应用分发。
-- 此 fork 的包名与官方版不同。下方保留上游介绍；其中商店和上游 release 链接不包含本 fork 新功能。
+- **[下载 v5 完整离线 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/xnotes-latex-0.9.8-latex.5-full-offline.apk)** · [Release / 十个独立学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。约 1.01 GB，Android 8.0+，arm64-v8a / x86_64；沿用此 fork 的签名，可覆盖升级。
+- APK 内置 GryphOne Q8 快速笔画识别、压缩 GLM-OCR 图片识别 / 精细复核，以及全部十个学科包。安装后不需要下载模型或学科包就能断网使用；包仍可独立启停、卸载、本地恢复、导入和通过 GitHub 更新。
+- 原始笔画先快速识别，需要时点“离线精细复核”，检查后手动采用结果；也可选择单张公式图片识别。复核不会覆盖手动编辑。公式源码可再次编辑，块可移动、缩放、撤销或保留原内容。
+- **准确率仍有限**：开发机同组 200 条真实样本由 v3 的 89/200 改善到 104/200；Android 新增 160 条为 95/160。高数、线代包改用训练集符号序列统计，旧专项集 116→117/200，新增集没有增益。不能宣称对大多数本科公式已可靠；发布标记为 prerelease，保留 v3 稳定渠道。
+- [完整验证报告](docs/FORMULA_ACCURACY_V5.md) · [使用、构建与许可](docs/FORMULA.md)。构建前运行 `python tools/prepare_full_formula.py`。没有三星 / S Pen 真机测试数据。
+- 此 fork 代码为 AGPL-3.0，保留原 xnotes MIT 署名。高数、线代统计资源源于 Google MathWriting HUMAN TRAIN，遵循 **CC BY-NC-SA 4.0**；原始笔迹、测试图片和用户截图不随应用分发。其余八个学科包是编辑辅助，并非八个另行训练的 OCR 模型。
+- 下方保留上游介绍；商店和上游 Release 链接不包含此 fork 功能。
 
-<p align="center"><img src="docs/screenshots/formula-dialog.png" width="90%" alt="人工纠正识别结果后，预览可插入的 LaTeX 公式" /><br /><em>交互测试示例：原输出为 χ=1，已人工改为 x=1；不是自动识别成功示例。</em></p>
-<p align="center"><img src="docs/screenshots/formula-edit.png" width="90%" alt="公式块保留可再次编辑的 LaTeX 源码" /></p>
-<p align="center"><img src="docs/screenshots/formula-pack-manager.png" width="90%" alt="从 GitHub Releases 独立下载和管理学科包" /></p>
+<p align="center"><img src="docs/screenshots/v5/formula-pack-manager.png" width="90%" alt="完整 APK 内置十个可独立管理的学科包" /></p>
+<p align="center"><img src="docs/screenshots/v5/formula-full-review.png" width="90%" alt="精细复核保留手工输入的 x=2，等待用户选择是否采用结果" /><br /><em>交互测试：合成 x=1 被快速模型读作 χ=1、精细模型读作 X=1，均非正确。图中 x=2 是人工输入，用于验证复核不会覆盖编辑。</em></p>
 
 ---
 

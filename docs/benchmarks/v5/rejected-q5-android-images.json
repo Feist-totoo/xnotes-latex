@@ -1,0 +1,182 @@
+[
+  {
+    "id": "100",
+    "truth": "- 1 8 0 0 \\cdot x = 6",
+    "desktop": "\n$$\n- 8 0 0. x = 6\n$$",
+    "latex": "- 8 0 0. x = 6",
+    "elapsed_ms": 16733,
+    "warm": false,
+    "structure_match": false
+  },
+  {
+    "id": "105",
+    "truth": "y ^ { 4 } = ( x - b _ { 1 } ) ( x - b _ { 1 } ) ^ { 2 } ( x - b _ { 3 } ) ^ { 2 } ( x - b _ { 4 } ) ^ { 3 }",
+    "desktop": "\n$$\ny ^ {4} = (x - b _ {1}) (x - b _ {1}) ^ {2} (x - b _ {3}) ^ {2} (x - b _ {u}) ^ {3}\n$$",
+    "latex": "y^{4} = (x - b_{1}) (x - b_{1})^{2} (x - b_{3})^{2} (x - b_{u})^{3}",
+    "elapsed_ms": 55066,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "110",
+    "truth": "= 5 0 0 ^ { 2 } - ( 5 0 0 - 1 ) \\times ( 5 0 0 + 1 ) = 5 0 0 ^ { 2 } - ( 5 0 0 ^ { 2 } + 1 ) = 1",
+    "desktop": "\n$$\n= 5 0 0 ^ {2} - (5 0 0 - 1) \\times (5 0 0 + 1) = 5 0 0 ^ {2} - (5 0 0 ^ {2} + 1) = 1\n$$",
+    "latex": "= 5 0 0^{2} - (5 0 0 - 1) \\times (5 0 0 + 1) = 5 0 0^{2} - (5 0 0^{2} + 1) = 1",
+    "elapsed_ms": 66151,
+    "warm": true,
+    "structure_match": true
+  },
+  {
+    "id": "115",
+    "truth": "( \\frac { B } { A + 1 } ) ^ { \\frac { 1 } { n + 1 } }",
+    "desktop": "\n$$\n\\left(\\frac {B}{A + 1}\\right) ^ {\\frac {1}{n + 1}}\n$$",
+    "latex": "\\left(\\frac {B}{A + 1}\\right)^{\\frac {1}{n + 1}}",
+    "elapsed_ms": 9541,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "120",
+    "truth": "5 j + 3 j",
+    "desktop": "\n$$\n5 j + 3 j\n$$",
+    "latex": "5 j + 3 j",
+    "elapsed_ms": 12313,
+    "warm": true,
+    "structure_match": true
+  },
+  {
+    "id": "125",
+    "truth": "\\vert 3 0 0 x = 3 0 0 \\times 6 = 1 8 0 0",
+    "desktop": "\n$$\n3 0 0 x = 3 0 0 \\times 6 = 1 8 0 0\n$$",
+    "latex": "3 0 0 x = 3 0 0 \\times 6 = 1 8 0 0",
+    "elapsed_ms": 18633,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "130",
+    "truth": "y ^ { \\prime } x ^ { \\prime } = q x ^ { \\prime } y ^ { \\prime }",
+    "desktop": "\n$$\ny ^ {\\prime} x ^ {\\prime} = q x ^ {\\prime} y ^ {\\prime}\n$$",
+    "latex": "y^{\\prime} x^{\\prime} = q x^{\\prime} y^{\\prime}",
+    "elapsed_ms": 16863,
+    "warm": true,
+    "structure_match": true
+  },
+  {
+    "id": "135",
+    "truth": "x ^ { 2 } + \\frac { 1 5 } { 4 } - 1 0 x + 4 = \\frac { 1 6 9 } { 4 } + x ^ { 2 } - 1 3 x",
+    "desktop": "\n$$\nx ^ {2} + \\frac {1 5}{4} - 1 0 x + 4 = \\frac {1 6 9}{4} + x ^ {2} - 1 3 x\n$$",
+    "latex": "x^{2} + \\frac {1 5}{4} - 1 0 x + 4 = \\frac {1 6 9}{4} + x^{2} - 1 3 x",
+    "elapsed_ms": 30457,
+    "warm": true,
+    "structure_match": true
+  },
+  {
+    "id": "140",
+    "truth": "\\sum S S = S",
+    "desktop": "\n$$\n\\sum s s = 8\n$$",
+    "latex": "\\sum s s = 8",
+    "elapsed_ms": 8984,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "145",
+    "truth": "1 8 z",
+    "desktop": "\n$$\n1 8 2\n$$",
+    "latex": "1 8 2",
+    "elapsed_ms": 5555,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "150",
+    "truth": "\\alpha N _ { f } = \\alpha ( \\sum \\limits _ { I = 1 } ^ { 9 } v _ { I } \\gamma _ { I } + \\sum \\limits _ { i = 1 } ^ { 3 } \\frac { i \\mu x ^ { i } } { 4 } \\{ \\gamma _ { i } , \\gamma _ { 1 2 3 } \\} ) + \\alpha ^ { 2 } \\mu ^ { 2 } / 4 ^ { 2 }",
+    "desktop": "\n$$\n\\alpha N _ {2} = \\alpha \\left(\\sum_ {i = 1} ^ {9} v _ {i} x _ {i} + \\sum_ {i = 1} ^ {3} \\frac {i \\mu x ^ {i}}{4} \\left\\{x _ {i}, x _ {1 2 3} ^ {2} \\right\\}\\right) + \\alpha^ {2} y ^ {2} / 4 ^ {2}\n$$",
+    "latex": "\\alpha N_{2} = \\alpha \\left(\\sum_{i = 1}^{9} v_{i} x_{i} + \\sum_{i = 1}^{3} \\frac {i \\mu x^{i}}{4} \\left\\{x_{i}, x_{1 2 3}^{2} \\right\\}\\right) + \\alpha^{2} y^{2} / 4^{2}",
+    "elapsed_ms": 83708,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "155",
+    "truth": "x ^ { n + 1 } + y ^ { 2 } + z ^ { 2 }",
+    "desktop": "\n$$\nx ^ {n + 1} + y ^ {2} + z ^ {2}\n$$",
+    "latex": "x^{n + 1} + y^{2} + z^{2}",
+    "elapsed_ms": 23178,
+    "warm": true,
+    "structure_match": true
+  },
+  {
+    "id": "160",
+    "truth": "\\int d ^ { n } x a _ { 2 }",
+    "desktop": "\n$$\n\\int d ^ {m} x a _ {2}\n$$",
+    "latex": "\\int d^{m} x a_{2}",
+    "elapsed_ms": 13435,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "165",
+    "truth": "x = 1 0 - y",
+    "desktop": "\n$$\nx = 1 0 - y\n$$",
+    "latex": "x = 1 0 - y",
+    "elapsed_ms": 5790,
+    "warm": true,
+    "structure_match": true
+  },
+  {
+    "id": "170",
+    "truth": "\\sqrt { 0 . 0 2 2 5 } = 2 2 . 5 \\sqrt { 3 6 } = \\sqrt { 6 } = 3",
+    "desktop": "\n$$\n\\sqrt {0 . 0 2 5}=2 2. 5 \\sqrt {3 6}=\\sqrt {6}=3\n$$",
+    "latex": "\\sqrt {0 . 0 2 5}=2 2. 5 \\sqrt {3 6}=\\sqrt {6}=3",
+    "elapsed_ms": 19346,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "175",
+    "truth": "y = 3 x + 7 + \\frac { x + 8 } { x }",
+    "desktop": "\n$$\ny = 3 x + 7 + \\frac {x + 8}{x}\n$$",
+    "latex": "y = 3 x + 7 + \\frac {x + 8}{x}",
+    "elapsed_ms": 24621,
+    "warm": true,
+    "structure_match": true
+  },
+  {
+    "id": "180",
+    "truth": "- \\frac { 1 1 \\pi } { 8 }",
+    "desktop": "\n$$\n- \\frac {1 1 \\pi}{8}\n$$",
+    "latex": "- \\frac {1 1 \\pi}{8}",
+    "elapsed_ms": 12641,
+    "warm": true,
+    "structure_match": true
+  },
+  {
+    "id": "185",
+    "truth": "x ^ { 2 } + 3 x + 1 = x ^ { 4 } + x ( a - 1 ) + b - a",
+    "desktop": "\n$$\nx ^ {2} + 3 x + 1 = x ^ {2} + x (a - 1) + b - a\n$$",
+    "latex": "x^{2} + 3 x + 1 = x^{2} + x (a - 1) + b - a",
+    "elapsed_ms": 26268,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "190",
+    "truth": "\u3001 C Q = B C - B Q = 6 0 - 2 0 \\sqrt { 3 } ( c m )",
+    "desktop": "\n$$\nC Q = B C - B Q = 6 0 - 2 0 \\sqrt {3} (c m)\n$$",
+    "latex": "C Q = B C - B Q = 6 0 - 2 0 \\sqrt {3} (c m)",
+    "elapsed_ms": 13620,
+    "warm": true,
+    "structure_match": false
+  },
+  {
+    "id": "195",
+    "truth": "\\frac { 4 7 } { 2 } + \\frac { 1 } { 2 } \\pi = 1 3 + \\pi",
+    "desktop": "\n$$\n\\frac {y _ {7}}{2} + \\frac {1}{2} \\pi = 1 3 + \\pi\n$$",
+    "latex": "\\frac {y_{7}}{2} + \\frac {1}{2} \\pi = 1 3 + \\pi",
+    "elapsed_ms": 6251,
+    "warm": true,
+    "structure_match": false
+  }
+]

@@ -17,29 +17,44 @@ data class FormulaPackEntry(val id: String, val version: Int, val nameZh: String
 
 /** Package storage only. The recognizer has no dependency on this downloader. */
 object FormulaPacks {
-    // Preview catalog must not replace the stable channel used by v3 installations.
-    const val INDEX_URL = "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.4-preview/formula-packs-index.json"
+    const val INDEX_URL = "https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.5-full/formula-packs-index.json"
     private fun directory(context: Context) = File(context.noBackupFilesDir, "formula-packs").apply { mkdirs() }
     private fun preferences(context: Context) = context.getSharedPreferences("formula-packs", Context.MODE_PRIVATE)
 
     @Synchronized fun load(context: Context): List<FormulaPack> {
         val folder = directory(context)
-        if (!preferences(context).getBoolean("bootstrapped", false)) {
-            install(context, context.assets.open("formula-packs/school_math.xformula").use { it.readBytes() })
-            preferences(context).edit().putBoolean("bootstrapped", true).apply()
-        }
-        // Run once on upgrade. Uninstalling a bundled pack remains persistent.
-        if (!preferences(context).getBoolean("recognition-v2", false)) {
-            for (id in listOf("calculus", "linear_algebra")) {
-                val existing = File(folder, "$id.xformula")
-                val version = runCatching { FormulaPack.parse(existing.readBytes()).version }.getOrDefault(0)
-                if (version < 2) install(context, context.assets.open("formula-packs/$id.xformula").use { it.readBytes() })
+        val prefs = preferences(context)
+        if (!prefs.getBoolean("full-bundle-v5", false)) {
+            val selected = prefs.getStringSet("selected", setOf("school_math", "calculus", "linear_algebra")).orEmpty().toSet()
+            val removed = prefs.getStringSet("removed-bundled", emptySet()).orEmpty().toMutableSet()
+            // A missing previously bootstrapped v4 core pack was deliberately removed.
+            if (prefs.getBoolean("recognition-v2", false)) for (id in listOf("calculus", "linear_algebra")) {
+                if (!File(folder, "$id.xformula").exists()) removed.add(id)
             }
-            preferences(context).edit().putBoolean("recognition-v2", true).apply()
+            for (entry in bundledCatalog(context)) {
+                if (entry.id in removed) continue
+                val existing = File(folder, "${entry.id}.xformula")
+                val version = runCatching { FormulaPack.parse(existing.readBytes()).version }.getOrDefault(0)
+                if (version < entry.version) installBundled(context, entry.id)
+            }
+            // Include all ten resources without silently enabling new subjects on upgrade.
+            save(context, selected)
+            atomicWrite(File(folder, "index.json"), context.assets.open("formula-packs/index.json").use { it.readBytes() })
+            prefs.edit().putStringSet("removed-bundled", removed).putBoolean("full-bundle-v5", true).apply()
         }
         return folder.listFiles().orEmpty().filter { it.extension == "xformula" }.mapNotNull {
             runCatching { require(it.length() <= FormulaPack.MAX_BYTES); FormulaPack.parse(it.readBytes()) }.getOrNull()
         }.sortedBy { it.id }
+    }
+
+    fun bundledCatalog(context: Context): List<FormulaPackEntry> =
+        parseCatalog(context.assets.open("formula-packs/index.json").use { it.readBytes() })
+
+    fun installBundled(context: Context, id: String): FormulaPack {
+        val entry = bundledCatalog(context).single { it.id == id }
+        val bytes = context.assets.open("formula-packs/$id.xformula").use { it.readBytes() }
+        require(bytes.size == entry.bytes && sha256(bytes) == entry.sha256)
+        return install(context, bytes)
     }
 
     fun catalog(context: Context): List<FormulaPackEntry> {
@@ -94,6 +109,8 @@ object FormulaPacks {
         atomicWrite(target, bytes)
         val previous = preferences(context).getStringSet("selected", setOf("school_math")).orEmpty()
         if (previousVersion == null) save(context, previous + pack.id)
+        val removed = preferences(context).getStringSet("removed-bundled", emptySet()).orEmpty()
+        preferences(context).edit().putStringSet("removed-bundled", removed - pack.id).apply()
         return pack
     }
 
@@ -103,6 +120,8 @@ object FormulaPacks {
         check(!target.exists() || target.delete())
         val previous = preferences(context).getStringSet("selected", emptySet()).orEmpty()
         save(context, previous - id)
+        val removed = preferences(context).getStringSet("removed-bundled", emptySet()).orEmpty()
+        preferences(context).edit().putStringSet("removed-bundled", removed + id).apply()
     }
 
     fun selected(context: Context, catalog: List<FormulaPack>): Set<String> = preferences(context)
@@ -110,8 +129,8 @@ object FormulaPacks {
     fun save(context: Context, ids: Set<String>) { preferences(context).edit().putStringSet("selected", ids.toSet()).apply() }
     fun automatic(context: Context) = preferences(context).getBoolean("automatic", true)
     fun setAutomatic(context: Context, value: Boolean) { preferences(context).edit().putBoolean("automatic", value).apply() }
-    // Held-out evaluation did not establish a net gain; opt in explicitly for experiments.
-    fun recognitionEnabled(context: Context) = preferences(context).getBoolean("recognition-scoring", false)
+    // Conservative v3 sequence statistics; preserve an explicitly disabled user setting.
+    fun recognitionEnabled(context: Context) = preferences(context).getBoolean("recognition-scoring", true)
     fun setRecognitionEnabled(context: Context, value: Boolean) { preferences(context).edit().putBoolean("recognition-scoring", value).apply() }
 
     private fun sha256(bytes: ByteArray) = MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it) }

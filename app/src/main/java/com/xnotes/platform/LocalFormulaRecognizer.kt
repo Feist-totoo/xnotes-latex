@@ -12,7 +12,6 @@ import ai.onnxruntime.OrtSession
 import com.xnotes.core.formula.*
 import com.xnotes.core.geometry.Pt
 import kotlinx.coroutines.*
-import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.json.JSONArray
 import org.json.JSONObject
@@ -39,7 +38,7 @@ object LocalFormulaRecognizer {
     private const val BEAMS = 4
     private const val STEPS = 20
     private const val VOCAB = 287
-    private val mutex = Mutex()
+    private val mutex get() = FormulaInferenceGate.mutex
     private val worker = Executors.newSingleThreadScheduledExecutor { Thread(it, "offline-formula").apply { isDaemon = true } }
     private val environment by lazy { OrtEnvironment.getEnvironment() }
     private data class Engine(val encoder: OrtSession, val decoder: OrtSession, val vocabulary: List<String>)
@@ -49,6 +48,16 @@ object LocalFormulaRecognizer {
 
     private fun unload() { engine?.let { it.decoder.close(); it.encoder.close() }; engine = null }
     fun releaseMemory() { if (registered) worker.execute { idleRelease?.cancel(false); unload() } }
+    internal suspend fun releaseAndAwait() {
+        if (!registered) return
+        suspendCancellableCoroutine<Unit> { continuation ->
+            worker.execute {
+                idleRelease?.cancel(false)
+                unload()
+                continuation.resume(Unit)
+            }
+        }
+    }
     @Synchronized private fun register(context: Context) {
         if (registered) return
         context.applicationContext.registerComponentCallbacks(object : ComponentCallbacks2 {
@@ -59,10 +68,12 @@ object LocalFormulaRecognizer {
         registered = true
     }
 
-    suspend fun recognize(context: Context, bitmap: Bitmap, strokes: List<List<Pt>>? = null): FormulaRecognition = mutex.withLock {
+    suspend fun recognize(context: Context, bitmap: Bitmap, strokes: List<List<Pt>>? = null): FormulaRecognition =
+        if (strokes == null) PrecisionFormulaRecognizer.recognize(context, bitmap) else mutex.withLock {
         val started = SystemClock.elapsedRealtime()
+        PrecisionFormulaRecognizer.releaseAndAwait()
         val folder = withContext(Dispatchers.IO) { modelFiles(context.applicationContext) }
-        val pixels = withContext(Dispatchers.Default) { if (strokes != null) FormulaInkRaster.pixels(strokes) else rasterPixels(bitmap) }
+        val pixels = withContext(Dispatchers.Default) { FormulaInkRaster.pixels(strokes) }
         currentCoroutineContext().ensureActive()
         register(context)
         val cancelled = AtomicBoolean(false)

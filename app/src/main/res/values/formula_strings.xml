@@ -11,7 +11,12 @@
     <string name="formula_uncertain">Some symbols may be uncertain. Check the preview, especially signs, fractions and subscripts.</string>
     <string name="formula_review">Check the preview before inserting. You can edit the LaTeX below. Undo restores the original ink.</string>
     <string name="formula_invalid">Check the braces, environments and supported math commands. A valid preview is required.</string>
-    <string name="formula_keep">Keep handwriting; place formula underneath</string>
+    <string name="formula_keep">Keep original content; place formula underneath</string>
+    <string name="formula_precision">Offline detailed review</string>
+    <string name="formula_precision_help">Use a second local model for difficult formulas, then choose a result. First use takes longer.</string>
+    <string name="formula_precision_working">Recognizing locally with the detailed model; your edits are preserved.</string>
+    <string name="formula_precision_failed">Detailed recognition did not finish. Your current result and original content are preserved.</string>
+    <string name="formula_precision_use">Use detailed result</string>
     <string name="formula_copy">Copy LaTeX</string>
     <string name="formula_retry">Retry recognition</string>
     <string name="formula_stale">The selection changed or could not be saved. Close this dialog and select it again.</string>
@@ -19,7 +24,7 @@
     <string name="formula_update">Update formula</string>
     <string name="formula_one_page">Select handwriting on a single page to convert it.</string>
     <string name="formula_packs_count">Subject packs (%1$d enabled)</string>
-    <string name="formula_packs_explanation">Enable packs independently. Calculus and linear algebra v2 offer experimental candidate scoring, off by default because a consistent accuracy gain is not established. Switching packs reuses existing recognition; other packs assist editing.</string>
+    <string name="formula_packs_explanation">All ten packs are included and can be enabled independently. Calculus and linear algebra v3 can rerank close alternatives, without guaranteeing correctness. Switching packs reuses existing results; other packs assist editing.</string>
     <string name="formula_packs_edit">Insert symbols at the cursor</string>
     <string name="formula_packs_templates">Templates replace the editor text after confirmation; they are not recognition results.</string>
     <string name="formula_packs_review">Review: %1$s</string>

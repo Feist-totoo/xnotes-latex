@@ -11,7 +11,12 @@
     <string name="formula_uncertain">部分符号可能不确定。请核对预览，特别是正负号、分式和上下标。</string>
     <string name="formula_review">插入前请核对预览，可在下方修改 LaTeX。撤销可恢复原笔迹。</string>
     <string name="formula_invalid">请检查括号、环境及数学命令，成功生成预览后才能插入。</string>
-    <string name="formula_keep">保留手写，将公式放在下方</string>
+    <string name="formula_keep">保留原内容，将公式放在下方</string>
+    <string name="formula_precision">离线精细复核</string>
+    <string name="formula_precision_help">困难公式可用另一套本地模型复核，结果由你选择。首次使用稍慢。</string>
+    <string name="formula_precision_working">正在本机精细识别；当前编辑内容会保留。</string>
+    <string name="formula_precision_failed">精细识别未完成，已有结果与原内容仍保留。</string>
+    <string name="formula_precision_use">使用精细结果</string>
     <string name="formula_copy">复制 LaTeX</string>
     <string name="formula_retry">重新识别</string>
     <string name="formula_stale">选区已改变或保存失败。请关闭此窗口并重新选择。</string>
@@ -19,7 +24,7 @@
     <string name="formula_update">更新公式</string>
     <string name="formula_one_page">请在同一页内选择要转换的笔迹。</string>
     <string name="formula_packs_count">学科包（已启用 %1$d）</string>
-    <string name="formula_packs_explanation">可分别启用学科包。高数、线代 v2 提供实验候选评分，尚未证实稳定增益，默认关闭。切换包复用已有识图结果；其余包提供编辑辅助。</string>
+    <string name="formula_packs_explanation">十个学科包已内置，可分别启用。高数、线代 v3 可辅助接近的候选评分，不能保证识别正确。切换包复用已有结果；其余包提供编辑辅助。</string>
     <string name="formula_packs_edit">在光标位置插入符号</string>
     <string name="formula_packs_templates">模板经确认后替换编辑框内容，不代表识别结果。</string>
     <string name="formula_packs_review">请核对：%1$s</string>

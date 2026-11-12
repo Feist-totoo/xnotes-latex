@@ -1,0 +1,110 @@
+[
+  {
+    "id": "c56f91675e627046",
+    "index": 0,
+    "run": 0,
+    "latex": "\\int x^{n - 1} d x = \\frac {1}{n} x^{n}",
+    "elapsed_ms": 15355,
+    "load_ms": 887,
+    "encode_ms": 12620,
+    "decode_ms": 1841,
+    "warm": false,
+    "pss_kib": 1443407
+  },
+  {
+    "id": "c56f91675e627046",
+    "index": 0,
+    "run": 1,
+    "latex": "\\int x^{n - 1} d x = \\frac {1}{n} x^{n}",
+    "elapsed_ms": 14035,
+    "load_ms": 13,
+    "encode_ms": 12252,
+    "decode_ms": 1760,
+    "warm": true,
+    "pss_kib": 1439777
+  },
+  {
+    "id": "c56f91675e627046",
+    "index": 0,
+    "run": 2,
+    "latex": "\\int x^{n - 1} d x = \\frac {1}{n} x^{n}",
+    "elapsed_ms": 15813,
+    "load_ms": 862,
+    "encode_ms": 13075,
+    "decode_ms": 1808,
+    "warm": false,
+    "pss_kib": 1439861
+  },
+  {
+    "id": "fc464983a71ece28",
+    "index": 100,
+    "run": 0,
+    "latex": "P_{0 1 0} = \\left[ \\begin{array}{l l} 0 0 \\\\ 0 0 \\end{array} \\right]",
+    "elapsed_ms": 14368,
+    "load_ms": 1092,
+    "encode_ms": 10156,
+    "decode_ms": 3047,
+    "warm": false,
+    "pss_kib": 1433152
+  },
+  {
+    "id": "fc464983a71ece28",
+    "index": 100,
+    "run": 1,
+    "latex": "P_{0 1 0} = \\left[ \\begin{array}{l l} 0 0 \\\\ 0 0 \\end{array} \\right]",
+    "elapsed_ms": 13589,
+    "load_ms": 12,
+    "encode_ms": 10893,
+    "decode_ms": 2676,
+    "warm": true,
+    "pss_kib": 1433660
+  },
+  {
+    "id": "fc464983a71ece28",
+    "index": 100,
+    "run": 2,
+    "latex": "P_{0 1 0} = \\left[ \\begin{array}{l l} 0 0 \\\\ 0 0 \\end{array} \\right]",
+    "elapsed_ms": 15346,
+    "load_ms": 1572,
+    "encode_ms": 10818,
+    "decode_ms": 2886,
+    "warm": false,
+    "pss_kib": 1434172
+  },
+  {
+    "id": "ac89b79f0dfd659d",
+    "index": 199,
+    "run": 0,
+    "latex": "\\left[ \\begin{array}{c c c} 1 O - c_{D}^{- T} & 2 B \\\\ 0 I D b \\end{array} \\right]",
+    "elapsed_ms": 13053,
+    "load_ms": 947,
+    "encode_ms": 9068,
+    "decode_ms": 2970,
+    "warm": false,
+    "pss_kib": 1430868
+  },
+  {
+    "id": "ac89b79f0dfd659d",
+    "index": 199,
+    "run": 1,
+    "latex": "\\left[ \\begin{array}{c c c} 1 O - c_{D}^{- T} & 2 B \\\\ 0 I D b \\end{array} \\right]",
+    "elapsed_ms": 12913,
+    "load_ms": 14,
+    "encode_ms": 9892,
+    "decode_ms": 2999,
+    "warm": true,
+    "pss_kib": 1431328
+  },
+  {
+    "id": "ac89b79f0dfd659d",
+    "index": 199,
+    "run": 2,
+    "latex": "\\left[ \\begin{array}{c c c} 1 O - c_{D}^{- T} & 2 B \\\\ 0 I D b \\end{array} \\right]",
+    "elapsed_ms": 12901,
+    "load_ms": 1034,
+    "encode_ms": 8889,
+    "decode_ms": 2906,
+    "warm": false,
+    "pss_kib": 1431176
+  }
+]

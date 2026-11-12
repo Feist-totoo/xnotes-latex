@@ -1,0 +1,8574 @@
+[
+  {
+    "id": "46e99d961874adb9",
+    "truth": "l i m _ { n \\rightarrow \\infty } \\sum _ { i = n } ^ { \\infty } a _ { i } = 0",
+    "latex": "l i m_{ n \\rightarrow \\infty } \\sum_{ i = n }^{ \\infty } a_{ i } = 0",
+    "ranked": "l i m_{ n \\rightarrow \\infty } \\sum_{ i = n }^{ \\infty } a_{ i } = 0",
+    "candidates": [
+      {
+        "latex": "l i m_{ n \\rightarrow \\infty } \\sum_{ i = n }^{ \\infty } a_{ i } = 0",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          256,
+          187,
+          116,
+          197,
+          251,
+          26,
+          256,
+          116,
+          243,
+          251,
+          26,
+          13
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          235,
+          2,
+          279,
+          228,
+          2,
+          237,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 3629,
+    "load_ms": 636,
+    "encode_ms": 562,
+    "decode_ms": 2415,
+    "warm": false,
+    "renderable": true
+  },
+  {
+    "id": "a46a061d69f6e3e8",
+    "truth": "l i m _ { y \\rightarrow 0 + } \\frac { 1 } { y }",
+    "latex": "l i m_{ y \\rightarrow 0 + } \\frac { 1 } { y }",
+    "ranked": "l i m_{ y \\rightarrow 0 + } \\frac { 1 } { y }",
+    "candidates": [
+      {
+        "latex": "l i m_{ y \\rightarrow 0 + } \\frac { 1 } { y }",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          267,
+          187,
+          13,
+          8,
+          106,
+          14,
+          267
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          2,
+          279,
+          2,
+          272,
+          272
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2990,
+    "load_ms": 0,
+    "encode_ms": 549,
+    "decode_ms": 2436,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "a3bb80287c4a42fc",
+    "truth": "\\int _ { 0 } ^ { \\infty } \\frac { d x } { \\Gamma ( x ) }",
+    "latex": "\\int_{ 0 }^{ \\infty } \\frac { d x } { \\Gamma ( x ) }",
+    "ranked": "\\int_{ 0 }^{ \\infty } \\frac { d x } { \\Gamma ( x ) }",
+    "candidates": [
+      {
+        "latex": "\\int_{ 0 }^{ \\infty } \\frac { d x } { \\Gamma ( x ) }",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          13,
+          116,
+          106,
+          246,
+          266,
+          60,
+          5,
+          266,
+          6
+        ],
+        "modifiers": [
+          2,
+          237,
+          228,
+          2,
+          269,
+          279,
+          269,
+          2,
+          2,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2932,
+    "load_ms": 0,
+    "encode_ms": 552,
+    "decode_ms": 2372,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "9acd2ee6f63fa0bb",
+    "truth": "l i m _ { ( x , y ) \\rightarrow ( 0 , 0 ) } x ^ { y }",
+    "latex": "l i m ( x , y ) \\rightarrow ( 0 , 0 ) x^{ y }",
+    "ranked": "l i m ( x , y ) \\rightarrow ( 0 , 0 ) x^{ y }",
+    "candidates": [
+      {
+        "latex": "l i m ( x , y ) \\rightarrow ( 0 , 0 ) x^{ y }",
+        "visual_score": -0.02813218268278325,
+        "symbols": [
+          254,
+          251,
+          255,
+          5,
+          266,
+          9,
+          267,
+          6,
+          187,
+          5,
+          13,
+          9,
+          13,
+          6,
+          266,
+          267
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          228
+        ]
+      },
+      {
+        "latex": "l i m ( x , y ) \\rightarrow ( 0 , 0 )^{ x^{ y } }",
+        "visual_score": -0.031567969494436736,
+        "symbols": [
+          254,
+          251,
+          255,
+          5,
+          266,
+          9,
+          267,
+          6,
+          187,
+          5,
+          13,
+          9,
+          13,
+          6,
+          266,
+          267
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          226,
+          229
+        ]
+      },
+      {
+        "latex": "l i m_{ ( x , y ) \\rightarrow ( 0 , 0 )^{ x^{ y } }",
+        "visual_score": -0.033596982243060514,
+        "symbols": [
+          254,
+          251,
+          255,
+          5,
+          266,
+          9,
+          267,
+          6,
+          187,
+          5,
+          13,
+          9,
+          13,
+          6,
+          266,
+          267
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          226,
+          229
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 3402,
+    "load_ms": 0,
+    "encode_ms": 583,
+    "decode_ms": 2808,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "f56c7e23c7e0b1c4",
+    "truth": "\\int e ^ { x } d x = e ^ { x } + C",
+    "latex": "\\int e^{ x } d x = e^{ x } + C",
+    "ranked": "\\int e^{ x } d x = e^{ x } + C",
+    "candidates": [
+      {
+        "latex": "\\int e^{ x } d x = e^{ x } + C",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          247,
+          266,
+          246,
+          266,
+          26,
+          247,
+          266,
+          8,
+          31
+        ],
+        "modifiers": [
+          2,
+          2,
+          228,
+          2,
+          2,
+          2,
+          2,
+          228,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2904,
+    "load_ms": 0,
+    "encode_ms": 494,
+    "decode_ms": 2398,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "dc8fe7e7df65cfa7",
+    "truth": "\\partial \\{ ( I ^ { 2 } , \\varphi _ { \\lambda } , S _ { \\lambda } ) \\} _ { \\lambda \\in \\Lambda }",
+    "latex": "\\partial \\{ ( I^{ 2 } , \\varphi_{ \\lambda } , S_{ \\lambda } ) \\}_{ \\lambda \\in \\Lambda }",
+    "ranked": "\\partial \\{ ( I^{ 2 } , \\varphi_{ \\lambda } , S_{ \\lambda } ) \\}_{ \\lambda \\in \\Lambda }",
+    "candidates": [
+      {
+        "latex": "\\partial \\{ ( I^{ 2 } , \\varphi_{ \\lambda } , S_{ \\lambda } ) \\}_{ \\lambda \\in \\Lambda }",
+        "visual_score": 0,
+        "symbols": [
+          174,
+          221,
+          5,
+          37,
+          15,
+          9,
+          210,
+          120,
+          9,
+          47,
+          120,
+          6,
+          223,
+          120,
+          115,
+          61
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          228,
+          2,
+          2,
+          237,
+          2,
+          2,
+          237,
+          2,
+          2,
+          235,
+          2,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2966,
+    "load_ms": 0,
+    "encode_ms": 576,
+    "decode_ms": 2382,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "e1cabeb8303a88bb",
+    "truth": "\\Phi ( h ) = \\int _ { 0 } ^ { h } g d z",
+    "latex": "\\Phi ( h ) = \\int_{ 0 }^{ h } g d z",
+    "ranked": "\\Phi ( h ) = \\int_{ 0 }^{ h } g d z",
+    "candidates": [
+      {
+        "latex": "\\Phi ( h ) = \\int_{ 0 }^{ h } g d z",
+        "visual_score": 0,
+        "symbols": [
+          64,
+          5,
+          250,
+          6,
+          26,
+          117,
+          13,
+          250,
+          249,
+          246,
+          268
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          228,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2807,
+    "load_ms": 0,
+    "encode_ms": 507,
+    "decode_ms": 2291,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "8944bd6a6babb660",
+    "truth": "\\int f _ { i } ^ { \\prime \\prime } ( x ) f _ { j } ^ { \\prime \\prime } ( x ) d x",
+    "latex": "\\int f_{ i }^{ \\prime \\prime } ( x ) f_{ i }^{ \\prime \\prime } ( x ) d x",
+    "ranked": "\\int f_{ i }^{ \\prime \\prime } ( x ) f_{ i }^{ \\prime \\prime } ( x ) d x",
+    "candidates": [
+      {
+        "latex": "\\int f_{ i }^{ \\prime \\prime } ( x ) f_{ i }^{ \\prime \\prime } ( x ) d x",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          248,
+          251,
+          179,
+          179,
+          5,
+          266,
+          6,
+          248,
+          251,
+          179,
+          179,
+          5,
+          266,
+          6,
+          246,
+          266
+        ],
+        "modifiers": [
+          2,
+          2,
+          237,
+          226,
+          279,
+          2,
+          2,
+          2,
+          2,
+          237,
+          226,
+          279,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2875,
+    "load_ms": 0,
+    "encode_ms": 494,
+    "decode_ms": 2376,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "766a44e49bd42baf",
+    "truth": "\\Pi = \\sum _ { i , j } \\Pi ^ { i j } \\partial _ { i } \\wedge \\partial _ { j }",
+    "latex": "\\Pi = \\sum_{ i , j } \\Pi^{ i j } \\partial_{ i } \\cap \\partial_{ j }",
+    "ranked": "\\Pi = \\sum_{ i , j } \\Pi^{ i j } \\partial_{ i } \\cap \\partial_{ j }",
+    "candidates": [
+      {
+        "latex": "\\Pi = \\sum_{ i , j } \\Pi^{ i j } \\partial_{ i } \\cap \\partial_{ j }",
+        "visual_score": 0,
+        "symbols": [
+          65,
+          26,
+          197,
+          251,
+          9,
+          252,
+          65,
+          251,
+          252,
+          174,
+          251,
+          89,
+          174,
+          252
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          226,
+          279,
+          2,
+          237,
+          2,
+          2,
+          237
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2820,
+    "load_ms": 0,
+    "encode_ms": 539,
+    "decode_ms": 2275,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "c3116c51fb4fde63",
+    "truth": "\\partial _ { v } f ( x ) = D f ( x ) v",
+    "latex": "\\partial_{ v } f ( x ) = D f ( x ) v",
+    "ranked": "\\partial_{ v } f ( x ) = D f ( x ) v",
+    "candidates": [
+      {
+        "latex": "\\partial_{ v } f ( x ) = D f ( x ) v",
+        "visual_score": 0,
+        "symbols": [
+          174,
+          264,
+          248,
+          5,
+          266,
+          6,
+          26,
+          32,
+          248,
+          5,
+          266,
+          6,
+          264
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2710,
+    "load_ms": 0,
+    "encode_ms": 530,
+    "decode_ms": 2171,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "9844df81e90a52b4",
+    "truth": "\\frac { d y } { d x } - | _ { x = a } = \\frac { d y } { d x } ( a )",
+    "latex": "\\frac { d y } { d x } |_{ x = a } = \\frac { d y } { d x } ( a )",
+    "ranked": "\\frac { d y } { d x } |_{ x = a } = \\frac { d y } { d x } ( a )",
+    "candidates": [
+      {
+        "latex": "\\frac { d y } { d x } |_{ x = a } = \\frac { d y } { d x } ( a )",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          246,
+          267,
+          246,
+          266,
+          278,
+          266,
+          26,
+          243,
+          26,
+          106,
+          246,
+          267,
+          246,
+          266,
+          5,
+          243,
+          6
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          235,
+          2,
+          279,
+          2,
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2874,
+    "load_ms": 0,
+    "encode_ms": 514,
+    "decode_ms": 2353,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "2f97515b6c626790",
+    "truth": "( \\frac { \\partial } { \\partial x ^ { 1 } } , \\cdot \\cdot \\cdot , \\frac { \\partial } { \\partial x ^ { n } } )",
+    "latex": "( \\frac { \\partial } { \\partial x^{ \\prime } } , . . . , \\frac { \\partial } { \\partial x^{ n } } )",
+    "ranked": "( \\frac { \\partial } { \\partial x^{ \\prime } } , . . . , \\frac { \\partial } { \\partial x^{ n } } )",
+    "candidates": [
+      {
+        "latex": "( \\frac { \\partial } { \\partial x^{ \\prime } } , . . . , \\frac { \\partial } { \\partial x^{ n } } )",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          106,
+          174,
+          174,
+          266,
+          179,
+          9,
+          11,
+          11,
+          11,
+          9,
+          106,
+          174,
+          174,
+          266,
+          256,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          269,
+          2,
+          229,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          269,
+          2,
+          229,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2853,
+    "load_ms": 0,
+    "encode_ms": 539,
+    "decode_ms": 2304,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "3e94a453d74f4c2a",
+    "truth": "j _ { 0 } = f ^ { 2 } \\partial _ { 0 } \\theta ( t )",
+    "latex": "j_{ 0 } = f^{ 2 } \\partial_{ 0 } \\theta ( t )",
+    "ranked": "j_{ 0 } = f^{ 2 } \\partial_{ 0 } \\theta ( t )",
+    "candidates": [
+      {
+        "latex": "j_{ 0 } = f^{ 2 } \\partial_{ 0 } \\theta ( t )",
+        "visual_score": 0,
+        "symbols": [
+          252,
+          13,
+          26,
+          248,
+          15,
+          174,
+          13,
+          201,
+          5,
+          262,
+          6
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          228,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2813,
+    "load_ms": 0,
+    "encode_ms": 525,
+    "decode_ms": 2278,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "83edd9847099abd7",
+    "truth": "\\frac { \\partial u } { \\partial \\tau } = \\frac { 1 } { 2 } \\sigma ^ { 2 } \\frac { \\partial ^ { 2 } u } { \\partial x ^ { 2 } }",
+    "latex": "\\frac { \\partial u } { \\partial \\tau } = \\frac { 1 } { 2 } \\sigma^{ 2 } \\frac { \\partial^{ 2 } u } { \\partial x^{ 2 } }",
+    "ranked": "\\frac { \\partial u } { \\partial \\tau } = \\frac { 1 } { 2 } \\sigma^{ 2 } \\frac { \\partial^{ 2 } u } { \\partial x^{ 2 } }",
+    "candidates": [
+      {
+        "latex": "\\frac { \\partial u } { \\partial \\tau } = \\frac { 1 } { 2 } \\sigma^{ 2 } \\frac { \\partial^{ 2 } u } { \\partial x^{ 2 } }",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          174,
+          263,
+          174,
+          200,
+          26,
+          106,
+          14,
+          15,
+          189,
+          15,
+          106,
+          174,
+          15,
+          263,
+          174,
+          266,
+          15
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          2,
+          272,
+          272,
+          2,
+          228,
+          2,
+          269,
+          228,
+          279,
+          269,
+          2,
+          229
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2886,
+    "load_ms": 0,
+    "encode_ms": 485,
+    "decode_ms": 2394,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "f799a4ce68495d65",
+    "truth": "\\frac { d ^ { 2 } y } { d x ^ { 2 } } = f ( x , y )",
+    "latex": "\\frac { d^{ 2 } y } { d x^{ 2 } } = F ( x , y )",
+    "ranked": "\\frac { d^{ 2 } y } { d x^{ 2 } } = F ( x , y )",
+    "candidates": [
+      {
+        "latex": "\\frac { d^{ 2 } y } { d x^{ 2 } } = F ( x , y )",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          246,
+          15,
+          267,
+          246,
+          266,
+          15,
+          26,
+          34,
+          5,
+          266,
+          9,
+          267,
+          6
+        ],
+        "modifiers": [
+          2,
+          269,
+          228,
+          279,
+          269,
+          2,
+          229,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2796,
+    "load_ms": 0,
+    "encode_ms": 490,
+    "decode_ms": 2300,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "8cf8d4ea96d798bf",
+    "truth": "\\int _ { 0 } ^ { t _ { 1 } } E ( t ) d t",
+    "latex": "\\int_{ 0 }^{ t_{ 1 } } E ( t ) d t",
+    "ranked": "\\int_{ 0 }^{ t_{ 1 } } E ( t ) d t",
+    "candidates": [
+      {
+        "latex": "\\int_{ 0 }^{ t_{ 1 } } E ( t ) d t",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          13,
+          262,
+          14,
+          33,
+          5,
+          262,
+          6,
+          246,
+          262
+        ],
+        "modifiers": [
+          2,
+          237,
+          226,
+          238,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2920,
+    "load_ms": 0,
+    "encode_ms": 529,
+    "decode_ms": 2384,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "58eb69a8f4ec7552",
+    "truth": "\\int ^ { c \\in C } F ( c , c )",
+    "latex": "\\int^{ c \\in C } f ( c , c )",
+    "ranked": "\\int^{ c \\in C } f ( c , c )",
+    "candidates": [
+      {
+        "latex": "\\int^{ c \\in C } f ( c , c )",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          245,
+          115,
+          31,
+          248,
+          5,
+          245,
+          9,
+          245,
+          6
+        ],
+        "modifiers": [
+          2,
+          226,
+          2,
+          279,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2884,
+    "load_ms": 0,
+    "encode_ms": 545,
+    "decode_ms": 2331,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "06cac62e9f4a69ba",
+    "truth": "f ^ { ( n ) } ( x ) = \\frac { d ^ { n } f } { d x ^ { n } }",
+    "latex": "f^{ ( n ) } ( x ) = \\frac { d^{ n } f } { d x^{ n } }",
+    "ranked": "f^{ ( n ) } ( x ) = \\frac { d^{ n } f } { d x^{ n } }",
+    "candidates": [
+      {
+        "latex": "f^{ ( n ) } ( x ) = \\frac { d^{ n } f } { d x^{ n } }",
+        "visual_score": 0,
+        "symbols": [
+          248,
+          5,
+          256,
+          6,
+          5,
+          266,
+          6,
+          26,
+          106,
+          246,
+          256,
+          248,
+          246,
+          266,
+          256
+        ],
+        "modifiers": [
+          2,
+          226,
+          2,
+          279,
+          2,
+          2,
+          2,
+          2,
+          2,
+          269,
+          228,
+          279,
+          269,
+          2,
+          229
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 3067,
+    "load_ms": 0,
+    "encode_ms": 560,
+    "decode_ms": 2500,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "d80fc0b526631ac4",
+    "truth": "\\frac { \\partial f } { \\partial x ^ { \\alpha } } d x ^ { \\alpha } = 0",
+    "latex": "\\frac { \\partial f } { \\partial x^{ \\alpha } } d x^{ \\alpha } = 0",
+    "ranked": "\\frac { \\partial f } { \\partial x^{ \\alpha } } d x^{ \\alpha } = 0",
+    "candidates": [
+      {
+        "latex": "\\frac { \\partial f } { \\partial x^{ \\alpha } } d x^{ \\alpha } = 0",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          174,
+          248,
+          174,
+          266,
+          76,
+          246,
+          266,
+          76,
+          26,
+          13
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          2,
+          229,
+          2,
+          2,
+          228,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2893,
+    "load_ms": 0,
+    "encode_ms": 493,
+    "decode_ms": 2393,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "d30272727c72c202",
+    "truth": "\\overline { \\partial } _ { j , J } f = \\nu",
+    "latex": "\\overline { d }_{ j } \\circ f = v",
+    "ranked": "\\overline { d }_{ j } \\circ f = v",
+    "candidates": [
+      {
+        "latex": "\\overline { d }_{ j } \\circ f = v",
+        "visual_score": 0,
+        "symbols": [
+          173,
+          246,
+          252,
+          92,
+          248,
+          26,
+          264
+        ],
+        "modifiers": [
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2713,
+    "load_ms": 0,
+    "encode_ms": 416,
+    "decode_ms": 2292,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "c43d66d0cb64858f",
+    "truth": "\\int \\frac { e ^ { x } } { x } d x",
+    "latex": "\\int \\frac { e^{ x } } { x } d x",
+    "ranked": "\\int \\frac { e^{ x } } { x } d x",
+    "candidates": [
+      {
+        "latex": "\\int \\frac { e^{ x } } { x } d x",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          106,
+          247,
+          266,
+          266,
+          246,
+          266
+        ],
+        "modifiers": [
+          2,
+          2,
+          269,
+          229,
+          272,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2662,
+    "load_ms": 0,
+    "encode_ms": 465,
+    "decode_ms": 2185,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "4a872ab19f19f78a",
+    "truth": "\\frac { d ^ { 2 } \\psi } { d z ^ { 2 } } = \\kappa ^ { 2 } \\psi",
+    "latex": "\\frac { d^{ 2 } \\psi } { d z^{ 2 } } = k^{ 2 } \\psi",
+    "ranked": "\\frac { d^{ 2 } \\psi } { d z^{ 2 } } = k^{ 2 } \\psi",
+    "candidates": [
+      {
+        "latex": "\\frac { d^{ 2 } \\psi } { d z^{ 2 } } = k^{ 2 } \\psi",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          246,
+          15,
+          182,
+          246,
+          268,
+          15,
+          26,
+          253,
+          15,
+          182
+        ],
+        "modifiers": [
+          2,
+          269,
+          228,
+          279,
+          269,
+          2,
+          229,
+          2,
+          2,
+          228,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2805,
+    "load_ms": 0,
+    "encode_ms": 384,
+    "decode_ms": 2416,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "30157fc71064b98e",
+    "truth": "\\frac { d } { d t } ( \\frac { d t } { d \\tau } ) \\approx 0",
+    "latex": "\\frac { d } { d t } ( \\frac { d t } { d \\tau } ) \\approx 0",
+    "ranked": "\\frac { d } { d t } ( \\frac { d t } { d \\tau } ) \\approx 0",
+    "candidates": [
+      {
+        "latex": "\\frac { d } { d t } ( \\frac { d t } { d \\tau } ) \\approx 0",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          246,
+          246,
+          262,
+          5,
+          106,
+          246,
+          262,
+          246,
+          200,
+          6,
+          78,
+          13
+        ],
+        "modifiers": [
+          2,
+          272,
+          269,
+          279,
+          2,
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2710,
+    "load_ms": 0,
+    "encode_ms": 447,
+    "decode_ms": 2257,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "522b2e3d5b4f2b14",
+    "truth": "a ( \\rho , p ) \\equiv \\sqrt { \\frac { \\partial p } { \\partial \\rho } }",
+    "latex": "a ( \\rho , \\rho ) = \\sqrt { \\frac { \\partial p } { \\partial \\rho } }",
+    "ranked": "a ( \\rho , \\rho ) = \\sqrt { \\frac { \\partial p } { \\partial \\rho } }",
+    "candidates": [
+      {
+        "latex": "a ( \\rho , \\rho ) = \\sqrt { \\frac { \\partial p } { \\partial \\rho } }",
+        "visual_score": 0,
+        "symbols": [
+          243,
+          5,
+          186,
+          9,
+          186,
+          6,
+          26,
+          192,
+          106,
+          174,
+          258,
+          174,
+          186
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          269,
+          269,
+          279,
+          269,
+          280
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2678,
+    "load_ms": 0,
+    "encode_ms": 338,
+    "decode_ms": 2336,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "56f699525f8350ad",
+    "truth": "l i m _ { x \\rightarrow - \\infty } \\frac { 4 x ^ { 3 } + 3 } { 5 x ^ { 3 } - 2 } = \\frac { 4 } { 5 }",
+    "latex": "l i m_{ x \\rightarrow - \\infty } \\frac { 4 x^{ 3 } + 3 } { 5 x^{ 3 } - 2 } = \\frac { 4 } { 5 }",
+    "ranked": "l i m_{ x \\rightarrow - \\infty } \\frac { 4 x^{ 3 } + 3 } { 5 x^{ 3 } - 2 } = \\frac { 4 } { 5 }",
+    "candidates": [
+      {
+        "latex": "l i m_{ x \\rightarrow - \\infty } \\frac { 4 x^{ 3 } + 3 } { 5 x^{ 3 } - 2 } = \\frac { 4 } { 5 }",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          266,
+          187,
+          10,
+          116,
+          106,
+          17,
+          266,
+          16,
+          8,
+          16,
+          18,
+          266,
+          16,
+          10,
+          15,
+          26,
+          106,
+          17,
+          18
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          2,
+          279,
+          2,
+          269,
+          2,
+          228,
+          2,
+          279,
+          269,
+          2,
+          228,
+          2,
+          279,
+          2,
+          2,
+          272,
+          272
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2741,
+    "load_ms": 0,
+    "encode_ms": 349,
+    "decode_ms": 2385,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "16cef76517956059",
+    "truth": "J _ { \\phi } = D _ { \\phi } \\frac { \\partial \\phi } { \\partial x _ { i } }",
+    "latex": "J_{ \\phi } = D_{ \\phi } \\frac { \\partial \\phi } { \\partial x_{ i } }",
+    "ranked": "J_{ \\phi } = D_{ \\phi } \\frac { \\partial \\phi } { \\partial x_{ i } }",
+    "candidates": [
+      {
+        "latex": "J_{ \\phi } = D_{ \\phi } \\frac { \\partial \\phi } { \\partial x_{ i } }",
+        "visual_score": 0,
+        "symbols": [
+          38,
+          176,
+          26,
+          32,
+          176,
+          106,
+          174,
+          176,
+          174,
+          266,
+          251
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          237,
+          2,
+          269,
+          279,
+          269,
+          2,
+          238
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2643,
+    "load_ms": 0,
+    "encode_ms": 395,
+    "decode_ms": 2243,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "b82d5cf9c79f5887",
+    "truth": "\\int d ^ { d } x \\overline { \\psi } i D / \\psi",
+    "latex": "\\int d^{ d } x \\overline { \\psi } : D / \\psi",
+    "ranked": "\\int d^{ d } x \\overline { \\psi } : D / \\psi",
+    "candidates": [
+      {
+        "latex": "\\int d^{ d } x \\overline { \\psi } : D / \\psi",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          246,
+          246,
+          266,
+          173,
+          182,
+          23,
+          32,
+          12,
+          182
+        ],
+        "modifiers": [
+          2,
+          2,
+          228,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2440,
+    "load_ms": 0,
+    "encode_ms": 348,
+    "decode_ms": 2085,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "23a0bc11da5c2d52",
+    "truth": "l i m _ { t \\rightarrow \\infty } \\frac { t ^ { \\alpha } } { a e ^ { t } } = 0",
+    "latex": "l i m_{ t \\rightarrow \\infty } \\frac { t^{ \\alpha } } { a e^{ t } } = 0",
+    "ranked": "l i m_{ t \\rightarrow \\infty } \\frac { t^{ \\alpha } } { a e^{ t } } = 0",
+    "candidates": [
+      {
+        "latex": "l i m_{ t \\rightarrow \\infty } \\frac { t^{ \\alpha } } { a e^{ t } } = 0",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          262,
+          187,
+          116,
+          106,
+          262,
+          76,
+          243,
+          247,
+          262,
+          26,
+          13
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          269,
+          229,
+          269,
+          2,
+          229,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2477,
+    "load_ms": 0,
+    "encode_ms": 296,
+    "decode_ms": 2177,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "a0e6cf50e5980169",
+    "truth": "f ^ { ( n ) } ( x ) = \\frac { d ^ { n } f } { d x ^ { n } }",
+    "latex": "f^{ ( n ) } ( x ) = \\frac { d^{ n } f } { d x^{ n } }",
+    "ranked": "f^{ ( n ) } ( x ) = \\frac { d^{ n } f } { d x^{ n } }",
+    "candidates": [
+      {
+        "latex": "f^{ ( n ) } ( x ) = \\frac { d^{ n } f } { d x^{ n } }",
+        "visual_score": 0,
+        "symbols": [
+          248,
+          5,
+          256,
+          6,
+          5,
+          266,
+          6,
+          26,
+          106,
+          246,
+          256,
+          248,
+          246,
+          266,
+          256
+        ],
+        "modifiers": [
+          2,
+          226,
+          2,
+          279,
+          2,
+          2,
+          2,
+          2,
+          2,
+          269,
+          228,
+          279,
+          269,
+          2,
+          229
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2539,
+    "load_ms": 0,
+    "encode_ms": 315,
+    "decode_ms": 2221,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "070e7f7a58aed5db",
+    "truth": "\\int | f | d \\mu < + \\infty",
+    "latex": "\\int | f | d u < + \\infty",
+    "ranked": "\\int | f | d u < + \\infty",
+    "candidates": [
+      {
+        "latex": "\\int | f | d u < + \\infty",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          278,
+          248,
+          278,
+          246,
+          263,
+          25,
+          8,
+          116
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2512,
+    "load_ms": 0,
+    "encode_ms": 316,
+    "decode_ms": 2188,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "ea27e930928453cb",
+    "truth": "\\hat { M } = l i m _ { \\eta \\rightarrow \\infty } M ^ { ( \\eta ) }",
+    "latex": "\\hat { M } = l i m_{ \\eta \\rightarrow \\infty } m^{ ( \\eta ) }",
+    "ranked": "\\hat { M } = l i m_{ \\eta \\rightarrow \\infty } m^{ ( \\eta ) }",
+    "candidates": [
+      {
+        "latex": "\\hat { M } = l i m_{ \\eta \\rightarrow \\infty } m^{ ( \\eta ) }",
+        "visual_score": -0.014159307837570518,
+        "symbols": [
+          110,
+          41,
+          26,
+          254,
+          251,
+          255,
+          103,
+          187,
+          116,
+          255,
+          5,
+          103,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          226,
+          2,
+          279
+        ]
+      },
+      {
+        "latex": "\\hat { M } = l i m_{ \\eta \\rightarrow \\infty } M^{ ( \\eta ) }",
+        "visual_score": -0.05445500943688051,
+        "symbols": [
+          110,
+          41,
+          26,
+          254,
+          251,
+          255,
+          103,
+          187,
+          116,
+          41,
+          5,
+          103,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          226,
+          2,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2904,
+    "load_ms": 0,
+    "encode_ms": 313,
+    "decode_ms": 2585,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "7422eb20f17ddef6",
+    "truth": "\\frac { U } { T ^ { 2 } } = \\frac { \\partial \\Phi } { \\partial T }",
+    "latex": "\\frac { U } { T^{ 2 } } = \\frac { \\partial \\phi } { \\partial T }",
+    "ranked": "\\frac { U } { T^{ 2 } } = \\frac { \\partial \\phi } { \\partial T }",
+    "candidates": [
+      {
+        "latex": "\\frac { U } { T^{ 2 } } = \\frac { \\partial \\phi } { \\partial T }",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          49,
+          48,
+          15,
+          26,
+          106,
+          174,
+          176,
+          174,
+          48
+        ],
+        "modifiers": [
+          2,
+          272,
+          269,
+          229,
+          2,
+          2,
+          269,
+          279,
+          269,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2568,
+    "load_ms": 0,
+    "encode_ms": 300,
+    "decode_ms": 2263,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "7f090bf53c5de339",
+    "truth": "p _ { i } ( q _ { i } , \\dot { q } _ { i } , t ) = \\frac { \\partial L } { \\partial \\dot { q } _ { i } }",
+    "latex": "p : ( q_{ i } , \\dot { q }_{ i } , t ) = \\frac { \\partial t } { \\partial q_{ i } }",
+    "ranked": "p : ( q_{ i } , \\dot { q }_{ i } , t ) = \\frac { \\partial t } { \\partial q_{ i } }",
+    "candidates": [
+      {
+        "latex": "p : ( q_{ i } , \\dot { q }_{ i } , t ) = \\frac { \\partial t } { \\partial q_{ i } }",
+        "visual_score": 0,
+        "symbols": [
+          258,
+          23,
+          5,
+          259,
+          251,
+          9,
+          98,
+          259,
+          251,
+          9,
+          262,
+          6,
+          26,
+          106,
+          174,
+          262,
+          174,
+          259,
+          251
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          269,
+          279,
+          269,
+          2,
+          238
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2988,
+    "load_ms": 0,
+    "encode_ms": 293,
+    "decode_ms": 2690,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "82e9543d2fa22611",
+    "truth": "\\oint _ { C } \\frac { d z } { z } = 2 \\pi i",
+    "latex": "\\oint_{ C } \\frac { d z } { z } = 2 \\pi i",
+    "ranked": "\\oint_{ C } \\frac { d z } { z } = 2 \\pi i",
+    "candidates": [
+      {
+        "latex": "\\oint_{ C } \\frac { d z } { z } = 2 \\pi i",
+        "visual_score": 0,
+        "symbols": [
+          168,
+          31,
+          106,
+          246,
+          268,
+          268,
+          26,
+          15,
+          177,
+          251
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          269,
+          279,
+          272,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2467,
+    "load_ms": 0,
+    "encode_ms": 319,
+    "decode_ms": 2142,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "a60e5a8e94331813",
+    "truth": "s ( t ) = \\int _ { 0 } ^ { t } d t ^ { \\prime } v ( t ^ { \\prime } )",
+    "latex": "s ( t ) = \\int_{ 0 }^{ t } d t^{ \\prime } v ( t^{ \\prime } )",
+    "ranked": "s ( t ) = \\int_{ 0 }^{ t } d t^{ \\prime } v ( t^{ \\prime } )",
+    "candidates": [
+      {
+        "latex": "s ( t ) = \\int_{ 0 }^{ t } d t^{ \\prime } v ( t^{ \\prime } )",
+        "visual_score": 0,
+        "symbols": [
+          261,
+          5,
+          262,
+          6,
+          26,
+          117,
+          13,
+          262,
+          246,
+          262,
+          179,
+          264,
+          5,
+          262,
+          179,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          228,
+          2,
+          2,
+          228,
+          2,
+          2,
+          2,
+          228,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2758,
+    "load_ms": 0,
+    "encode_ms": 303,
+    "decode_ms": 2450,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "4c0882bd2643a87c",
+    "truth": "\\approx \\int _ { \\partial N } f ^ { \\mu } d s _ { \\mu }",
+    "latex": "\\approx \\int_{ \\partial N } f^{ \\mu } d S_{ \\mu }",
+    "ranked": "\\approx \\int_{ \\partial N } f^{ \\mu } d S_{ \\mu }",
+    "candidates": [
+      {
+        "latex": "\\approx \\int_{ \\partial N } f^{ \\mu } d S_{ \\mu }",
+        "visual_score": 0,
+        "symbols": [
+          78,
+          117,
+          174,
+          42,
+          248,
+          159,
+          246,
+          47,
+          159
+        ],
+        "modifiers": [
+          2,
+          2,
+          235,
+          279,
+          2,
+          228,
+          2,
+          2,
+          237
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2413,
+    "load_ms": 0,
+    "encode_ms": 308,
+    "decode_ms": 2101,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "48b9f889c7af2cb5",
+    "truth": "l i m _ { x \\rightarrow 2 } \\frac { x - 2 } { x - 2 }",
+    "latex": "l i m_{ x \\rightarrow 2 } \\frac { \\lambda - 2 } { \\lambda - 2 }",
+    "ranked": "l i m_{ x \\rightarrow 2 } \\frac { \\lambda - 2 } { \\lambda - 2 }",
+    "candidates": [
+      {
+        "latex": "l i m_{ x \\rightarrow 2 } \\frac { \\lambda - 2 } { \\lambda - 2 }",
+        "visual_score": -0.00550520400412423,
+        "symbols": [
+          254,
+          251,
+          255,
+          266,
+          187,
+          15,
+          106,
+          120,
+          10,
+          15,
+          120,
+          10,
+          15
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          269,
+          2,
+          279,
+          269,
+          2,
+          279
+        ]
+      },
+      {
+        "latex": "l i m_{ x \\rightarrow 2 } \\frac { \\lambda - 2 } { x - 2 }",
+        "visual_score": -0.13035283532237743,
+        "symbols": [
+          254,
+          251,
+          255,
+          266,
+          187,
+          15,
+          106,
+          120,
+          10,
+          15,
+          266,
+          10,
+          15
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          269,
+          2,
+          279,
+          269,
+          2,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 3038,
+    "load_ms": 0,
+    "encode_ms": 316,
+    "decode_ms": 2718,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "9154bc8b5dc3dfa5",
+    "truth": "\\oint _ { C } \\frac { f ^ { \\prime } ( z ) } { f ( z ) } d z",
+    "latex": "\\oint_{ C } \\frac { f^{ \\prime } ( z ) } { f ( z ) } d z",
+    "ranked": "\\oint_{ C } \\frac { f^{ \\prime } ( z ) } { f ( z ) } d z",
+    "candidates": [
+      {
+        "latex": "\\oint_{ C } \\frac { f^{ \\prime } ( z ) } { f ( z ) } d z",
+        "visual_score": 0,
+        "symbols": [
+          168,
+          31,
+          106,
+          248,
+          179,
+          5,
+          268,
+          6,
+          248,
+          5,
+          268,
+          6,
+          246,
+          268
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          269,
+          228,
+          2,
+          2,
+          279,
+          269,
+          2,
+          2,
+          279,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2463,
+    "load_ms": 0,
+    "encode_ms": 291,
+    "decode_ms": 2168,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "aaa76d5c95ddd3b0",
+    "truth": "0 \\le \\frac { d P } { d w }",
+    "latex": "0 \\le \\frac { d P } { d w }",
+    "ranked": "0 \\le \\frac { d P } { d w }",
+    "candidates": [
+      {
+        "latex": "0 \\le \\frac { d P } { d w }",
+        "visual_score": 0,
+        "symbols": [
+          13,
+          123,
+          106,
+          246,
+          44,
+          246,
+          265
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          269,
+          279,
+          269,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2846,
+    "load_ms": 0,
+    "encode_ms": 317,
+    "decode_ms": 2524,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "d095a50b886bebc1",
+    "truth": "\\int \\frac { x ^ { 6 } } { ( 1 + x ) ^ { 8 } } d x",
+    "latex": "\\int \\frac { x^{ 6 } } { ( 1 + x )^{ 8 } } d x",
+    "ranked": "\\int \\frac { x^{ 6 } } { ( 1 + x )^{ 8 } } d x",
+    "candidates": [
+      {
+        "latex": "\\int \\frac { x^{ 6 } } { ( 1 + x )^{ 8 } } d x",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          106,
+          266,
+          19,
+          5,
+          14,
+          8,
+          266,
+          6,
+          21,
+          246,
+          266
+        ],
+        "modifiers": [
+          2,
+          2,
+          269,
+          229,
+          269,
+          2,
+          2,
+          2,
+          2,
+          229,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2428,
+    "load_ms": 0,
+    "encode_ms": 381,
+    "decode_ms": 2042,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "2653c8374d402278",
+    "truth": "= J + \\epsilon _ { 0 } \\frac { \\partial E } { \\partial t }",
+    "latex": "= J + \\epsilon_{ 0 } \\frac { \\partial E } { \\partial t }",
+    "ranked": "= J + \\epsilon_{ 0 } \\frac { \\partial E } { \\partial t }",
+    "candidates": [
+      {
+        "latex": "= J + \\epsilon_{ 0 } \\frac { \\partial E } { \\partial t }",
+        "visual_score": 0,
+        "symbols": [
+          26,
+          38,
+          8,
+          101,
+          13,
+          106,
+          174,
+          33,
+          174,
+          262
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          269,
+          279,
+          269,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1568,
+    "load_ms": 0,
+    "encode_ms": 213,
+    "decode_ms": 1353,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "aac21e8867ba7869",
+    "truth": "\\int _ { 0 } ^ { \\pi } x ^ { n } s i n ( x ) d x",
+    "latex": "\\int_{ 0 }^{ \\pi } x^{ n } s i n ( x ) d x",
+    "ranked": "\\int_{ 0 }^{ \\pi } x^{ n } s i n ( x ) d x",
+    "candidates": [
+      {
+        "latex": "\\int_{ 0 }^{ \\pi } x^{ n } s i n ( x ) d x",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          13,
+          177,
+          266,
+          256,
+          261,
+          251,
+          256,
+          5,
+          266,
+          6,
+          246,
+          266
+        ],
+        "modifiers": [
+          2,
+          237,
+          228,
+          2,
+          228,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1409,
+    "load_ms": 0,
+    "encode_ms": 169,
+    "decode_ms": 1237,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "109648cb8168780d",
+    "truth": "g _ { D S } = \\frac { \\partial I _ { D S } } { \\partial V _ { D S } }",
+    "latex": "g_{ D S } = \\frac { \\partial I_{ D S } } { \\partial V_{ D S } }",
+    "ranked": "g_{ D S } = \\frac { \\partial I_{ D S } } { \\partial V_{ D S } }",
+    "candidates": [
+      {
+        "latex": "g_{ D S } = \\frac { \\partial I_{ D S } } { \\partial V_{ D S } }",
+        "visual_score": 0,
+        "symbols": [
+          249,
+          32,
+          47,
+          26,
+          106,
+          174,
+          37,
+          32,
+          47,
+          174,
+          50,
+          32,
+          47
+        ],
+        "modifiers": [
+          2,
+          235,
+          279,
+          2,
+          2,
+          269,
+          2,
+          235,
+          280,
+          269,
+          2,
+          235,
+          280
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1441,
+    "load_ms": 0,
+    "encode_ms": 187,
+    "decode_ms": 1251,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "e63c53ac68d8c0b6",
+    "truth": "\\Gamma = \\frac { \\partial \\Delta } { \\partial S } = \\frac { \\partial ^ { 2 } V } { \\partial S ^ { 2 } }",
+    "latex": "T = \\frac { \\partial \\Delta } { \\partial S } = \\frac { \\partial^{ 2 } V } { \\partial S^{ 2 } }",
+    "ranked": "T = \\frac { \\partial \\Delta } { \\partial S } = \\frac { \\partial^{ 2 } V } { \\partial S^{ 2 } }",
+    "candidates": [
+      {
+        "latex": "T = \\frac { \\partial \\Delta } { \\partial S } = \\frac { \\partial^{ 2 } V } { \\partial S^{ 2 } }",
+        "visual_score": 0,
+        "symbols": [
+          48,
+          26,
+          106,
+          174,
+          59,
+          174,
+          47,
+          26,
+          106,
+          174,
+          15,
+          50,
+          174,
+          47,
+          15
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          2,
+          269,
+          228,
+          279,
+          269,
+          2,
+          229
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1411,
+    "load_ms": 0,
+    "encode_ms": 174,
+    "decode_ms": 1235,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "d7dc76ac4a53ab23",
+    "truth": "l i m _ { x \\rightarrow 0 } \\frac { x } { x ^ { 3 } } = \\infty . ( 6 )",
+    "latex": "l i m_{ x \\rightarrow 0 } \\frac { x } { x^{ 3 } } = \\infty . ( 6 )",
+    "ranked": "l i m_{ x \\rightarrow 0 } \\frac { x } { x^{ 3 } } = \\infty . ( 6 )",
+    "candidates": [
+      {
+        "latex": "l i m_{ x \\rightarrow 0 } \\frac { x } { x^{ 3 } } = \\infty . ( 6 )",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          266,
+          187,
+          13,
+          106,
+          266,
+          266,
+          16,
+          26,
+          116,
+          11,
+          5,
+          19,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          272,
+          269,
+          229,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1376,
+    "load_ms": 0,
+    "encode_ms": 186,
+    "decode_ms": 1187,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "0a19e88f5fc8e613",
+    "truth": "\\int _ { 0 } ^ { t _ { 1 } } E ( t ) d t",
+    "latex": "\\int_{ 0 }^{ t_{ 1 } } E ( t ) d t",
+    "ranked": "\\int_{ 0 }^{ t_{ 1 } } E ( t ) d t",
+    "candidates": [
+      {
+        "latex": "\\int_{ 0 }^{ t_{ 1 } } E ( t ) d t",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          13,
+          262,
+          14,
+          33,
+          5,
+          262,
+          6,
+          246,
+          262
+        ],
+        "modifiers": [
+          2,
+          237,
+          226,
+          238,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1415,
+    "load_ms": 0,
+    "encode_ms": 176,
+    "decode_ms": 1237,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "ea83e0936da12b4b",
+    "truth": "\\int _ { a } ^ { b } f ( x ) d _ { h } x",
+    "latex": "\\int_{ a }^{ b } f ( x ) d_{ h } x",
+    "ranked": "\\int_{ a }^{ b } f ( x ) d_{ h } x",
+    "candidates": [
+      {
+        "latex": "\\int_{ a }^{ b } f ( x ) d_{ h } x",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          243,
+          244,
+          248,
+          5,
+          266,
+          6,
+          246,
+          250,
+          266
+        ],
+        "modifiers": [
+          2,
+          237,
+          228,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1445,
+    "load_ms": 0,
+    "encode_ms": 176,
+    "decode_ms": 1266,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "e2c483ae100dcbf0",
+    "truth": "\\frac { 1 } { 2 \\pi } \\frac { d } { d t } \\phi ( t )",
+    "latex": "\\frac { 1 } { 2 \\pi } \\frac { d } { d t } \\Phi ( t )",
+    "ranked": "\\frac { 1 } { 2 \\pi } \\frac { d } { d t } \\Phi ( t )",
+    "candidates": [
+      {
+        "latex": "\\frac { 1 } { 2 \\pi } \\frac { d } { d t } \\Phi ( t )",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          14,
+          15,
+          177,
+          106,
+          246,
+          246,
+          262,
+          64,
+          5,
+          262,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          269,
+          279,
+          2,
+          272,
+          269,
+          279,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1488,
+    "load_ms": 0,
+    "encode_ms": 223,
+    "decode_ms": 1262,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "12b33524b848a3f8",
+    "truth": "\\int \\psi _ { e } ^ { \\prime * } \\mu _ { e } \\psi _ { e } d \\tau _ { e }",
+    "latex": "\\int \\psi_{ e }^{ \\prime * } \\mu_{ e } \\psi_{ e } d \\tau_{ e }",
+    "ranked": "\\int \\psi_{ e }^{ \\prime * } \\mu_{ e } \\psi_{ e } d \\tau_{ e }",
+    "candidates": [
+      {
+        "latex": "\\int \\psi_{ e }^{ \\prime * } \\mu_{ e } \\psi_{ e } d \\tau_{ e }",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          182,
+          247,
+          179,
+          7,
+          159,
+          247,
+          182,
+          247,
+          246,
+          200,
+          247
+        ],
+        "modifiers": [
+          2,
+          2,
+          237,
+          226,
+          279,
+          2,
+          237,
+          2,
+          237,
+          2,
+          2,
+          237
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1456,
+    "load_ms": 0,
+    "encode_ms": 187,
+    "decode_ms": 1266,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "e8d0caaf1afaf0cd",
+    "truth": "\\int _ { 0 } ^ { \\infty } y _ { \\lambda } J _ { \\lambda } d \\lambda",
+    "latex": "\\int_{ 0 }^{ \\infty } y_{ x } J_{ x } d x",
+    "ranked": "\\int_{ 0 }^{ \\infty } y_{ x } J_{ x } d x",
+    "candidates": [
+      {
+        "latex": "\\int_{ 0 }^{ \\infty } y_{ x } J_{ x } d x",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          13,
+          116,
+          267,
+          266,
+          38,
+          266,
+          246,
+          266
+        ],
+        "modifiers": [
+          2,
+          237,
+          228,
+          2,
+          237,
+          2,
+          237,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1424,
+    "load_ms": 0,
+    "encode_ms": 194,
+    "decode_ms": 1226,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "984f67ef58dd2b99",
+    "truth": "\\frac { d x } { d t } = ( x ( t - 1 ) ) ^ { 2 }",
+    "latex": "\\frac { d x } { d t } = ( x ( t - 1 ) )^{ 2 }",
+    "ranked": "\\frac { d x } { d t } = ( x ( t - 1 ) )^{ 2 }",
+    "candidates": [
+      {
+        "latex": "\\frac { d x } { d t } = ( x ( t - 1 ) )^{ 2 }",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          246,
+          266,
+          246,
+          262,
+          26,
+          5,
+          266,
+          5,
+          262,
+          10,
+          14,
+          6,
+          6,
+          15
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          228
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1482,
+    "load_ms": 0,
+    "encode_ms": 176,
+    "decode_ms": 1304,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "41a09d7b45b6d8ee",
+    "truth": "\\frac { d g } { d \\mu } = \\frac { C } { \\sqrt { h ( \\mu ) } }",
+    "latex": "\\frac { d g } { d \\mu } = \\frac { C } { \\sqrt { h ( \\mu ) } }",
+    "ranked": "\\frac { d g } { d \\mu } = \\frac { C } { \\sqrt { h ( \\mu ) } }",
+    "candidates": [
+      {
+        "latex": "\\frac { d g } { d \\mu } = \\frac { C } { \\sqrt { h ( \\mu ) } }",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          246,
+          249,
+          246,
+          159,
+          26,
+          106,
+          31,
+          192,
+          250,
+          5,
+          159,
+          6
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          2,
+          272,
+          269,
+          269,
+          2,
+          2,
+          280
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1457,
+    "load_ms": 0,
+    "encode_ms": 206,
+    "decode_ms": 1248,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "0fd68a3b86abd184",
+    "truth": "( \\frac { \\partial F } { \\partial V } ) _ { T , \\{ N _ { i } \\} } = - p",
+    "latex": "( \\frac { \\partial E } { \\partial V } )_{ T , \\{ N_{ i } \\} } = - p",
+    "ranked": "( \\frac { \\partial E } { \\partial V } )_{ T , \\{ N_{ i } \\} } = - p",
+    "candidates": [
+      {
+        "latex": "( \\frac { \\partial E } { \\partial V } )_{ T , \\{ N_{ i } \\} } = - p",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          106,
+          174,
+          33,
+          174,
+          50,
+          6,
+          48,
+          9,
+          221,
+          42,
+          251,
+          223,
+          26,
+          10,
+          258
+        ],
+        "modifiers": [
+          2,
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          235,
+          2,
+          2,
+          2,
+          237,
+          279,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1645,
+    "load_ms": 0,
+    "encode_ms": 167,
+    "decode_ms": 1476,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "e92fcc5d5ba2a1f8",
+    "truth": "\\frac { \\frac { d y } { d t } } { \\frac { d x } { d t } } = \\frac { \\dot { y } ( t ) } { \\dot { x } ( t ) }",
+    "latex": "\\frac { \\frac { d y } { d t } } { \\frac { d x } { d t } } = \\frac { \\dot { y } ( t ) } { \\dot { x } ( t ) }",
+    "ranked": "\\frac { \\frac { d y } { d t } } { \\frac { d x } { d t } } = \\frac { \\dot { y } ( t ) } { \\dot { x } ( t ) }",
+    "candidates": [
+      {
+        "latex": "\\frac { \\frac { d y } { d t } } { \\frac { d x } { d t } } = \\frac { \\dot { y } ( t ) } { \\dot { x } ( t ) }",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          106,
+          246,
+          267,
+          246,
+          262,
+          106,
+          246,
+          266,
+          246,
+          262,
+          26,
+          106,
+          98,
+          267,
+          5,
+          262,
+          6,
+          98,
+          266,
+          5,
+          262,
+          6
+        ],
+        "modifiers": [
+          2,
+          269,
+          269,
+          279,
+          269,
+          280,
+          269,
+          269,
+          279,
+          269,
+          280,
+          2,
+          2,
+          269,
+          272,
+          2,
+          2,
+          279,
+          269,
+          272,
+          2,
+          2,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1533,
+    "load_ms": 0,
+    "encode_ms": 194,
+    "decode_ms": 1336,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "58b0bfe3dacfa15c",
+    "truth": "G = \\xi \\partial ^ { \\mu } A _ { \\mu }",
+    "latex": "G = \\xi \\partial^{ 4 } A_{ 4 }",
+    "ranked": "G = \\xi \\partial^{ 4 } A_{ 4 }",
+    "candidates": [
+      {
+        "latex": "G = \\xi \\partial^{ 4 } A_{ 4 }",
+        "visual_score": 0,
+        "symbols": [
+          35,
+          26,
+          219,
+          174,
+          17,
+          29,
+          17
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          228,
+          2,
+          237
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1618,
+    "load_ms": 0,
+    "encode_ms": 197,
+    "decode_ms": 1419,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "265c81923ae5ccb4",
+    "truth": "l i m _ { \\Delta x \\rightarrow 0 } g ( \\Delta x ) = 0",
+    "latex": "l i m_{ \\Delta x \\rightarrow 0 } g ( \\Delta x ) = 0",
+    "ranked": "l i m_{ \\Delta x \\rightarrow 0 } g ( \\Delta x ) = 0",
+    "candidates": [
+      {
+        "latex": "l i m_{ \\Delta x \\rightarrow 0 } g ( \\Delta x ) = 0",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          59,
+          266,
+          187,
+          13,
+          249,
+          5,
+          59,
+          266,
+          6,
+          26,
+          13
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          2,
+          279,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1451,
+    "load_ms": 0,
+    "encode_ms": 169,
+    "decode_ms": 1279,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "6d62335e21196ff6",
+    "truth": "\\frac { \\partial \\phi } { \\partial t } = \\frac { \\partial } { \\partial z } [ ( 1 - \\phi ) u ]",
+    "latex": "\\frac { \\partial \\phi } { \\partial t } = \\frac { \\partial } { \\partial z } [ ( 1 - \\phi ) u ]",
+    "ranked": "\\frac { \\partial \\phi } { \\partial t } = \\frac { \\partial } { \\partial z } [ ( 1 - \\phi ) u ]",
+    "candidates": [
+      {
+        "latex": "\\frac { \\partial \\phi } { \\partial t } = \\frac { \\partial } { \\partial z } [ ( 1 - \\phi ) u ]",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          174,
+          176,
+          174,
+          262,
+          26,
+          106,
+          174,
+          174,
+          268,
+          55,
+          5,
+          14,
+          10,
+          176,
+          6,
+          263,
+          224
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          2,
+          272,
+          269,
+          279,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 3917,
+    "load_ms": 398,
+    "encode_ms": 755,
+    "decode_ms": 2753,
+    "warm": false,
+    "renderable": true
+  },
+  {
+    "id": "8a8dbd5387660cfe",
+    "truth": "J _ { k } \\equiv \\oint p _ { k } d q _ { k }",
+    "latex": "J_{ k } \\equiv \\oint p_{ k } d q_{ k }",
+    "ranked": "J_{ k } \\equiv \\oint p_{ k } d q_{ k }",
+    "candidates": [
+      {
+        "latex": "J_{ k } \\equiv \\oint p_{ k } d q_{ k }",
+        "visual_score": 0,
+        "symbols": [
+          38,
+          253,
+          102,
+          168,
+          258,
+          253,
+          246,
+          259,
+          253
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          237
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1467,
+    "load_ms": 0,
+    "encode_ms": 179,
+    "decode_ms": 1286,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "99ae18602c195843",
+    "truth": "\\int _ { X } ^ { \\oplus } H _ { x } d \\mu ( x )",
+    "latex": "\\int_{ X }^{ \\oplus } H x d \\mu ( x )",
+    "ranked": "\\int_{ X }^{ \\oplus } H x d \\mu ( x )",
+    "candidates": [
+      {
+        "latex": "\\int_{ X }^{ \\oplus } H x d \\mu ( x )",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          52,
+          171,
+          36,
+          266,
+          246,
+          159,
+          5,
+          266,
+          6
+        ],
+        "modifiers": [
+          2,
+          237,
+          228,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1606,
+    "load_ms": 0,
+    "encode_ms": 200,
+    "decode_ms": 1404,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "71cd104b64d76233",
+    "truth": "\\int _ { 0 } ^ { \\infty } \\frac { d x } { \\Gamma ( x ) }",
+    "latex": "\\int_{ 0 }^{ \\infty } \\frac { d x } { \\Gamma ( x ) }",
+    "ranked": "\\int_{ 0 }^{ \\infty } \\frac { d x } { \\Gamma ( x ) }",
+    "candidates": [
+      {
+        "latex": "\\int_{ 0 }^{ \\infty } \\frac { d x } { \\Gamma ( x ) }",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          13,
+          116,
+          106,
+          246,
+          266,
+          60,
+          5,
+          266,
+          6
+        ],
+        "modifiers": [
+          2,
+          237,
+          228,
+          2,
+          269,
+          279,
+          269,
+          2,
+          2,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1458,
+    "load_ms": 0,
+    "encode_ms": 174,
+    "decode_ms": 1282,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "1be2a95395c1f717",
+    "truth": "p _ { i } ( q _ { i } , \\dot { q } _ { i } , t ) = \\frac { \\partial L } { \\partial \\dot { q } _ { i } }",
+    "latex": "p_{ i } ( q_{ i } , \\dot { q }_{ i } , t ) = \\frac { \\partial L } { \\partial \\dot { q }_{ i } }",
+    "ranked": "p_{ i } ( q_{ i } , \\dot { q }_{ i } , t ) = \\frac { \\partial L } { \\partial \\dot { q }_{ i } }",
+    "candidates": [
+      {
+        "latex": "p_{ i } ( q_{ i } , \\dot { q }_{ i } , t ) = \\frac { \\partial L } { \\partial \\dot { q }_{ i } }",
+        "visual_score": 0,
+        "symbols": [
+          258,
+          251,
+          5,
+          259,
+          251,
+          9,
+          98,
+          259,
+          251,
+          9,
+          262,
+          6,
+          26,
+          106,
+          174,
+          40,
+          174,
+          98,
+          259,
+          251
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          237,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          269,
+          279,
+          269,
+          2,
+          272,
+          238
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1605,
+    "load_ms": 0,
+    "encode_ms": 227,
+    "decode_ms": 1374,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "11b2c9901428884f",
+    "truth": "l i m _ { i \\rightarrow \\infty } \\frac { f ( i ) } { i } = \\frac { 1 } { 2 }",
+    "latex": "l i m_{ i \\rightarrow \\infty } \\frac { f ( i ) } { i } = \\frac { 1 } { 2 }",
+    "ranked": "l i m_{ i \\rightarrow \\infty } \\frac { f ( i ) } { i } = \\frac { 1 } { 2 }",
+    "candidates": [
+      {
+        "latex": "l i m_{ i \\rightarrow \\infty } \\frac { f ( i ) } { i } = \\frac { 1 } { 2 }",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          251,
+          187,
+          116,
+          106,
+          248,
+          5,
+          251,
+          6,
+          251,
+          26,
+          106,
+          14,
+          15
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          269,
+          2,
+          2,
+          279,
+          272,
+          2,
+          2,
+          272,
+          272
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1540,
+    "load_ms": 0,
+    "encode_ms": 192,
+    "decode_ms": 1345,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "3df04ce34522e61b",
+    "truth": "\\partial _ { i } f = \\frac { \\partial f } { \\partial \\xi ^ { i } } : = \\frac { \\partial \\overline { f } } { \\partial \\xi ^ { i } }",
+    "latex": "\\partial_{ i } f = \\frac { \\partial f } { \\partial \\xi^{ i } } : = \\frac { \\partial \\overline { f } } { \\partial \\xi^{ i } }",
+    "ranked": "\\partial_{ i } f = \\frac { \\partial f } { \\partial \\xi^{ i } } : = \\frac { \\partial \\overline { f } } { \\partial \\xi^{ i } }",
+    "candidates": [
+      {
+        "latex": "\\partial_{ i } f = \\frac { \\partial f } { \\partial \\xi^{ i } } : = \\frac { \\partial \\overline { f } } { \\partial \\xi^{ i } }",
+        "visual_score": 0,
+        "symbols": [
+          174,
+          251,
+          248,
+          26,
+          106,
+          174,
+          248,
+          174,
+          219,
+          251,
+          23,
+          26,
+          106,
+          174,
+          173,
+          248,
+          174,
+          219,
+          251
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          269,
+          279,
+          269,
+          2,
+          229,
+          2,
+          2,
+          2,
+          269,
+          2,
+          273,
+          269,
+          2,
+          229
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1444,
+    "load_ms": 0,
+    "encode_ms": 167,
+    "decode_ms": 1271,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "2a396f0f5462d00b",
+    "truth": "\\frac { d x _ { i } } { d t } = x _ { i } f _ { i } ( x )",
+    "latex": "\\frac { d x_{ i } } { d t } = x_{ i } f_{ i } ( x )",
+    "ranked": "\\frac { d x_{ i } } { d t } = x_{ i } f_{ i } ( x )",
+    "candidates": [
+      {
+        "latex": "\\frac { d x_{ i } } { d t } = x_{ i } f_{ i } ( x )",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          246,
+          266,
+          251,
+          246,
+          262,
+          26,
+          266,
+          251,
+          248,
+          251,
+          5,
+          266,
+          6
+        ],
+        "modifiers": [
+          2,
+          269,
+          2,
+          238,
+          269,
+          279,
+          2,
+          2,
+          237,
+          2,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1534,
+    "load_ms": 0,
+    "encode_ms": 194,
+    "decode_ms": 1334,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "63d619242a1174fc",
+    "truth": "l i m _ { x - }",
+    "latex": "l i m_{ x_{ - } }",
+    "ranked": "l i m_{ x_{ - } }",
+    "candidates": [
+      {
+        "latex": "l i m_{ x_{ - } }",
+        "visual_score": -0.03108928255533328,
+        "symbols": [
+          254,
+          251,
+          255,
+          266,
+          10
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          238
+        ]
+      },
+      {
+        "latex": "l i m_{ x_{ - }",
+        "visual_score": -0.4748425481367922,
+        "symbols": [
+          254,
+          251,
+          255,
+          266,
+          10
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          237
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1723,
+    "load_ms": 0,
+    "encode_ms": 190,
+    "decode_ms": 1530,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "0beb4acc918f8df5",
+    "truth": "\\Pi = \\sum _ { i , j } \\Pi ^ { i j } \\partial _ { i } \\wedge \\partial _ { j }",
+    "latex": "\\Pi = \\sum_{ i , j } \\Pi^{ i j } \\partial_{ i } \\cap \\partial_{ j }",
+    "ranked": "\\Pi = \\sum_{ i , j } \\Pi^{ i j } \\partial_{ i } \\cap \\partial_{ j }",
+    "candidates": [
+      {
+        "latex": "\\Pi = \\sum_{ i , j } \\Pi^{ i j } \\partial_{ i } \\cap \\partial_{ j }",
+        "visual_score": 0,
+        "symbols": [
+          65,
+          26,
+          197,
+          251,
+          9,
+          252,
+          65,
+          251,
+          252,
+          174,
+          251,
+          89,
+          174,
+          252
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          226,
+          279,
+          2,
+          237,
+          2,
+          2,
+          237
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1636,
+    "load_ms": 0,
+    "encode_ms": 223,
+    "decode_ms": 1410,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "0339bd185b869ac1",
+    "truth": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon _ { f } } \\frac { d \\epsilon _ { p } } { d t }",
+    "latex": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon_{ j } } \\frac { d \\epsilon_{ p } } { d t }",
+    "ranked": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon_{ j } } \\frac { d \\epsilon_{ p } } { d t }",
+    "candidates": [
+      {
+        "latex": "\\frac { d D } { d t } = \\frac { 1 } { \\epsilon_{ j } } \\frac { d \\epsilon_{ p } } { d t }",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          246,
+          32,
+          246,
+          262,
+          26,
+          106,
+          14,
+          101,
+          252,
+          106,
+          246,
+          101,
+          258,
+          246,
+          262
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          279,
+          2,
+          2,
+          272,
+          269,
+          238,
+          2,
+          269,
+          2,
+          238,
+          269,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1551,
+    "load_ms": 0,
+    "encode_ms": 187,
+    "decode_ms": 1362,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "328ec836feae9fcf",
+    "truth": "M _ { 1 } \\equiv \\int d \\zeta \\frac { \\lambda ( \\zeta ) } { \\zeta ^ { 2 } }",
+    "latex": "M_{ 1 } \\equiv \\int d \\zeta \\frac { \\lambda ( \\zeta ) } { \\zeta^{ 2 } }",
+    "ranked": "M_{ 1 } \\equiv \\int d \\zeta \\frac { \\lambda ( \\zeta ) } { \\zeta^{ 2 } }",
+    "candidates": [
+      {
+        "latex": "M_{ 1 } \\equiv \\int d \\zeta \\frac { \\lambda ( \\zeta ) } { \\zeta^{ 2 } }",
+        "visual_score": 0,
+        "symbols": [
+          41,
+          14,
+          102,
+          117,
+          246,
+          220,
+          106,
+          120,
+          5,
+          220,
+          6,
+          220,
+          15
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          269,
+          2,
+          2,
+          279,
+          269,
+          229
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1617,
+    "load_ms": 0,
+    "encode_ms": 175,
+    "decode_ms": 1439,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "9d517d1e7f0fce73",
+    "truth": "\\frac { \\partial f } { \\partial { x ^ { \\prime } } ^ { i } } = \\frac { \\partial f } { \\partial x ^ { j } } \\frac { \\partial x ^ { j } } { \\partial { x ^ { \\prime } } ^ { i } }",
+    "latex": "\\frac { \\partial f } { \\partial { x^{ \\prime } }^{ i } } = \\frac { \\partial f } { \\partial x^{ i } } \\frac { \\partial x^{ j } } { \\partial { x^{ \\prime } }^{ i } }",
+    "ranked": "\\frac { \\partial f } { \\partial { x^{ \\prime } }^{ i } } = \\frac { \\partial f } { \\partial x^{ i } } \\frac { \\partial x^{ j } } { \\partial { x^{ \\prime } }^{ i } }",
+    "candidates": [
+      {
+        "latex": "\\frac { \\partial f } { \\partial { x^{ \\prime } }^{ i } } = \\frac { \\partial f } { \\partial x^{ i } } \\frac { \\partial x^{ j } } { \\partial { x^{ \\prime } }^{ i } }",
+        "visual_score": -0.02144238529191607,
+        "symbols": [
+          106,
+          174,
+          248,
+          174,
+          266,
+          179,
+          251,
+          26,
+          106,
+          174,
+          248,
+          174,
+          266,
+          251,
+          106,
+          174,
+          266,
+          252,
+          174,
+          266,
+          179,
+          251
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          269,
+          229,
+          229,
+          2,
+          2,
+          269,
+          279,
+          269,
+          2,
+          229,
+          2,
+          269,
+          2,
+          229,
+          269,
+          269,
+          229,
+          229
+        ]
+      },
+      {
+        "latex": "\\frac { \\partial f } { \\partial { x^{ \\prime } }^{ i } } = \\frac { \\partial f } { \\partial x^{ i } } \\frac { \\partial x^{ j } } { \\partial x^{ \\prime } }^{ i } }",
+        "visual_score": -0.08929012294963032,
+        "symbols": [
+          106,
+          174,
+          248,
+          174,
+          266,
+          179,
+          251,
+          26,
+          106,
+          174,
+          248,
+          174,
+          266,
+          251,
+          106,
+          174,
+          266,
+          252,
+          174,
+          266,
+          179,
+          251
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          269,
+          229,
+          229,
+          2,
+          2,
+          269,
+          279,
+          269,
+          2,
+          229,
+          2,
+          269,
+          2,
+          229,
+          269,
+          2,
+          229,
+          229
+        ]
+      },
+      {
+        "latex": "\\frac { \\partial f } { \\partial x^{ \\prime^{ i } } = \\frac { \\partial f } { \\partial x^{ i } } \\frac { \\partial x^{ j } } { \\partial { x^{ \\prime } }^{ i } }",
+        "visual_score": -0.1452028224423321,
+        "symbols": [
+          106,
+          174,
+          248,
+          174,
+          266,
+          179,
+          251,
+          26,
+          106,
+          174,
+          248,
+          174,
+          266,
+          251,
+          106,
+          174,
+          266,
+          252,
+          174,
+          266,
+          179,
+          251
+        ],
+        "modifiers": [
+          2,
+          269,
+          279,
+          269,
+          2,
+          226,
+          229,
+          2,
+          2,
+          269,
+          279,
+          269,
+          2,
+          229,
+          2,
+          269,
+          2,
+          229,
+          269,
+          269,
+          229,
+          229
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2583,
+    "load_ms": 0,
+    "encode_ms": 285,
+    "decode_ms": 2295,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "e634ed605e39fea9",
+    "truth": "N _ { v } ( \\mu _ { 2 } - \\mu _ { 1 } ) = \\frac { d f } { d c }",
+    "latex": "N_{ \\nu } ( \\mu_{ 2 } - \\mu_{ 1 } ) = \\frac { d f } { d c }",
+    "ranked": "N_{ \\nu } ( \\mu_{ 2 } - \\mu_{ 1 } ) = \\frac { d f } { d c }",
+    "candidates": [
+      {
+        "latex": "N_{ \\nu } ( \\mu_{ 2 } - \\mu_{ 1 } ) = \\frac { d f } { d c }",
+        "visual_score": 0,
+        "symbols": [
+          42,
+          166,
+          5,
+          159,
+          15,
+          10,
+          159,
+          14,
+          6,
+          26,
+          106,
+          246,
+          248,
+          246,
+          245
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          237,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          269,
+          279,
+          269,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 2009,
+    "load_ms": 0,
+    "encode_ms": 379,
+    "decode_ms": 1625,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "2932531b27801066",
+    "truth": "\\frac { \\partial } { \\partial \\overline { z } } w ( z ) = 0",
+    "latex": "\\frac { \\partial } { \\partial \\overline { z } } w ( z ) = 0",
+    "ranked": "\\frac { \\partial } { \\partial \\overline { z } } w ( z ) = 0",
+    "candidates": [
+      {
+        "latex": "\\frac { \\partial } { \\partial \\overline { z } } w ( z ) = 0",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          174,
+          174,
+          173,
+          268,
+          265,
+          5,
+          268,
+          6,
+          26,
+          13
+        ],
+        "modifiers": [
+          2,
+          272,
+          269,
+          2,
+          273,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1569,
+    "load_ms": 0,
+    "encode_ms": 227,
+    "decode_ms": 1335,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "809994b3cbbe1001",
+    "truth": "l i m _ { t \\rightarrow \\infty } \\hat { d } ( w , t ) = d ( w )",
+    "latex": "l i m_{ t \\rightarrow \\infty } \\frac { d } ( \\omega , t ) = d ( \\omega )",
+    "ranked": "l i m_{ t \\rightarrow \\infty } \\frac { d } ( \\omega , t ) = d ( \\omega )",
+    "candidates": [
+      {
+        "latex": "l i m_{ t \\rightarrow \\infty } \\frac { d } ( \\omega , t ) = d ( \\omega )",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          262,
+          187,
+          116,
+          106,
+          246,
+          5,
+          169,
+          9,
+          262,
+          6,
+          26,
+          246,
+          5,
+          169,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1509,
+    "load_ms": 0,
+    "encode_ms": 163,
+    "decode_ms": 1343,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "174f7a2ee7aabd91",
+    "truth": "F _ { i } * \\frac { d V _ { g } } { d T } = \\frac { d C } { d T }",
+    "latex": "F_{ i } * \\frac { d V_{ g } } { d T } = \\frac { d C } { d T }",
+    "ranked": "F_{ i } * \\frac { d V_{ g } } { d T } = \\frac { d C } { d T }",
+    "candidates": [
+      {
+        "latex": "F_{ i } * \\frac { d V_{ g } } { d T } = \\frac { d C } { d T }",
+        "visual_score": 0,
+        "symbols": [
+          34,
+          251,
+          7,
+          106,
+          246,
+          50,
+          249,
+          246,
+          48,
+          26,
+          106,
+          246,
+          31,
+          246,
+          48
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          269,
+          2,
+          238,
+          269,
+          279,
+          2,
+          2,
+          269,
+          279,
+          269,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 3598,
+    "load_ms": 0,
+    "encode_ms": 659,
+    "decode_ms": 2927,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "38e4da6cd911c1bc",
+    "truth": "l i m _ { x \\rightarrow 2 } \\frac { x - 2 } { x - 2 }",
+    "latex": "l i m_{ x \\rightarrow 2 } \\frac { x - 2 } { x - 2 }",
+    "ranked": "l i m_{ x \\rightarrow 2 } \\frac { x - 2 } { x - 2 }",
+    "candidates": [
+      {
+        "latex": "l i m_{ x \\rightarrow 2 } \\frac { x - 2 } { x - 2 }",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          266,
+          187,
+          15,
+          106,
+          266,
+          10,
+          15,
+          266,
+          10,
+          15
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          269,
+          2,
+          279,
+          269,
+          2,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1448,
+    "load_ms": 0,
+    "encode_ms": 167,
+    "decode_ms": 1278,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "b3fd654f9492f7de",
+    "truth": "\\hat { p } _ { x } = - i \\hbar \\frac { d } { d x }",
+    "latex": "\\hat { p }_{ x } = - i \\hbar \\frac { d } { d x }",
+    "ranked": "\\hat { p }_{ x } = - i \\hbar \\frac { d } { d x }",
+    "candidates": [
+      {
+        "latex": "\\hat { p }_{ x } = - i \\hbar \\frac { d } { d x }",
+        "visual_score": 0,
+        "symbols": [
+          110,
+          258,
+          266,
+          26,
+          10,
+          251,
+          111,
+          106,
+          246,
+          246,
+          266
+        ],
+        "modifiers": [
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          269,
+          279
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1473,
+    "load_ms": 0,
+    "encode_ms": 184,
+    "decode_ms": 1283,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "bd3368a22b22b118",
+    "truth": "2 0 l o g _ { 1 0 } ( \\frac { d } { d _ { 0 } } )",
+    "latex": "2 0 l o g_{ 1 0 } ( \\frac { d } { d_{ 0 } } )",
+    "ranked": "2 0 l o g_{ 1 0 } ( \\frac { d } { d_{ 0 } } )",
+    "candidates": [
+      {
+        "latex": "2 0 l o g_{ 1 0 } ( \\frac { d } { d_{ 0 } } )",
+        "visual_score": 0,
+        "symbols": [
+          15,
+          13,
+          254,
+          257,
+          249,
+          14,
+          13,
+          5,
+          106,
+          246,
+          246,
+          13,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          235,
+          279,
+          2,
+          2,
+          272,
+          269,
+          238,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1492,
+    "load_ms": 0,
+    "encode_ms": 175,
+    "decode_ms": 1312,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "ca88dd6dc6935a97",
+    "truth": "l i m _ { x \\rightarrow 0 } \\frac { x } { x ^ { 3 } } = \\infty . ( 6 )",
+    "latex": "l i m_{ x \\rightarrow 0 } \\frac { x } { x^{ 3 } } = \\infty . ( 6 )",
+    "ranked": "l i m_{ x \\rightarrow 0 } \\frac { x } { x^{ 3 } } = \\infty . ( 6 )",
+    "candidates": [
+      {
+        "latex": "l i m_{ x \\rightarrow 0 } \\frac { x } { x^{ 3 } } = \\infty . ( 6 )",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          251,
+          255,
+          266,
+          187,
+          13,
+          106,
+          266,
+          266,
+          16,
+          26,
+          116,
+          11,
+          5,
+          19,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          272,
+          269,
+          229,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1493,
+    "load_ms": 0,
+    "encode_ms": 200,
+    "decode_ms": 1290,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "a7ca71d8f2321a23",
+    "truth": "\\int _ { 0 } ^ { 1 } \\frac { s i n ( 1 / x ) } { x } d x",
+    "latex": "\\int_{ 0 }^{ 1 } \\frac { s i n ( 1 / x ) } { x } d x",
+    "ranked": "\\int_{ 0 }^{ 1 } \\frac { s i n ( 1 / x ) } { x } d x",
+    "candidates": [
+      {
+        "latex": "\\int_{ 0 }^{ 1 } \\frac { s i n ( 1 / x ) } { x } d x",
+        "visual_score": 0,
+        "symbols": [
+          117,
+          13,
+          14,
+          106,
+          261,
+          251,
+          256,
+          5,
+          14,
+          12,
+          266,
+          6,
+          266,
+          246,
+          266
+        ],
+        "modifiers": [
+          2,
+          237,
+          228,
+          2,
+          269,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          279,
+          272,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1553,
+    "load_ms": 0,
+    "encode_ms": 168,
+    "decode_ms": 1382,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "b8893091914c8191",
+    "truth": "l i m _ { t \\rightarrow \\infty } \\hat { d } ( w , t ) = d ( w )",
+    "latex": "l i m_{ t \\rightarrow \\infty } d ( w , t ) = d ( w )",
+    "ranked": "l i m_{ t \\rightarrow \\infty } d ( w , t ) = d ( w )",
+    "candidates": [
+      {
+        "latex": "l i m_{ t \\rightarrow \\infty } d ( w , t ) = d ( w )",
+        "visual_score": -0.025536351238256864,
+        "symbols": [
+          254,
+          251,
+          255,
+          262,
+          187,
+          116,
+          246,
+          5,
+          265,
+          9,
+          262,
+          6,
+          26,
+          246,
+          5,
+          265,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "l i m_{ t \\rightarrow \\infty } { d } ( w , t ) = d ( w )",
+        "visual_score": -0.07766543735898639,
+        "symbols": [
+          254,
+          251,
+          255,
+          262,
+          187,
+          116,
+          246,
+          5,
+          265,
+          9,
+          262,
+          6,
+          26,
+          246,
+          5,
+          265,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          235,
+          2,
+          279,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1799,
+    "load_ms": 0,
+    "encode_ms": 231,
+    "decode_ms": 1565,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "6f6336b71ee7be2d",
+    "truth": "( \\frac { \\partial } { \\partial x ^ { 1 } } , \\cdot \\cdot \\cdot , \\frac { \\partial } { \\partial x ^ { n } } )",
+    "latex": "( \\frac { \\partial } { \\partial x^{ 1 } } , . . . , \\frac { \\partial } { \\partial x^{ n } } )",
+    "ranked": "( \\frac { \\partial } { \\partial x^{ 1 } } , . . . , \\frac { \\partial } { \\partial x^{ n } } )",
+    "candidates": [
+      {
+        "latex": "( \\frac { \\partial } { \\partial x^{ 1 } } , . . . , \\frac { \\partial } { \\partial x^{ n } } )",
+        "visual_score": -0.005023609986873281,
+        "symbols": [
+          5,
+          106,
+          174,
+          174,
+          266,
+          14,
+          9,
+          11,
+          11,
+          11,
+          9,
+          106,
+          174,
+          174,
+          266,
+          256,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          269,
+          2,
+          229,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          269,
+          2,
+          229,
+          2
+        ]
+      },
+      {
+        "latex": "( \\frac { d } { d x^{ 1 } } , . . . , \\frac { \\partial } { \\partial x^{ n } } )",
+        "visual_score": -0.11935314757556258,
+        "symbols": [
+          5,
+          106,
+          246,
+          246,
+          266,
+          14,
+          9,
+          11,
+          11,
+          11,
+          9,
+          106,
+          174,
+          174,
+          266,
+          256,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          269,
+          2,
+          229,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          269,
+          2,
+          229,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1761,
+    "load_ms": 0,
+    "encode_ms": 194,
+    "decode_ms": 1564,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "09162552907096f0",
+    "truth": "H _ { 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "latex": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "ranked": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "candidates": [
+      {
+        "latex": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+        "visual_score": 0,
+        "symbols": [
+          36,
+          14,
+          26,
+          10,
+          216,
+          246,
+          90,
+          216,
+          33
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1503,
+    "load_ms": 0,
+    "encode_ms": 189,
+    "decode_ms": 1312,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "7d5a2aac2ba6306c",
+    "truth": "\\nabla \\times ( \\vec { E } + \\frac { \\partial \\vec { A } } { \\partial t } ) = 0",
+    "latex": "\\nabla \\times ( \\vec { E } + \\frac { \\partial \\vec { A } } { \\partial t } ) = 0",
+    "ranked": "\\nabla \\times ( \\vec { E } + \\frac { \\partial \\vec { A } } { \\partial t } ) = 0",
+    "candidates": [
+      {
+        "latex": "\\nabla \\times ( \\vec { E } + \\frac { \\partial \\vec { A } } { \\partial t } ) = 0",
+        "visual_score": 0,
+        "symbols": [
+          160,
+          203,
+          5,
+          216,
+          33,
+          8,
+          106,
+          174,
+          216,
+          29,
+          174,
+          262,
+          6,
+          26,
+          13
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          269,
+          2,
+          273,
+          269,
+          279,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 1642,
+    "load_ms": 0,
+    "encode_ms": 203,
+    "decode_ms": 1435,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "e714c4263dd56a0a",
+    "truth": "\\vec { \\Omega } = \\frac { \\vec { R } \\times \\vec { V } _ { r } } { \\vec { R } \\cdot \\vec { R } }",
+    "latex": "\\vec { \\Omega } = \\frac { \\vec { R } \\times \\vec { V }_{ r } } { \\vec { R } \\cdot \\vec { R }",
+    "ranked": "\\vec { \\Omega } = \\frac { \\vec { R } \\times \\vec { V }_{ r } } { \\vec { R } \\cdot \\vec { R }",
+    "candidates": [
+      {
+        "latex": "\\vec { \\Omega } = \\frac { \\vec { R } \\times \\vec { V }_{ r } } { \\vec { R } \\cdot \\vec { R }",
+        "visual_score": -0.030739031230397663,
+        "symbols": [
+          216,
+          63,
+          26,
+          106,
+          216,
+          46,
+          203,
+          216,
+          50,
+          260,
+          216,
+          46,
+          90,
+          216,
+          46
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          269,
+          272,
+          2,
+          2,
+          272,
+          238,
+          269,
+          272,
+          2,
+          2,
+          272
+        ]
+      },
+      {
+        "latex": "\\vec { \\Omega } = \\frac { \\vec { R } \\times \\vec { V }_{ r } } { \\vec { R } \\cdot \\vec { R } }",
+        "visual_score": -0.0444062894507775,
+        "symbols": [
+          216,
+          63,
+          26,
+          106,
+          216,
+          46,
+          203,
+          216,
+          50,
+          260,
+          216,
+          46,
+          90,
+          216,
+          46
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          269,
+          272,
+          2,
+          2,
+          272,
+          238,
+          269,
+          272,
+          2,
+          2,
+          273
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1734,
+    "load_ms": 0,
+    "encode_ms": 193,
+    "decode_ms": 1537,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "0dc82ec554bcbe23",
+    "truth": "\\Phi _ { l m } = \\vec { r } \\times \\nabla Y _ { l m }",
+    "latex": "\\Phi_{ I m } = \\vec { r } \\times \\nabla Y_{ I m }",
+    "ranked": "\\Phi_{ I m } = \\vec { r } \\times \\nabla Y_{ I m }",
+    "candidates": [
+      {
+        "latex": "\\Phi_{ I m } = \\vec { r } \\times \\nabla Y_{ I m }",
+        "visual_score": 0,
+        "symbols": [
+          64,
+          37,
+          255,
+          26,
+          216,
+          260,
+          203,
+          160,
+          53,
+          37,
+          255
+        ],
+        "modifiers": [
+          2,
+          235,
+          279,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          235,
+          279
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1447,
+    "load_ms": 0,
+    "encode_ms": 181,
+    "decode_ms": 1264,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "cc70e60e9d3d5915",
+    "truth": "- \\omega \\propto - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+    "latex": "- \\omega \\propto - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+    "ranked": "- \\omega \\propto - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+    "candidates": [
+      {
+        "latex": "- \\omega \\propto - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+        "visual_score": -0.028298450782383258,
+        "symbols": [
+          10,
+          169,
+          181,
+          10,
+          15,
+          216,
+          160,
+          90,
+          216,
+          45
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      },
+      {
+        "latex": "- \\omega \\alpha - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+        "visual_score": -0.037590303683890484,
+        "symbols": [
+          10,
+          169,
+          76,
+          10,
+          15,
+          216,
+          160,
+          90,
+          216,
+          45
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1714,
+    "load_ms": 0,
+    "encode_ms": 201,
+    "decode_ms": 1511,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "7fbf60632d4b1415",
+    "truth": "\\vec { x } ( t ) = [ \\begin{matrix} f _ { 1 } ( t ) \\\\ \\cdot \\cdot \\cdot \\\\ f _ { N } ( t ) \\end{matrix} ]",
+    "latex": "\\vec { x } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\vec { f }_{ N } ( t ) \\end{matrix} ]",
+    "ranked": "\\vec { x } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\vec { f }_{ N } ( t ) \\end{matrix} ]",
+    "candidates": [
+      {
+        "latex": "\\vec { x } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\vec { f }_{ N } ( t ) \\end{matrix} ]",
+        "visual_score": -0.009500246637965844,
+        "symbols": [
+          216,
+          266,
+          5,
+          262,
+          6,
+          26,
+          55,
+          80,
+          248,
+          14,
+          5,
+          262,
+          6,
+          73,
+          216,
+          248,
+          42,
+          5,
+          262,
+          6,
+          100,
+          224
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\vec { x } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\cdot \\cdot f_{ N } ( t ) \\end{matrix} ]",
+        "visual_score": -0.012320204155963679,
+        "symbols": [
+          216,
+          266,
+          5,
+          262,
+          6,
+          26,
+          55,
+          80,
+          248,
+          14,
+          5,
+          262,
+          6,
+          73,
+          90,
+          90,
+          248,
+          42,
+          5,
+          262,
+          6,
+          100,
+          224
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\vec { x } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\cdot \\vec { f }_{ N } ( t ) \\end{matrix} ]",
+        "visual_score": -0.030080803372764225,
+        "symbols": [
+          216,
+          266,
+          5,
+          262,
+          6,
+          26,
+          55,
+          80,
+          248,
+          14,
+          5,
+          262,
+          6,
+          73,
+          90,
+          216,
+          248,
+          42,
+          5,
+          262,
+          6,
+          100,
+          224
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\vec { x } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\cdot f_{ N } ( t ) \\end{matrix} ]",
+        "visual_score": -0.03095476745032629,
+        "symbols": [
+          216,
+          266,
+          5,
+          262,
+          6,
+          26,
+          55,
+          80,
+          248,
+          14,
+          5,
+          262,
+          6,
+          73,
+          90,
+          248,
+          42,
+          5,
+          262,
+          6,
+          100,
+          224
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "linear_algebra"
+    ],
+    "elapsed_ms": 4000,
+    "load_ms": 0,
+    "encode_ms": 605,
+    "decode_ms": 3385,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "c43e357dde25f0aa",
+    "truth": "Q _ { V } ( \\vec { R } _ { N } , N | \\vec { R } _ { 0 } . 0 )",
+    "latex": "Q_{ V } ( \\vec { R }_{ N } , N | \\vec { R }_{ 0 } . O )",
+    "ranked": "Q_{ V } ( \\vec { R }_{ N } , N | \\vec { R }_{ 0 } . O )",
+    "candidates": [
+      {
+        "latex": "Q_{ V } ( \\vec { R }_{ N } , N | \\vec { R }_{ 0 } . O )",
+        "visual_score": 0,
+        "symbols": [
+          45,
+          50,
+          5,
+          216,
+          46,
+          42,
+          9,
+          42,
+          278,
+          216,
+          46,
+          13,
+          11,
+          43,
+          6
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2734,
+    "load_ms": 0,
+    "encode_ms": 455,
+    "decode_ms": 2274,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "1ace5bc41bc3f9bd",
+    "truth": "[ \\begin{matrix} - i & 2 + i \\\\ - ( 2 - i ) & 0 \\end{matrix} ]",
+    "latex": "[ \\begin{matrix} - i & z + i \\\\ - ( z - i ) & 0 \\end{matrix} ]",
+    "ranked": "[ \\begin{matrix} - i & z + i \\\\ - ( z - i ) & 0 \\end{matrix} ]",
+    "candidates": [
+      {
+        "latex": "[ \\begin{matrix} - i & z + i \\\\ - ( z - i ) & 0 \\end{matrix} ]",
+        "visual_score": 0,
+        "symbols": [
+          55,
+          80,
+          10,
+          251,
+          4,
+          268,
+          8,
+          251,
+          73,
+          10,
+          5,
+          268,
+          10,
+          251,
+          6,
+          4,
+          13,
+          100,
+          224
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "linear_algebra"
+    ],
+    "elapsed_ms": 1949,
+    "load_ms": 0,
+    "encode_ms": 230,
+    "decode_ms": 1711,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "a834bae18fd460ee",
+    "truth": "( \\begin{matrix} \\mu _ { 1 } & \\mu _ { 2 } & \\gamma \\\\ \\nu _ { 1 } & \\nu _ { 2 } & \\nu \\end{matrix} )",
+    "latex": "( \\begin{matrix} \\mu_{ 1 } & \\mu_{ 2 } & \\nu \\\\ \\nu_{ 1 } & \\nu_{ 2 } & \\nu \\end{matrix} )",
+    "ranked": "( \\begin{matrix} \\mu_{ 1 } & \\mu_{ 2 } & \\nu \\\\ \\nu_{ 1 } & \\nu_{ 2 } & \\nu \\end{matrix} )",
+    "candidates": [
+      {
+        "latex": "( \\begin{matrix} \\mu_{ 1 } & \\mu_{ 2 } & \\nu \\\\ \\nu_{ 1 } & \\nu_{ 2 } & \\nu \\end{matrix} )",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          80,
+          159,
+          14,
+          4,
+          159,
+          15,
+          4,
+          166,
+          73,
+          166,
+          14,
+          4,
+          166,
+          15,
+          4,
+          166,
+          100,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "linear_algebra"
+    ],
+    "elapsed_ms": 3663,
+    "load_ms": 0,
+    "encode_ms": 664,
+    "decode_ms": 2993,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "daca179ad10e4364",
+    "truth": "f ( \\vec { a } , \\vec { b } ) = f ( \\vec { b } , \\vec { a } )",
+    "latex": "f ( \\vec { a } , \\vec { b } ) = f ( b , \\vec { a } )",
+    "ranked": "f ( \\vec { a } , \\vec { b } ) = f ( b , \\vec { a } )",
+    "candidates": [
+      {
+        "latex": "f ( \\vec { a } , \\vec { b } ) = f ( b , \\vec { a } )",
+        "visual_score": 0,
+        "symbols": [
+          248,
+          5,
+          216,
+          243,
+          9,
+          216,
+          244,
+          6,
+          26,
+          248,
+          5,
+          244,
+          9,
+          216,
+          243,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2199,
+    "load_ms": 0,
+    "encode_ms": 247,
+    "decode_ms": 1949,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "5ec1c2cd1a8ebe09",
+    "truth": "l ( U \\vec { v } ) = l ( \\vec { v } )",
+    "latex": "l ( U \\vec { v } = l ( \\vec { v } )",
+    "ranked": "l ( U \\vec { v } = l ( \\vec { v } )",
+    "candidates": [
+      {
+        "latex": "l ( U \\vec { v } = l ( \\vec { v } )",
+        "visual_score": 0,
+        "symbols": [
+          254,
+          5,
+          49,
+          216,
+          264,
+          26,
+          254,
+          5,
+          216,
+          264,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2009,
+    "load_ms": 0,
+    "encode_ms": 237,
+    "decode_ms": 1768,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "eccea302813f84d0",
+    "truth": "f _ { E W } ( | \\vec { a } - \\vec { b } | )",
+    "latex": "f \\in W ( | \\vec { a } - \\vec { b } | )",
+    "ranked": "f \\in W ( | \\vec { a } - \\vec { b } | )",
+    "candidates": [
+      {
+        "latex": "f \\in W ( | \\vec { a } - \\vec { b } | )",
+        "visual_score": 0,
+        "symbols": [
+          248,
+          115,
+          51,
+          5,
+          278,
+          216,
+          243,
+          10,
+          216,
+          244,
+          278,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1939,
+    "load_ms": 0,
+    "encode_ms": 235,
+    "decode_ms": 1700,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "27ac8b497f2008b5",
+    "truth": "H _ { 0 } ( \\langle \\vec { X } \\rangle _ { m } ) < \\infty",
+    "latex": "H_{ 0 } ( \\langle \\vec { X } \\rangle_{ m } ) < \\infty",
+    "ranked": "H_{ 0 } ( \\langle \\vec { X } \\rangle_{ m } ) < \\infty",
+    "candidates": [
+      {
+        "latex": "H_{ 0 } ( \\langle \\vec { X } \\rangle_{ m } ) < \\infty",
+        "visual_score": 0,
+        "symbols": [
+          36,
+          13,
+          5,
+          121,
+          216,
+          52,
+          183,
+          255,
+          6,
+          25,
+          116
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          272,
+          2,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1533,
+    "load_ms": 0,
+    "encode_ms": 192,
+    "decode_ms": 1338,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "486a6ac05e5661f2",
+    "truth": "( \\vec { 0 } , \\vec { 0 } )",
+    "latex": "( \\vec { 0 } , \\vec { 0 } )",
+    "ranked": "( \\vec { 0 } , \\vec { 0 } )",
+    "candidates": [
+      {
+        "latex": "( \\vec { 0 } , \\vec { 0 } )",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          216,
+          13,
+          9,
+          216,
+          13,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1527,
+    "load_ms": 0,
+    "encode_ms": 208,
+    "decode_ms": 1316,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "959c90c580a7e4fd",
+    "truth": "| \\vec { a } \\vec { b } \\vec { c } | = \\vec { a } \\cdot ( \\vec { b } \\times \\vec { c } )",
+    "latex": "| \\vec { a } \\vec { b } \\vec { c } | = \\vec { d } \\cdot ( \\vec { b } \\times \\vec { c } )",
+    "ranked": "| \\vec { a } \\vec { b } \\vec { c } | = \\vec { d } \\cdot ( \\vec { b } \\times \\vec { c } )",
+    "candidates": [
+      {
+        "latex": "| \\vec { a } \\vec { b } \\vec { c } | = \\vec { d } \\cdot ( \\vec { b } \\times \\vec { c } )",
+        "visual_score": 0,
+        "symbols": [
+          278,
+          216,
+          243,
+          216,
+          244,
+          216,
+          245,
+          278,
+          26,
+          216,
+          246,
+          90,
+          5,
+          216,
+          244,
+          203,
+          216,
+          245,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          2,
+          272,
+          2,
+          272,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1707,
+    "load_ms": 0,
+    "encode_ms": 182,
+    "decode_ms": 1519,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "b57e27b877f675bc",
+    "truth": "\\vec { m } \\in M",
+    "latex": "\\vec { m } \\in M",
+    "ranked": "\\vec { m } \\in M",
+    "candidates": [
+      {
+        "latex": "\\vec { m } \\in M",
+        "visual_score": -0.05110084144594914,
+        "symbols": [
+          216,
+          255,
+          115,
+          41
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\vec { n } \\in M",
+        "visual_score": -0.09206666854887953,
+        "symbols": [
+          216,
+          256,
+          115,
+          41
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1879,
+    "load_ms": 0,
+    "encode_ms": 203,
+    "decode_ms": 1673,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "92e1440b2526a822",
+    "truth": "\\vec { n } _ { i } \\cdot \\vec { x } \\le b _ { i }",
+    "latex": "\\vec { n }_{ i } \\cdot \\vec { x } \\le b_{ i }",
+    "ranked": "\\vec { n }_{ i } \\cdot \\vec { x } \\le b_{ i }",
+    "candidates": [
+      {
+        "latex": "\\vec { n }_{ i } \\cdot \\vec { x } \\le b_{ i }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          256,
+          251,
+          90,
+          216,
+          266,
+          123,
+          244,
+          251
+        ],
+        "modifiers": [
+          2,
+          272,
+          237,
+          2,
+          2,
+          272,
+          2,
+          2,
+          237
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1519,
+    "load_ms": 0,
+    "encode_ms": 192,
+    "decode_ms": 1321,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "384f287ab997af9a",
+    "truth": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+    "latex": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+    "ranked": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+    "candidates": [
+      {
+        "latex": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          34,
+          26,
+          259,
+          216,
+          264,
+          203,
+          216,
+          30
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1622,
+    "load_ms": 0,
+    "encode_ms": 194,
+    "decode_ms": 1424,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "f7869720b04a37ee",
+    "truth": "f ( \\vec { a } , \\vec { b } ) = f ( \\vec { b } , \\vec { a } )",
+    "latex": "f ( \\vec { a } , \\vec { b } ) = f ( \\vec { b } , \\vec { a } )",
+    "ranked": "f ( \\vec { a } , \\vec { b } ) = f ( \\vec { b } , \\vec { a } )",
+    "candidates": [
+      {
+        "latex": "f ( \\vec { a } , \\vec { b } ) = f ( \\vec { b } , \\vec { a } )",
+        "visual_score": 0,
+        "symbols": [
+          248,
+          5,
+          216,
+          243,
+          9,
+          216,
+          244,
+          6,
+          26,
+          248,
+          5,
+          216,
+          244,
+          9,
+          216,
+          243,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1631,
+    "load_ms": 0,
+    "encode_ms": 242,
+    "decode_ms": 1383,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "54d054800371dea1",
+    "truth": "\\vec { r } \\rightarrow - \\vec { r }",
+    "latex": "\\vec { r } \\rightarrow - \\vec { r }",
+    "ranked": "\\vec { r } \\rightarrow - \\vec { r }",
+    "candidates": [
+      {
+        "latex": "\\vec { r } \\rightarrow - \\vec { r }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          260,
+          187,
+          10,
+          216,
+          260
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 1534,
+    "load_ms": 0,
+    "encode_ms": 186,
+    "decode_ms": 1343,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "38d0911222d295b9",
+    "truth": "U = \\gamma ( c , \\vec { u } )",
+    "latex": "U = \\gamma ( c , \\vec { u } )",
+    "ranked": "U = \\gamma ( c , \\vec { u } )",
+    "candidates": [
+      {
+        "latex": "U = \\gamma ( c , \\vec { u } )",
+        "visual_score": 0,
+        "symbols": [
+          49,
+          26,
+          107,
+          5,
+          245,
+          9,
+          216,
+          263,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2041,
+    "load_ms": 0,
+    "encode_ms": 205,
+    "decode_ms": 1834,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "729b394ef8f197c9",
+    "truth": "\\nabla \\cdot \\vec { v } = 3 y + 2 y z",
+    "latex": "\\nabla \\cdot \\vec { v } = 3 y + 2 y z",
+    "ranked": "\\nabla \\cdot \\vec { v } = 3 y + 2 y z",
+    "candidates": [
+      {
+        "latex": "\\nabla \\cdot \\vec { v } = 3 y + 2 y z",
+        "visual_score": 0,
+        "symbols": [
+          160,
+          90,
+          216,
+          264,
+          26,
+          16,
+          267,
+          8,
+          15,
+          267,
+          268
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2987,
+    "load_ms": 0,
+    "encode_ms": 438,
+    "decode_ms": 2547,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "7e2fd41a5f9c6fbb",
+    "truth": "H _ { 0 } ( \\langle \\vec { X } \\rangle _ { m } ) < \\infty",
+    "latex": "H_{ 0 } ( \\langle \\vec { x } \\rangle_{ m } ) < \\infty",
+    "ranked": "H_{ 0 } ( \\langle \\vec { x } \\rangle_{ m } ) < \\infty",
+    "candidates": [
+      {
+        "latex": "H_{ 0 } ( \\langle \\vec { x } \\rangle_{ m } ) < \\infty",
+        "visual_score": 0,
+        "symbols": [
+          36,
+          13,
+          5,
+          121,
+          216,
+          266,
+          183,
+          255,
+          6,
+          25,
+          116
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          272,
+          2,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2409,
+    "load_ms": 0,
+    "encode_ms": 329,
+    "decode_ms": 2075,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "cef9724ff9acdd41",
+    "truth": "H _ { 0 } ( \\langle \\vec { X } \\rangle _ { m } ) < \\infty",
+    "latex": "H_{ 0 } ( \\langle \\vec { x } \\rangle_{ m } ) < \\infty",
+    "ranked": "H_{ 0 } ( \\langle \\vec { x } \\rangle_{ m } ) < \\infty",
+    "candidates": [
+      {
+        "latex": "H_{ 0 } ( \\langle \\vec { x } \\rangle_{ m } ) < \\infty",
+        "visual_score": 0,
+        "symbols": [
+          36,
+          13,
+          5,
+          121,
+          216,
+          266,
+          183,
+          255,
+          6,
+          25,
+          116
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          272,
+          2,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3016,
+    "load_ms": 0,
+    "encode_ms": 266,
+    "decode_ms": 2744,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "4f3d10b7400eb65d",
+    "truth": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+    "latex": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+    "ranked": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+    "candidates": [
+      {
+        "latex": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          266,
+          187,
+          260,
+          5,
+          216,
+          266,
+          24,
+          259,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4149,
+    "load_ms": 0,
+    "encode_ms": 537,
+    "decode_ms": 3610,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "721897d83799072f",
+    "truth": "Q _ { V } ( \\vec { R } _ { N } , N | \\vec { R } _ { 0 } . 0 )",
+    "latex": "Q_{ V } ( \\vec { R }_{ N } , N | \\vec { R }_{ 0 } , 0 )",
+    "ranked": "Q_{ V } ( \\vec { R }_{ N } , N | \\vec { R }_{ 0 } , 0 )",
+    "candidates": [
+      {
+        "latex": "Q_{ V } ( \\vec { R }_{ N } , N | \\vec { R }_{ 0 } , 0 )",
+        "visual_score": 0,
+        "symbols": [
+          45,
+          50,
+          5,
+          216,
+          46,
+          42,
+          9,
+          42,
+          278,
+          216,
+          46,
+          13,
+          9,
+          13,
+          6
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 6049,
+    "load_ms": 0,
+    "encode_ms": 1018,
+    "decode_ms": 5022,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "ce5218f66e61558f",
+    "truth": "- \\omega \\propto - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+    "latex": "- \\omega \\propto - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+    "ranked": "- \\omega \\propto - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+    "candidates": [
+      {
+        "latex": "- \\omega \\propto - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+        "visual_score": 0,
+        "symbols": [
+          10,
+          169,
+          181,
+          10,
+          15,
+          216,
+          160,
+          90,
+          216,
+          45
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4986,
+    "load_ms": 0,
+    "encode_ms": 685,
+    "decode_ms": 4296,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "cc6a4ae36d17a479",
+    "truth": "\\vec { x } ( t ) = [ \\begin{matrix} f _ { 1 } ( t ) \\\\ \\cdot \\cdot \\cdot \\\\ f _ { N } ( t ) \\end{matrix} ]",
+    "latex": "\\vec { \\gamma } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\cdot \\\\ f_{ v } ( t ) \\end{matrix} ]",
+    "ranked": "\\vec { \\gamma } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\cdot \\\\ f_{ v } ( t ) \\end{matrix} ]",
+    "candidates": [
+      {
+        "latex": "\\vec { \\gamma } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\cdot \\\\ f_{ v } ( t ) \\end{matrix} ]",
+        "visual_score": -0.05906740778679242,
+        "symbols": [
+          216,
+          107,
+          5,
+          262,
+          6,
+          26,
+          55,
+          80,
+          248,
+          14,
+          5,
+          262,
+          6,
+          73,
+          90,
+          73,
+          248,
+          264,
+          5,
+          262,
+          6,
+          100,
+          224
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\vec { \\gamma } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\cdot \\dot { f }_{ v } ( t ) \\end{matrix} ]",
+        "visual_score": -0.060301601651069535,
+        "symbols": [
+          216,
+          107,
+          5,
+          262,
+          6,
+          26,
+          55,
+          80,
+          248,
+          14,
+          5,
+          262,
+          6,
+          73,
+          90,
+          98,
+          248,
+          264,
+          5,
+          262,
+          6,
+          100,
+          224
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\vec { \\gamma } ( t ) = [ \\begin{matrix} f_{ 1 } ( t ) \\\\ \\dot \\vec { f }_{ v } ( t ) \\end{matrix} ]",
+        "visual_score": -0.13307634242364805,
+        "symbols": [
+          216,
+          107,
+          5,
+          262,
+          6,
+          26,
+          55,
+          80,
+          248,
+          14,
+          5,
+          262,
+          6,
+          73,
+          98,
+          216,
+          248,
+          264,
+          5,
+          262,
+          6,
+          100,
+          224
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "linear_algebra"
+    ],
+    "elapsed_ms": 5360,
+    "load_ms": 0,
+    "encode_ms": 659,
+    "decode_ms": 4698,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "8de26247f3daaee4",
+    "truth": "E = \\int \\vec { F } \\cdot \\vec { d x }",
+    "latex": "E = \\int \\vec { F } \\cdot d \\vec { x }",
+    "ranked": "E = \\int \\vec { F } \\cdot d \\vec { x }",
+    "candidates": [
+      {
+        "latex": "E = \\int \\vec { F } \\cdot d \\vec { x }",
+        "visual_score": 0,
+        "symbols": [
+          33,
+          26,
+          117,
+          216,
+          34,
+          90,
+          246,
+          216,
+          266
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [
+      "calculus"
+    ],
+    "elapsed_ms": 4221,
+    "load_ms": 0,
+    "encode_ms": 579,
+    "decode_ms": 3635,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "ec155114b24c6c67",
+    "truth": "\\vec { S } _ { i } , \\vec { S } _ { j }",
+    "latex": "\\vec { S }_{ i } , \\vec { S }_{ j }",
+    "ranked": "\\vec { S }_{ i } , \\vec { S }_{ j }",
+    "candidates": [
+      {
+        "latex": "\\vec { S }_{ i } , \\vec { S }_{ j }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          47,
+          251,
+          9,
+          216,
+          47,
+          252
+        ],
+        "modifiers": [
+          2,
+          272,
+          237,
+          2,
+          2,
+          272,
+          237
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4370,
+    "load_ms": 0,
+    "encode_ms": 574,
+    "decode_ms": 3792,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "05e62d58c104a6b6",
+    "truth": "\\vec { n } _ { i } \\cdot \\vec { x } \\le b _ { i }",
+    "latex": "\\vec { n_{ i } } \\cdot \\vec { x } \\le b_{ i }",
+    "ranked": "\\vec { n_{ i } } \\cdot \\vec { x } \\le b_{ i }",
+    "candidates": [
+      {
+        "latex": "\\vec { n_{ i } } \\cdot \\vec { x } \\le b_{ i }",
+        "visual_score": -0.005889703579086419,
+        "symbols": [
+          216,
+          256,
+          251,
+          90,
+          216,
+          266,
+          123,
+          244,
+          251
+        ],
+        "modifiers": [
+          2,
+          269,
+          238,
+          2,
+          2,
+          272,
+          2,
+          2,
+          237
+        ]
+      },
+      {
+        "latex": "\\vec { n }_{ i } \\cdot \\vec { x } \\le b_{ i }",
+        "visual_score": -0.007427518504216603,
+        "symbols": [
+          216,
+          256,
+          251,
+          90,
+          216,
+          266,
+          123,
+          244,
+          251
+        ],
+        "modifiers": [
+          2,
+          272,
+          237,
+          2,
+          2,
+          272,
+          2,
+          2,
+          237
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 5117,
+    "load_ms": 0,
+    "encode_ms": 546,
+    "decode_ms": 4568,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "63c7416b99af676d",
+    "truth": "\\vec { r } \\rightarrow - \\vec { r }",
+    "latex": "\\vec { r } \\rightarrow - \\vec { r }",
+    "ranked": "\\vec { r } \\rightarrow - \\vec { r }",
+    "candidates": [
+      {
+        "latex": "\\vec { r } \\rightarrow - \\vec { r }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          260,
+          187,
+          10,
+          216,
+          260
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4273,
+    "load_ms": 0,
+    "encode_ms": 716,
+    "decode_ms": 3554,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "cbe6e13131e399ec",
+    "truth": "\\sum \\vec { a } ( x _ { i } ) = 1",
+    "latex": "\\sum \\vec { a } ( x_{ i } ) = 1",
+    "ranked": "\\sum \\vec { a } ( x_{ i } ) = 1",
+    "candidates": [
+      {
+        "latex": "\\sum \\vec { a } ( x_{ i } ) = 1",
+        "visual_score": 0,
+        "symbols": [
+          197,
+          216,
+          243,
+          5,
+          266,
+          251,
+          6,
+          26,
+          14
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          2,
+          2,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3456,
+    "load_ms": 0,
+    "encode_ms": 617,
+    "decode_ms": 2834,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "6514dfe7a4538725",
+    "truth": "\\vec { r } \\rightarrow - \\vec { r }",
+    "latex": "\\vec { r } \\rightarrow - \\vec { r }",
+    "ranked": "\\vec { r } \\rightarrow - \\vec { r }",
+    "candidates": [
+      {
+        "latex": "\\vec { r } \\rightarrow - \\vec { r }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          260,
+          187,
+          10,
+          216,
+          260
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2993,
+    "load_ms": 0,
+    "encode_ms": 520,
+    "decode_ms": 2468,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "47e685a94c7ef963",
+    "truth": "\\frac { 4 } { 3 } \\pi p _ { f } ^ { 3 } ( \\vec { r } )",
+    "latex": "\\frac { 4 } { 3 } \\pi p_{ f }^{ 3 } ( \\vec { r } )",
+    "ranked": "\\frac { 4 } { 3 } \\pi p_{ f }^{ 3 } ( \\vec { r } )",
+    "candidates": [
+      {
+        "latex": "\\frac { 4 } { 3 } \\pi p_{ f }^{ 3 } ( \\vec { r } )",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          17,
+          16,
+          177,
+          258,
+          248,
+          16,
+          5,
+          216,
+          260,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          272,
+          2,
+          2,
+          237,
+          228,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3502,
+    "load_ms": 0,
+    "encode_ms": 403,
+    "decode_ms": 3095,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "2c52bada855509d5",
+    "truth": "\\nabla _ { \\vec { \\theta } } = D _ { d } \\nabla",
+    "latex": "\\nabla \\vec { \\theta } = D_{ d } \\nabla",
+    "ranked": "\\nabla \\vec { \\theta } = D_{ d } \\nabla",
+    "candidates": [
+      {
+        "latex": "\\nabla \\vec { \\theta } = D_{ d } \\nabla",
+        "visual_score": -0.03678510516882124,
+        "symbols": [
+          160,
+          216,
+          201,
+          26,
+          32,
+          246,
+          160
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          2,
+          2,
+          237,
+          2
+        ]
+      },
+      {
+        "latex": "\\nabla \\vec { \\theta } = D d \\nabla",
+        "visual_score": -0.07549556332472213,
+        "symbols": [
+          160,
+          216,
+          201,
+          26,
+          32,
+          246,
+          160
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\nabla_{ \\vec { \\theta } = D_{ d } \\nabla",
+        "visual_score": -0.22224209206220122,
+        "symbols": [
+          160,
+          216,
+          201,
+          26,
+          32,
+          246,
+          160
+        ],
+        "modifiers": [
+          2,
+          235,
+          272,
+          2,
+          2,
+          237,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3454,
+    "load_ms": 0,
+    "encode_ms": 453,
+    "decode_ms": 2998,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "5b13e0cd0f1b661d",
+    "truth": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+    "latex": "\\vec { x } \\mapsto \\gamma ( \\vec { x } ; q )",
+    "ranked": "\\vec { x } \\mapsto \\gamma ( \\vec { x } ; q )",
+    "candidates": [
+      {
+        "latex": "\\vec { x } \\mapsto \\gamma ( \\vec { x } ; q )",
+        "visual_score": -0.05902096029271591,
+        "symbols": [
+          216,
+          266,
+          129,
+          107,
+          5,
+          216,
+          266,
+          24,
+          259,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\vec { x } \\rightarrow \\gamma ( \\vec { x } ; q )",
+        "visual_score": -0.06189974437264444,
+        "symbols": [
+          216,
+          266,
+          187,
+          107,
+          5,
+          216,
+          266,
+          24,
+          259,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+        "visual_score": -0.06574235261125597,
+        "symbols": [
+          216,
+          266,
+          187,
+          260,
+          5,
+          216,
+          266,
+          24,
+          259,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3168,
+    "load_ms": 0,
+    "encode_ms": 321,
+    "decode_ms": 2843,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "97d080f22bcdcc5d",
+    "truth": "H _ { 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "latex": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "ranked": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "candidates": [
+      {
+        "latex": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+        "visual_score": 0,
+        "symbols": [
+          36,
+          14,
+          26,
+          10,
+          216,
+          246,
+          90,
+          216,
+          33
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3014,
+    "load_ms": 0,
+    "encode_ms": 327,
+    "decode_ms": 2682,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "367cca8ea9d29f51",
+    "truth": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+    "latex": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+    "ranked": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+    "candidates": [
+      {
+        "latex": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          34,
+          26,
+          259,
+          216,
+          264,
+          203,
+          216,
+          30
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3436,
+    "load_ms": 0,
+    "encode_ms": 497,
+    "decode_ms": 2929,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "2c81192726c758df",
+    "truth": "\\vec { \\beta } \\cdot \\dot { \\vec { \\beta } } = 0",
+    "latex": "\\vec { \\beta } \\cdot \\dot { \\vec { \\beta } } = 0",
+    "ranked": "\\vec { \\beta } \\cdot \\dot { \\vec { \\beta } } = 0",
+    "candidates": [
+      {
+        "latex": "\\vec { \\beta } \\cdot \\dot { \\vec { \\beta } } = 0",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          81,
+          90,
+          98,
+          216,
+          81,
+          26,
+          13
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          269,
+          273,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3705,
+    "load_ms": 0,
+    "encode_ms": 463,
+    "decode_ms": 3239,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "09ca522b12af82a8",
+    "truth": "\\hat { S } = \\frac { 1 } { 2 } [ \\begin{matrix} \\sigma & 0 \\\\ 0 & \\sigma \\end{matrix} ]",
+    "latex": "\\hat { S } = \\frac { 1 } { 2 } [ \\begin{matrix} \\sigma & 0 \\\\ Q & \\sigma \\end{matrix} ]",
+    "ranked": "\\hat { S } = \\frac { 1 } { 2 } [ \\begin{matrix} \\sigma & 0 \\\\ Q & \\sigma \\end{matrix} ]",
+    "candidates": [
+      {
+        "latex": "\\hat { S } = \\frac { 1 } { 2 } [ \\begin{matrix} \\sigma & 0 \\\\ Q & \\sigma \\end{matrix} ]",
+        "visual_score": 0,
+        "symbols": [
+          110,
+          47,
+          26,
+          106,
+          14,
+          15,
+          55,
+          80,
+          189,
+          4,
+          13,
+          73,
+          45,
+          4,
+          189,
+          100,
+          224
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          272,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "linear_algebra"
+    ],
+    "elapsed_ms": 3748,
+    "load_ms": 0,
+    "encode_ms": 549,
+    "decode_ms": 3190,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "d91b1e1aa4afc9a5",
+    "truth": "\\frac { 4 } { 3 } \\pi p _ { f } ^ { 3 } ( \\vec { r } )",
+    "latex": "\\frac { 4 } { 3 } \\pi P^{ 3 } f ( \\vec { r } )",
+    "ranked": "\\frac { 4 } { 3 } \\pi P^{ 3 } f ( \\vec { r } )",
+    "candidates": [
+      {
+        "latex": "\\frac { 4 } { 3 } \\pi P^{ 3 } f ( \\vec { r } )",
+        "visual_score": 0,
+        "symbols": [
+          106,
+          17,
+          16,
+          177,
+          44,
+          16,
+          248,
+          5,
+          216,
+          260,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          272,
+          2,
+          2,
+          228,
+          2,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2976,
+    "load_ms": 0,
+    "encode_ms": 466,
+    "decode_ms": 2507,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "f77c8c6f7facb4e5",
+    "truth": "H _ { 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "latex": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "ranked": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "candidates": [
+      {
+        "latex": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+        "visual_score": 0,
+        "symbols": [
+          36,
+          14,
+          26,
+          10,
+          216,
+          246,
+          90,
+          216,
+          33
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2862,
+    "load_ms": 0,
+    "encode_ms": 483,
+    "decode_ms": 2375,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "4d1192b42c43e5a5",
+    "truth": "( E , \\vec { p } c )",
+    "latex": "( E , \\vec { p^{ c } } )",
+    "ranked": "( E , \\vec { p^{ c } } )",
+    "candidates": [
+      {
+        "latex": "( E , \\vec { p^{ c } } )",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          33,
+          9,
+          216,
+          258,
+          245,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          269,
+          229,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3339,
+    "load_ms": 0,
+    "encode_ms": 426,
+    "decode_ms": 2909,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "2d2330623de6def0",
+    "truth": "\\vec { m } \\in M",
+    "latex": "\\vec { n } \\in M",
+    "ranked": "\\vec { n } \\in M",
+    "candidates": [
+      {
+        "latex": "\\vec { n } \\in M",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          256,
+          115,
+          41
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2987,
+    "load_ms": 0,
+    "encode_ms": 551,
+    "decode_ms": 2434,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "541676cb1d9e7349",
+    "truth": "\\vec { F } = q ( \\vec { B } \\times \\vec { v } )",
+    "latex": "\\vec { F } = q ( \\vec { B } \\times \\vec { v } )",
+    "ranked": "\\vec { F } = q ( \\vec { B } \\times \\vec { v } )",
+    "candidates": [
+      {
+        "latex": "\\vec { F } = q ( \\vec { B } \\times \\vec { v } )",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          34,
+          26,
+          259,
+          5,
+          216,
+          30,
+          203,
+          216,
+          264,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3278,
+    "load_ms": 0,
+    "encode_ms": 449,
+    "decode_ms": 2826,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "69deb7249bce0cd3",
+    "truth": "( E , \\vec { p } c )",
+    "latex": "( E , \\vec { p }_{ c } )",
+    "ranked": "( E , \\vec { p }_{ c } )",
+    "candidates": [
+      {
+        "latex": "( E , \\vec { p }_{ c } )",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          33,
+          9,
+          216,
+          258,
+          245,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          272,
+          237,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3845,
+    "load_ms": 0,
+    "encode_ms": 562,
+    "decode_ms": 3280,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "3909b57ff658a0cf",
+    "truth": "\\vec { m } \\in M",
+    "latex": "\\vec { m } \\in M",
+    "ranked": "\\vec { m } \\in M",
+    "candidates": [
+      {
+        "latex": "\\vec { m } \\in M",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          255,
+          115,
+          41
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3200,
+    "load_ms": 0,
+    "encode_ms": 440,
+    "decode_ms": 2751,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "16ac3bd2dfbb6aff",
+    "truth": "( d \\vec { b } ) - 1",
+    "latex": "( d \\vec { b } ) - 1",
+    "ranked": "( d \\vec { b } ) - 1",
+    "candidates": [
+      {
+        "latex": "( d \\vec { b } ) - 1",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          246,
+          216,
+          244,
+          6,
+          10,
+          14
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2923,
+    "load_ms": 0,
+    "encode_ms": 417,
+    "decode_ms": 2499,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "fc407568d5ab1f23",
+    "truth": "P ^ { \\prime } ( \\vec { a } )",
+    "latex": "P^{ \\prime } ( \\vec { \\alpha } )",
+    "ranked": "P^{ \\prime } ( \\vec { \\alpha } )",
+    "candidates": [
+      {
+        "latex": "P^{ \\prime } ( \\vec { \\alpha } )",
+        "visual_score": 0,
+        "symbols": [
+          44,
+          179,
+          5,
+          216,
+          76,
+          6
+        ],
+        "modifiers": [
+          2,
+          228,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4546,
+    "load_ms": 0,
+    "encode_ms": 768,
+    "decode_ms": 3766,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "f0cfceae2a4c2f32",
+    "truth": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+    "latex": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+    "ranked": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+    "candidates": [
+      {
+        "latex": "\\vec { F } = q \\vec { v } \\times \\vec { B }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          34,
+          26,
+          259,
+          216,
+          264,
+          203,
+          216,
+          30
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2889,
+    "load_ms": 0,
+    "encode_ms": 481,
+    "decode_ms": 2404,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "395f2c5d36accb8f",
+    "truth": "( d \\vec { b } ) ^ { - 1 }",
+    "latex": "( d \\vec { b } )^{ - 1 }",
+    "ranked": "( d \\vec { b } )^{ - 1 }",
+    "candidates": [
+      {
+        "latex": "( d \\vec { b } )^{ - 1 }",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          246,
+          216,
+          244,
+          6,
+          10,
+          14
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          272,
+          2,
+          226,
+          279
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2959,
+    "load_ms": 0,
+    "encode_ms": 394,
+    "decode_ms": 2561,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "9949a2b3d9a524fc",
+    "truth": "\\vec { p } _ { f 1 } , \\vec { p } _ { f 2 }",
+    "latex": "\\vec { p }_{ f 1 } , \\vec { p }_{ f 2 }",
+    "ranked": "\\vec { p }_{ f 1 } , \\vec { p }_{ f 2 }",
+    "candidates": [
+      {
+        "latex": "\\vec { p }_{ f 1 } , \\vec { p }_{ f 2 }",
+        "visual_score": -0.006160262868214566,
+        "symbols": [
+          216,
+          258,
+          248,
+          14,
+          9,
+          216,
+          258,
+          248,
+          15
+        ],
+        "modifiers": [
+          2,
+          272,
+          235,
+          279,
+          2,
+          2,
+          272,
+          235,
+          279
+        ]
+      },
+      {
+        "latex": "\\vec { p }_{ f l } , \\vec { p }_{ f 2 }",
+        "visual_score": -0.11697465980281015,
+        "symbols": [
+          216,
+          258,
+          248,
+          254,
+          9,
+          216,
+          258,
+          248,
+          15
+        ],
+        "modifiers": [
+          2,
+          272,
+          235,
+          279,
+          2,
+          2,
+          272,
+          235,
+          279
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3483,
+    "load_ms": 0,
+    "encode_ms": 393,
+    "decode_ms": 3087,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "c9d75323af172b7e",
+    "truth": "U = \\gamma ( c , \\vec { u } )",
+    "latex": "U = \\gamma ( c , \\vec { u } )",
+    "ranked": "U = \\gamma ( c , \\vec { u } )",
+    "candidates": [
+      {
+        "latex": "U = \\gamma ( c , \\vec { u } )",
+        "visual_score": 0,
+        "symbols": [
+          49,
+          26,
+          107,
+          5,
+          245,
+          9,
+          216,
+          263,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2586,
+    "load_ms": 0,
+    "encode_ms": 369,
+    "decode_ms": 2214,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "30219739140b234b",
+    "truth": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+    "latex": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+    "ranked": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+    "candidates": [
+      {
+        "latex": "j \\mapsto ( \\begin{matrix} - 1 & 1 \\\\ 1 & 1 \\end{matrix} )",
+        "visual_score": 0,
+        "symbols": [
+          252,
+          129,
+          5,
+          80,
+          10,
+          14,
+          4,
+          14,
+          73,
+          14,
+          4,
+          14,
+          100,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [
+      "linear_algebra"
+    ],
+    "elapsed_ms": 2906,
+    "load_ms": 0,
+    "encode_ms": 435,
+    "decode_ms": 2462,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "3bc16c6e7647840d",
+    "truth": "\\nabla \\cdot \\vec { v } = 3 y + 2 y z",
+    "latex": "\\nabla \\cdot \\vec { v } = 3 y + 2 y 2",
+    "ranked": "\\nabla \\cdot \\vec { v } = 3 y + 2 y 2",
+    "candidates": [
+      {
+        "latex": "\\nabla \\cdot \\vec { v } = 3 y + 2 y 2",
+        "visual_score": 0,
+        "symbols": [
+          160,
+          90,
+          216,
+          264,
+          26,
+          16,
+          267,
+          8,
+          15,
+          267,
+          15
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3131,
+    "load_ms": 0,
+    "encode_ms": 408,
+    "decode_ms": 2717,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "7078999683c4352c",
+    "truth": "H _ { 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "latex": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "ranked": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+    "candidates": [
+      {
+        "latex": "H_{ 1 } = - \\vec { d } \\cdot \\vec { E }",
+        "visual_score": 0,
+        "symbols": [
+          36,
+          14,
+          26,
+          10,
+          216,
+          246,
+          90,
+          216,
+          33
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2996,
+    "load_ms": 0,
+    "encode_ms": 457,
+    "decode_ms": 2536,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "5326766c784854fa",
+    "truth": "( \\vec { a } \\cdot \\nabla )",
+    "latex": "( \\vec { a } \\cdot \\nabla )",
+    "ranked": "( \\vec { a } \\cdot \\nabla )",
+    "candidates": [
+      {
+        "latex": "( \\vec { a } \\cdot \\nabla )",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          216,
+          243,
+          90,
+          160,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3026,
+    "load_ms": 0,
+    "encode_ms": 434,
+    "decode_ms": 2589,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "699cecfd16c84cbb",
+    "truth": "f ( \\vec { x } , \\vec { e } _ { i } , t )",
+    "latex": "f ( \\vec { x } , \\vec { e }_{ i } , t )",
+    "ranked": "f ( \\vec { x } , \\vec { e }_{ i } , t )",
+    "candidates": [
+      {
+        "latex": "f ( \\vec { x } , \\vec { e }_{ i } , t )",
+        "visual_score": 0,
+        "symbols": [
+          248,
+          5,
+          216,
+          266,
+          9,
+          216,
+          247,
+          251,
+          9,
+          262,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2837,
+    "load_ms": 0,
+    "encode_ms": 444,
+    "decode_ms": 2390,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "8f7d685c8fc55533",
+    "truth": "\\nabla _ { \\vec { \\theta } } = D _ { d } \\nabla",
+    "latex": "\\nabla_{ \\overline { \\theta } } = D_{ d } \\nabla",
+    "ranked": "\\nabla_{ \\overline { \\theta } } = D_{ d } \\nabla",
+    "candidates": [
+      {
+        "latex": "\\nabla_{ \\overline { \\theta } } = D_{ d } \\nabla",
+        "visual_score": 0,
+        "symbols": [
+          160,
+          173,
+          201,
+          26,
+          32,
+          246,
+          160
+        ],
+        "modifiers": [
+          2,
+          235,
+          273,
+          2,
+          2,
+          237,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3220,
+    "load_ms": 0,
+    "encode_ms": 506,
+    "decode_ms": 2711,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "426b6ad15c57c1f0",
+    "truth": "A \\vec { e } _ { i } = \\lambda _ { i } \\vec { e } _ { i }",
+    "latex": "A \\vec { e }_{ i } = \\lambda_{ i } \\vec { e }_{ i }",
+    "ranked": "A \\vec { e }_{ i } = \\lambda_{ i } \\vec { e }_{ i }",
+    "candidates": [
+      {
+        "latex": "A \\vec { e }_{ i } = \\lambda_{ i } \\vec { e }_{ i }",
+        "visual_score": 0,
+        "symbols": [
+          29,
+          216,
+          247,
+          251,
+          26,
+          120,
+          251,
+          216,
+          247,
+          251
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          237,
+          2,
+          272,
+          237
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3070,
+    "load_ms": 0,
+    "encode_ms": 435,
+    "decode_ms": 2630,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "b80b42639f321be1",
+    "truth": "- \\omega \\propto - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+    "latex": "- \\omega \\alpha - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+    "ranked": "- \\omega \\alpha - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+    "candidates": [
+      {
+        "latex": "- \\omega \\alpha - 2 \\vec { \\nabla } \\cdot \\vec { Q }",
+        "visual_score": 0,
+        "symbols": [
+          10,
+          169,
+          76,
+          10,
+          15,
+          216,
+          160,
+          90,
+          216,
+          45
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2935,
+    "load_ms": 0,
+    "encode_ms": 331,
+    "decode_ms": 2597,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "587529e3aec5f340",
+    "truth": "( \\vec { 0 } , \\vec { 0 } )",
+    "latex": "( \\vec { 0 } , \\vec { 0 } )",
+    "ranked": "( \\vec { 0 } , \\vec { 0 } )",
+    "candidates": [
+      {
+        "latex": "( \\vec { 0 } , \\vec { 0 } )",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          216,
+          13,
+          9,
+          216,
+          13,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3015,
+    "load_ms": 0,
+    "encode_ms": 405,
+    "decode_ms": 2602,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "f1acffc7d7fd27a0",
+    "truth": "Q _ { V } ( \\vec { R } _ { N } , N | \\vec { R } _ { 0 } . 0 )",
+    "latex": "Q_{ V } ( \\vec { R }_{ N } , N ) \\vec { R }_{ 0 } , 0 )",
+    "ranked": "Q_{ V } ( \\vec { R }_{ N } , N ) \\vec { R }_{ 0 } , 0 )",
+    "candidates": [
+      {
+        "latex": "Q_{ V } ( \\vec { R }_{ N } , N ) \\vec { R }_{ 0 } , 0 )",
+        "visual_score": 0,
+        "symbols": [
+          45,
+          50,
+          5,
+          216,
+          46,
+          42,
+          9,
+          42,
+          6,
+          216,
+          46,
+          13,
+          9,
+          13,
+          6
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 2873,
+    "load_ms": 0,
+    "encode_ms": 373,
+    "decode_ms": 2496,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "a5bab34ff5a94191",
+    "truth": "\\Phi _ { l m } = \\vec { r } \\times \\nabla Y _ { l m }",
+    "latex": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l | m }",
+    "ranked": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l | m }",
+    "candidates": [
+      {
+        "latex": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l | m }",
+        "visual_score": -0.03314119147549591,
+        "symbols": [
+          64,
+          254,
+          255,
+          26,
+          216,
+          260,
+          203,
+          160,
+          53,
+          254,
+          278,
+          255
+        ],
+        "modifiers": [
+          2,
+          235,
+          279,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          235,
+          2,
+          279
+        ]
+      },
+      {
+        "latex": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l M }",
+        "visual_score": -0.03637766060089613,
+        "symbols": [
+          64,
+          254,
+          255,
+          26,
+          216,
+          260,
+          203,
+          160,
+          53,
+          254,
+          41
+        ],
+        "modifiers": [
+          2,
+          235,
+          279,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          235,
+          279
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3941,
+    "load_ms": 0,
+    "encode_ms": 394,
+    "decode_ms": 3540,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "fa9d51a9bde9e558",
+    "truth": "( c , \\vec { v } )",
+    "latex": "( c , \\vec { v } )",
+    "ranked": "( c , \\vec { v } )",
+    "candidates": [
+      {
+        "latex": "( c , \\vec { v } )",
+        "visual_score": -0.04429654822867372,
+        "symbols": [
+          5,
+          245,
+          9,
+          216,
+          264,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          272,
+          2
+        ]
+      },
+      {
+        "latex": "( C , \\vec { v } )",
+        "visual_score": -0.05548994075067294,
+        "symbols": [
+          5,
+          31,
+          9,
+          216,
+          264,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3651,
+    "load_ms": 0,
+    "encode_ms": 464,
+    "decode_ms": 3183,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "b38bd0ba28778e8e",
+    "truth": "\\vec { m } \\in M",
+    "latex": "\\vec { n } \\in M",
+    "ranked": "\\vec { n } \\in M",
+    "candidates": [
+      {
+        "latex": "\\vec { n } \\in M",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          256,
+          115,
+          41
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3008,
+    "load_ms": 0,
+    "encode_ms": 420,
+    "decode_ms": 2584,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "3037aee21159ed63",
+    "truth": "( \\vec { 0 } , \\vec { 0 } )",
+    "latex": "( \\vec { 0 } , \\vec { 0 } )",
+    "ranked": "( \\vec { 0 } , \\vec { 0 } )",
+    "candidates": [
+      {
+        "latex": "( \\vec { 0 } , \\vec { 0 } )",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          216,
+          13,
+          9,
+          216,
+          13,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4432,
+    "load_ms": 0,
+    "encode_ms": 508,
+    "decode_ms": 3919,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "db1647565c2ec7d9",
+    "truth": "( c , \\vec { v } )",
+    "latex": "( c , \\vec { v } )",
+    "ranked": "( c , \\vec { v } )",
+    "candidates": [
+      {
+        "latex": "( c , \\vec { v } )",
+        "visual_score": 0,
+        "symbols": [
+          5,
+          245,
+          9,
+          216,
+          264,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4952,
+    "load_ms": 0,
+    "encode_ms": 828,
+    "decode_ms": 4115,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "9fc78b094828eae2",
+    "truth": "\\Phi _ { l m } = \\vec { r } \\times \\nabla Y _ { l m }",
+    "latex": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l m }",
+    "ranked": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l m }",
+    "candidates": [
+      {
+        "latex": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l m }",
+        "visual_score": 0,
+        "symbols": [
+          64,
+          254,
+          255,
+          26,
+          216,
+          260,
+          203,
+          160,
+          53,
+          254,
+          255
+        ],
+        "modifiers": [
+          2,
+          235,
+          279,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          235,
+          279
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4365,
+    "load_ms": 0,
+    "encode_ms": 532,
+    "decode_ms": 3829,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "c5659f880dbfde2b",
+    "truth": "\\vec { B } = \\nabla \\times \\vec { A }",
+    "latex": "\\vec { B } = \\nabla \\times \\vec { A }",
+    "ranked": "\\vec { B } = \\nabla \\times \\vec { A }",
+    "candidates": [
+      {
+        "latex": "\\vec { B } = \\nabla \\times \\vec { A }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          30,
+          26,
+          160,
+          203,
+          216,
+          29
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4417,
+    "load_ms": 0,
+    "encode_ms": 653,
+    "decode_ms": 3759,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "038c609ec875dc17",
+    "truth": "\\Phi _ { l m } = \\vec { r } \\times \\nabla Y _ { l m }",
+    "latex": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l m }",
+    "ranked": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l m }",
+    "candidates": [
+      {
+        "latex": "\\Phi_{ l m } = \\vec { r } \\times \\nabla Y_{ l m }",
+        "visual_score": 0,
+        "symbols": [
+          64,
+          254,
+          255,
+          26,
+          216,
+          260,
+          203,
+          160,
+          53,
+          254,
+          255
+        ],
+        "modifiers": [
+          2,
+          235,
+          279,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          235,
+          279
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4626,
+    "load_ms": 0,
+    "encode_ms": 556,
+    "decode_ms": 4066,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "0f2eb2dde840d20e",
+    "truth": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+    "latex": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+    "ranked": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+    "candidates": [
+      {
+        "latex": "\\vec { x } \\rightarrow r ( \\vec { x } ; q )",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          266,
+          187,
+          260,
+          5,
+          216,
+          266,
+          24,
+          259,
+          6
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4182,
+    "load_ms": 0,
+    "encode_ms": 576,
+    "decode_ms": 3599,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "8a1159f6b4b29ee4",
+    "truth": "f ( \\vec { a } , \\vec { b } ) = f ( \\vec { b } , \\vec { a } )",
+    "latex": "f ( \\vec { a } , \\vec { b } ) = f ( \\vec { b } , \\vec { a } )",
+    "ranked": "f ( \\vec { a } , \\vec { b } ) = f ( \\vec { b } , \\vec { a } )",
+    "candidates": [
+      {
+        "latex": "f ( \\vec { a } , \\vec { b } ) = f ( \\vec { b } , \\vec { a } )",
+        "visual_score": 0,
+        "symbols": [
+          248,
+          5,
+          216,
+          243,
+          9,
+          216,
+          244,
+          6,
+          26,
+          248,
+          5,
+          216,
+          244,
+          9,
+          216,
+          243,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3889,
+    "load_ms": 0,
+    "encode_ms": 627,
+    "decode_ms": 3259,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "1880048d586ae7a1",
+    "truth": "f _ { E W } ( | \\vec { a } - \\vec { b } | )",
+    "latex": "f_{ E W } ( | \\vec { a } - \\vec { b } | )",
+    "ranked": "f_{ E W } ( | \\vec { a } - \\vec { b } | )",
+    "candidates": [
+      {
+        "latex": "f_{ E W } ( | \\vec { a } - \\vec { b } | )",
+        "visual_score": 0,
+        "symbols": [
+          248,
+          33,
+          51,
+          5,
+          278,
+          216,
+          243,
+          10,
+          216,
+          244,
+          278,
+          6
+        ],
+        "modifiers": [
+          2,
+          235,
+          279,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          272,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4293,
+    "load_ms": 0,
+    "encode_ms": 617,
+    "decode_ms": 3669,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "56bb6eaaa0bc9fbb",
+    "truth": "Q _ { V } ( \\vec { R } _ { N } , N | \\vec { R } _ { 0 } . 0 )",
+    "latex": "Q_{ V } ( \\vec { R }_{ N } , N | \\vec { R }_{ 0 } , 0 )",
+    "ranked": "Q_{ V } ( \\vec { R }_{ N } , N | \\vec { R }_{ 0 } , 0 )",
+    "candidates": [
+      {
+        "latex": "Q_{ V } ( \\vec { R }_{ N } , N | \\vec { R }_{ 0 } , 0 )",
+        "visual_score": 0,
+        "symbols": [
+          45,
+          50,
+          5,
+          216,
+          46,
+          42,
+          9,
+          42,
+          278,
+          216,
+          46,
+          13,
+          9,
+          13,
+          6
+        ],
+        "modifiers": [
+          2,
+          237,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2,
+          2,
+          272,
+          237,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3686,
+    "load_ms": 0,
+    "encode_ms": 505,
+    "decode_ms": 3177,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "7ccbc7c162e151cc",
+    "truth": "\\vec { B } = \\nabla \\times \\vec { A }",
+    "latex": "\\vec { B } = \\nabla \\times \\vec { A }",
+    "ranked": "\\vec { B } = \\nabla \\times \\vec { A }",
+    "candidates": [
+      {
+        "latex": "\\vec { B } = \\nabla \\times \\vec { A }",
+        "visual_score": 0,
+        "symbols": [
+          216,
+          30,
+          26,
+          160,
+          203,
+          216,
+          29
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          272
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 4345,
+    "load_ms": 0,
+    "encode_ms": 525,
+    "decode_ms": 3817,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "76e11eef861a7014",
+    "truth": "\\vec { \\beta } \\cdot \\dot { \\vec { \\beta } } = 0",
+    "latex": "\\dot { \\beta } \\cdot \\dot { \\dot { \\beta } } = 0",
+    "ranked": "\\dot { \\beta } \\cdot \\dot { \\dot { \\beta } } = 0",
+    "candidates": [
+      {
+        "latex": "\\dot { \\beta } \\cdot \\dot { \\dot { \\beta } } = 0",
+        "visual_score": -0.041954135212686226,
+        "symbols": [
+          98,
+          81,
+          90,
+          98,
+          98,
+          81,
+          26,
+          13
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          269,
+          273,
+          2,
+          2
+        ]
+      },
+      {
+        "latex": "\\dot { \\beta } \\cdot \\dot { \\dot { \\beta } } =",
+        "visual_score": -1.1927723802001904,
+        "symbols": [
+          98,
+          81,
+          90,
+          98,
+          98,
+          81,
+          26
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          269,
+          273,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 5054,
+    "load_ms": 0,
+    "encode_ms": 803,
+    "decode_ms": 4244,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "0f8bb3df8b2639b0",
+    "truth": "\\vec { \\Psi } : R ^ { d } \\supset U \\rightarrow R ^ { n }",
+    "latex": "\\tilde { \\Psi } : R^{ d } \\supset U \\rightarrow R^{ n }",
+    "ranked": "\\tilde { \\Psi } : R^{ d } \\supset U \\rightarrow R^{ n }",
+    "candidates": [
+      {
+        "latex": "\\tilde { \\Psi } : R^{ d } \\supset U \\rightarrow R^{ n }",
+        "visual_score": 0,
+        "symbols": [
+          202,
+          66,
+          23,
+          46,
+          246,
+          198,
+          49,
+          187,
+          46,
+          256
+        ],
+        "modifiers": [
+          2,
+          272,
+          2,
+          2,
+          228,
+          2,
+          2,
+          2,
+          2,
+          228
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3969,
+    "load_ms": 0,
+    "encode_ms": 622,
+    "decode_ms": 3339,
+    "warm": true,
+    "renderable": true
+  },
+  {
+    "id": "a6a6b4ce10cee8d4",
+    "truth": "T = ( \\vec { \\omega } , v + d \\times \\vec { \\omega } )",
+    "latex": "T = ( \\vec { w } , v + d \\times \\vec { w } )",
+    "ranked": "T = ( \\vec { w } , v + d \\times \\vec { w } )",
+    "candidates": [
+      {
+        "latex": "T = ( \\vec { w } , v + d \\times \\vec { w } )",
+        "visual_score": 0,
+        "symbols": [
+          48,
+          26,
+          5,
+          216,
+          265,
+          9,
+          264,
+          8,
+          246,
+          203,
+          216,
+          265,
+          6
+        ],
+        "modifiers": [
+          2,
+          2,
+          2,
+          2,
+          272,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          272,
+          2
+        ]
+      }
+    ],
+    "routed": [],
+    "elapsed_ms": 3972,
+    "load_ms": 0,
+    "encode_ms": 436,
+    "decode_ms": 3527,
+    "warm": true,
+    "renderable": true
+  }
+]

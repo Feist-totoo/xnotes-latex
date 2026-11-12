@@ -1,0 +1,17 @@
+{
+  "model": "ggml-org/GLM-OCR-GGUF",
+  "revision": "glm-precision-v5-q4q8",
+  "sourceRevision": "65a42de1148dbed2297e922b5dbc7d9b70c36578",
+  "runtime": "2d973636e292ee6f75fadcf08d29cb33511f509f",
+  "license": "MIT",
+  "files": {
+    "GLM-OCR-Q4_K_M-compact.gguf": {
+      "bytes": 423701152,
+      "sha256": "8ede263d18b8d9dac49ef602bac272afab93fb8b28efe4214a34fafca316ba40"
+    },
+    "mmproj-GLM-OCR-Q8_0.gguf": {
+      "bytes": 484403648,
+      "sha256": "9c4b58e33e316ed142eb5dcb41abec3844d3e6e5dc361ffb782c3fa9d175141f"
+    }
+  }
+}

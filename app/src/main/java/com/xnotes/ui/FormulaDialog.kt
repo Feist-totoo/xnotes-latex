@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.TextRange
@@ -30,9 +31,11 @@ import com.xnotes.core.formula.FormulaCandidateRanking
 import com.xnotes.platform.FormulaDraft
 import com.xnotes.platform.FormulaPacks
 import com.xnotes.platform.LocalFormulaRecognizer
+import com.xnotes.platform.PrecisionFormulaRecognizer
 import com.xnotes.platform.RenderedFormula
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -62,6 +65,10 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
     var candidates by remember(draft) { mutableStateOf<List<FormulaCandidate>>(emptyList()) }
     var automaticText by remember(draft) { mutableStateOf(draft.initialLatex) }
     var userEdited by remember(draft) { mutableStateOf(false) }
+    var reviewing by remember(draft) { mutableStateOf(false) }
+    var reviewJob by remember(draft) { mutableStateOf<Job?>(null) }
+    var preciseLatex by remember(draft) { mutableStateOf<String?>(null) }
+    var reviewFailed by remember(draft) { mutableStateOf(false) }
     val ranking = remember(candidates, catalog, selectedPacks, automaticPacks, recognitionPacks) {
         FormulaCandidateRanking.rank(candidates, if (recognitionPacks) catalog.filter { it.id in selectedPacks } else emptyList(), automaticPacks)
     }
@@ -81,9 +88,14 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
             if (draft.originalFormula != null) return@LaunchedEffect
             val source = ink ?: error("Empty selection")
             val pen = withContext(Dispatchers.Default) { draft.recognitionStrokes() }
-            val result = LocalFormulaRecognizer.recognize(context, source, pen)
-            automaticText = field.text
-            candidates = result.candidates
+            val result = LocalFormulaRecognizer.recognize(context, source, pen.takeIf { it.isNotEmpty() })
+            if (result.candidates.isEmpty()) {
+                field = TextFieldValue(result.latex, TextRange(result.latex.length))
+                automaticText = result.latex
+            } else {
+                automaticText = field.text
+                candidates = result.candidates
+            }
             uncertain = result.uncertain
         } catch (cancelled: CancellationException) {
             throw cancelled
@@ -140,6 +152,35 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
                         uncertain -> R.string.formula_uncertain
                         else -> R.string.formula_review
                     }), style = MaterialTheme.typography.bodyMedium)
+                    if (draft.originalFormula == null && draft.hasPenInput) {
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            OutlinedButton(enabled = !recognizing && !reviewing && !committing && ink != null, onClick = {
+                                val source = ink ?: return@OutlinedButton
+                                reviewing = true; reviewFailed = false
+                                reviewJob = scope.launch {
+                                    try {
+                                        preciseLatex = PrecisionFormulaRecognizer.recognize(context, source).latex
+                                    } catch (cancelled: CancellationException) { throw cancelled }
+                                    catch (_: Exception) { reviewFailed = true }
+                                    finally { reviewing = false }
+                                }
+                            }) { Text(stringResource(R.string.formula_precision)) }
+                            if (reviewing) {
+                                CircularProgressIndicator(Modifier.size(20.dp), strokeWidth = 2.dp)
+                                TextButton(onClick = { reviewJob?.cancel() }) { Text(stringResource(R.string.cancel)) }
+                            }
+                        }
+                        Text(stringResource(if (reviewing) R.string.formula_precision_working else R.string.formula_precision_help),
+                            style = MaterialTheme.typography.bodySmall)
+                        if (reviewFailed) Text(stringResource(R.string.formula_precision_failed), color = MaterialTheme.colorScheme.error)
+                        preciseLatex?.let { alternative ->
+                            Text(alternative, fontFamily = FontFamily.Monospace, maxLines = 5, modifier = Modifier.testTag("formula-precision-result"))
+                            TextButton(enabled = !reviewing && !committing, onClick = {
+                                field = TextFieldValue(alternative, TextRange(alternative.length)); userEdited = true
+                                recognitionFailed = false; uncertain = true
+                            }) { Text(stringResource(R.string.formula_precision_use)) }
+                        }
+                    }
                     if (ranking.packageIds.isNotEmpty()) {
                         val chinese = LocalConfiguration.current.locales[0].language == "zh"
                         Text((if (chinese) "候选评分：" else "Recognition scoring: ") +
@@ -186,13 +227,13 @@ fun FormulaDialog(draft: FormulaDraft, onDismiss: () -> Unit) {
                             clipboard.setPrimaryClip(android.content.ClipData.newPlainText("LaTeX", cleaned))
                         }) { Text(stringResource(R.string.formula_copy)) }
                     }
-                    if (recognitionFailed) TextButton(onClick = { generation++ }, enabled = !recognizing) { Text(stringResource(R.string.formula_retry)) }
+                    if (recognitionFailed) TextButton(onClick = { generation++ }, enabled = !recognizing && !reviewing) { Text(stringResource(R.string.formula_retry)) }
                     if (stale) Text(stringResource(R.string.formula_stale), color = MaterialTheme.colorScheme.error)
                 }
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End, verticalAlignment = Alignment.CenterVertically) {
                     TextButton(onClick = onDismiss, enabled = !committing) { Text(stringResource(R.string.cancel)) }
                     Spacer(Modifier.width(8.dp))
-                    Button(enabled = ready != null && !recognizing && !committing, onClick = {
+                    Button(enabled = ready != null && !recognizing && !reviewing && !committing, onClick = {
                         val result = ready ?: return@Button
                         committing = true
                         scope.launch {

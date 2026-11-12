@@ -1,0 +1,27 @@
+[
+  {
+    "id": "00000b332dcd6fe5",
+    "identical": true,
+    "latex": "\n$$\n(\\binom {j} {m + 1})\n$$"
+  },
+  {
+    "id": "003921302c543b2c",
+    "identical": true,
+    "latex": "\n$$\n\\frac {d ^ {2} v}{d x ^ {2}} - v = 0\n$$"
+  },
+  {
+    "id": "00a32b900a4aa32f",
+    "identical": true,
+    "latex": "\n$$\n(\\begin{array}{c} 0 \\\\ 1 \\end{array})\n$$"
+  },
+  {
+    "id": "010963a06d1d5a79",
+    "identical": true,
+    "latex": "\n$$\n\\gamma (0) = P\n$$"
+  },
+  {
+    "id": "0178bf7cceb64473",
+    "identical": true,
+    "latex": "\n$$\n\\angle 7 7 (x + a / 2)\n$$"
+  }
+]

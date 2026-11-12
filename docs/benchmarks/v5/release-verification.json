@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-12",
+  "status": "complete offline APK prerelease; general recognition accuracy target NOT met",
+  "apk": {
+    "name": "xnotes-latex-0.9.8-latex.5-full-offline.apk",
+    "bytes": 1013056713,
+    "sha256": "5971325cc61554934d9b7347f35ba07b2dcc89476b48f3324ef207223d14211d",
+    "applicationId": "com.xnotes.latex.debug",
+    "versionCode": 73,
+    "versionName": "0.9.8-latex.5-full-debug",
+    "minSdk": 26,
+    "targetSdk": 36,
+    "abis": [
+      "arm64-v8a",
+      "x86_64"
+    ],
+    "certificateSha256": "dbde9527283a1432beee854febc94fb79a8710968f3566bb7763b6ec0a41b6bc",
+    "v2Signature": true,
+    "v3Signature": true,
+    "zipalign16K": true,
+    "nativeLibraries": [
+      "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "lib/arm64-v8a/libonnxruntime.so",
+      "lib/arm64-v8a/libonnxruntime4j_jni.so",
+      "lib/arm64-v8a/libxnotespdf.so",
+      "lib/arm64-v8a/libxnotesprecision.so",
+      "lib/arm64-v8a/libxnotests.so",
+      "lib/x86_64/libandroidx.graphics.path.so",
+      "lib/x86_64/libonnxruntime.so",
+      "lib/x86_64/libonnxruntime4j_jni.so",
+      "lib/x86_64/libxnotespdf.so",
+      "lib/x86_64/libxnotesprecision.so",
+      "lib/x86_64/libxnotests.so"
+    ],
+    "modelFiles": {
+      "encoder-q8.onnx": {
+        "bytes": 25056585,
+        "sha256": "7ed2dbc6a9248c8fa57a33af1c833d34f48b5855f512928b32773dc68034e456"
+      },
+      "decoder-q8.onnx": {
+        "bytes": 7170036,
+        "sha256": "e8b06ed1f3337872e2f85f6f10e3478a49d3f0eeb1ff912b592594d410a4c0c8"
+      },
+      "vocabulary.json": {
+        "bytes": 2454,
+        "sha256": "500710a20d593b3bd59466dac7ac399e796597484ca1f445b2fc783a5367adaa"
+      },
+      "GLM-OCR-Q4_K_M-compact.gguf": {
+        "bytes": 423701152,
+        "sha256": "8ede263d18b8d9dac49ef602bac272afab93fb8b28efe4214a34fafca316ba40"
+      },
+      "mmproj-GLM-OCR-Q8_0.gguf": {
+        "bytes": 484403648,
+        "sha256": "9c4b58e33e316ed142eb5dcb41abec3844d3e6e5dc361ffb782c3fa9d175141f"
+      }
+    },
+    "bundledPackCount": 10,
+    "containsEvaluationOrPrivateSamples": false
+  },
+  "jvm": {
+    "tests": 2510,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android": {
+    "device": "Xnotes_LaTeX_Test emulator; Android 14 x86_64, 2 vCPU, 4 GiB",
+    "physicalTabletTested": false,
+    "network": "airplane mode ON, Wi-Fi/data OFF during recognition",
+    "finalApkUpgradeInstall": "PASS",
+    "testsPassed": 16,
+    "testGroups": {
+      "workflow": 8,
+      "confirmation": 1,
+      "roundtrip": 1,
+      "matrixWitness": 1,
+      "calculusWitness": 1,
+      "enginesAndImages": 4
+    },
+    "newHumanConfirmation": 160,
+    "productionFloatRastersRerun": 5,
+    "allRasterHashesMatched": true,
+    "offCorrect": 95,
+    "onCorrect": 95,
+    "targetedKnownPriorFixes": 2,
+    "fixedHweSubset": {
+      "cases": 20,
+      "nativeCorrect": 8,
+      "desktopCorrect": 9,
+      "structuralAgreement": 19,
+      "mismatch": "135: Android includes an explicit multiplication dot; retained as strict-metric failure"
+    },
+    "publicEarlierImageRegressions": {
+      "cases": 12,
+      "correct": 1
+    },
+    "privateImageNotPublished": true,
+    "engineSwitchingAndCancellation": "PASS",
+    "githubPackDownload": "Pending publication"
+  },
+  "quality": {
+    "sameLegacy200Desktop": {
+      "v3": 89,
+      "v4": 49,
+      "v5": 104
+    },
+    "sameSubject200Desktop": {
+      "off": 116,
+      "on": 117
+    },
+    "fresh160Android": {
+      "off": 95,
+      "on": 95
+    },
+    "priorDefault": true,
+    "tenTrainedSubjectModels": false
+  },
+  "release": {
+    "tag": "v0.9.8-latex.5-full",
+    "prerelease": true,
+    "replaceLatestStable": false,
+    "remoteVerification": "Pending publication"
+  }
+}

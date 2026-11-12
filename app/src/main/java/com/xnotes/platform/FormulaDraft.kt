@@ -20,10 +20,15 @@ class FormulaDraft(
     val imageDir: File,
     val apply: (ImageItem, Boolean) -> Boolean,
 ) {
-    private val previous = items.singleOrNull() as? ImageItem
+    private val previous = (items.singleOrNull() as? ImageItem)?.let {
+        ImageItem(it.image, it.rect, it.orientation, it.angle, it.flip, it.part, it.formula).apply {
+            group = it.group; sync = it.sync
+        }
+    }
     val originalFormula = previous?.formula
     val bounds: Rect = items.map { it.bounds() }.reduce(Rect::union)
     private val strokes = items.filterIsInstance<Stroke>().map { Stroke(it) }
+    val hasPenInput: Boolean get() = strokes.isNotEmpty()
     val color = originalFormula?.color ?: strokes.firstOrNull()?.config?.rgba?.withAlpha(255) ?: Rgba(24, 24, 24)
     val initialLatex = originalFormula?.latex.orEmpty()
 
@@ -33,7 +38,7 @@ class FormulaDraft(
     /** Only selected ink, on white; no paper lines, PDF, annotations or neighbouring ink. */
     fun inkBitmap(): Bitmap? {
         if (originalFormula != null) return BitmapFactory.decodeFile(previous?.image?.file?.path)
-        if (strokes.isEmpty()) return null
+        if (strokes.isEmpty() && previous == null) return null
         val box = bounds.outset(8.0)
         require(box.w.isFinite() && box.h.isFinite() && box.w > 0 && box.h > 0)
         val scale = minOf(3.0, 1536.0 / maxOf(box.w, box.h))
@@ -42,6 +47,7 @@ class FormulaDraft(
         val renderer = surface.renderer()
         renderer.scale(scale, scale)
         renderer.translate(-box.x, -box.y)
+        previous?.paint(renderer)
         for (stroke in strokes) {
             stroke.config = stroke.config.copy(rgba = Rgba(0, 0, 0), neon = false, colorOverride = null, highlighterAlpha = 1.0)
             stroke.paint(renderer)
@@ -73,18 +79,19 @@ class FormulaDraft(
         imageDir.mkdirs()
         val file = File(imageDir, "formula-${UUID.randomUUID()}.png")
         file.outputStream().use { check(rendered.bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)) }
-        val width = if (previous != null) previous.rect.w else bounds.w.coerceIn(80.0, 900.0)
+        val editing = originalFormula != null
+        val width = if (editing) previous!!.rect.w else bounds.w.coerceIn(80.0, 900.0)
         val height = width * rendered.bitmap.height / rendered.bitmap.width
-        val position = previous?.rect ?: bounds
-        val rect = Rect(position.x, if (keepInk && previous == null) bounds.bottom + 16.0 else position.y, width, height)
+        val position = if (editing) previous!!.rect else bounds
+        val rect = Rect(position.x, if (keepInk && !editing) bounds.bottom + 16.0 else position.y, width, height)
         return ImageItem(ImageData(file, rendered.bitmap.width, rendered.bitmap.height), rect,
-            orientation = previous?.orientation ?: 0, angle = previous?.angle ?: 0.0,
+            orientation = if (editing) previous!!.orientation else 0, angle = if (editing) previous!!.angle else 0.0,
             formula = rendered.source).also { it.group = previous?.group; it.sync = previous?.sync }
     }
 
     companion object {
         fun accepts(items: List<CanvasItem>): Boolean =
-            (items.singleOrNull() as? ImageItem)?.let { it.formula != null && !it.locked } == true ||
+            (items.singleOrNull() as? ImageItem)?.let { !it.locked } == true ||
                 (items.isNotEmpty() && items.size <= 1000 && items.all { it is Stroke && it.sampleCount > 0 && !it.locked })
     }
 }

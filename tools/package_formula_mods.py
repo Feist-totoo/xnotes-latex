@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--tag", default="v0.9.8-latex.4-preview")
+    parser.add_argument("--tag", default="v0.9.8-latex.5-full")
     parser.add_argument("--output", type=Path, default=ROOT / "build/releases")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
@@ -26,8 +26,8 @@ def main():
     (args.output / "formula-packs-index.json").write_bytes(data)
     assets = ROOT / "app/src/main/assets/formula-packs"
     (assets / "index.json").write_bytes(data)
-    for id in ("school_math", "calculus", "linear_algebra"):
-        core = next(p for p in entries if p["id"] == id)
+    for core in entries:
+        id = core['id']
         (assets / f"{id}.xformula").write_bytes((args.output / f"{id}-v{core['version']}.xformula").read_bytes())
     print(f"Built {len(entries)} independent packs for {args.tag}")
 

@@ -45,7 +45,9 @@ def rerank(candidates,packs):
     best=ordered[0]['visual_score']
     def score(c):
         if best-c['visual_score']>p['maxVisualGap']:return -float('inf')
-        prior=float(np.mean(table[c['symbols'],c['modifiers']])) if c['symbols'] else -20.
+        if not c['symbols']:prior=-20.
+        elif p.get('kind')=='symbol-bigram-v1':prior=float(np.mean(table[[0]+c['symbols'],c['symbols']+[0]]))
+        else:prior=float(np.mean(table[c['symbols'],c['modifiers']]))
         return c['visual_score']+p['strength']*prior
     return sorted(ordered,key=score,reverse=True),subject
 

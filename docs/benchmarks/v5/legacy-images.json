@@ -1,0 +1,802 @@
+[
+  {
+    "id": "100",
+    "truth": "- 1 8 0 0 \\cdot x = 6",
+    "latex": "\n$$\n- 8 0 0. x = 6\n$$",
+    "image_sha256": "9fefb3daf96f2266a3d7bad89e17c5624de9e3ef8431e650009584dc22b51bfa",
+    "seconds": 1.8900000001303852,
+    "structure_match": false
+  },
+  {
+    "id": "101",
+    "truth": "\\sqrt { 1 5 }",
+    "latex": "\n$$\n\\sqrt {1 5}\n$$",
+    "image_sha256": "6c5eb38306c6d85b0f80160eeb7960d9ba6677b07abe8f2385f50f671dc2bc88",
+    "seconds": 0.6569999998901039,
+    "structure_match": true
+  },
+  {
+    "id": "102",
+    "truth": "\\sqrt { \\frac { 1 } { a } }",
+    "latex": "\n$$\n\\sqrt {\\frac {1}{a}}\n$$",
+    "image_sha256": "3a00807e5be1014ec072317998e123d76e03f687afaf2be265f14b3dabf2aa54",
+    "seconds": 0.7029999999795109,
+    "structure_match": true
+  },
+  {
+    "id": "103",
+    "truth": "c = \\pm \\sqrt { 3 }",
+    "latex": "\n$$\nC = \\pm \\sqrt {3}\n$$",
+    "image_sha256": "3c5810e32475aa2d65e0028cdf8f91d877b6a45c012ef310c52ecd81a12d21c6",
+    "seconds": 0.7809999999590218,
+    "structure_match": false
+  },
+  {
+    "id": "104",
+    "truth": "3 \\times 3 \\times 5 = 4 5 ( d m ^ { 2 } )",
+    "latex": "\n$$\n3 \\times 3 \\times 5 = 4 5 (d m ^ {2})\n$$",
+    "image_sha256": "5cb32602dd72806e85c7104528252c0360536ddedb9cc96cec992f7303574174",
+    "seconds": 1.25,
+    "structure_match": true
+  },
+  {
+    "id": "105",
+    "truth": "y ^ { 4 } = ( x - b _ { 1 } ) ( x - b _ { 1 } ) ^ { 2 } ( x - b _ { 3 } ) ^ { 2 } ( x - b _ { 4 } ) ^ { 3 }",
+    "latex": "\n$$\ny ^ {4} = (x - b _ {1}) (x - b _ {1}) ^ {2} (x - b _ {3}) ^ {2} (x - b _ {4}) ^ {3}\n$$",
+    "image_sha256": "0b476af7de6267c1a99963c3c9e0c1f17f7ea0d137667551d8617b8f4027f84b",
+    "seconds": 12.046000000089407,
+    "structure_match": true
+  },
+  {
+    "id": "106",
+    "truth": "\\frac { a z ^ { - 1 } ( 1 + a z ^ { - 1 } ) } { ( 1 - a z ^ { - 1 } ) 3 }",
+    "latex": "\n$$\n\\frac {a z ^ {- 1} \\left(1 + a z ^ {- 1}\\right)}{\\left(1 - a z ^ {- 1}\\right) ^ {3}}\n$$",
+    "image_sha256": "0b4fc7a3ab6db5ed27bd816d78c815c0b9b55e970c86575c823da514d83d9916",
+    "seconds": 5.5939999998081475,
+    "structure_match": false
+  },
+  {
+    "id": "107",
+    "truth": "b = \\sqrt { a }",
+    "latex": "\n$$\nb = \\sqrt {a}\n$$",
+    "image_sha256": "b23376ecef917426c55116827d5d3e0bcf583bc141a3b5d47b42a4ad116d0605",
+    "seconds": 0.9060000001918525,
+    "structure_match": true
+  },
+  {
+    "id": "108",
+    "truth": "m _ { 1 } = 1 h _ { 2 } = \\frac { 3 } { 2 }",
+    "latex": "\n$$\nm _ {1} = 1 h _ {2} = \\frac {3}{2}\n$$",
+    "image_sha256": "bb17d677ddff03cd3b441566903b3996deb2cfe99ce432637af6ab27a70c43ad",
+    "seconds": 1.3910000000614673,
+    "structure_match": true
+  },
+  {
+    "id": "109",
+    "truth": "1 9",
+    "latex": "\n$$\n\\vert 1 9 \\vert\n$$",
+    "image_sha256": "21d88e5cdc65f3c56dca2f758980b7e542eb7e6e27c9574e65b1516b1b2b3801",
+    "seconds": 0.8589999999385327,
+    "structure_match": false
+  },
+  {
+    "id": "110",
+    "truth": "= 5 0 0 ^ { 2 } - ( 5 0 0 - 1 ) \\times ( 5 0 0 + 1 ) = 5 0 0 ^ { 2 } - ( 5 0 0 ^ { 2 } + 1 ) = 1",
+    "latex": "\n$$\n= 5 0 0 ^ {2} - (5 0 0 - 1) \\times (5 0 0 + 1) = 5 0 0 ^ {2} - (5 0 0 ^ {2} + 1) = 1\n$$",
+    "image_sha256": "faadc70ccecae89476c7ae0d4fac0c3f757d5bdfb743884e68714e7d760faf1d",
+    "seconds": 9.125,
+    "structure_match": true
+  },
+  {
+    "id": "111",
+    "truth": "A F ^ { 2 } = A B ^ { 2 } - B F",
+    "latex": "\n$$\nA F ^ {2} = A B ^ {2} - B F\n$$",
+    "image_sha256": "8c3a7ed46749d57372615d249b4d28c90b05b9dd4ae275679bc5e81178aed812",
+    "seconds": 1.0619999999180436,
+    "structure_match": true
+  },
+  {
+    "id": "112",
+    "truth": "x = - \\frac { 2 } { 3 }",
+    "latex": "\n$$\nx = - \\frac {2}{3}\n$$",
+    "image_sha256": "c1f778ca7c8ad63db693f53e72a343b080741ecf3810eadaba133099a11e683d",
+    "seconds": 0.8280000002123415,
+    "structure_match": true
+  },
+  {
+    "id": "113",
+    "truth": "\\tan 1 = \\frac { C D } { B C } = \\frac { 2 } { 3 }",
+    "latex": "\n$$\n\\mathrm {f a n} = \\frac {C P}{B C} = \\frac {2}{3}\n$$",
+    "image_sha256": "fbfcc424f5208d50c68f3c65edd557b8c33d85bb4bdbf1171afba7df619b4412",
+    "seconds": 1.0940000000409782,
+    "structure_match": false
+  },
+  {
+    "id": "114",
+    "truth": "3 y - \\frac { 2 } { y } + 3 = 0",
+    "latex": "\n$$\n3 y - \\frac {2}{y} + 3 = 0\n$$",
+    "image_sha256": "7c5f50d8edf4772333f063b39e0edbb28bec35b3c165922fcc3613fed5235884",
+    "seconds": 0.8279999999795109,
+    "structure_match": true
+  },
+  {
+    "id": "115",
+    "truth": "( \\frac { B } { A + 1 } ) ^ { \\frac { 1 } { n + 1 } }",
+    "latex": "\n$$\n\\left(\\frac {B}{A + 1}\\right) ^ {\\frac {1}{n + 1}}\n$$",
+    "image_sha256": "f41da5df4f7dc029122c6efe13f1375646c85380e5b80d1f40040a986f9327d5",
+    "seconds": 1.4379999998491257,
+    "structure_match": false
+  },
+  {
+    "id": "116",
+    "truth": "\\sin ( \\frac { \\theta } { 2 } )",
+    "latex": "\n$$\n\\sin \\left(\\frac {6}{2}\\right)\n$$",
+    "image_sha256": "b49d9937dbc7e23fb43dfd93466aff7b8dd3d0cd1ad8c147db24b1b20de55c0f",
+    "seconds": 0.8910000000614673,
+    "structure_match": false
+  },
+  {
+    "id": "117",
+    "truth": "\\frac { ( s ^ { 2 } + t ^ { 2 } + u ^ { 2 } ) ^ { 2 } } { s t u }",
+    "latex": "\n$$\n\\frac {(s ^ {2} + t ^ {2} + u ^ {2}) ^ {2}}{s t u}\n$$",
+    "image_sha256": "3428397e4151c071a1b0a0ab470bf49b4e99d3502c220cac4656a58517b395e6",
+    "seconds": 4.297000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "118",
+    "truth": "y = \\frac { 2 } { 3 } x",
+    "latex": "\n$$\ny = \\frac {2}{3} x\n$$",
+    "image_sha256": "82eb9dbdc557293785890e3ecab842ca9b7ca6cfb867c5d8e152a79fa5adfbdf",
+    "seconds": 0.7970000000204891,
+    "structure_match": true
+  },
+  {
+    "id": "119",
+    "truth": "\\frac { 1 } { \\sqrt { V } }",
+    "latex": "\n$$\n\\frac {1}{\\sqrt {v}}\n$$",
+    "image_sha256": "17c0deb8e4c8c3b89e213047f60a1fbe5df117fceabdbde95707c66bff98a99e",
+    "seconds": 0.9529999999795109,
+    "structure_match": false
+  },
+  {
+    "id": "120",
+    "truth": "5 j + 3 j",
+    "latex": "\n$$\n5 j + 3 j\n$$",
+    "image_sha256": "6f3c926643666efcc14d4074111d4fa72e245ac7d0dec7cb19a2fa2fbadae72e",
+    "seconds": 1.468000000109896,
+    "structure_match": true
+  },
+  {
+    "id": "121",
+    "truth": "\\int d ^ { n } x f g = \\int d ^ { n } x g f",
+    "latex": "\n$$\n\\int d ^ {n} x f g = \\int d ^ {n} x g f\n$$",
+    "image_sha256": "30ef511e3c54da5bee1817e986e4ecc37a618f03fb0225f530411c943081b937",
+    "seconds": 1.7349999998696148,
+    "structure_match": true
+  },
+  {
+    "id": "122",
+    "truth": "\\sum \\limits _ { i _ { 1 } } m _ { i _ { 1 } } + \\sum \\limits _ { j _ { 1 } } m _ { j _ { 1 } } - 2 \\sum \\limits _ { k _ { 1 } } m _ { k _ { 1 } } = - 3",
+    "latex": "\n$$\n\\sum_ {i _ {1}} m _ {i _ {1}} + \\sum_ {j _ {1}} m _ {j _ {1}} - 2 \\sum_ {k _ {1}} m _ {k _ {1}} = - 3\n$$",
+    "image_sha256": "614753b0cb364c11c6973b62fe53806b66b446bfebc372c7837ae0b39b427427",
+    "seconds": 6.358999999938533,
+    "structure_match": true
+  },
+  {
+    "id": "123",
+    "truth": "3 0 x = 1 9 0 8",
+    "latex": "\n$$\n3 0 x = 1 9 0 8\n$$",
+    "image_sha256": "6ae1abab9c6bac0d8191025197cff0abfbde7a99d2dbd4ffce05e55fdafa4733",
+    "seconds": 0.8279999999795109,
+    "structure_match": true
+  },
+  {
+    "id": "124",
+    "truth": "- 2 ^ { \\frac { 1 } { 4 } } ( \\frac { 5 + \\sqrt { 5 } } { 5 - \\sqrt { 5 } } ) ^ { \\frac { 1 } { 4 } }",
+    "latex": "\n$$\n- 2 ^ {\\frac {1}{4}} \\left(\\frac {5 + \\sqrt {3}}{5 - \\sqrt {5}}\\right) ^ {\\frac {4}{4}}\n$$",
+    "image_sha256": "8b255101a79716d5d92e9276a961663bec5983a69914faf911e845f997099ae1",
+    "seconds": 2.405999999959022,
+    "structure_match": false
+  },
+  {
+    "id": "125",
+    "truth": "\\vert 3 0 0 x = 3 0 0 \\times 6 = 1 8 0 0",
+    "latex": "\n$$\n3 0 0 x = 3 0 0 \\times 6 = 1 8 0 0\n$$",
+    "image_sha256": "09f18c75d545e90f388a4c3507a73ddfa04405b6d05271909111fc4f17b243fd",
+    "seconds": 2.469000000040978,
+    "structure_match": false
+  },
+  {
+    "id": "126",
+    "truth": "\\frac { 1 } { 3 } \\times 2 8 . 2 6 \\times 1 0 = 9 4 . 2 ( d m ^ { 3 } )",
+    "latex": "\n$$\n\\frac {1}{2} \\times 2 8. 2 6 \\times 1 0 ^ {3} = 9 4. 2 (d m ^ {3})\n$$",
+    "image_sha256": "1f72cde2aa7568dfcec8aef33c0bf9fb75558db6c73897a116fcb2afa7db5a7d",
+    "seconds": 1.421000000089407,
+    "structure_match": false
+  },
+  {
+    "id": "127",
+    "truth": "C ^ { 2 }",
+    "latex": "\n$$\nC ^ {2}\n$$",
+    "image_sha256": "644be5c8d48b104c6e89821d1afc311874cabc3618ac7e1b19755af3e58a2733",
+    "seconds": 0.7189999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "128",
+    "truth": "\\frac { 7 } { 1 6 } + 7",
+    "latex": "\n$$\n\\frac {7}{1 6} + 7\n$$",
+    "image_sha256": "93e0ac2cae4601e743ad514c4f0bea92cd16479bb105e007663e35f307c1f22b",
+    "seconds": 1.6410000000614673,
+    "structure_match": true
+  },
+  {
+    "id": "129",
+    "truth": "1 - \\frac { 1 } { 2 } + \\frac { 1 } { 2 } - \\frac { 1 } { 3 } + \\frac { 1 } { 3 } - \\frac { 1 } { 4 } \\cdots + \\frac { 1 } { n } -",
+    "latex": "\n$$\n1 - \\frac {1}{2} + \\frac {1}{2} - \\frac {1}{3} + \\frac {1}{3} - \\frac {1}{4} \\therefore + \\frac {1}{n}\n$$",
+    "image_sha256": "f3ba228b6f9db12b980d4323cea0c8c1ab429a54152e9ea49736a8db1c5b305d",
+    "seconds": 2.9370000001508743,
+    "structure_match": false
+  },
+  {
+    "id": "130",
+    "truth": "y ^ { \\prime } x ^ { \\prime } = q x ^ { \\prime } y ^ { \\prime }",
+    "latex": "\n$$\ny ^ {\\prime} x ^ {\\prime} = q x ^ {\\prime} y ^ {\\prime}\n$$",
+    "image_sha256": "63b91d65958d4dbc14a40d783db45a2c9f9542851f9de0440047353474df1e9a",
+    "seconds": 2.1870000001508743,
+    "structure_match": true
+  },
+  {
+    "id": "131",
+    "truth": "\\overrightarrow { A D } = \\frac { 1 } { 2 } ( \\overrightarrow { A B } + \\overrightarrow { A C } )",
+    "latex": "\n$$\n\\overrightarrow {A D} = \\frac {1}{2} (\\overrightarrow {A B} + \\overrightarrow {A C})\n$$",
+    "image_sha256": "292e88a702a522bfb62081a203071b630c140dda902ce8718f55985bddf2d22e",
+    "seconds": 2.1090000001713634,
+    "structure_match": true
+  },
+  {
+    "id": "132",
+    "truth": "\\frac { 2 } { x } = \\frac { 1 } { 0 . 9 }",
+    "latex": "\n$$\n\\frac {2}{\\pi} = \\frac {1}{1 9}\n$$",
+    "image_sha256": "5696aa4ae901c3a17908ed4db3efb502824e4c63dafdf8c65de860c1a5283d53",
+    "seconds": 0.8910000000614673,
+    "structure_match": false
+  },
+  {
+    "id": "133",
+    "truth": "O D \\bot A B",
+    "latex": "\n$$\nO D \\bot A B\n$$",
+    "image_sha256": "b12e81fc91487669c7c02a2ffb7d161a4fc190adab6b389cdb0430a3a5f4e6d4",
+    "seconds": 0.7189999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "134",
+    "truth": "4 + 4 + \\frac { 4 } { 4 }",
+    "latex": "\n$$\n4 + 4 + \\frac {4}{4}\n$$",
+    "image_sha256": "ac888f4be89787577da047ab7d2cf48848404d604e2ae6d00316564030c21ee3",
+    "seconds": 2.344000000040978,
+    "structure_match": true
+  },
+  {
+    "id": "135",
+    "truth": "x ^ { 2 } + \\frac { 1 5 } { 4 } - 1 0 x + 4 = \\frac { 1 6 9 } { 4 } + x ^ { 2 } - 1 3 x",
+    "latex": "\n$$\nx ^ {2} + \\frac {1 5}{4} - 1 0 x + 4 = \\frac {1 6 9}{4} + x ^ {2} - 1 3 x\n$$",
+    "image_sha256": "755a12a9ad06d661be80ca07cf1cfa3dd1d8d369e897ee64d0fa5c8772bb48e6",
+    "seconds": 4.094000000040978,
+    "structure_match": true
+  },
+  {
+    "id": "136",
+    "truth": "\\eta = \\frac { F s - f s } { F s } = \\frac { F - f } { F }",
+    "latex": "\n$$\nn = \\frac {F S - F S}{F S} = \\frac {F - f}{F}\n$$",
+    "image_sha256": "ddeec7a6ace5b8452b25451d26bdefbd5ca94931f7fb545e6f2ea5d7e12dcb46",
+    "seconds": 6.375,
+    "structure_match": false
+  },
+  {
+    "id": "137",
+    "truth": "\\frac { 1 } { 8 }",
+    "latex": "\n$$\n\\frac {1}{8}\n$$",
+    "image_sha256": "cae8402ecabaed1e265cc950eefc5185f2dcec2abdc58aba9996c378dc3a7d84",
+    "seconds": 1.1559999999590218,
+    "structure_match": true
+  },
+  {
+    "id": "138",
+    "truth": "\\int \\sin ^ { 2 } x d x",
+    "latex": "\n$$\n\\sqrt {S} \\sin^ {2} x d x\n$$",
+    "image_sha256": "72f566c617571057722fdd6c9156deb9e682f16e883ae74e4f25e986c472b093",
+    "seconds": 2.75,
+    "structure_match": false
+  },
+  {
+    "id": "139",
+    "truth": "\\sum \\limits _ { m = 1 } ^ { \\infty } \\sum \\limits _ { n = 1 } ^ { \\infty } \\frac { m ^ { 2 } n } { 3 ^ { m } ( m 3 ^ { n } + n 3 ^ { m } ) }",
+    "latex": "\n$$\n\\sum_ {m = 1} ^ {\\infty} \\sum_ {n = 1} ^ {\\infty} \\frac {m ^ {2} n}{3 ^ {m} \\left(m 3 ^ {n} + n 3 ^ {m}\\right)}\n$$",
+    "image_sha256": "ef94ab6a79536fc6564ef34a25e6658bc68266acf820a77da1e660b8eed2c756",
+    "seconds": 9.718999999808148,
+    "structure_match": true
+  },
+  {
+    "id": "140",
+    "truth": "\\sum S S = S",
+    "latex": "\n$$\n\\sum s s = 8\n$$",
+    "image_sha256": "e3a437377072a8c5af729eff999c5999768c6057d6c1d09082a61255bf2f69f8",
+    "seconds": 1.297000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "141",
+    "truth": "8 0 ^ { o }",
+    "latex": "\n$$\n| 8 0 ^ {\\circ} |\n$$",
+    "image_sha256": "b212edcaad3d13e5236d48fbf89e01b5832dbf9dc006277969cca61d419478c6",
+    "seconds": 1.3910000000614673,
+    "structure_match": false
+  },
+  {
+    "id": "142",
+    "truth": "\\sqrt { t } = \\sqrt { x - 4 }",
+    "latex": "\n$$\n\\sqrt {t} = \\sqrt {x - 4}\n$$",
+    "image_sha256": "94d694c8fc62221eb95d5cc15a172e960e19d019cc9e1cbb46f30de5195163e8",
+    "seconds": 1.0619999999180436,
+    "structure_match": true
+  },
+  {
+    "id": "143",
+    "truth": "H _ { 2 } S O _ { 3 } ^ { - } \\rightleftharpoons H ^ { + } + S O _ { 3 } ^ { 2 - }",
+    "latex": "\n$$\nH _ {2} S O _ {3} ^ {-} \\rightleftharpoons H ^ {+} + S O _ {3} ^ {2 -}\n$$",
+    "image_sha256": "60cbf2d2cb852d6cac656cfb2edd5000c4b952f44989de6af0cc6527eff63942",
+    "seconds": 1.202999999979511,
+    "structure_match": true
+  },
+  {
+    "id": "144",
+    "truth": "5 \\times 5 \\times 6 = 1 5 0 ( c m ^ { 2 } )",
+    "latex": "\n$$\n5 ^ {2} \\times 5 \\times 6 = 1 5 0 (c m ^ {2})\n$$",
+    "image_sha256": "35b88d0c82c2c1a8503843cecdbd320c4e0aa956f91797d55fc07f9f1c25a664",
+    "seconds": 1.25,
+    "structure_match": false
+  },
+  {
+    "id": "145",
+    "truth": "1 8 z",
+    "latex": "\n$$\n1 8 2\n$$",
+    "image_sha256": "9b4b6d7b0224a87e2fa66d2cbd7fc932bc89a51e8a18b28d4878ddc946a151ea",
+    "seconds": 0.6410000000614673,
+    "structure_match": false
+  },
+  {
+    "id": "146",
+    "truth": "\\frac { q ^ { 2 } \\sqrt { \\pi } } { 2 g } \\sqrt { \\frac { a - 1 } { a } }",
+    "latex": "\n$$\n\\frac {q ^ {2} \\sqrt {\\pi}}{2 g} \\sqrt {\\frac {a - 1}{a}}\n$$",
+    "image_sha256": "3969877776487a53d30ecf09894070d24c285faa5ea9dd0635543314c4fe8024",
+    "seconds": 1.5630000000819564,
+    "structure_match": true
+  },
+  {
+    "id": "147",
+    "truth": "a = \\frac { 3 } { 2 }",
+    "latex": "\n$$\na = \\frac {3}{2}\n$$",
+    "image_sha256": "d17fa595a7e7fa4e2b0ee08acb34fac36bd094671f143071bc014288cdbfd9ae",
+    "seconds": 0.7029999999795109,
+    "structure_match": true
+  },
+  {
+    "id": "148",
+    "truth": "\\frac { A B } { B C } = \\frac { 3 } { 2 }",
+    "latex": "\n$$\n\\frac {A B}{B C} = \\frac {3}{2}\n$$",
+    "image_sha256": "4ce5f4a4d5394f8c73882a0fbba11c1355172e5444461e0dd3b57300218db200",
+    "seconds": 0.7349999998696148,
+    "structure_match": true
+  },
+  {
+    "id": "149",
+    "truth": "= \\frac { 5 9 } { 1 2 } = - 4 \\frac { 1 1 } { 1 2 }",
+    "latex": "\n$$\n= \\frac {5 9}{1 2} = - 7 \\frac {1 1}{1 2}\n$$",
+    "image_sha256": "950fce8d1e6c536ae028ea094aba7944c7dad00518e1acc983fec98f2cd1b28f",
+    "seconds": 0.9690000000409782,
+    "structure_match": false
+  },
+  {
+    "id": "150",
+    "truth": "\\alpha N _ { f } = \\alpha ( \\sum \\limits _ { I = 1 } ^ { 9 } v _ { I } \\gamma _ { I } + \\sum \\limits _ { i = 1 } ^ { 3 } \\frac { i \\mu x ^ { i } } { 4 } \\{ \\gamma _ { i } , \\gamma _ { 1 2 3 } \\} ) + \\alpha ^ { 2 } \\mu ^ { 2 } / 4 ^ { 2 }",
+    "latex": "\n$$\n\\alpha N _ {2} = \\alpha \\left(\\sum_ {i = 1} ^ {g} v _ {i} x _ {i} + \\sum_ {i = 1} ^ {3} \\frac {i \\mu x ^ {i}}{4} \\left\\{\\gamma_ {i}, \\gamma_ {1 2 3} ^ {2} \\right\\}\\right) + \\alpha^ {2} y ^ {2} / 4 ^ {2}\n$$",
+    "image_sha256": "96266b919f02fe9b650d208ba55300400f4845eaafb71051b03ab790cec301bb",
+    "seconds": 9.671000000089407,
+    "structure_match": false
+  },
+  {
+    "id": "151",
+    "truth": "p ^ { \\alpha } - p ^ { \\alpha - 1 }",
+    "latex": "\n$$\np ^ {\\alpha} - p ^ {\\alpha - 1}\n$$",
+    "image_sha256": "618022c6cb99b694bcc6299dd32c855fc04318fb307d5b359951ce665eb7ab93",
+    "seconds": 1.547000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "152",
+    "truth": "\\sin z = \\beta",
+    "latex": "\n$$\n\\sin z = \\beta\n$$",
+    "image_sha256": "fc3bbf4d04b286ec8d34beeea1db046aa1885fe3bdff161e2d826e5695fba35e",
+    "seconds": 1.047000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "153",
+    "truth": "3 b - 2 a = 4",
+    "latex": "\n$$\n3 b-2 a=4\n$$",
+    "image_sha256": "fd4b01cae252320153975d636b1f26c425847a54a0c547f499f072465121eec7",
+    "seconds": 1.8589999999385327,
+    "structure_match": true
+  },
+  {
+    "id": "154",
+    "truth": "( x - 1 ) ^ { 2 } = \\frac { 7 } { 4 }",
+    "latex": "\n$$\n(x - 1) ^ {2} = \\frac {7}{4}\n$$",
+    "image_sha256": "718774833f4fa6a4bb8e1e25c6f282d24cbe58a6f4bec1a89a49ca5af35e5f9f",
+    "seconds": 2.25,
+    "structure_match": true
+  },
+  {
+    "id": "155",
+    "truth": "x ^ { n + 1 } + y ^ { 2 } + z ^ { 2 }",
+    "latex": "\n$$\nx ^ {n + 1} + y ^ {2} + z ^ {2}\n$$",
+    "image_sha256": "5813a1ff516ed883d3ea9f00a2bf4356dbb15ad9efbd2b18b240ecec331011a4",
+    "seconds": 3.0310000001918525,
+    "structure_match": true
+  },
+  {
+    "id": "156",
+    "truth": "P = \\frac { F } { S } =",
+    "latex": "\n$$\nP = \\frac {F}{S}\n$$",
+    "image_sha256": "e2a1cf59d90968ce1802f70b00011b523a38133b441c8758de78aaf05b4e4b77",
+    "seconds": 0.9069999998901039,
+    "structure_match": false
+  },
+  {
+    "id": "157",
+    "truth": "[ ( x + y ) + 4 ( x - y ) ] [ ( x + y ) - 4 ( x - y ) ]",
+    "latex": "\n$$\n[ (x + y) + 4 (x - y) ] [ (x + y) - 4 (x - y) ]\n$$",
+    "image_sha256": "35f80fbfeefdc130dfe77c3c5a607a607df05050e10138b86eca04d0e4c2ef58",
+    "seconds": 1.3439999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "158",
+    "truth": "x ^ { 1 } y ^ { 1 } = q y ^ { 1 } x ^ { 1 }",
+    "latex": "\n$$\nx ^ {\\prime} y ^ {\\prime} = 9 y ^ {\\prime} x ^ {\\prime}\n$$",
+    "image_sha256": "ac50bc632505fe0e1cee9064889520beb45d80c7a1b0b21fb8d75e095ec4343b",
+    "seconds": 2.422000000020489,
+    "structure_match": false
+  },
+  {
+    "id": "159",
+    "truth": "| x y | = | x | | y |",
+    "latex": "\n$$\n| x y | = | x | | y |\n$$",
+    "image_sha256": "600455472ee051680b5e75029f1cb3598079d281373d20fe79ad50c892f31979",
+    "seconds": 1.2809999999590218,
+    "structure_match": true
+  },
+  {
+    "id": "160",
+    "truth": "\\int d ^ { n } x a _ { 2 }",
+    "latex": "\n$$\n\\int d ^ {m} x a _ {2}\n$$",
+    "image_sha256": "64a7c2fe5973d109aac67770281e5fe8b6277a3bfeaa9cde63d2efbb860ace25",
+    "seconds": 1.8589999999385327,
+    "structure_match": false
+  },
+  {
+    "id": "161",
+    "truth": "\\angle F D E = \\angle F E D = 6 0 ^ { \\circ }",
+    "latex": "\n$$\n\\angle D E = \\angle F E D = 6 0 ^ {\\circ}\n$$",
+    "image_sha256": "7c1973a5924e0a09668f615d5d7b842c18f170a5329e87c607a753b5636cf957",
+    "seconds": 1.1880000000819564,
+    "structure_match": false
+  },
+  {
+    "id": "162",
+    "truth": "\\cdot b ^ { 2 } = a ^ { 2 } + c ^ { 2 } - 2 a c \\cdot \\cos B",
+    "latex": "\n$$\nb ^ {2} = a ^ {2} + c ^ {2} - 2 a c \\cdot \\cos E\n$$",
+    "image_sha256": "1cf73985e848cd3611640bac271e1751b98e0f533a17b19963fd32731c0a4dd9",
+    "seconds": 2.2339999999385327,
+    "structure_match": false
+  },
+  {
+    "id": "163",
+    "truth": "B \\cos C = 2 S i n A + S :",
+    "latex": "\n$$\n\\cos C = 2 \\sin A + s\n$$",
+    "image_sha256": "89f0ec93ab3633385c2061c76b61296dea0bcb55efccfc0737704d6f0beb4e2b",
+    "seconds": 0.875,
+    "structure_match": false
+  },
+  {
+    "id": "164",
+    "truth": "\\overrightarrow { A B } = \\overrightarrow { D C }",
+    "latex": "\n$$\n\\overrightarrow {A B} = \\overrightarrow {D C}\n$$",
+    "image_sha256": "d4f0b02c2a68648ba4c00fc74598807a16b9639d8cdf0d62b73ae40a43197fe8",
+    "seconds": 1.047000000020489,
+    "structure_match": true
+  },
+  {
+    "id": "165",
+    "truth": "x = 1 0 - y",
+    "latex": "\n$$\nx = 1 0 - y\n$$",
+    "image_sha256": "9f1fe7612d521549bbd88dc3b99d0703b663fc71505b1952d1f0f15bf7a8a53a",
+    "seconds": 0.9059999999590218,
+    "structure_match": true
+  },
+  {
+    "id": "166",
+    "truth": "2 a = \\frac { 5 } { 4 } m",
+    "latex": "\n$$\n2 a = \\frac {5}{4} m\n$$",
+    "image_sha256": "192af69ffa7b6f0a46d36e4d469f0e2138d45faa0b01888d997c806e2574f23a",
+    "seconds": 3.1089999999385327,
+    "structure_match": true
+  },
+  {
+    "id": "167",
+    "truth": "\\alpha \\in [ 0 ,",
+    "latex": "\n$$\n\\alpha \\in [ 0,\n$$",
+    "image_sha256": "26458ffd448e676ba7913acf1f0d3e5919de209f8fb5b71fe082a55b9f923ab3",
+    "seconds": 1.3900000001303852,
+    "structure_match": true
+  },
+  {
+    "id": "168",
+    "truth": "q _ { 1 } , q _ { 2 } , \\ldots , q _ { m }",
+    "latex": "\n$$\n9 _ {1}, 9 _ {2}, \\dots , 9 _ {m}\n$$",
+    "image_sha256": "84603e7685de5195179153d7c7984de66dd2c96411408a00fd566573b232e8ce",
+    "seconds": 2.031999999890104,
+    "structure_match": false
+  },
+  {
+    "id": "169",
+    "truth": "C _ { 2 } ( j , \\frac { 1 } { 2 } , \\ldots , \\pm \\frac { 1 } { 2 } ) = ( j - \\frac { 1 } { 2 } ) ( j + 2 n - \\frac { 3 } { 2 } ) + \\frac { 1 } { 4 } n ( 2 n - 1 )",
+    "latex": "\n$$\nC _ {2} \\left(j, \\frac {1}{2}, \\dots \\pm \\frac {1}{2}\\right) = \\left(j - \\frac {1}{2}\\right) \\left(j + 2 n - \\frac {3}{2}\\right) + \\frac {1}{5} n (2 n - 1)\n$$",
+    "image_sha256": "e7fc3e28d15ec6373b37d3aff955acca074b1610e4c61b11ff8df3f2c40cb8c4",
+    "seconds": 5.656999999890104,
+    "structure_match": false
+  },
+  {
+    "id": "170",
+    "truth": "\\sqrt { 0 . 0 2 2 5 } = 2 2 . 5 \\sqrt { 3 6 } = \\sqrt { 6 } = 3",
+    "latex": "\n$$\n\\sqrt {0 . 0 2 5}=2 2. 5 \\sqrt {A 3 6}=\\sqrt {6}=3\n$$",
+    "image_sha256": "ccafc94a41902c3d118376d5f28f4497e8d7cc3fdf05566f30786eb9c89ef9c7",
+    "seconds": 2.844000000040978,
+    "structure_match": false
+  },
+  {
+    "id": "171",
+    "truth": "O C > O D",
+    "latex": "\n$$\nO C > O D\n$$",
+    "image_sha256": "4b6559c36d47583a520419dd989aedb6719700485d32d6f1d51e9a8d520d9c6d",
+    "seconds": 0.8440000000409782,
+    "structure_match": true
+  },
+  {
+    "id": "172",
+    "truth": "5 a ( a - b ) ^ { 2 } - 1 0 ( a - b ) ^ { 3 } = ( a - b ) ^ { 2 } \\cdot ( 1 0 b - 5 a ) = 5 ( a - b ) ^ { 2 }",
+    "latex": "\n$$\n5 a (a - b) ^ {2} - 1 0 (a - b) ^ {3} = (a - b) ^ {2} \\cdot (1 0 b - 5 a) = 5 (a - b) ^ {2}\n$$",
+    "image_sha256": "b220c7dec7ddad6e629144293994bceb1c4786735b93c08ebe261719aa08dcbc",
+    "seconds": 4.780999999959022,
+    "structure_match": true
+  },
+  {
+    "id": "173",
+    "truth": "E \\geq 1 + \\pi \\sqrt { \\alpha / 8 } = 1 . 3 3 0 9",
+    "latex": "\n$$\nE \\geq 1 + \\pi r \\sqrt {\\alpha / 8} = 1. 3 3 0 g\n$$",
+    "image_sha256": "c6d8bf650de4ed810d2e2431040faf6f4835d82e9cd955cf39a2e5817bebbc7a",
+    "seconds": 3.875,
+    "structure_match": false
+  },
+  {
+    "id": "174",
+    "truth": "a ( x ) a ( y ) a ( z )",
+    "latex": "\n$$\na (x) a (y) a (z)\n$$",
+    "image_sha256": "ba462609aa4dd067d1bf41e78af4b30a5d5c984b516811320b8d683f18f2c63c",
+    "seconds": 1.6089999999385327,
+    "structure_match": true
+  },
+  {
+    "id": "175",
+    "truth": "y = 3 x + 7 + \\frac { x + 8 } { x }",
+    "latex": "\n$$\ny = 3 x + 7 + \\frac {x + 8}{x}\n$$",
+    "image_sha256": "8ada0b1be2babd353a9338c034d18ab1c772b9b78c92b75a4c9e86ef13d8389f",
+    "seconds": 3.1410000000614673,
+    "structure_match": true
+  },
+  {
+    "id": "176",
+    "truth": "1 . 6 9 4 6 9 6 1",
+    "latex": "\n$$\n1. 6 9 4 6 9 6 1\n$$",
+    "image_sha256": "c8879f44855d18399b28fa766e3d627eb3a6b44c99bf8b0d738b508b1c14911b",
+    "seconds": 1.2339999999385327,
+    "structure_match": true
+  },
+  {
+    "id": "177",
+    "truth": "\\frac { 1 5 0 \\times 0 . 4 } { x } + \\frac { 1 5 0 \\times 0 . 6 } { 2 x + 5 0 } = \\frac { 1 } { 2 }",
+    "latex": "\n$$\n\\frac {1 5 0 \\times 0 . 4}{x} + \\frac {1 5 0 \\times 0 . 6}{2 x + 5 0} = \\frac {1}{2}\n$$",
+    "image_sha256": "4e0644f6287fc3dfd5e31865a440814464a9b874b6c0747df15c9cebba668d56",
+    "seconds": 2.093000000109896,
+    "structure_match": true
+  },
+  {
+    "id": "178",
+    "truth": "a _ { B } = \\frac { f } { m } = \\mu g",
+    "latex": "\n$$\na _ {B} = \\frac {f}{m} = u g\n$$",
+    "image_sha256": "ce6295da3d20e614ba529f4ba646276169039ed0c500b3d4d46871e83ef33abf",
+    "seconds": 1.875,
+    "structure_match": false
+  },
+  {
+    "id": "179",
+    "truth": "x = - \\frac { b } { 2 a } = \\frac { 2 } { 2 \\times ( - 1 ) } = 1",
+    "latex": "\n$$\nx = - \\frac {6}{2 a} = \\frac {2}{2 (x - 1)} = 1\n$$",
+    "image_sha256": "eec138465ca3ad192d581cc5090e1e2acfa0eab51f5b2d8f068663207415fda5",
+    "seconds": 2.375,
+    "structure_match": false
+  },
+  {
+    "id": "180",
+    "truth": "- \\frac { 1 1 \\pi } { 8 }",
+    "latex": "\n$$\n- \\frac {1 1 \\pi}{8}\n$$",
+    "image_sha256": "962b4e845db229c17adaea7cf89478377fda614b145ef65c86f9ad681542b9a7",
+    "seconds": 1.8600000001024455,
+    "structure_match": true
+  },
+  {
+    "id": "181",
+    "truth": "x _ { 1 } x _ { d + 1 } + \\ldots + x _ { d } x _ { 2 d }",
+    "latex": "\n$$\nx _ {1} x _ {d + 1} + \\dots + x _ {d} x _ {2 d}\n$$",
+    "image_sha256": "97c61ae602e4a6c9f9297d2287a656fd1cabea5512e49d0dd351a622c63c966c",
+    "seconds": 4.983999999938533,
+    "structure_match": false
+  },
+  {
+    "id": "182",
+    "truth": "n \\times n",
+    "latex": "\n$$\nn \\times n\n$$",
+    "image_sha256": "127df04250228705b604774a4814fd231996442d5b68bb9c62d2e2511da9fa93",
+    "seconds": 0.9370000001508743,
+    "structure_match": true
+  },
+  {
+    "id": "183",
+    "truth": "7 \\sqrt { 2 }",
+    "latex": "\n$$\n| 7 \\sqrt {2} |\n$$",
+    "image_sha256": "e8a139b1db8b09442c64e29333468c882dc599ebaa1f496dcd913825f0f77cef",
+    "seconds": 0.9220000000204891,
+    "structure_match": false
+  },
+  {
+    "id": "184",
+    "truth": "\\lim \\limits _ { t \\rightarrow \\infty } | \\gamma ( t ) | = \\infty",
+    "latex": "\n$$\n\\lim _ {t \\rightarrow \\infty} | \\gamma (t) | = \\infty\n$$",
+    "image_sha256": "585afa02e62785e25d59ceb1a36d26b2fc1d70f555a508428ee00b0acf47acbe",
+    "seconds": 2.5620000001508743,
+    "structure_match": true
+  },
+  {
+    "id": "185",
+    "truth": "x ^ { 2 } + 3 x + 1 = x ^ { 4 } + x ( a - 1 ) + b - a",
+    "latex": "\n$$\nx ^ {2} + 3 x + 1 = x ^ {2} + x (a - 1) + b - a\n$$",
+    "image_sha256": "a6ee27053060ffa6988dc16b6216c8697daa2faf1549679f6480ac7bb8e98866",
+    "seconds": 3.6090000001713634,
+    "structure_match": false
+  },
+  {
+    "id": "186",
+    "truth": "\\int d y f ( y ) = 1",
+    "latex": "\n$$\n\\int d y f (y) = 1\n$$",
+    "image_sha256": "551d3586bf1cc40b357bc75bd661295ac717ca886a34a1427bf41e778e885fee",
+    "seconds": 1.2189999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "187",
+    "truth": "y + \\frac { 2 } { y } = 3",
+    "latex": "\n$$\ny+\\frac {1}{y}=3\n$$",
+    "image_sha256": "0cbc9f782cd079520128a24b3182c032121df1a6abb2e55c077afd833adf390f",
+    "seconds": 2.25,
+    "structure_match": false
+  },
+  {
+    "id": "188",
+    "truth": "- \\frac { 1 1 + z + 5 z ^ { 2 } - z ^ { 3 } } { 1 6 }",
+    "latex": "\n$$\n- \\frac {1 1 + 3 + 5 x ^ {2} - y ^ {3}}{1 6}\n$$",
+    "image_sha256": "cbe3ac7243aeb8c6127be094a1fa798f750535e380c96ecda202664972a96083",
+    "seconds": 4.703999999910593,
+    "structure_match": false
+  },
+  {
+    "id": "189",
+    "truth": "H = H _ { 0 } ^ { 1 } + H _ { 1 } ^ { 1 }",
+    "latex": "\n$$\nH = H _ {0} ^ {1} + H _ {1} ^ {1}\n$$",
+    "image_sha256": "8c4956ec3f80a6433a7cd98b4c63a5d6aed6c69b75cab125ac42a3557a45f412",
+    "seconds": 2.1089999999385327,
+    "structure_match": true
+  },
+  {
+    "id": "190",
+    "truth": "\u3001 C Q = B C - B Q = 6 0 - 2 0 \\sqrt { 3 } ( c m )",
+    "latex": "\n$$\nC Q = B C - B Q = 6 0 - 2 0 \\sqrt {3} (c m)\n$$",
+    "image_sha256": "dbf630d2a571e81ae577f869a40c7e19236dd522fde3f3ff6c0be6a4b62e070f",
+    "seconds": 2.125,
+    "structure_match": false
+  },
+  {
+    "id": "191",
+    "truth": "\\theta _ { i + 1 } = \\theta _ { i } - \\alpha _ { i }",
+    "latex": "\n$$\n\\theta_ {i + 1} = \\theta_ {i} - \\alpha_ {i}\n$$",
+    "image_sha256": "8d2dfbde368b4c0197dcc97f96be4cde28d09d15ba69b34c4d888e99b962d2c1",
+    "seconds": 3.843000000109896,
+    "structure_match": true
+  },
+  {
+    "id": "192",
+    "truth": "( 1 ) + ( 1 1 ) + ( 1 1 1 ) + ( 1 1 2 ) + ( 1 2 3 )",
+    "latex": "\n$$\n(1) + (1 1) + (1 1 1) + (1 1 2) + (1 2 3)\n$$",
+    "image_sha256": "c11a378d6f20ad754207a3148b1d6c6f19dd03be3666a6e0f1cc3c95cd7a50b6",
+    "seconds": 4.4689999998081475,
+    "structure_match": true
+  },
+  {
+    "id": "193",
+    "truth": "( x + \\frac { b } { 2 a } ) ^ { 2 } = \\frac { b ^ { 2 } - 4 a } { 4 a \\cdot ^ { 2 } } \\cdot",
+    "latex": "\n$$\n(x + \\frac {b}{2 0}) ^ {2} = \\frac {6}{4} a ^ {2}.\n$$",
+    "image_sha256": "bca43d03e17191b16a3a2c079bd334b2c0026c5a48b8af4d7cad09774345b807",
+    "seconds": 1.5630000000819564,
+    "structure_match": false
+  },
+  {
+    "id": "194",
+    "truth": "1 + 1 2 + 1 2 + 2 + 1 8 + 1 2 + 6 = 6 3",
+    "latex": "\n$$\n1 + 1 2 + 1 2 + 2 + 1 8 + 1 2 + 6 = 6 3\n$$",
+    "image_sha256": "b7d6f1946bbe9ddc58dcaf84768606d0d55ee985c57931d8ef276b5151149576",
+    "seconds": 4.5149999998975545,
+    "structure_match": true
+  },
+  {
+    "id": "195",
+    "truth": "\\frac { 4 7 } { 2 } + \\frac { 1 } { 2 } \\pi = 1 3 + \\pi",
+    "latex": "\n$$\n\\frac {9 7}{2} + \\frac {1}{2} \\pi = 1 3 + \\pi\n$$",
+    "image_sha256": "693cc9dad725408c56603e83d003a9fbe8295124a891419317b04cd6dae77657",
+    "seconds": 1.2810000001918525,
+    "structure_match": false
+  },
+  {
+    "id": "196",
+    "truth": "x = \\frac { 1 } { 2 } \\times ( \\frac { 6 } { 5 } x - \\frac { 3 6 } { 5 } )",
+    "latex": "\n$$\nx = \\frac {1}{2} \\times (\\frac {6}{5} x - \\frac {3 6}{5})\n$$",
+    "image_sha256": "90052112e9dbc764bb7c8f6559fb082f0780013d91edf065a4e2ee917b71fc36",
+    "seconds": 3.625,
+    "structure_match": true
+  },
+  {
+    "id": "197",
+    "truth": "\\frac { p _ { 2 } } { q _ { 2 } } = \\frac { p _ { 1 } + p _ { 3 } } { q _ { 1 } + q _ { 3 } }",
+    "latex": "\n$$\n\\frac {\\rho_ {2}}{\\rho_ {2}} = \\frac {\\rho_ {1} + \\rho_ {3}}{9 _ {1} + 9 _ {3}}\n$$",
+    "image_sha256": "cf41b461f84c9789d33e48c601e2e5bf34dfcb13aefaf1ad6d1b300230f30350",
+    "seconds": 5.5,
+    "structure_match": false
+  },
+  {
+    "id": "198",
+    "truth": "x = \\frac { 4 4 } { 3 5 }",
+    "latex": "\n$$\nx = \\frac {1 4}{3 5}\n$$",
+    "image_sha256": "239b940b30735bb485f231e49ff9fc4ff4d9072f7aa51fae46fe3f5fa9cd525f",
+    "seconds": 1.0469999997876585,
+    "structure_match": false
+  },
+  {
+    "id": "199",
+    "truth": "\\frac { 4 k + 8 - 8 k ^ { 2 } } { ( 1 - k ) ^ { 2 } } = \\alpha",
+    "latex": "\n$$\n\\frac {4 k + 8 - 8 k ^ {2}}{(1 - k) ^ {2}} = 2\n$$",
+    "image_sha256": "f7fa4e27fe88786c2a3cf1ce2e74833d77238a053fcb9f26b3484f68e8a0d82e",
+    "seconds": 1.9850000001024455,
+    "structure_match": false
+  }
+]

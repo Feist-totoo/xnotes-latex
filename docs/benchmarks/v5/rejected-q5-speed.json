@@ -1,0 +1,38 @@
+[
+  {
+    "id": "c56f91675e627046",
+    "index": 0,
+    "run": 0,
+    "latex": "\\int x^{n - 1} d x = \\frac {1}{n} x^{n}",
+    "elapsed_ms": 42418,
+    "load_ms": 416,
+    "encode_ms": 40216,
+    "decode_ms": 1780,
+    "warm": false,
+    "pss_kib": 1275225
+  },
+  {
+    "id": "c56f91675e627046",
+    "index": 0,
+    "run": 1,
+    "latex": "\\int x^{n - 1} d x = \\frac {1}{n} x^{n}",
+    "elapsed_ms": 41546,
+    "load_ms": 9,
+    "encode_ms": 39780,
+    "decode_ms": 1750,
+    "warm": true,
+    "pss_kib": 1275497
+  },
+  {
+    "id": "c56f91675e627046",
+    "index": 0,
+    "run": 2,
+    "latex": "\\int x^{n - 1} d x = \\frac {1}{n} x^{n}",
+    "elapsed_ms": 42446,
+    "load_ms": 392,
+    "encode_ms": 40120,
+    "decode_ms": 1875,
+    "warm": false,
+    "pss_kib": 1272433
+  }
+]

@@ -35,6 +35,8 @@ app/src/main/assets/formula-glm/*.gguf
 app/src/main/assets/formula-glm/*.part
 app/src/main/assets/formula-gryph/*.onnx
 app/src/main/assets/formula-gryph/*.part
+app/src/main/assets/formula-precision/*.gguf
+app/src/main/assets/formula-precision/*.part
 app/src/androidTest/assets/handwriting/
 .venv/
 
@@ -47,3 +49,5 @@ app/src/androidTest/assets/packs/
 app/src/androidTest/assets/handwriting-v4/
 
 app/src/androidTest/assets/handwriting-confirmation/
+app/src/androidTest/assets/handwriting-v5/
+app/src/androidTest/assets/handwriting-v5-images/

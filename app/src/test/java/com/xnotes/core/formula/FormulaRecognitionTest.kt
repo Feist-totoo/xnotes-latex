@@ -28,6 +28,16 @@ class FormulaRecognitionTest {
         }
     }
 
+    @Test fun sequenceStatisticsUseSymbolHistoryAndEndOfFormula() {
+        val prior = FormulaRecognitionPrior.parse(data().put("kind", "symbol-bigram-v1").put("strength", .01)
+            .put("pairs", org.json.JSONArray("[[0,3,100],[3,4,100],[4,0,100],[3,5,1],[5,0,1]]")))
+        val preferred = prior.logLikelihood(intArrayOf(3,4), intArrayOf(8,8))
+        assertTrue(preferred > prior.logLikelihood(intArrayOf(3,5), intArrayOf(8,8)))
+        assertEquals(preferred, prior.logLikelihood(intArrayOf(3,4), intArrayOf(9,10)), 0.0)
+        assertTrue(preferred > prior.logLikelihood(intArrayOf(3,4,3), intArrayOf(8,8,8)))
+        assertThrows(IllegalArgumentException::class.java) { FormulaRecognitionPrior.parse(data().put("kind", "executable")) }
+    }
+
     @Test fun penCoordinatesAreTranslationAndScaleInvariantAndSeparateStrokesStaySeparate() {
         val strokes=listOf(listOf(Pt(0.0,0.0),Pt(20.0,20.0)),listOf(Pt(0.0,20.0),Pt(20.0,0.0)))
         val pixels=FormulaInkRaster.pixels(strokes)

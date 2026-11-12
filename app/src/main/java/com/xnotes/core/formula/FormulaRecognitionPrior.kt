@@ -7,11 +7,23 @@ import kotlin.math.ln
 class FormulaRecognitionPrior private constructor(
     private val counts: IntArray,
     private val totals: LongArray,
+    private val sequence: Boolean,
     val strength: Double,
     val maxVisualGap: Double,
 ) {
     fun logLikelihood(symbols: IntArray, modifiers: IntArray): Double {
         if (symbols.isEmpty() || symbols.size != modifiers.size) return -20.0
+        if (symbols.any { it !in 0 until VOCABULARY_SIZE } || modifiers.any { it !in 0 until VOCABULARY_SIZE }) return -20.0
+        if (sequence) {
+            var previous = 0
+            var score = 0.0
+            for (i in 0..symbols.size) {
+                val current = if (i == symbols.size) 0 else symbols[i]
+                score += ln((counts[previous * VOCABULARY_SIZE + current] + ALPHA) / (totals[previous] + ALPHA * VOCABULARY_SIZE))
+                previous = current
+            }
+            return score / (symbols.size + 1)
+        }
         var sum = 0.0
         for (i in symbols.indices) {
             val s = symbols[i]; val m = modifiers[i]
@@ -33,9 +45,13 @@ class FormulaRecognitionPrior private constructor(
                 json.getInt("vocabularySize") == VOCABULARY_SIZE) { "Incompatible recognition package" }
             val strength = json.getDouble("strength")
             val gap = json.getDouble("maxVisualGap")
+            val kind = json.optString("kind", "symbol-modifier-v1")
+            require(kind in setOf("symbol-modifier-v1", "symbol-bigram-v1")) { "Unsupported statistics kind" }
+            val sequence = kind == "symbol-bigram-v1"
             require(strength.isFinite() && strength in 0.0..0.1 && gap.isFinite() && gap in 0.0..0.03)
+            if (sequence) require(strength <= 0.01)
             require(json.getDouble("alpha") == ALPHA)
-            val rows = json.getJSONArray("pairs"); require(rows.length() in 1..4096)
+            val rows = json.getJSONArray("pairs"); require(rows.length() in 1..8192)
             val counts = IntArray(VOCABULARY_SIZE * VOCABULARY_SIZE)
             val totals = LongArray(VOCABULARY_SIZE)
             for (i in 0 until rows.length()) {
@@ -47,7 +63,7 @@ class FormulaRecognitionPrior private constructor(
                 counts[index] = count; totals[s] += count
                 require(totals[s] <= 50_000_000)
             }
-            return FormulaRecognitionPrior(counts, totals, strength, gap)
+            return FormulaRecognitionPrior(counts, totals, sequence, strength, gap)
         }
     }
 }

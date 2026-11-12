@@ -1,0 +1,8 @@
+{
+  "source": "ggml-org/GLM-OCR-GGUF",
+  "sourceRevision": "65a42de1148dbed2297e922b5dbc7d9b70c36578",
+  "file": "mmproj-GLM-OCR-Q8_0.gguf",
+  "unchangedFromSource": true,
+  "bytes": 484403648,
+  "sha256": "9c4b58e33e316ed142eb5dcb41abec3844d3e6e5dc361ffb782c3fa9d175141f"
+}

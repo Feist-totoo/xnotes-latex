@@ -1,0 +1,4 @@
+{
+  "expected": "x=1",
+  "actual": "X = 1"
+}

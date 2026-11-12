@@ -1,0 +1,12 @@
+{
+  "status": "Rejected before publication",
+  "reason": "Q5_0 vision encoder was much slower in native Android than original Q8_0 on the first fixed same-case timing comparison. Full four-test batch was intentionally stopped after the 20-image/switch/cancel test passed and three speed runs were recorded. The resulting process-crashed instrumentation message reflects this deliberate stop, not a spontaneous crash.",
+  "firstCaseIndex": 0,
+  "speedRuns": 3,
+  "twentyImagesCompleted": 20,
+  "imageStructureCorrect": 8,
+  "imageDesktopStructureParity": 20,
+  "candidateApkBytes": 853214409,
+  "candidateApkSha256": "c9f535596a6fee4d46a0c4e53df919f559311f4e0a49a80f5c64bf8c254a248b",
+  "finalChoice": "Keep compact Q4_K_M decoder and original Q8_0 vision encoder; revalidate and rebuild."
+}

@@ -1,0 +1,7 @@
+GLM-OCR offline detailed recognition
+Source: https://huggingface.co/ggml-org/GLM-OCR-GGUF/tree/65a42de1148dbed2297e922b5dbc7d9b70c36578
+GLM-OCR by Z.ai / Zhipu AI: MIT. See MODEL-LICENSE.txt.
+Runtime: llama.cpp 2d973636e292ee6f75fadcf08d29cb33511f509f, MIT and vendored licenses.
+Modified for Xnotes: Q8 decoder requantized to Q4_K_M; unused NextN layer removed, all 16 active layers byte-identical after removal. Vision encoder retains the original Q8_0 weights after Q5_0 proved slower in Android testing.
+Conversions are reproducible using tools/handwriting. No neural-weight training.
+All inference runs directly in JNI on the device, without HTTP or model downloads.

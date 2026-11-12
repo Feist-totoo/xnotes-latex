@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "samples": 2,
+    "off": 0,
+    "on": 2,
+    "oracle": 2,
+    "fixed": 2,
+    "regressed": 0,
+    "changed": 2,
+    "routed": 2
+  },
+  "results": [
+    {
+      "id": "597321ff3f23d97a",
+      "truth": "[ \\begin{matrix} A _ { 1 1 } & A _ { 1 2 } & A _ { 1 3 } \\\\ A _ { 2 1 } & A _ { 2 2 } & A _ { 2 3 } \\\\ A _ { 3 1 } & A _ { 3 2 } & A _ { 3 3 } \\end{matrix} ]",
+      "latex": "[ \\begin{matrix} A_{ 1 1 } & A_{ 1 2 } & A_{ 1 3 } \\\\ A_{ 2 1 } & A_{ 2 2 } & A_{ 2 3 } \\\\ A_{ 3 1 } & A_{ 3 2 } & A_{ 3 3 } \\end{matrix} ]",
+      "base": "[ \\begin{matrix} A_{ 1 1 } & A_{ 1 2 } & A_{ 1 3 } \\\\ A_{ 2 1 } & A_{ 2 2 } & A_{ 2 3 } \\\\ A_{ 3 1 } & A_{ 3 2 } A_{ 3 3 } \\end{matrix} ]",
+      "off": false,
+      "on": true,
+      "subject": null,
+      "routed": "linear_algebra",
+      "seconds": null,
+      "elapsed_ms": 5862
+    },
+    {
+      "id": "4297e6edf7e58bea",
+      "truth": "\\int d V | \\Psi | ^ { 2 } = N",
+      "latex": "\\int d V | \\Psi |^{ 2 } = N",
+      "base": "\\int d V | \\Psi^{ 2 } = N",
+      "off": false,
+      "on": true,
+      "subject": null,
+      "routed": "calculus",
+      "seconds": null,
+      "elapsed_ms": 5271
+    }
+  ]
+}

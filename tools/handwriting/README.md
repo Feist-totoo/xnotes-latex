@@ -1,10 +1,10 @@
 # Offline handwriting research and reproduction
 
-This directory is developer tooling, not part of the Android runtime. The preview
-does not meet the complete quality target: see [the report](../../docs/FORMULA_ACCURACY_V4.md),
-including the image-only regression and the zero net subject-profile gain.
+This directory is developer tooling, not part of the Android runtime. V5 bundles
+both engines and all ten packs; it still does not meet the general recognition
+quality target. See [the v5 report](../../docs/FORMULA_ACCURACY_V5.md).
 
-For a normal APK build, run `python tools/prepare_handwriting_model.py` and
+For a normal APK build, run `python tools/prepare_full_formula.py` and
 `python tools/package_formula_mods.py`; the converted graphs are pinned by size
 and SHA-256. No evaluation data or Python interpreter is needed on the tablet.
 
@@ -64,3 +64,42 @@ All original/reference data and the learned statistics retain Google LLC's
 CC BY-NC-SA 4.0 conditions. The APK contains no original handwriting, evaluation
 images, or private user screenshots. Only public provenance, predictions and
 fingerprints are committed in `docs/benchmarks/v4`.
+
+
+## V5 additions
+
+The earlier steps reproduce the fast engine and human-source data. V5 retains the
+same frozen fast graph/decoding contract. `train_priors.py` now writes TRAIN-only
+symbol-bigram counts into the v3 packs; `score_candidates.py` reads the pack's
+explicit kind. `profile_sweep.py REPORT --counts COUNTS --output OUTPUT` reproduces
+the parameter comparison on the original 160 validation cases only. Parameters
+were fixed before evaluating the new test set.
+
+`prepare_v5_confirmation.py` selects 80 calculus-marker and 80 vector/matrix cases
+from previously unused official TEST, excludes all earlier IDs and verifies
+original human InkML. It uses a stricter derivative denominator rule. Only four
+unused multi-column matrices remained, so the linear group includes vector
+expressions; do not compare its difficulty directly with the earlier matrix set.
+Run `prepare_android_fixtures.py build/accuracy-v5/confirmation --name handwriting-v5`,
+then OfflineStrokeBenchmarkTest with `dataset=handwriting-v5`, separately with
+`roundtrip=true`. Five of 160 input rasters change through production float storage;
+replace those five raw-input records when scoring the production path.
+
+For the precision model, use unchanged llama.cpp revision
+`2d973636e292ee6f75fadcf08d29cb33511f509f` (tag b9870), GLM source revision
+`65a42de1148dbed2297e922b5dbc7d9b70c36578`, and the original v3 Q8 weights.
+Run the pinned `llama-quantize --allow-requantize DECODER_Q8 DECODER_Q4 Q4_K_M 4`,
+then `compact_glm_decoder.py DECODER_Q4 COMPACT_OUTPUT`. The final APK keeps the original Q8_0 vision encoder.
+`quantize_glm_vision.py VISION_Q8 VISION_Q5 --dtype Q5_0` reproduces the rejected
+smaller-but-slower Q5 vision experiment. These scripts do not modify
+upstream sources. Conversion reports and exact output hashes are in
+`docs/benchmarks/v5`; the 163 active decoder tensors remain byte-identical during
+NextN removal. Five fixed real-image outputs also matched before/after removal.
+The final Q4/Q8 validation is 38/100 versus the original Q8/Q8 37/100;
+model byte parity does not by itself establish quality. HWE results and rejected
+Q5 measurements are recorded separately in the report.
+
+`CompleteFormulaTest` checks twenty fixed HWE images, actual engine switching and
+cancellation, and same-three-case cold/warm/reload times. `caseIds` on
+OfflineStrokeBenchmarkTest restricts a run to named regression witnesses and adds
+`-selected` to its output; selected fixes are not a new accuracy benchmark.

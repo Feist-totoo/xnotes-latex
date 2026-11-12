@@ -1,0 +1,7 @@
+{
+  "samples": 100,
+  "v3Correct": 56,
+  "v5Correct": 56,
+  "fixes": 1,
+  "regressions": 1
+}
