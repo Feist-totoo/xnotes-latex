@@ -14,14 +14,14 @@ class ToolbarLayoutTest {
 
     @Test fun defaultMirrorsToolbarGrouping() {
         val d = ToolbarLayout.DEFAULT
-        assertEquals(11, d.sections.size)
-        assertEquals(listOf(ToolbarItem.HOME, ToolbarItem.TITLE), d.sections[0].entries.map { it.item })
+        assertEquals(10, d.sections.size)
+        assertEquals(listOf(ToolbarItem.HOME, ToolbarItem.TITLE, ToolbarItem.SIDEBAR), d.sections[0].entries.map { it.item })
         assertEquals(
             listOf(
                 ToolbarItem.PEN, ToolbarItem.DASHED, ToolbarItem.CALLIGRAPHY, ToolbarItem.SPEED,
                 ToolbarItem.TAPER, ToolbarItem.HIGHLIGHTER, ToolbarItem.ERASER,
             ),
-            d.sections[2].entries.map { it.item },
+            d.sections[1].entries.map { it.item },
         )
         assertEquals(
             listOf(ToolbarItem.PAN, ToolbarItem.SELECT, ToolbarItem.LASSO, ToolbarItem.INSERT_SPACE),
@@ -31,7 +31,8 @@ class ToolbarLayoutTest {
             listOf(ToolbarItem.WAND, ToolbarItem.TAPE, ToolbarItem.SHAPE, ToolbarItem.RULER, ToolbarItem.TEXT, ToolbarItem.TEXT_BOX, ToolbarItem.MARKUP),
             d.sections[4].entries.map { it.item },
         )
-        assertEquals(listOf(ToolbarItem.FULLSCREEN), d.sections[10].entries.map { it.item })
+        assertEquals(listOf(ToolbarItem.UNDO, ToolbarItem.REDO), d.sections[2].entries.map { it.item })
+        assertEquals(listOf(ToolbarItem.FULLSCREEN), d.sections[9].entries.map { it.item })
     }
 
     @Test fun defaultContainsEveryItemOnce() {

@@ -1947,7 +1947,8 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
                 controller.clearSelection()
                 val command = com.xnotes.core.history.ReplacePageItems(page, before, after)
                 command.redo(); history.push(command); doc.dirty = true
-                state.refreshAllInk(); refreshContent(); view.requestRender()
+                controller.frontInk?.replaced()
+                state.invalidatePage(page); refreshContent(); view.requestRender()
                 true
             }
         }
@@ -2000,7 +2001,8 @@ class Editor(context: Context, val pane: Pane = Pane.PRIMARY) : ToolPopupHost, S
                 command.redo()
                 history.push(command)
                 doc.dirty = true
-                state.refreshAllInk()
+                controller.frontInk?.replaced()
+                state.invalidatePage(page)
                 controller.setTool(Tool.SELECT)
                 controller.selectPlaced(doc.pages.indexOf(page), listOf(block))
                 refreshContent()

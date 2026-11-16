@@ -127,6 +127,7 @@ fun Toolbar(
     ToolbarFrame(armed = editor.tool, trailing = onClosePane?.let { { ClosePaneButton(it) } }) {
         InlineMathToolbarButton(editor.inlineMath)
         ImageCutToolbarButton(editor)
+        SelectedInkRenderButton(editor)
         // The bar is driven by the user-customisable layout; separators sit between non-empty
         // sections, and each item dispatches to its renderer (see ToolbarItemView).
         editor.toolbarLayout.visibleSections.forEachIndexed { si, section ->

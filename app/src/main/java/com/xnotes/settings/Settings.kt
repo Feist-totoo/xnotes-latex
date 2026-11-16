@@ -508,7 +508,15 @@ data class Settings(
                 }
                 raw.add(entries)
             }
-            return ToolbarLayout.fromRaw(raw, among, fallback)
+            val old = raw.map { section -> section.map { it.first } }
+            val expected = fallback.sections.map { it.entries.map { e -> e.item.id } }.toMutableList()
+            expected.removeAt(2)
+            if (among == ToolbarLayout.NOTE_ITEMS) {
+                expected[0] = listOf("home", "title")
+                expected.add(1, listOf("sidebar"))
+            }
+            expected.add(if (among == ToolbarLayout.NOTE_ITEMS) 7 else 6, listOf("undo", "redo"))
+            return if (old == expected && raw.flatten().all { it.second }) fallback else ToolbarLayout.fromRaw(raw, among, fallback)
         }
     }
 }

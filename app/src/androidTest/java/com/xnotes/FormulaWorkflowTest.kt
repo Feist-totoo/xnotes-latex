@@ -259,6 +259,9 @@ class FormulaWorkflowTest {
         compose.onNodeWithTag("math-pad-panel").assertDoesNotExist()
         compose.onNodeWithContentDescription(context.getString(R.string.tool_screenshot)).assertDoesNotExist()
         compose.runOnIdle { ink.forEach { gesture(ed, it) } }
+        compose.waitUntil(10_000) { ed.inlineMath.ready }
+        compose.runOnIdle { assertFalse(ed.state.document.pages.first().items.any { it is ImageItem }) }
+        compose.onNodeWithTag("inline-confirm").performClick()
         compose.waitUntil(60_000) { ed.state.document.pages.first().items.any { it is ImageItem && it.formula != null } }
         lateinit var block: ImageItem
         compose.runOnIdle {
@@ -289,7 +292,10 @@ class FormulaWorkflowTest {
             val center = block.rect.center
             gesture(ed, listOf(center, center + Pt(20.0,30.0), center + Pt(50.0,50.0), center + Pt(50.0,50.0)))
         }
-        compose.onNodeWithContentDescription(context.getString(R.string.math_restore_ink)).performClick()
+        compose.onNodeWithContentDescription("修改原笔记").performClick()
+        compose.onNodeWithTag("formula-ink-editor").assertExists()
+        compose.onNodeWithText("×").performClick()
+        compose.runOnIdle { ed.restoreFormulaInk() }
         compose.runOnIdle {
             val restored = ed.state.document.pages.first().items.filterIsInstance<Stroke>()
             assertTrue(restored.isNotEmpty()); assertTrue(ed.inlineMath.waitingForEdit)
@@ -299,6 +305,9 @@ class FormulaWorkflowTest {
         screenshot("inline-formula-restored.png")
         // A subsequent stroke extends the restored batch rather than discarding it.
         compose.runOnIdle { gesture(ed, listOf(Pt(460.0, 320.0), Pt(470.0, 320.0), Pt(480.0, 320.0))) }
+        compose.waitUntil(10_000) { ed.inlineMath.ready }
+        compose.runOnIdle { assertFalse(ed.state.document.pages.first().items.any { it is ImageItem }) }
+        compose.onNodeWithTag("inline-confirm").performClick()
         compose.waitUntil(60_000) { ed.state.document.pages.first().items.any { it is ImageItem } }
         compose.runOnIdle {
             ed.undo(); assertTrue(ed.state.document.pages.first().items.any { it is Stroke })
@@ -324,6 +333,8 @@ class FormulaWorkflowTest {
             canvas.document.addAll(samples)
             samples.forEach { ed.inlineMath.offer(canvas.document, it) }
         }
+        compose.waitUntil(10_000) { ed.inlineMath.ready }
+        compose.onNodeWithTag("inline-confirm").performClick()
         compose.waitUntil(60_000) { ed.infinite.document.items.any { it is ImageItem && it.formula != null } }
         compose.runOnIdle {
             val block = ed.infinite.document.items.filterIsInstance<ImageItem>().single()
@@ -344,6 +355,41 @@ class FormulaWorkflowTest {
         compose.onNodeWithTag("image-cut-apply").performClick()
         compose.waitUntil(15_000) { ed.infinite.document.items.size == 2 }
         compose.runOnIdle { ed.infinite.undo(); assertEquals(1, ed.infinite.document.items.size); canvasMode(ed, false) }
+    }
+
+    @Test fun confirmedBatchBreakAndOriginalInkEditingAreUndoable() {
+        val ed=editor()
+        compose.runOnIdle { canvasMode(ed,false); ed.newNote(); ed.controller.setTool(Tool.PEN); if(!ed.inlineMath.enabled) ed.inlineMath.toggle(); realInk().forEach { gesture(ed,it) } }
+        compose.waitUntil(10000) { ed.inlineMath.ready }
+        screenshot("v9-confirm-batch.png")
+        compose.onNodeWithTag("inline-break").performClick()
+        compose.runOnIdle { assertTrue(ed.inlineMath.strokes.isEmpty()); ed.undo(); assertTrue(ed.inlineMath.strokes.isNotEmpty()) }
+        compose.waitUntil(10000) { ed.inlineMath.ready }
+        compose.onNodeWithTag("inline-confirm").performClick()
+        compose.waitUntil(60000) { ed.state.document.pages.first().items.any { it is ImageItem } }
+        lateinit var original: ImageItem
+        compose.runOnIdle { original=ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single(); ed.controller.setTool(Tool.SELECT); ed.controller.selectPlaced(0,listOf(original)) }
+        compose.onNodeWithContentDescription("修改原笔记").performClick()
+        screenshot("v9-original-ink-editor.png")
+        compose.onNodeWithTag("formula-edit-ink").performTouchInput { swipe(androidx.compose.ui.geometry.Offset(40f,60f),androidx.compose.ui.geometry.Offset(90f,60f),200) }
+        compose.onNodeWithText("↶").performClick()
+        compose.onNodeWithText("↷").performClick()
+        compose.onNodeWithTag("formula-edit-apply").performClick()
+        compose.waitUntil(60000) { ed.state.document.pages.first().items.filterIsInstance<ImageItem>().singleOrNull()?.let { it !== original } == true }
+        compose.runOnIdle { assertNotNull(ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single().formula!!.ink) }
+        compose.onNodeWithContentDescription("修改原笔记").performClick()
+        compose.onNodeWithText("TeX").performClick()
+        compose.onNodeWithTag("formula-edit-latex").performTextReplacement("x^2+1")
+        compose.onNodeWithText("↶").performClick()
+        compose.onNodeWithText("↷").performClick()
+        compose.onNodeWithTag("formula-edit-apply").performClick()
+        compose.waitUntil(15000) { ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single().formula!!.latex == "x^2+1" }
+        compose.runOnIdle {
+            assertNull(ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single().formula!!.ink)
+            ed.undo(); assertNotNull(ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single().formula!!.ink)
+            ed.redo(); assertNull(ed.state.document.pages.first().items.filterIsInstance<ImageItem>().single().formula!!.ink)
+            ed.inlineMath.toggle()
+        }
     }
 
     private fun screenshot(name: String) {
@@ -433,12 +479,10 @@ class FormulaWorkflowTest {
         }
         screenshot("formula-block.png")
         compose.onNodeWithContentDescription(compose.activity.getString(R.string.formula_convert)).performClick()
-        compose.onNode(hasSetTextAction()).performTextReplacement("\\frac{x^{2}+1}{2}")
-        val update = compose.activity.getString(R.string.formula_update)
-        compose.waitUntil(15_000) { compose.onAllNodes(hasText(update) and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
-        showPreview()
+        compose.onNodeWithText("TeX").performClick()
+        compose.onNodeWithTag("formula-edit-latex").performTextReplacement("\\frac{x^{2}+1}{2}")
         screenshot("formula-edit.png")
-        compose.onNodeWithText(update).performClick()
+        compose.onNodeWithTag("formula-edit-apply").performClick()
         compose.waitUntil(15_000) { ed.state.document.pages.first().items.filterIsInstance<ImageItem>().singleOrNull()?.formula?.latex == "\\frac{x^{2}+1}{2}" }
         compose.runOnIdle {
             ed.undo() // edit

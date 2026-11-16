@@ -1,17 +1,15 @@
-# xnotes LaTeX — 离线手写公式白板
+# xnotes LaTeX — 离线公式白板
 
-Android 平板白板 fork：**顶部 Σ 开关 → 白板直接书写 → 停笔本机识别 → 原位同色 LaTeX 块**，保留套索识别、分页笔记和无限画布。
+**v9：停笔确认排版、分段与原笔迹草稿编辑。**
 
-- **[下载 v8 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.8-inline/xnotes-latex-0.9.8-latex.8-inline.apk)** · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.8-inline)。约 **67.8 MB**，Android 8.0+，arm64-v8a / x86_64，沿用旧签名覆盖升级。
-- 在 **偏好设置 → 离线 OCR 设置** 主动下载 **32.2 MB** 数学模型；之后完全离线。已有离线包可继续使用，APK 不内置权重，不含 Paddle API。
-- 移除独立手写侧栏。顶部 **Σ** 启用后，停笔在原笔迹位置生成同色公式块；选中后可 **还原手写** 继续改写，也可直接编辑 LaTeX。原笔迹随笔记保存，移动、缩放、旋转后仍可恢复。
-- 图片剪切使用 **剪刀** 图标，原截图入口隐藏。直接在图片上拖出虚线，两侧显示 **30% alpha 的主题色蒙版**；原位确认后成为两个可独立移动、继续切分的图片块。
-- 偏好设置可调整快速/均衡/精细模式、停笔等待、CPU 线程和十个学科包的辅助排序。新落笔取消旧任务，识别失败保留手写。
-- [v8 操作与验证说明](docs/INLINE_FORMULA_CUT.md) · [v8 测试报告](docs/benchmarks/v8-inline/TEST-REPORT.json) · [离线模型及学科包](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.5-full)。
-- **2523 项 JVM 测试、19 项 Android 断网回归通过**，包含真实手写回放、同色渲染、保存重开还原和原位切图。尚无三星/S Pen 真机验证。
-- 本次没有训练或替换模型；v7 的 160 条真实高数/线代手写结构匹配为 **95/160（59.4%）**，精细模式热运行引擎中位数约 **1.51 秒**，默认停笔等待另加 550 ms。该历史结果来自 Android 模拟器，不能代替平板实测，仍需逐式校对。[历史基准](docs/benchmarks/v7-offline-sidebar/)。
-- 代码 AGPL-3.0，保留原 xnotes MIT 署名。模型/运行库许可证随应用附带；高数、线代统计数据为 CC BY-NC-SA 4.0。测试笔迹与用户截图不随 APK 分发。
-- 下方保留上游介绍；商店与上游 Release 不包含本 fork 功能。
+- [下载 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.9-confirm/xnotes-latex-0.9.8-latex.9-confirm.apk) · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.9-confirm) · [操作说明](docs/CONFIRMED_FORMULA_EDIT.md)。约 67.9 MB，Android 8+，arm64 / x86_64，同签名覆盖升级。
+- 顶部 Σ 启用后，停笔仅显示 **✓ 渲染 / ；分段**。点 ✓ 才运行一次本地 OCR；点 ；保留这批笔迹，下一笔开启新批次。自由套索选择后可点「渲染选中笔记」。
+- 选中公式点 **修改原笔记**，右上小窗补写、擦除、撤销/恢复；✓ 确认替换，× 取消。打开 TeX 可编辑源码；实际改动 LaTeX 后清除草稿笔迹，转为纯源码编辑，此操作与提交都可撤销。
+- 默认工具栏第三组为撤销/恢复。清理公式替换后的手写前缓冲，避免下一笔带回旧笔迹；按批次维护范围缓存，确认前不运行识别。
+- 继续使用原离线模型与十个学科包。首次到偏好设置下载 32.2 MB 模型，之后断网使用；已有模型无需重下，没有 Paddle 或识别上传。
+- 图片仍用剪刀原位划线切块，双侧主题色 30% 蒙版、独立拖动、连续切分与撤销。
+- 本次不声明模型准确率提升。历史 v7 的真实高数/线代结构匹配 **95/160**；[历史测试](docs/benchmarks/v7-offline-sidebar/)与[v9 测试报告](docs/benchmarks/v9-confirm/TEST-REPORT.json)。模拟器验证不能代替三星/S Pen 真机流畅度测试。
+- 代码 AGPL-3.0，保留上游署名；模型、运行库和学科包沿用其附带许可证。测试笔迹不进入 APK。下方为上游介绍。
 
 ---
 

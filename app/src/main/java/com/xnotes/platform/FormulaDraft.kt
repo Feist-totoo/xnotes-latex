@@ -56,6 +56,8 @@ class FormulaDraft(
         return surface.bitmap
     }
 
+    fun editableInk(): List<Stroke> = previous?.let { item -> item.formula?.ink?.restore(item)?.onEach { it.applyTransform(com.xnotes.core.geometry.Affine.rotateAbout(item.rect.center, -item.angle)) } }.orEmpty()
+
     fun render(raw: String): RenderedFormula = FormulaTypesetter.render(raw, color, originalFormula?.pointSize ?: 24.0)
 
     fun block(rendered: RenderedFormula, keepInk: Boolean): ImageItem {

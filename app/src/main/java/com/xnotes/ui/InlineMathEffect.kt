@@ -18,7 +18,15 @@ fun InlineMathEffect(editor: Editor) {
         val version = state.revision
         val config = OfflineMathSettings.load(context)
         delay(config.pauseMs.toLong())
-        if (!OfflineMathModel.installed(context)) { editor.message = context.getString(R.string.math_pack_needed); return@LaunchedEffect }
+        state.ready = true
+    }
+    var consumed by remember { mutableIntStateOf(0) }
+    LaunchedEffect(state.request, state.revision, editor.noteOpen, editor.canvasOpen) {
+        if (state.requestedRevision != state.revision || state.request == consumed || state.ready || state.touching || state.strokes.isEmpty() || !editor.noteOpen) return@LaunchedEffect
+        val version = state.revision
+        val config = OfflineMathSettings.load(context)
+        if (!OfflineMathModel.installed(context)) { consumed = state.request; state.ready = true; editor.message = context.getString(R.string.math_pack_needed); return@LaunchedEffect }
+        consumed = state.request
         val draft = editor.inlineFormulaDraft() ?: return@LaunchedEffect
         var block: ImageItem? = null
         state.busy = true
@@ -33,6 +41,6 @@ fun InlineMathEffect(editor: Editor) {
             }
         } catch (cancelled: CancellationException) { throw cancelled }
         catch (_: Exception) { editor.message = context.getString(R.string.math_inline_failed) }
-        finally { block?.image?.file?.delete(); state.busy = false }
+        finally { block?.image?.file?.delete(); state.busy = false; if (version == state.revision && state.strokes.isNotEmpty()) state.ready = true }
     }
 }

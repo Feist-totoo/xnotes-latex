@@ -76,6 +76,16 @@ class InlineFormulaTest {
         val extra = stroke(48.0); doc.add(extra); state.offer(doc, extra)
         assertEquals(doc.items.toList(), state.strokes); assertFalse(state.waitingForEdit)
     }
+    @Test fun explicitConfirmationDoesNotRunOnEveryStrokeAndClearsAtBreak() {
+        val state=InlineMathState(); val page=Any(); state.toggle(); state.offer(page,stroke())
+        assertEquals(0,state.request); assertFalse(state.ready)
+        state.waitForConfirmation(); state.render(); assertEquals(1,state.request)
+        state.touch(true); assertFalse(state.ready); state.touch(false)
+        assertNotEquals(state.revision,state.requestedRevision)
+        assertEquals(1,state.request)
+        state.clear(); state.offer(page,stroke(500.0)); assertEquals(1,state.strokes.size)
+        assertEquals(500.0,state.strokes.single().xAt(0),0.01)
+    }
     @Test fun screenshotIsAbsentFromNormalToolbarCatalog() {
         assertFalse(ToolbarItem.SCREENSHOT in ToolbarLayout.NOTE_ITEMS)
         assertTrue(ToolbarLayout.DEFAULT.visibleSections.flatMap { it.visibleEntries }.none { it.item == ToolbarItem.SCREENSHOT })

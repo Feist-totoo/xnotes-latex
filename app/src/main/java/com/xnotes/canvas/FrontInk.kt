@@ -167,6 +167,13 @@ class FrontInk(
      * There is nothing left to hand over and nothing left to wait for, so the stroke goes back on
      * the ordinary path and the canvas takes everything the pad was showing at once.
      */
+    /** Retire captured ink after an explicit model replacement. */
+    fun replaced() {
+        abandon(); settle()
+        val gen = handoffGen
+        pad.standDown { if (gen == handoffGen) pad.release() }
+    }
+
     fun surfaceLost() {
         abandon()
         settle()

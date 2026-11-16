@@ -199,6 +199,7 @@ fun SelectionMenu(
     var overflowOpen by remember { mutableStateOf(false) }
     var arrangeOpen by remember { mutableStateOf(false) }
     var styleOpen by remember { mutableStateOf(false) }
+    var editDraft by remember(host) { mutableStateOf<com.xnotes.platform.FormulaDraft?>(null) }
     var formulaDraft by remember(host) { mutableStateOf<com.xnotes.platform.FormulaDraft?>(null) }
     var renamingAudio by remember { mutableStateOf<com.xnotes.core.model.AudioItem?>(null) }
 
@@ -235,10 +236,11 @@ fun SelectionMenu(
             }
             if (crops) ActionIcon(XnotesIcons.crop, stringResource(R.string.crop)) { host.startCrop() }
             if (splits) ActionIcon(XnotesIcons.scissors, stringResource(R.string.image_split)) { host.startImageCut() }
-            if (restores) ActionIcon(XnotesIcons.undo, stringResource(R.string.math_restore_ink)) { host.restoreFormulaInk() }
+            if (restores) ActionIcon(XnotesIcons.undo, "修改原笔记") { editDraft = host.createFormulaDraft() }
             if (formulas) {
                 ActionIcon(androidx.compose.material.icons.Icons.Outlined.Functions, stringResource(R.string.formula_convert)) {
-                    formulaDraft = host.createFormulaDraft()
+                    val draft = host.createFormulaDraft()
+                    if (draft?.originalFormula != null) editDraft = draft else formulaDraft = draft
                 }
             }
             ActionIcon(XnotesIcons.trash, stringResource(R.string.delete), shortcut = Keys.DELETE) { host.deleteSelection() }
@@ -356,6 +358,7 @@ fun SelectionMenu(
             }
         }
     }
+    editDraft?.let { draft -> FormulaInkEditor(draft, host.selectionMenuRect) { editDraft = null } }
     formulaDraft?.let { draft -> FormulaDialog(draft) { formulaDraft = null } }
 }
 

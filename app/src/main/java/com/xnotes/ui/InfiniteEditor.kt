@@ -552,7 +552,11 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
                 val after = com.xnotes.core.formula.FormulaReplacement.items(before, picked, block, false)
                 interaction.clearSelection()
                 val command = ReplaceCanvasItems(doc, before, after)
-                command.redo(); history.push(command); markDirty(); refresh(); publishOverlay()
+                command.redo(); history.push(command)
+                settleHeld(); forgetWetStroke(); scene.setWetParts(emptyList(), Rect(0.0, 0.0, 0.0, 0.0))
+                val gen = handoffGen
+                pad.standDown { if (gen == handoffGen) pad.release() }
+                markDirty(); refresh(); publishOverlay()
                 true
             }
         }
@@ -598,6 +602,9 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
                 val command = com.xnotes.core.infinite.ReplaceCanvasItems(doc, before, after)
                 command.redo()
                 history.push(command)
+                settleHeld(); forgetWetStroke(); scene.setWetParts(emptyList(), Rect(0.0, 0.0, 0.0, 0.0))
+                val gen = handoffGen
+                pad.standDown { if (gen == handoffGen) pad.release() }
                 armTool(Tool.SELECT)
                 selection.select(listOf(block))
                 markDirty()

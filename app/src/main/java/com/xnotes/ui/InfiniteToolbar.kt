@@ -86,6 +86,7 @@ fun InfiniteToolbar(
     ToolbarFrame(armed = editor.tool, trailing = onClosePane?.let { { ClosePaneButton(it) } }) {
         inlineMath?.let { InlineMathToolbarButton(it) }
         ImageCutToolbarButton(editor)
+        SelectedInkRenderButton(editor)
         val sections = editor.toolbarLayout.visibleSections
         sections.forEachIndexed { index, section ->
             if (index > 0) Separator()

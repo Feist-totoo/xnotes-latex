@@ -1517,6 +1517,7 @@ private fun EditorPane(
                         com.xnotes.ui.TextStyleBar(canvas)
                         com.xnotes.ui.LongPressMenu(canvas, onInsertImageAt = { c -> actions.onInsertCanvasImage(editor, c) })
                         com.xnotes.ui.CanvasDebugOverlay(canvas)
+                        com.xnotes.ui.InlineMathActions(editor)
                         com.xnotes.ui.ImageCutOverlay(canvas.imageCut) { canvas.imageCut = null }
                     }
 
@@ -1580,6 +1581,7 @@ private fun EditorPane(
                             com.xnotes.ui.FlowTableMenu(editor)
                             com.xnotes.ui.TableChrome(editor)
                             ZoomLockHint(editor)
+                            com.xnotes.ui.InlineMathActions(editor)
                             com.xnotes.ui.ImageCutOverlay(editor.imageCut) { editor.imageCut = null }
                         }
 
