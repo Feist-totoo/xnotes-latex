@@ -1559,7 +1559,7 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
         view.publishThen {
             mainHandler.post {
                 // A moved generation means another stroke has taken the pad and is answerable for it.
-                if (gen == handoffGen) takePad(stroke)
+                if (gen == handoffGen) takePad(stroke, replay = true)
             }
         }
     }
@@ -1573,11 +1573,17 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
      * showing for the refresh in between, which is the blink. Hiding is a transaction, latched like
      * a buffer, so both layers change in one composite; only then are the pixels this stroke's.
      */
-    private fun takePad(stroke: Stroke) {
+    private fun takePad(stroke: Stroke, replay: Boolean = false) {
+        if (wetOwner !== stroke) return
         // Already down, which is every stroke that starts after any sort of pause: take it here so
         // the caller's own publish is the first one, rather than re-entering it.
         if (!pad.showing) {
-            startFrontInk()
+            if (startFrontInk() && replay) {
+                wetMeshed = 0; wetArc = 0.0
+                scene.setWetParts(emptyList(), Rect(0.0, 0.0, 0.0, 0.0))
+                publishWetStroke(stroke)
+                view.publish()
+            }
             return
         }
         val gen = handoffGen
@@ -2083,8 +2089,8 @@ class InfiniteEditor(context: Context) : ToolPopupHost, SelectionMenuHost, LongP
         mainHandler.postDelayed(timeout, CAPTURE_TIMEOUT_MS)
         android.view.PixelCopy.request(view, box, capture, { result ->
             mainHandler.removeCallbacks(timeout)
-            if (gen != handoffGen) return@request
-            if (result != android.view.PixelCopy.SUCCESS) return@request handOffStroke()
+            if (gen != handoffGen) { capture.recycle(); return@request }
+            if (result != android.view.PixelCopy.SUCCESS) { capture.recycle(); return@request handOffStroke() }
             pad.coverWith(capture, box) { if (gen == handoffGen) handOffStroke() }
         }, mainHandler)
     }

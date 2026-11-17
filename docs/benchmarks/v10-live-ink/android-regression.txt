@@ -1,0 +1,12 @@
+
+com.xnotes.FormulaWorkflowTest:..............
+com.xnotes.ImageSplitTest:...
+com.xnotes.FormulaPackDeviceTest:..
+com.xnotes.CompleteFormulaTest:.
+com.xnotes.OfflineMathTest:.
+
+Time: 90.284
+
+OK (21 tests)
+
+

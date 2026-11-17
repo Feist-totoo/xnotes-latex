@@ -230,7 +230,7 @@ class FrontInk(
         if (settled || awaitingPublish) {
             val gen = handoffGen
             return view.publishThen {
-                if (gen == handoffGen) takePad(stroke, pageIndex, scrollX, scrollY, zoom, clip)
+                if (gen == handoffGen) takePad(stroke, pageIndex, scrollX, scrollY, zoom, clip, replay = true)
             }
         }
         takePad(stroke, pageIndex, scrollX, scrollY, zoom, clip)
@@ -290,11 +290,17 @@ class FrontInk(
         scrollY: Double,
         zoom: Double,
         clip: PixelRect,
+        replay: Boolean = false,
     ) {
+        if (owner !== stroke) return
         // Already down, which is every stroke that starts after any sort of pause: take it here so
         // the caller's own present is the first one, rather than re-entering it.
         if (!pad.showing) {
-            start(scrollX, scrollY, zoom, clip)
+            if (start(scrollX, scrollY, zoom, clip) && replay) {
+                // A delayed promotion must paint the existing stroke before the canvas stops painting it.
+                wet(stroke, pageIndex)
+                view.requestRender()
+            }
             return
         }
         val gen = handoffGen
@@ -393,8 +399,8 @@ class FrontInk(
         try {
             PixelCopy.request(window, src, shot, { result ->
                 handler.removeCallbacks(timeout)
-                if (gen != handoffGen) return@request
-                if (result != PixelCopy.SUCCESS) return@request finish()
+                if (gen != handoffGen) { shot.recycle(); return@request }
+                if (result != PixelCopy.SUCCESS) { shot.recycle(); return@request finish() }
                 pad.coverWith(shot, box) { if (gen == handoffGen) finish() }
             }, handler)
         } catch (e: IllegalArgumentException) {

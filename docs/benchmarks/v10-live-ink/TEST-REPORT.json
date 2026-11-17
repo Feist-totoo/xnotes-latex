@@ -1,0 +1,116 @@
+{
+  "version": "0.9.8-latex.10-live-ink-debug",
+  "versionCode": 80,
+  "validationDate": "2026-11-17 Asia/Shanghai",
+  "packaging": {
+    "apk": "xnotes-latex-0.9.8-latex.10-live-ink.apk",
+    "bytes": 67858619,
+    "sha256": "a0832bfd6839feba654da7b0a410ebb6df084704d0bb5ecc994a6e82b0b7a7a8",
+    "bundledModelWeights": 0,
+    "paddleProvider": false,
+    "runtime": "ONNX Runtime Android 1.23.2",
+    "downloadableModelBytes": 32226621,
+    "subjectPacks": 10,
+    "nativeLibraries": [
+      "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "lib/arm64-v8a/libonnxruntime.so",
+      "lib/arm64-v8a/libonnxruntime4j_jni.so",
+      "lib/arm64-v8a/libxnotespdf.so",
+      "lib/arm64-v8a/libxnotests.so",
+      "lib/x86_64/libandroidx.graphics.path.so",
+      "lib/x86_64/libonnxruntime.so",
+      "lib/x86_64/libonnxruntime4j_jni.so",
+      "lib/x86_64/libxnotespdf.so",
+      "lib/x86_64/libxnotests.so"
+    ],
+    "privateTestData": false
+  },
+  "jvm": {
+    "tests": 2527,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android": {
+    "tests": 21,
+    "failures": 0,
+    "seconds": 90.284,
+    "installedApkSha256": "a0832bfd6839feba654da7b0a410ebb6df084704d0bb5ecc994a6e82b0b7a7a8",
+    "device": "Android 14 x86_64 SwiftShader emulator, 2 vCPU / 4 GB",
+    "offline": true,
+    "liveInkPixelChecks": [
+      {
+        "infinite": false,
+        "round": 0,
+        "hardwareFrontBufferReady": false,
+        "bluePixelsBeforePenUp": 444
+      },
+      {
+        "infinite": false,
+        "round": 1,
+        "hardwareFrontBufferReady": false,
+        "bluePixelsBeforePenUp": 444
+      },
+      {
+        "infinite": false,
+        "round": 2,
+        "hardwareFrontBufferReady": false,
+        "bluePixelsBeforePenUp": 444
+      },
+      {
+        "infinite": false,
+        "round": 3,
+        "hardwareFrontBufferReady": false,
+        "bluePixelsBeforePenUp": 444
+      },
+      {
+        "infinite": true,
+        "round": 0,
+        "hardwareFrontBufferReady": false,
+        "bluePixelsBeforePenUp": 444
+      },
+      {
+        "infinite": true,
+        "round": 1,
+        "hardwareFrontBufferReady": false,
+        "bluePixelsBeforePenUp": 444
+      },
+      {
+        "infinite": true,
+        "round": 2,
+        "hardwareFrontBufferReady": false,
+        "bluePixelsBeforePenUp": 444
+      },
+      {
+        "infinite": true,
+        "round": 3,
+        "hardwareFrontBufferReady": false,
+        "bluePixelsBeforePenUp": 444
+      }
+    ]
+  },
+  "raceValidation": {
+    "deterministicJvmTests": 3,
+    "hardwareFrontBufferSupportedByEmulator": false,
+    "realTabletTested": false
+  },
+  "fixes": [
+    "Issue handover tokens synchronously before render-thread enqueue",
+    "Expire delayed hide, wipe, cover and completion on new ink",
+    "Never release an active stroke",
+    "Reject delayed ownership of an ended stroke",
+    "Replay existing ink immediately when delayed front-buffer promotion succeeds",
+    "Recycle completed and stale cover bitmaps"
+  ],
+  "signatureCertificateSha256": "dbde9527283a1432beee854febc94fb79a8710968f3566bb7763b6ec0a41b6bc",
+  "sameSigningKey": true,
+  "zipalign16KB": true,
+  "sourceBaseCommit": "1371264ff7fc4567de5eb91302aba9f4087b180a",
+  "sourceCommitProof": "post-publish-verification.json",
+  "modelChanged": false,
+  "limitations": [
+    "Pixel checks exercise the composited fallback on this emulator, not hardware single-buffer rendering",
+    "No Samsung/S Pen hardware reproduction or validation",
+    "Race tests and code inspection support the fix but do not establish all-device resolution"
+  ]
+}

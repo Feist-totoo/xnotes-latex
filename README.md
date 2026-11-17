@@ -1,5 +1,7 @@
 # xnotes LaTeX — 离线公式白板
 
+**v10 修复版**：[下载 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.10-live-ink/xnotes-latex-0.9.8-latex.10-live-ink.apk) · [原因与验证边界](docs/LIVE_INK_FIX.md)。修复旧前缓冲回调隐藏新笔迹，以及延迟接管未立即重绘已有笔画的问题。沿用 v9 功能与离线包，可覆盖升级。
+
 **v9：停笔确认排版、分段与原笔迹草稿编辑。**
 
 - [下载 APK](https://github.com/Feist-totoo/xnotes-latex/releases/download/v0.9.8-latex.9-confirm/xnotes-latex-0.9.8-latex.9-confirm.apk) · [Release](https://github.com/Feist-totoo/xnotes-latex/releases/tag/v0.9.8-latex.9-confirm) · [操作说明](docs/CONFIRMED_FORMULA_EDIT.md)。约 67.9 MB，Android 8+，arm64 / x86_64，同签名覆盖升级。

@@ -114,7 +114,7 @@ class GlWetPad(context: Context, onTop: Boolean = false) : SurfaceView(context),
     private val mainHandler = Handler(context.mainLooper)
 
     /** Bumped by anything that outdates a pending handover, so a stale wipe cannot land. */
-    private var releaseGen = 0
+    private val generation = PadGeneration()
 
     /** One refresh of the panel this is on, which is what the handover is timed by. */
     @Volatile
@@ -183,6 +183,7 @@ class GlWetPad(context: Context, onTop: Boolean = false) : SurfaceView(context),
 
     override fun surfaceDestroyed(holder: SurfaceHolder) {
         // Every pixel goes with the surface, so nothing left on it may be joined afterwards.
+        generation.next()
         ink.forget()
         onSurfaceLost?.invoke()
         val t = thread ?: return closeLayer()
@@ -255,10 +256,11 @@ class GlWetPad(context: Context, onTop: Boolean = false) : SurfaceView(context),
         val hz = display?.refreshRate ?: 0f
         refreshMs = if (hz > 1f) (1000f / hz).toLong().coerceIn(4L, 40L) else DEFAULT_REFRESH_MS
         this.samples = samples
+        val gen = generation.next()
         post {
+            if (!generation.accepts(gen)) return@post
             // Cancels a handover still waiting to wipe the pad, and takes the last stroke's pixels
             // off it, which the canvas has been holding since long before a hand can come back down.
-            releaseGen++
             covered = false
             clearSurface()
             setAutoRefresh(true)
@@ -287,7 +289,8 @@ class GlWetPad(context: Context, onTop: Boolean = false) : SurfaceView(context),
         if (!frontBuffering || !ready || covered) return false
         if (!ink.extend(scrollX, scrollY, zoom, width, height, clip)) return false
         // Cancels a handover still waiting to wipe the pad this stroke has just taken over.
-        post { releaseGen++ }
+        generation.next()
+        post { if (ink.active) { setAutoRefresh(true); setLayerVisible(true) } }
         return true
     }
 
@@ -328,12 +331,17 @@ class GlWetPad(context: Context, onTop: Boolean = false) : SurfaceView(context),
     fun coverWith(capture: Bitmap, box: Rect, done: () -> Unit) {
         val pad = handler
         if (pad == null || !ready) {
+            capture.recycle()
             done()
             return
         }
+        val gen = generation.current()
         pad.post {
-            drawCover(capture, box)
-            mainHandler.post(done)
+            try {
+                if (!generation.accepts(gen) || ink.active) return@post
+                drawCover(capture, box)
+                mainHandler.post { if (generation.accepts(gen)) done() }
+            } finally { capture.recycle() }
         }
     }
 
@@ -352,15 +360,16 @@ class GlWetPad(context: Context, onTop: Boolean = false) : SurfaceView(context),
      */
     fun release() {
         // Nothing on the pad survives this, so no later stroke may lay itself over what is on it.
+        if (ink.active) return
+        val gen = generation.next()
         ink.forgetFrozen()
-        post { wipe() }
+        post { if (generation.accepts(gen)) wipe(gen) }
     }
 
-    private fun wipe() {
+    private fun wipe(gen: Long) {
         // A stroke that took the pad while this was in flight owns it now, and its ink is the only
         // copy of itself on screen. Whoever queued this was talking about a stroke that is gone.
         if (ink.active) return
-        val gen = ++releaseGen
         if (covered) {
             // The pad is holding an opaque copy of the composite the screen was already showing,
             // so the canvas underneath can take as long as it likes to catch up: nothing of it is
@@ -368,7 +377,7 @@ class GlWetPad(context: Context, onTop: Boolean = false) : SurfaceView(context),
             // racing. Hiding the instant the canvas's frame is queued shows the canvas as it was
             // one refresh earlier, before the committed stroke was in it.
             handler?.postDelayed({
-                if (gen == releaseGen) setLayerVisible(false)
+                if (generation.accepts(gen) && !ink.active) setLayerVisible(false)
             }, refreshMs * 4)
         } else {
             // Nothing was captured, so the two layers still have to be timed against each other.
@@ -379,11 +388,11 @@ class GlWetPad(context: Context, onTop: Boolean = false) : SurfaceView(context),
             // hiding later leaves both layers drawing it, and two antialiased edges at half
             // coverage composite to three quarters rather than to a half.
             Choreographer.getInstance().postFrameCallback {
-                if (gen == releaseGen) setLayerVisible(false)
+                if (generation.accepts(gen) && !ink.active) setLayerVisible(false)
             }
         }
         handler?.postDelayed({
-            if (gen != releaseGen) return@postDelayed
+            if (!generation.accepts(gen) || ink.active) return@postDelayed
             covered = false
             clearSurface()
             setAutoRefresh(false)
@@ -431,13 +440,18 @@ class GlWetPad(context: Context, onTop: Boolean = false) : SurfaceView(context),
      * a stroke that starts after any sort of pause gets.
      */
     fun standDown(then: () -> Unit) {
+        if (ink.active) return
+        val gen = generation.next()
         ink.forgetFrozen()
         if (!showing) return then()
         post {
-            val gen = ++releaseGen
+            if (!generation.accepts(gen)) return@post
             Choreographer.getInstance().postFrameCallback {
-                if (gen == releaseGen) setLayerVisible(false)
-                handler?.postDelayed({ mainHandler.post(then) }, refreshMs * 2)
+                if (!generation.accepts(gen) || ink.active) return@postFrameCallback
+                setLayerVisible(false)
+                handler?.postDelayed({ mainHandler.post {
+                    if (generation.accepts(gen) && !ink.active) then()
+                } }, refreshMs * 2)
             }
         }
     }

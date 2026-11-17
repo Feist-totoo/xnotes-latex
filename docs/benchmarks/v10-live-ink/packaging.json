@@ -1,0 +1,23 @@
+{
+  "apk": "xnotes-latex-0.9.8-latex.10-live-ink.apk",
+  "bytes": 67858619,
+  "sha256": "a0832bfd6839feba654da7b0a410ebb6df084704d0bb5ecc994a6e82b0b7a7a8",
+  "bundledModelWeights": 0,
+  "paddleProvider": false,
+  "runtime": "ONNX Runtime Android 1.23.2",
+  "downloadableModelBytes": 32226621,
+  "subjectPacks": 10,
+  "nativeLibraries": [
+    "lib/arm64-v8a/libandroidx.graphics.path.so",
+    "lib/arm64-v8a/libonnxruntime.so",
+    "lib/arm64-v8a/libonnxruntime4j_jni.so",
+    "lib/arm64-v8a/libxnotespdf.so",
+    "lib/arm64-v8a/libxnotests.so",
+    "lib/x86_64/libandroidx.graphics.path.so",
+    "lib/x86_64/libonnxruntime.so",
+    "lib/x86_64/libonnxruntime4j_jni.so",
+    "lib/x86_64/libxnotespdf.so",
+    "lib/x86_64/libxnotests.so"
+  ],
+  "privateTestData": false
+}

@@ -392,6 +392,69 @@ class FormulaWorkflowTest {
         }
     }
 
+    @Test fun penDownPixelsRemainVisibleAcrossHandoverAndReplacement() {
+        val ed=editor(); val automation=InstrumentationRegistry.getInstrumentation().uiAutomation
+        val blue=com.xnotes.core.model.Rgba(20,70,220)
+        for (infinite in listOf(false,true)) {
+            compose.runOnIdle {
+                canvasMode(ed,infinite); ed.newNote()
+                if (!ed.inlineMath.enabled) ed.inlineMath.toggle()
+                if(infinite) { ed.infinite.replaceDocument(com.xnotes.core.infinite.InfiniteDocument()); ed.infinite.armTool(Tool.PEN); ed.infinite.armInkColor(blue) }
+                else { ed.controller.setTool(Tool.PEN); ed.controller.pickInk(blue) }
+            }
+            compose.waitForIdle()
+            if(infinite) {
+                compose.waitUntil(15000) {
+                    val frame=automation.takeScreenshot()
+                    val visible=android.graphics.Color.red(frame.getPixel(frame.width/2,frame.height/2))>20
+                    frame.recycle(); visible
+                }
+                compose.runOnIdle { ed.infinite.armInkColor(blue) }
+            }
+            val view=if(infinite) ed.infinite.view else ed.view
+            val pad=if(infinite) ed.infinite.pad else ed.pad
+            for (round in 0..3) {
+                val down=SystemClock.uptimeMillis()
+                val origin=IntArray(2)
+                compose.runOnIdle { view.getLocationOnScreen(origin) }
+                // Viewport coordinates stay clear of toolbars, irrespective of page zoom.
+                val x=260f; val y=280f+round*80f
+                fun event(action:Int, px:Float) {
+                    val properties=arrayOf(MotionEvent.PointerProperties().apply { id=0; toolType=MotionEvent.TOOL_TYPE_STYLUS })
+                    val coords=arrayOf(MotionEvent.PointerCoords().apply { this.x=px; this.y=y; pressure=1f; size=1f })
+                    val e=MotionEvent.obtain(down,SystemClock.uptimeMillis(),action,1,properties,coords,0,0,1f,1f,0,0,InputDevice.SOURCE_STYLUS,0)
+                    if(infinite) ed.infinite.view.input!!.invoke(e) else ed.view.input!!.invoke(e)
+                    e.recycle()
+                }
+                compose.runOnIdle {
+                    // Queue an old-layer retirement immediately before the next pen takes ownership.
+                    if(round>0) pad.standDown { pad.release() }
+                    event(MotionEvent.ACTION_DOWN,x)
+                }
+                repeat(12) { i ->
+                    compose.runOnIdle { event(MotionEvent.ACTION_MOVE,x+(i+1)*12f) }
+                    SystemClock.sleep(8)
+                }
+                SystemClock.sleep(180)
+                val shot=automation.takeScreenshot()
+                var bluePixels=0
+                for(py in (origin[1]+y.toInt()-12)..(origin[1]+y.toInt()+12)) for(px in (origin[0]+x.toInt()+20)..(origin[0]+x.toInt()+130)) {
+                    if(px !in 0 until shot.width || py !in 0 until shot.height) continue
+                    val c=shot.getPixel(px,py)
+                    if(android.graphics.Color.blue(c)>android.graphics.Color.red(c)+80 && android.graphics.Color.blue(c)>android.graphics.Color.green(c)+60) bluePixels++
+                }
+                val file=File(compose.activity.getExternalFilesDir(null), "live-ink-$infinite-$round.png")
+                file.outputStream().use { shot.compress(Bitmap.CompressFormat.PNG,100,it) }
+                android.util.Log.i("XnotesLiveInk", "canvas=$infinite round=$round ready=${pad.ready} bluePixels=$bluePixels")
+                shot.recycle()
+                try { assertTrue("Ink must be visible BEFORE UP (canvas=$infinite round=$round ready=${pad.ready})",bluePixels>25) }
+                finally { compose.runOnIdle { event(MotionEvent.ACTION_UP,x+144) } }
+            }
+            compose.runOnIdle { ed.inlineMath.toggle() }
+        }
+        compose.runOnIdle { canvasMode(ed,false) }
+    }
+
     private fun screenshot(name: String) {
         compose.waitForIdle()
         val test = InstrumentationRegistry.getInstrumentation()
